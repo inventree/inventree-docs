@@ -1,10 +1,12 @@
 # Project
-repo_url: https://github.com/inventree/inventree-docs
-repo_name: inventree/inventree-docs
 site_name: InvenTree Documentation
 site_description: InvenTree - Open Source Inventory Management
 site_author: InvenTree
 google_analytics: ['UA-143467500-1', 'inventree-docs']
+
+# Repository
+repo_url: https://github.com/inventree/inventree-docs
+repo_name: inventree/inventree-docs
 
 # Theme
 theme:
@@ -32,6 +34,7 @@ nav:
     - Deploying: start/deploy.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
+    - Color Themes: start/themes.md
   - Parts:
     - Parts: part/part.md
     - Part Views: part/views.md
@@ -78,3 +81,8 @@ markdown_extensions:
   - markdown.extensions.codehilite
   - toc:
       permalink: ⚓
+
+# Global Variables
+extra:
+  static_folder_source: ./InvenTree/InvenTree/static/
+  static_folder_local_default: ./inventree_static/
