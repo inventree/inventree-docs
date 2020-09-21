@@ -1,0 +1,47 @@
+.overlay {
+	/* Display over the entire page */
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.9) !important;
+
+	/* Horizontal and vertical centering of the image */
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	/* We hide all this by default */
+	visibility: hidden;
+
+	/* Animation */
+/*  opacity: 0;*/
+	transition: opacity .3s;
+}
+
+.overlay img {
+	/* Maximum image size */
+	max-width: 90%;
+	max-height: 90%;
+
+	/* We keep the ratio of the image */
+	width: auto;
+	height: auto;
+	margin: auto;
+
+	/* Animation */
+	transform: scale(0.95);
+	transition: transform .3s;
+}
+
+.overlay:target {
+	visibility: visible;
+	outline: none;
+	cursor: default;
+}
+
+.overlay:target img {
+	transform: scale(1);
+}

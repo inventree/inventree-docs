@@ -1,0 +1,80 @@
+# Project
+repo_url: https://github.com/inventree/inventree-docs
+repo_name: inventree/inventree-docs
+site_name: InvenTree Documentation
+site_description: InvenTree - Open Source Inventory Management
+site_author: InvenTree
+google_analytics: ['UA-143467500-1', 'inventree-docs']
+
+# Theme
+theme:
+  name: material
+  custom_dir: _includes/overrides
+  palette:
+    scheme: slate
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - instant
+    - tabs
+extra_css:
+  - stylesheets/extra.css
+
+# Navigation
+nav:
+  - Home: index.md
+  - Contribute: contribute.md
+  - Getting Started:
+    - Installation: start/install.md
+    - Configuration: start/config.md
+    - Deploying: start/deploy.md
+    - Updating: start/update.md
+    - Migrating: start/migrate.md
+  - Parts:
+    - Parts: part/part.md
+    - Part Views: part/views.md
+    - Parameters: part/parameter.md
+    - Template Parts: part/template.md
+    - Tests: part/test.md
+  - Stock:
+    - Stock Items: stock/stock.md
+    - Adjusting Stock: stock/adjust.md
+    - Stocktake: stock/stocktake.md
+    - Test Results: stock/test.md
+  - Build:
+    - Build Parts: build/build.md
+    - BOM: build/bom.md
+  - Buy:
+    - Suppliers: buy/supplier.md
+    - Purchase Orders: buy/po.md
+  - Report:
+    - Labels: report/labels.md
+    - Templates: report/report.md
+    - Test Reports: report/test.md
+    - Packing List: report/pack.md
+    - Order: report/order.md
+  - Admin:
+    - Admin Interface: admin/admin.md
+    - Export Data: admin/export.md
+    - Import Data: admin/import.md
+  - Extend:
+    - API: extend/api.md
+    - Python Interface: extend/python.md
+    - Plugins: extend/plugins.md
+    - Third-Party: extend/integrate.md
+
+# Plugins
+plugins:
+  - search
+  - macros:
+      include_dir: _includes
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - markdown.extensions.codehilite
+  - toc:
+      permalink: ⚓
