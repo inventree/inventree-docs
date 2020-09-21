@@ -1,6 +1,6 @@
-# InvenTree.github.io
+# InvenTree Documentation
 
-This repository hosts the user documentation for [InvenTree](https://github.com/inventree/inventree), an open source inventory management system. 
+This repository hosts the official documentation for [InvenTree](https://github.com/inventree/inventree), an open source inventory management system. 
 
 To serve this documentation locally (e.g. for development), you will need to have Python 3 installed on your system.
 
