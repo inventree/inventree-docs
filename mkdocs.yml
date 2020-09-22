@@ -67,6 +67,8 @@ nav:
     - Python Interface: extend/python.md
     - Plugins: extend/plugins.md
     - Third-Party: extend/integrate.md
+  - Debug:
+    - Debug: debug.md
 
 # Plugins
 plugins:
