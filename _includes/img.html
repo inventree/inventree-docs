@@ -1,4 +1,8 @@
+{% if 'readthedocs.org' in config.docs_dir %}
 {% set assets = '/en/latest/assets' %}
+{% else %}
+{% set assets = '/assets' %}
+{% endif %}
 
 <figure class='image'>
     {% if id %}
