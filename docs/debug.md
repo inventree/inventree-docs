@@ -9,7 +9,12 @@ layout: page
 
 *[Reference](https://docs.readthedocs.io/en/stable/development/design/theme-context.html#context-injected)*
 
-{{ readthedocs }}
+<ul>
+  <li>readthedocs - {{ readthedocs | pretty }}</li>
+  <li>READTHEDOCS - {{ READTHEDOCS }}</li>
+  <li>meta - {{ meta | pretty }}</li>
+  <li>meta2 - {{ context(meta) | pretty }}</li>
+</ul>
 
 ### Mkdocs
 
