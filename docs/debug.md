@@ -17,7 +17,7 @@ layout: page
   <li>meta2 - {{ context(meta) | pretty }}</li>
 </ul>
 
-{{ readthedocs.v1.meta | pretty }}
+<b>config.docs_dir:</b> {{ config.docs_dir }}
 
 ### Mkdocs
 
