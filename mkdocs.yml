@@ -79,10 +79,9 @@ plugins:
 # Extensions
 markdown_extensions:
   - admonition
-  - attr_list
-  - meta
+  # - attr_list
+  # - meta
   - pymdownx.details
-  - markdown.extensions.codehilite
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.emoji:
