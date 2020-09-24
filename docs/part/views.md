@@ -1,6 +1,5 @@
 ---
 title: Part Views
-layout: page
 ---
 
 The Part information page organizes part data into sections, displayed as tabs.

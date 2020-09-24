@@ -20,6 +20,7 @@ theme:
     repo: fontawesome/brands/github
   features:
     - tabs
+edit_uri: "" # Disable "Edit" button
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
@@ -40,7 +41,7 @@ nav:
     - Parts: part/part.md
     - Part Views: part/views.md
     - Parameters: part/parameter.md
-    - Template Parts: part/template.md
+    - Templates: part/template.md
     - Tests: part/test.md
   - Stock:
     - Stock Items: stock/stock.md
@@ -49,7 +50,7 @@ nav:
     - Test Results: stock/test.md
   - Build:
     - Build Parts: build/build.md
-    - BOM: build/bom.md
+    - Bill of Materials (BOM): build/bom.md
   - Buy:
     - Suppliers: buy/supplier.md
     - Purchase Orders: buy/po.md
@@ -79,6 +80,7 @@ plugins:
 markdown_extensions:
   - admonition
   - attr_list
+  - meta
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.superfences

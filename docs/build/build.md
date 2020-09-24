@@ -1,6 +1,5 @@
 ---
-title: Build
-layout: page
+title: Build Parts
 ---
 
 ## Building Parts
@@ -46,7 +45,7 @@ Builds orders are used to create parts builds.
 To create a build order for your part, you have two options:
 
 1. navigate to the Part detail page, click on "Build Orders" tab then click on "Start New Build" button
-0. navigate to the Build page, click on "New Build Order"
+0. navigate to the Build page, click on "New Build Order".
 
 {% with id="build_start_new", url="build/build_start_new.png", description="Start New Build Form" %}
 {% include 'img.html' %}
@@ -58,16 +57,26 @@ Fill-out the form then click the "Submit" button to create the build.
 
 To allocate stock for a build, you have two options:
 
-1. automatic allocation: if each subpart has only **one** storage location, InvenTree can allocate stock from this location automatically
-0. manual allocation: user can define allocation for each subpart in the build
+1. **automatic** allocation: if each subpart has only **one** storage location, InvenTree can allocate stock from this location automatically
+0. **manual** allocation: user can define allocation for each subpart in the build.
+
+During allocation, InvenTree relies on [Stock items](/stock/stock/#stock-item) to reference parts that will be used for the build. Make sure to read through the [stock documentation](/stock/stock) before proceeding with stock allocation.
 
 #### Automatic Allocation
 
-Click on the "Allocated Parts tab" then click on the "Auto Allocate" button to automatically allocate stock.
+Click on the "Allocated Parts" tab then click on the "Auto Allocate" button to automatically allocate stock for this build.
+
+The `Allocate Stock` form will be displayed. Verify each subpart automatic allocation, click on the confirmation switch, then click on the "Submit" button to process the stock allocation.
 
 #### Manual Allocation
 
-Click on the "Allocated Parts tab" then click on the :fontawesome-solid-plus: icon next to each subpart in the build to manually allocate stock.
+Click on the "Allocated Parts" tab then click on the :fontawesome-solid-plus: icon next to each subpart in the build to manually allocate stock.
+
+The `Allocate new Part` form will be displayed. Select a `Stock Item` and fill-out the `Quantity` field then click on the "Submit" button to allocate stock for this subpart.
+
+#### Unallocate
+
+Click on the "Allocated Parts" tab then click on the "Unallocate" button to unallocate stock items allocated for this build.
 
 ### Cancel Build
 
@@ -87,3 +96,6 @@ To complete a build, click on :fontawesome-solid-tools: icon on the build detail
 
 Select a `Location` to store the resulting parts from the build then click on the confirmation switch.
 Finally, click on the "Complete Build" button to process the build completion.
+
+!!! warning "Completed Build"
+	**A completed build cannot be re-opened**. Make sure to use the confirm only if you are certain that the build is complete.

@@ -1,6 +1,5 @@
 ---
 title: Report Generation
-layout: page
 ---
 
 ## Custom Reporting

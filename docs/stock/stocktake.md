@@ -1,6 +1,5 @@
 ---
 title: Stocktake
-layout: page
 ---
 
 ## Stocktake

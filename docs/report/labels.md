@@ -1,6 +1,5 @@
 ---
 title: Custom Labels
-layout: page
 ---
 
 ## Custom Labels

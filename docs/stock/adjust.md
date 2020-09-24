@@ -1,6 +1,5 @@
 ---
 title: Stock Adjustments
-layout: page
 ---
 
 ## Stock Adjustments

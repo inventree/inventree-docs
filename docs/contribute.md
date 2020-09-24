@@ -1,6 +1,5 @@
 ---
 title: Contributing to InvenTree
-layout: page
 ---
 
 ## Contribute to InvenTree

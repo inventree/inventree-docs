@@ -1,6 +1,5 @@
 ---
 title: Purchase Order
-layout: page
 ---
 
 ## Purchase Orders

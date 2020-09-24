@@ -1,6 +1,5 @@
 ---
 title: Database Configuration
-layout: page
 ---
 
 ## Database Configuration

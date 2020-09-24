@@ -1,6 +1,5 @@
 ---
 title: Part Templates
-layout: page
 ---
 
 ## Part Templates

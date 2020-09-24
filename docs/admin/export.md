@@ -1,6 +1,5 @@
 ---
 title: Exporting Data
-layout: page
 ---
 
 ## Exporting Data

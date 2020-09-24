@@ -1,6 +1,5 @@
 ---
 title: Stock Test Result
-layout: page
 ---
 
 ## Stock Test Result

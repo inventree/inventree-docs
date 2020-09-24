@@ -1,6 +1,5 @@
 ---
 title: Part Parameters
-layout: page
 --- 
 
 ## Part Parameters
