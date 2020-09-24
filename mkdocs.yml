@@ -82,6 +82,7 @@ markdown_extensions:
   - attr_list
   - meta
   - pymdownx.details
+  - markdown.extensions.codehilite
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.emoji:
