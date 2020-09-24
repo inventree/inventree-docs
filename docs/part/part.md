@@ -1,6 +1,5 @@
 ---
 title: Parts
-layout: page
 ---
 
 # Part

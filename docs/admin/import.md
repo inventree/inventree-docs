@@ -1,6 +1,5 @@
 ---
 title: Importing Data
-layout: page
 ---
 
 ## Importing Data

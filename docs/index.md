@@ -1,7 +1,5 @@
 ---
 title: InvenTree
-layout: page
-permalink: "/"
 ---
 
 ## InvenTree - Intuitive Inventory Management 

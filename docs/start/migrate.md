@@ -1,6 +1,5 @@
 ---
 title: Migrating Data
-layout: page
 ---
 
 ## Migrating Data

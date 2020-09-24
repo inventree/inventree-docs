@@ -1,6 +1,5 @@
 ---
 title: Stock
-layout: page
 --- 
 
 ## Stock Location

@@ -1,6 +1,5 @@
 ---
 title: Deploy InvenTree
-layout: page
 ---
 
 ## Deploying InvenTree

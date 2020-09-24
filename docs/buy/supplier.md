@@ -1,6 +1,5 @@
 ---
 title: Suppliers
-layout: page
 ---
 
 ## Suppliers

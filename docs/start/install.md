@@ -1,6 +1,5 @@
 ---
 title: Install InvenTree
-layout: page
 ---
 
 ## Introduction
