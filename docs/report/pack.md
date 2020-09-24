@@ -1,6 +1,5 @@
 ---
 title: Packing List Report
-layout: page
 ---
 
 ## Packing List

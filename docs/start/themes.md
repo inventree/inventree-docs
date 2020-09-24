@@ -1,6 +1,5 @@
 ---
 title: Changing color theme
-layout: page
 ---
 
 ## Color Themes

@@ -1,6 +1,5 @@
 ---
 title: Python Interface
-layout: page
 ---
 
 ## Python Module

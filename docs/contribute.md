@@ -1,6 +1,5 @@
 ---
 title: Contributing to InvenTree
-layout: page
 ---
 
 ## Contribute to InvenTree
@@ -28,10 +27,12 @@ InvenTree provides a translation layer for the web interface, this requires effo
 
 ### Documentation
 
-Documenting a large software project is a challenging and ongoing effort. If you are able to provide assistance in improving this documentation set, please consider doing so! Documentation contributions can be made on [GitHub](https://github.com/inventree/inventree.github.io).
+Documenting a large software project is a challenging and ongoing effort. If you are able to provide assistance in improving this documentation set, please consider doing so! Documentation contributions can be made on [GitHub](https://github.com/inventree/inventree-docs).
 
 ### Donate
 
 If you are unable to provide contributions as listed above, or you find InvenTree to be useful, please consider donating to support its ongoing development.
 
-{% include 'donate.html' %}
+[ Donate :material-emoticon-cool: ](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T4M976M5URSUE&currency_code=AUD){: .md-button .md-button--primary }
+<img src="/assets/paypal-logo-small-min-300x136.png" border="0" alt="PayPal Logo" style="width: 102px; length:225px; vertical-align:middle;">
+

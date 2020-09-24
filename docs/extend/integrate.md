@@ -1,6 +1,5 @@
 ---
 title: Third Party Integrations
-layout: page
 ---
 
 ## Third Party Integrations

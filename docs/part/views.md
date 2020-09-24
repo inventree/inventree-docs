@@ -1,6 +1,5 @@
 ---
 title: Part Views
-layout: page
 ---
 
 The Part information page organizes part data into sections, displayed as tabs.
@@ -57,7 +56,9 @@ Parts can have multiple defined [parameters](/part/parameter).
 
 ## Variants
 
-If a part is a *Template Part* then the *Variants* tab will be visible. [Part templates](/part/template)
+If a part is a *Template Part* then the *Variants* tab will be visible.
+
+[Read about Part templates](/part/template)
 
 ## Stock
 
@@ -93,8 +94,7 @@ The *BOM* tab displays the [Bill of Materials](/build/bom) - a list of sub-compo
 
 ## Build Orders
 
-!!! missing "TODO"
-	Documentation to be written
+The *Build Orders* tab shows a list of the builds for this part. It provides a view for important build information like quantity, status, creation and completion dates.
 
 ## Used In
 
@@ -118,8 +118,7 @@ This tab is only displayed if the part is marked as *Purchaseable*.
 
 ## Sales Orders
 
-!!! missing "TODO"
-	Documentation to be written
+The *Sales Orders* tab shows a list of the sales orders for this part. It provides a view for important sales order information like customer, status, creation and shipment dates.
 
 ## Tests
 

@@ -1,7 +1,5 @@
 ---
 title: InvenTree
-layout: page
-permalink: "/"
 ---
 
 ## InvenTree - Intuitive Inventory Management 
@@ -14,19 +12,19 @@ InvenTree is designed to be lightweight and easy to use for SME or hobbyist appl
 
 InvenTree is a [Python](https://www.python.org/) and [Django](https://www.djangoproject.com/) application which stores data in a relational database, and serves this data to the user(s) via a web browser, and (optionally) can be integrated into custom applications via an API.
 
-InvenTree is designed to allow for a flexible installation. You could run the InvenTree server on Raspberry Pi SBC and have a simple single-user setup with a lightweight sqlite database. Or it can be run on the "cloud" using MySQL or PostgreSQL and support multiple simultaneous users.
+InvenTree is designed to allow for a flexible installation. You could run the InvenTree server on Raspberry Pi SBC and have a simple single-user setup with a lightweight SQLite database. Or it can be run on the "cloud" using MySQL or PostgreSQL and support multiple simultaneous users.
 
 ## Features
 
 ### Organize Parts
 
-Parts are the fundemental element of any inventory. InvenTree groups parts into structured categories which allow you to arrange parts to meet your particular needs. 
+Parts are the fundamental element of any inventory. InvenTree groups parts into structured categories which allow you to arrange parts to meet your particular needs. 
 
 [Read more...](part/part)
 
 ### Manage Suppliers
 
-Link parts to multiple suppliers, 
+InvenTree allows you to easily create, modify or delete suppliers and supplier items linked to any part in your inventory.
 
 [Read more...](buy/supplier)
 
@@ -39,12 +37,14 @@ Instantly view current stock for a certain part, in a particular location, or re
 ### BOM Management
 
 Intelligent BOM (Bill of Material) management provides a clear understanding of the sub-parts required to make a new part. 
+InvenTree allows you to upload simple BOM files in multiple formats, and download a detailed BOM with all the information stored in its database.
 
 [Read more...](build/bom)
 
 ### Build Parts
 
-Consume stock items to make new parts
+Inventree features a build management system to help you track the progress of your builds.
+Builds consume stock items to make new parts, you can decide to automatically or manually allocate parts from your current inventory.
 
 [Read more...](build/build)
 

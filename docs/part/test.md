@@ -1,6 +1,5 @@
 ---
 title: Part Test Templates
-layout: page
 ---
 
 ## Part Test Templates

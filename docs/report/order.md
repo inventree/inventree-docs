@@ -1,6 +1,5 @@
 ---
 title: Order Report
-layout: page
 ---
 
 ## Order Report

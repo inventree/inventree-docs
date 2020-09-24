@@ -1,6 +1,5 @@
 ---
 title: Test Report
-layout: page
 ---
 
 ## Test Report
