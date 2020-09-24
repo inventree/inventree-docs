@@ -1055,21 +1055,22 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>Part Templates</title></head><body><article class="markdown-body"><h2 id="part-templates">Part Templates<a class="headerlink" href="#part-templates" title="Permanent link"></a></h2>
-<p>There are various purposes for using part templates, among them:
-* template parts can hold information that can be re-used across &ldquo;variants&rdquo;, a template part could be useful for creating a base variant of an assembly which can be derived from, with BoM changes for instance
-* </p>
-<p>&ldquo;Variants&rdquo; parts will reference the &ldquo;Template&rdquo; part therefore explicitly creating and showing direct relationship.
-They also allow you to do special things like:
-* Serial Numbers
-Parts that are linked in a template / variant relationship must have unique serial numbers. e.g. if you have a template part Widget, and two variants Widget-01 and Widget-02 then any assigned serial numbers must be unique across all these variants.</p>
-<p>Stock Reporting
-The &ldquo;stock&rdquo; for a template part includes stock for all variants under that part</p>
-<p>Logical Grouping
-The template / variant relationship is subtly different to the category / part relationship</p>
-<h3 id="create-variant">Create Variant<a class="headerlink" href="#create-variant" title="Permanent link"></a></h3>
-<p>When a part&rsquo;s <a href="/part/views#part-options"><em>Template option</em></a> is turned-on, &ldquo;Variants&rdquo; of this part can be created.</p>
-<p _="%" endwith="endwith">To create a variant, navigate to a specific part detail page, click on the &ldquo;Variants&rdquo; tab then click on the &ldquo;New Variant&rdquo; button.
-The <code>Create Variant</code> form will be displayed:
-{% with id=&rdquo;create_part_variant&rdquo;, url=&rdquo;part/create_part_variant.png&rdquo;, description=&rdquo;Create Part Variant Form&rdquo; %}
-{% include &lsquo;img.html&rsquo; %}</p></article></body></html>
+</style><title>Contributing to InvenTree</title></head><body><article class="markdown-body"><h2 id="contribute-to-inventree">Contribute to InvenTree<a class="headerlink" href="#contribute-to-inventree" title="Permanent link"></a></h2>
+<p>InvenTree is an open source project, and benefits greatly from user contributions.</p>
+<p>If you find InvenTree to be useful, and wish to improve the software, please consider contributing:</p>
+<h3 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link"></a></h3>
+<p>InvenTree is built using <a href="https://www.python.org/">Python3</a> and <a href="https://www.djangoproject.com/">Django</a>. Source code is available on <a href="https://github.com/inventree/inventree">GitHub</a>.</p>
+<p>Contributions towards the core InvenTree code base are welcomed; either extending current functionality, prodiving new features, or addressing outstanding issues.</p>
+<h3 id="report-bugs">Report Bugs<a class="headerlink" href="#report-bugs" title="Permanent link"></a></h3>
+<p>If you find a bug or a feature that does not work correctly, please report it on <a href="https://github.com/inventree/inventree/issues">GitHub</a>. Reporting bugs is critical to improving the software. If you are able and willing, providing a fix for any outstanding issues would be greatly appreciated.</p>
+<h3 id="translation">Translation<a class="headerlink" href="#translation" title="Permanent link"></a></h3>
+<p>InvenTree provides a translation layer for the web interface, this requires effort from translators to provide multi-lingual support. If you wish to translate InvenTree to a new language (or improve an existing translation), such contributions would be extremely useful. To provide translation improvements, refer to <a href="https://github.com/inventree/inventree">GitHub</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Translation Helper Script</p>
+<p>A python script is provided to assist with translation. This script is located at <code>./InvenTree/script/translate.py</code></p>
+</div>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link"></a></h3>
+<p>Documenting a large software project is a challenging and ongoing effort. If you are able to provide assistance in improving this documentation set, please consider doing so! Documentation contributions can be made on <a href="https://github.com/inventree/inventree-docs">GitHub</a>.</p>
+<h3 id="donate">Donate<a class="headerlink" href="#donate" title="Permanent link"></a></h3>
+<p>If you are unable to provide contributions as listed above, or you find InvenTree to be useful, please consider donating to support its ongoing development.</p>
+<p><a class="md-button md-button--primary" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=T4M976M5URSUE&amp;currency_code=AUD">Donate :material-emoticon-cool: </a></p></article></body></html>

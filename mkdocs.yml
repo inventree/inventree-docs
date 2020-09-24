@@ -78,8 +78,10 @@ plugins:
 # Extensions
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
-  - markdown.extensions.codehilite
+  - pymdownx.highlight
+  - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
