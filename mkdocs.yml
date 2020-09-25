@@ -79,14 +79,14 @@ plugins:
 # Extensions
 markdown_extensions:
   - admonition
-  # - attr_list
-  # - meta
+  - attr_list
+  - meta
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.superfences
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
       permalink: ⚓
 
