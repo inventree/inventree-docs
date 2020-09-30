@@ -62,6 +62,7 @@ nav:
     - Order: report/order.md
   - Admin:
     - Admin Interface: admin/admin.md
+    - User Permissions: admin/permissions.md
     - Export Data: admin/export.md
     - Import Data: admin/import.md
   - Extend:
