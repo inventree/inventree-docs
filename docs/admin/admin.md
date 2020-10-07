@@ -4,10 +4,12 @@ title: InvenTree Admin Interface
 
 ## Admin Interface
 
-Users which have administrator privileges have access to an Admin interface which provides extremely low level control of the database. Every item in the database is available and this interface provides a convenient option for directly viewing and modifying database objects.
+Users which have *staff* privileges have access to an Admin interface which provides extremely low level control of the database. Every item in the database is available and this interface provides a convenient option for directly viewing and modifying database objects.
 
 !!! warning "Caution"
 	Admin users should exercise extreme care when modifying data via the admin interface, as performing the wrong action may have unintended consequences!
+
+The admin interface allows *staff* users the ability to directly view / add / edit / delete database entries according to their [user permissions](/admin/permissions).
 
 ### Access Admin Interface
 

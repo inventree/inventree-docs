@@ -62,6 +62,7 @@ nav:
     - Order: report/order.md
   - Admin:
     - Admin Interface: admin/admin.md
+    - User Permissions: admin/permissions.md
     - Export Data: admin/export.md
     - Import Data: admin/import.md
   - Extend:
@@ -82,12 +83,11 @@ markdown_extensions:
   - attr_list
   - meta
   - pymdownx.details
-  - markdown.extensions.codehilite
   - pymdownx.highlight
   - pymdownx.superfences
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
       permalink: ⚓
 
