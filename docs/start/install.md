@@ -20,7 +20,7 @@ Database selection should be determined by your particular installation requirem
 
 ### Serving Data
 
-Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users. Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](start/deploy).
+Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users. Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](/start/deploy).
 
 ## Setup
 
@@ -122,7 +122,7 @@ Once the required packages are installed, the database configuration must be adj
 
 As part of the previous *install* step, a configuration file (**config.yaml**) is created. The configuration file provides administrators control over various setup options without digging into the Django *settings.py* script. The default setup uses a local sqlite database with *DEBUG* mode enabled.
 
-For further information on installation configuration, refer to the [Configuration](start/config) section.
+For further information on installation configuration, refer to the [Configuration](/start/config) section.
 
 !!! warning "Configure Database"
     Ensure database settings are correctly configured in `config.yaml` before proceeding to the next step!
@@ -167,4 +167,4 @@ This will launch the InvenTree web interface at `http://127.0.0.1:8000`. For oth
 
 ### Run Production Server
 
-For a production install, refer to [deployment instructions](start/deploy).
+For a production install, refer to [deployment instructions](/start/deploy).
