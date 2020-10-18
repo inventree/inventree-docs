@@ -19,7 +19,7 @@ This will export all data (including user information) to a json data file.
 
 ### Initialize New Database
 
-Configure the new database using the normal processes (see [Configuration](start/config))
+Configure the new database using the normal processes (see [Configuration](/start/config))
 
 Then, ensure that the database schema are correctly initialized in the new database:
 

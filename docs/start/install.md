@@ -20,30 +20,53 @@ Database selection should be determined by your particular installation requirem
 
 ### Serving Data
 
-Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users. Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](start/deploy).
+Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users. Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](/start/deploy).
 
-## Setup
+## OS Requirements
 
 To install a complete *development* environment for InvenTree, follow the steps presented below. A production environment will require further work as per the particular application requirements. 
 
-!!! warning "Windows"
-    If you are using the Windows operating system, it is recommended that you use the <a href='https://docs.microsoft.com/en-us/windows/wsl/install-win10'>WSL (Windows Subsystem for Linux) framework</a>
+Installing and running InvenTree should be possible on most operating systems, as it requires only cross-platform Python libraries.
 
-### Requirements
+### Linux
 
-To install InvenTree you will need python3 (>3.6) installed, as well as PIP (the Python package manager).
-
-Install these required programs (e.g. using apt or similar) before running the setup scripts.
-
-For example:
+The InvenTree documentation assumes that the operating system is a Linux variant. To install the required python packages to get started on a Linux system, run the following commands:
 
 ```
 sudo apt-get update
-sudo apt-get install python3 python3-dev python3-pip
+sudo apt-get install python3 python3-dev
+sudo apt-get install python3-pip python3-invoke
 ```
 
 !!! warning "Sudo"
     `apt-get` commands will (most likely) be required to run under sudo. Take care not to run the installation scripts under sudo, as this may alter the system python path and cause the InvenTree installation to not work correctly
+
+### Windows
+
+InvenTree can be installed and run from the Windows command line, assuming the following binaries are available in the system PATH:
+
+- python3
+- pip3
+- invoke
+
+!!! info "WSL"
+
+    Alternatively, if you are running under the Windows operating system you can install and run InvenTree using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL (Windows Subsystem for Linux)</a> framework. Running under WSL provides a Linux compatible layer which simplifies InvenTree installation.
+
+### FreeBSD
+
+If you are running the FreeBSD operating system, run the following commands to install the required Python packages:
+
+```
+pkg install python
+pkg install py37-pip
+pkg install py37-wheel
+pkg install py37-invoke
+```
+
+## Python Setup
+
+To install InvenTree you will need python3 (>3.6) installed, as well as PIP (the Python package manager), and the Invoke tool.
 
 ### Python Virtual Environment
 
@@ -122,7 +145,7 @@ Once the required packages are installed, the database configuration must be adj
 
 As part of the previous *install* step, a configuration file (**config.yaml**) is created. The configuration file provides administrators control over various setup options without digging into the Django *settings.py* script. The default setup uses a local sqlite database with *DEBUG* mode enabled.
 
-For further information on installation configuration, refer to the [Configuration](start/config) section.
+For further information on installation configuration, refer to the [Configuration](/start/config) section.
 
 !!! warning "Configure Database"
     Ensure database settings are correctly configured in `config.yaml` before proceeding to the next step!
@@ -167,4 +190,4 @@ This will launch the InvenTree web interface at `http://127.0.0.1:8000`. For oth
 
 ### Run Production Server
 
-For a production install, refer to [deployment instructions](start/deploy).
+For a production install, refer to [deployment instructions](/start/deploy).
