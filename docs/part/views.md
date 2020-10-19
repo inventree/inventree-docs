@@ -36,15 +36,15 @@ A Part can provide different functionality based on the following options.
 
 **Virtual** - A *Virtual* part is one which does not physically exist but should still be tracked in the system. This could be a process step, machine time, software license, etc.
 
-**Template** - A *Template* part is one which can have *variants* which exist underneath it. [Read further information about template parts here](/part/template).
+**Template** - A *Template* part is one which can have *variants* which exist underneath it. [Read further information about template parts here](../template).
 
-**Assembly** - If a part is designated as an *Assembly* it can be created (or built) from other component parts. As an example, a circuit board assembly is made using multiple electronic components, which are tracked in the system. An *Assembly* Part has a Bill of Materials (BOM) which lists all the required sub-components. [Read further information about BOM management here](/build/bom).
+**Assembly** - If a part is designated as an *Assembly* it can be created (or built) from other component parts. As an example, a circuit board assembly is made using multiple electronic components, which are tracked in the system. An *Assembly* Part has a Bill of Materials (BOM) which lists all the required sub-components. [Read further information about BOM management here](../../build/bom).
 
-**Component** - If a part is designated as a *Component* it can be used as a sub-component of an *Assembly*. [Read further information about BOM management here](/build/bom)
+**Component** - If a part is designated as a *Component* it can be used as a sub-component of an *Assembly*. [Read further information about BOM management here](../../build/bom)
 
 **Trackable** - If a part is designed as *trackable*, it can be tracked using unique serial numbers.
 
-**Purchaseable** - If a part is designated as *Purchaseable* it can be purchased from external suppliers. Setting this flag allows parts to be added to [purchase orders](/buy/po).
+**Purchaseable** - If a part is designated as *Purchaseable* it can be purchased from external suppliers. Setting this flag allows parts to be added to [purchase orders](../../buy/po).
 
 **Salable** - If a part is designated as *Salable* it can be sold to external customers. Setting this flag allows parts to be added to sales orders.
 
@@ -52,13 +52,13 @@ A Part can provide different functionality based on the following options.
 
 ## Parameters
 
-Parts can have multiple defined [parameters](/part/parameter).
+Parts can have multiple defined [parameters](../parameter).
 
 ## Variants
 
 If a part is a *Template Part* then the *Variants* tab will be visible.
 
-[Read about Part templates](/part/template)
+[Read about Part templates](../template)
 
 ## Stock
 
@@ -90,7 +90,7 @@ The *Allocated* tab displays how many units of this part have been allocated to 
 
 ## BOM
 
-The *BOM* tab displays the [Bill of Materials](/build/bom) - a list of sub-components used to build an assembly. Each row in the BOM specifies a quantity of another Part which is required to build the assembly. This tab is only visible if the Part is an *assembly* (meaning it can be build from other parts).
+The *BOM* tab displays the [Bill of Materials](../../build/bom) - a list of sub-components used to build an assembly. Each row in the BOM specifies a quantity of another Part which is required to build the assembly. This tab is only visible if the Part is an *assembly* (meaning it can be build from other parts).
 
 ## Build Orders
 
@@ -122,7 +122,7 @@ The *Sales Orders* tab shows a list of the sales orders for this part. It provid
 
 ## Tests
 
-If a part is marked as *trackable*, the user can define tests which must be performed on any stock items which are instances of this part. [Read more about testing](/part/test).
+If a part is marked as *trackable*, the user can define tests which must be performed on any stock items which are instances of this part. [Read more about testing](../test).
 
 ## Attachments
 

@@ -4,7 +4,7 @@ title: Bill of Materials
 
 ## Bill of Materials
 
-A Bill of Materials (BOM) defines the list of component parts required to make an assembly, [create builds](/build/build) and allocate inventory.
+A Bill of Materials (BOM) defines the list of component parts required to make an assembly, [create builds](../build) and allocate inventory.
 
 ### Add BOM Item
 

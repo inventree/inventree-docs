@@ -9,7 +9,7 @@ Users which have *staff* privileges have access to an Admin interface which prov
 !!! warning "Caution"
 	Admin users should exercise extreme care when modifying data via the admin interface, as performing the wrong action may have unintended consequences!
 
-The admin interface allows *staff* users the ability to directly view / add / edit / delete database entries according to their [user permissions](/admin/permissions).
+The admin interface allows *staff* users the ability to directly view / add / edit / delete database entries according to their [user permissions](../permissions).
 
 ### Access Admin Interface
 
