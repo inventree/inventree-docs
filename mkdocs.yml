@@ -13,13 +13,14 @@ theme:
   name: material
   custom_dir: _includes/overrides
   palette:
-    scheme: slate
+    scheme: default
   logo: assets/logo.png
   favicon: assets/favicon.ico
   icon:
     repo: fontawesome/brands/github
   features:
     - tabs
+    - toc.autohide
 edit_uri: "" # Disable "Edit" button
 extra_css:
   - stylesheets/extra.css
@@ -28,15 +29,15 @@ extra_javascript:
 
 # Navigation
 nav:
-  - Home: index.md
-  - Contribute: contribute.md
+  - InvenTree:
+    - About InvenTree: index.md
+    - Contribute: contribute.md
   - Getting Started:
     - Installation: start/install.md
     - Configuration: start/config.md
     - Deploying: start/deploy.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
-    - Color Themes: start/themes.md
   - Parts:
     - Parts: part/part.md
     - Part Views: part/views.md
@@ -69,6 +70,7 @@ nav:
     - API: extend/api.md
     - Python Interface: extend/python.md
     - Plugins: extend/plugins.md
+    - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
 
 # Plugins
@@ -89,7 +91,7 @@ markdown_extensions:
   #     emoji_index: !!python/name:materialx.emoji.twemoji
   #     emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
-      permalink: ⚓
+      permalink: true
 
 # Global Variables
 extra:
