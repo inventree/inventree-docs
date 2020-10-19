@@ -25,5 +25,5 @@ The category part list provides an overview of each part:
 
 The list of parts underneath a given category can be filtered by multiple user-configurable filters, which is especially useful when a large number of parts exist under a certain category.
 
-Clicking on the part name links to the [*Part Detail*](/part/views) view.
+Clicking on the part name links to the [*Part Detail*](../views) view.
 

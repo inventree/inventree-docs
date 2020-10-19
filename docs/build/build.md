@@ -36,7 +36,7 @@ A "basic" build flow is as follow:
 
 A Part BOM is required to allocate inventory to a build.
 
-Read through the [Bill of Materials documentation](/build/bom).
+Read through the [Bill of Materials documentation](../bom).
 
 ### Build Order
 

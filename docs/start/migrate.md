@@ -19,13 +19,12 @@ This will export all data (including user information) to a json data file.
 
 ### Initialize New Database
 
-Configure the new database using the normal processes (see [Configuration](/start/config))
+Configure the new database using the normal processes (see [Configuration](../config))
 
 Then, ensure that the database schema are correctly initialized in the new database:
 
 ```
-python3 InvenTree/manage.py makemigrations
-python3 InvenTree/manage.py migrate --run-syncdb
+invoke migrate
 ```
 
 ### Import Data
@@ -35,5 +34,6 @@ The new database should now be correctly initialized with the correct table stru
 ```
 python3 InvenTree/manage.py loaddata data.json
 ```
+
 !!! info "Character Encoding"
 	If the character encoding of the data file does not exactly match the target database, the import operation may not succeed. In this case, some manual editing of the database JSON file may be required.
