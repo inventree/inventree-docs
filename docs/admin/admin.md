@@ -13,7 +13,13 @@ The admin interface allows *staff* users the ability to directly view / add / ed
 
 ### Access Admin Interface
 
-To access the admin interface, select the "Admin" option from the drop-down user menu in the top-right corner of the screen. You will be presented with an adminstation panel as shown below:
+To access the admin interface, select the "Admin" option from the drop-down user menu in the top-right corner of the screen.
+
+
+!!! info "Staff Only"
+    Only users with staff acccess will be able to see the "Admin" option
+
+An adminstation panel will be presented as shown below:
 
 {% with id="admin", url="admin/admin.png", description="InvenTree Admin Panel" %}
 {% include 'img.html' %}
@@ -26,6 +32,9 @@ Database objects can be listed and filtered directly. The image below shows an e
 {% with id="part_cats", url="admin/part_cats.png", description="Display part categories" %}
 {% include 'img.html' %}
 {% endwith %}
+
+!!! info "Permissions"
+    A "staff" account does not necessarily provide access to all administration options, depending on the roles assigned to the user.
 
 #### Filtering
 
