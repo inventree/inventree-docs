@@ -1,5 +1,7 @@
 # InvenTree Documentation
 
+[![Documentation Status](https://readthedocs.org/projects/inventree/badge/?version=latest)](https://inventree.readthedocs.io/en/latest/?badge=latest)
+
 This repository hosts the [official documentation](https://inventree.readthedocs.io/) for [InvenTree](https://github.com/inventree/inventree), an open source inventory management system. 
 
 To serve this documentation locally (e.g. for development), you will need to have Python 3 installed on your system.
