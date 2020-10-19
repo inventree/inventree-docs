@@ -8,7 +8,7 @@ Build management can be accessed via the *Build* navigation tab.
 
 A "basic" build flow is as follow:
 
-1. create a part with the [*Assembly option*](/part/views/#part-options) turned-on
+1. create a part with the [*Assembly option*](../../part/views/#part-options) turned-on
 0. add a Bill of Material (BOM)
 0. create a "Build Order" for this part
 0. allocate stocks from your inventory
@@ -60,7 +60,7 @@ To allocate stock for a build, you have two options:
 1. **automatic** allocation: if each subpart has only **one** storage location, InvenTree can allocate stock from this location automatically
 0. **manual** allocation: user can define allocation for each subpart in the build.
 
-During allocation, InvenTree relies on [Stock items](/stock/stock/#stock-item) to reference parts that will be used for the build. Make sure to read through the [stock documentation](/stock/stock) before proceeding with stock allocation.
+During allocation, InvenTree relies on [Stock items](../../stock/stock/#stock-item) to reference parts that will be used for the build. Make sure to read through the [stock documentation](../../stock/stock) before proceeding with stock allocation.
 
 #### Automatic Allocation
 
