@@ -64,4 +64,4 @@ latex:
 
 ## Uploading Templates
 
-Custom report templates can be uploaded using the [Admin Interface](/admin/admin). Only users with admin access can upload and/or edit report template files.
+Custom report templates can be uploaded using the [Admin Interface](../../admin/admin). Only users with admin access can upload and/or edit report template files.
