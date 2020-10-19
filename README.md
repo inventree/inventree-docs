@@ -38,6 +38,24 @@ Once the server is running, it will monitor the documentation files for any chan
 
 Refer to the [reference documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) to customize the admonition block to the use-case (eg. warning, missing, info, etc.).
 
+### Internal Links
+
+Links to internal documentation pages **must** use relative pathing, otherwise the link will be broken by the readthedocs URL formatting.
+
+For example, to link to the page `/part/views` from `/stock/stocktake`, the link must be formed as follows:
+
+```
+Click [here](../../part/views)
+```
+
+*Formatting the link as follows:*
+
+```
+Click [here](/part/views)
+```
+
+*will result in a broken link.*
+
 ### Images
 
 Images are served from the `./docs/assets/images` folder and can be added as follow:
