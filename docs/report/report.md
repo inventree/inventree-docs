@@ -16,9 +16,9 @@ In addition to providing the ability for end-users to provide their own reportin
 
 Following is a list of available report types
 
-* [Test Report](/report/test): Format results of a test report against for a particular StockItem
-* [Packing List](/report/pack): Format a list of items for shipping or transfer
-* [Order List](/report/order): Order line items 
+* [Test Report](../test): Format results of a test report against for a particular StockItem
+* [Packing List](../pack): Format a list of items for shipping or transfer
+* [Order List](../order): Order line items 
 
 ## Template Formats
 

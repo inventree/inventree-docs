@@ -39,4 +39,4 @@ If this flag is set, then a corresponding test result against a stock item must 
 
 ### Test Results
 
-Individual stock item objects can have test results associated with them which correspond to test templates. Refer to the [stock test result](/stock/test) documentation for further information.
+Individual stock item objects can have test results associated with them which correspond to test templates. Refer to the [stock test result](../../stock/test) documentation for further information.
