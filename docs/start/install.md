@@ -51,7 +51,7 @@ InvenTree can be installed and run from the Windows command line, assuming the f
 
 !!! info "WSL"
 
-    Alternatively, if you are running under the Windows operating system you can install and run InvenTree using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL (Windows Subsystem for Linux)</a> framework. Running under WSL provides a Linux compatible layer which simplifies InvenTree installation.
+    Alternatively, if you are running under the Windows operating system you can install and run InvenTree using the [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) framework. Running under WSL provides a Linux compatible layer which simplifies InvenTree installation.
 
 ### FreeBSD
 
@@ -81,6 +81,15 @@ sudo apt-get install python3-venv
 python3 -m venv inventree-env
 source inventree-env/bin/activate
 ```
+
+??? note "Virtual Environment on Windows"
+	To create and activate a virtual environment in Windows, run the following commands:
+	```
+	py -m venv inventree-env
+	.\inventree-env\Scripts\activate
+	```
+
+	Refer to the [official Python documentation](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to setup a virtual environment on Windows.
 
 This will place the current shell session inside a virtual environment - the terminal should display the ``(inventree-env)`` prefix.
 
