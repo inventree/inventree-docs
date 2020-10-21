@@ -15,14 +15,6 @@ A "basic" build flow is as follow:
 0. update build status and notes
 0. complete the build.
 
-##### Future Features
-
-| Feature     | Status     	|
-| ----------- | ----------- |
-| Allow edit of completed builds | :material-progress-clock: [Work In Progress](https://github.com/inventree/InvenTree/pull/993)  |
-| Track subparts used in build | :material-progress-clock: [Work In Progress](https://github.com/inventree/InvenTree/pull/991) |
-| Partial build completion | :material-close: Not yet supported |
-
 ### Build Status
 
 | Status | Description |
