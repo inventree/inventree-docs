@@ -1,15 +1,13 @@
 ---
-title: Suppliers
+title: Sales Order
 ---
 
-## Suppliers
-
-A supplier is an external vendor of parts and raw materials.
+## Sales Orders
 
 !!! missing "TODO"
 	This section requires further work
 
-## Supplier Parts
+## Line Items
 
 !!! missing "TODO"
 	This section requires further work
