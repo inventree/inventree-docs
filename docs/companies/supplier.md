@@ -4,7 +4,7 @@ title: Suppliers
 
 ## Suppliers
 
-A supplier is an external vendor of parts and raw materials.
+A supplier is an external **vendor** of parts and raw materials.
 
 To access the supplier page, click on the "Buy" navigation tab and click on "Suppliers" option in the dropdown list.
 
