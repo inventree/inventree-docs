@@ -8,7 +8,7 @@ A Bill of Materials (BOM) defines the list of component parts required to make a
 
 ### Add BOM Item
 
-To manually add a BOM item, navigate to the part/assembly detail page then click on the "BOM" tab. On top of the tab view, click on the :fontawesome-solid-edit: icon then, after the page reloads, click on the :fontawesome-solid-plus-circle: icon.
+To manually add a BOM item, navigate to the part/assembly detail page then click on the "BOM" tab. On top of the tab view, click on the <span class='fas fa-edit'></span> icon then, after the page reloads, click on the <span class='fas fa-plus-circle'></span> icon.
 
 The `Create BOM Item` form will be displayed:
 {% with id="bom_add_item", url="build/bom_add_item.png", description="Create BOM Item Form" %}
@@ -25,7 +25,7 @@ Uploading a BOM to InvenTree is a three steps process:
 0. select matching InvenTree fields
 0. select matching InvenTree parts.
 
-To upload a BOM file, navigate to the part/assembly detail page then click on the "BOM" tab. On top of the tab view, click on the :fontawesome-solid-edit: icon then, after the page reloads, click on the :fontawesome-solid-file-upload: icon.
+To upload a BOM file, navigate to the part/assembly detail page then click on the "BOM" tab. On top of the tab view, click on the <span class='fas fa-edit'></span> icon then, after the page reloads, click on the <span class='fas fa-file-upload'></span> icon.
 
 The following view will load:
 {% with id="bom_upload_file", url="build/bom_upload_file.png", description="BOM Upload View" %}
@@ -60,7 +60,7 @@ Once the BOM file columns and InvenTree fields are correctly matched, the follow
 InvenTree automatically tries to match parts from the BOM file with parts in its database. For parts that are found in InvenTree's database, the `Select Part` field selection will automatically point to the matching database part.
 
 !!! info "Create New Part"
-	The :fontawesome-solid-plus: icon in the `Select Part` column let's you load the `Create New Part` form which allows you to create an InvenTree part during the BOM upload process.
+	The <span class='fas fa-plus-circle'></span> icon in the `Select Part` column let's you load the `Create New Part` form which allows you to create an InvenTree part during the BOM upload process.
 
 In this view, you can also edit the parts `Reference` and `Quantity` fields.
 
@@ -75,9 +75,9 @@ After [adding BOM items manually](#add-bom-item) or [uploading a BOM file](#uplo
 
 The first message in the red box `The BOM for PCBA TEST has changed, and must be validated.` points out that InvenTree BOM needs to be "validated". BOM validation is a way to ensure a BOM does not have duplicate items/parts.
 
-To process with BOM validation, click on the :fontawesome-solid-clipboard-check: icon and the `Validate BOM` form will be displayed. Click one the "Validate" switch then click on the "Submit" button.
+To process with BOM validation, click on the <span class='fas fa-clipboard-check'></span> icon and the `Validate BOM` form will be displayed. Click one the "Validate" switch then click on the "Submit" button.
 
-Voilà, this Bill or Materials is validated :material-emoticon-cool:
+Voilà, this Bill of Materials is validated <span class='far fa-smile'></span>
 
 {% with id="bom_valid", url="build/bom_valid.png", description="Valid BOM View" %}
 {% include 'img.html' %}
