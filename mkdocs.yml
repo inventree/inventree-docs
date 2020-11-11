@@ -74,6 +74,8 @@ nav:
     - User Permissions: admin/permissions.md
     - Export Data: admin/export.md
     - Import Data: admin/import.md
+    - Python Shell: admin/shell.md
+    - Error Logs: admin/logs.md
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
