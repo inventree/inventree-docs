@@ -8,20 +8,12 @@ Build management can be accessed via the *Build* navigation tab.
 
 A "basic" build flow is as follow:
 
-1. create a part with the [*Assembly option*](/part/views/#part-options) turned-on
+1. create a part with the [*Assembly option*](../../part/views/#part-options) turned-on
 0. add a Bill of Material (BOM)
 0. create a "Build Order" for this part
 0. allocate stocks from your inventory
 0. update build status and notes
 0. complete the build.
-
-##### Future Features
-
-| Feature     | Status     	|
-| ----------- | ----------- |
-| Allow edit of completed builds | :material-progress-clock: [Work In Progress](https://github.com/inventree/InvenTree/pull/993)  |
-| Track subparts used in build | :material-progress-clock: [Work In Progress](https://github.com/inventree/InvenTree/pull/991) |
-| Partial build completion | :material-close: Not yet supported |
 
 ### Build Status
 
@@ -60,7 +52,7 @@ To allocate stock for a build, you have two options:
 1. **automatic** allocation: if each subpart has only **one** storage location, InvenTree can allocate stock from this location automatically
 0. **manual** allocation: user can define allocation for each subpart in the build.
 
-During allocation, InvenTree relies on [Stock items](/stock/stock/#stock-item) to reference parts that will be used for the build. Make sure to read through the [stock documentation](/stock/stock) before proceeding with stock allocation.
+During allocation, InvenTree relies on [Stock items](../../stock/stock/#stock-item) to reference parts that will be used for the build. Make sure to read through the [stock documentation](../../stock/stock) before proceeding with stock allocation.
 
 #### Automatic Allocation
 
@@ -70,7 +62,7 @@ The `Allocate Stock` form will be displayed. Verify each subpart automatic alloc
 
 #### Manual Allocation
 
-Click on the "Allocated Parts" tab then click on the :fontawesome-solid-plus: icon next to each subpart in the build to manually allocate stock.
+Click on the "Allocated Parts" tab then click on the <span class='fas fa-plus'></span> icon next to each subpart in the build to manually allocate stock.
 
 The `Allocate new Part` form will be displayed. Select a `Stock Item` and fill-out the `Quantity` field then click on the "Submit" button to allocate stock for this subpart.
 
@@ -80,7 +72,7 @@ Click on the "Allocated Parts" tab then click on the "Unallocate" button to unal
 
 ### Cancel Build
 
-To cancel a build, click on :fontawesome-regular-times-circle: icon on the build detail page.
+To cancel a build, click on <span class='fas fa-times-circle'></span> icon on the build detail page.
 
 The `Cancel Build` form will be displayed, click on the confirmation switch then click on the "Cancel Build" button to process the build cancellation.
 
@@ -89,7 +81,7 @@ The `Cancel Build` form will be displayed, click on the confirmation switch then
 
 ### Complete Build
 
-To complete a build, click on :fontawesome-solid-tools: icon on the build detail page, the `Complete Build` form will be displayed.
+To complete a build, click on <span class='fas fa-tools'></span> icon on the build detail page, the `Complete Build` form will be displayed.
 
 !!! info "Incomplete Allocation"
 	If the warning message `Warning: Build order allocation is not complete` is shown, make sure to allocate stock for the build before proceeding with build completion.

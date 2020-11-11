@@ -4,55 +4,46 @@ title: User Permissions
 
 ## Permissions
 
-!!! warning "TODO"
-    This section requires further work - in particular screenshots!
+InvenTree provides access control to various features and data, by assigning each *user* to one (or more) *groups* which have multiple *roles* assigned.
 
-InvenTree provides a permission system which allows authority control on a user or group basis.
+!!! info "Superuser"
+    The superuser account is afforded *all* permissions across an InvenTree intallation. This includes the admin interface, web interface, and API.
 
-!!! info "Django Permissions"
-    InvenTree implements the django permissions system. For background reading, refer to the [django permissions documentation](https://docs.djangoproject.com/en/3.1/topics/auth/default/#permissions-and-authorization).
+### User
 
-Permissions can be assigned for each model in the InvenTree database. The following permission classes are available for each model (or "table") in the database:
+A *user* is a single unique account with login credentials. By default, a user is not afforded *any* permissions, and the user must be assigned to the relevent group for the permissions to be assigned.
 
-### View
+### Group
 
-Users with the *View* permission for a particular model will be able to view data associated with the model.
+A *group* is a named set of zero or more users. Each group is assigned permissions against each possible role.
 
-*For example, a user who has the View permission set for the PurchaseOrder model will be able to view purchase orders.*
+### Role
 
-### Add
+A *role* is a set of distinct permissions linked to a given subset of InvenTree functionality (more on this below).
 
-Users with the *Add* permission for a particular model will be able to add (create) new instances of that model.
+## Roles
 
-*For example, a user who has the Add permission set for the StockItem model will be able to add / create new stock item objects.*
+InvenTree functionality is split into a number of distinct roles. A group will have a set of permissions assigned to each of the following roles:
 
-### Edit
+- **Admin** - The *admin* role is related to assigning user permissions.
+- **Part** - The *part* role is related to accessing Part data
+- **Stock** - The *stock* role is related to accessing Stock data
+- **Build** - The *build* role is related to accessing Build Order and Bill of Materials data
+- **Purchase** - The *purchase* role is related to accessing Purchase Order data
+- **Sales** - The *sales* role is related to accessing Sales Order data
 
-Users with the *Edit* permissions for a particular model will be able to edit (adjust) instances of that model.
+{% with id="roles", url="admin/roles.png", description="Roles" %}
+{% include 'img.html' %}
+{% endwith %}
 
-*For example, a user who has the Edit permission set for the Build model will be able to edit Build items.*
+### Role Permissions
 
-### Delete
+Within each role, there are four levels of available permissions:
 
-Users with the *Delete* permission for a particular model will be able to delete instances of that model.
-
-## Superuser Account
-
-The *superuser* account (normally the first user created when configuring the database) automatically has every assigned permission.
-
-## Assigning Permissions
-
-The *superuser* account can assign model permissions to any users or groups.
-
-Additionally, any users who have permissions to edit the *Users* table can also adjust these permissions.
-
-### User Permissions
-
-User permissions allow model permissions to be assigned on a single user basis. This is useful if you wish to finely control which InvenTree features a certain user can access.
-
-### Group Permissions
-
-Group permissions allow model permissions to be assigned to a *group* of users which greatly simplifies the task of assigning similar permissions to multiple users.
+- **View** - The *view* permission allows viewing of content related to the particular role
+- **Change** - The *change* permission allows the user to edit / alter / change data associated with the particular role
+- **Add** - The *add* permission allows the user to add / create database records associated with the particular role
+- **Delete** - The *delete* permission allows the user to delete / remove database records associated with the particular role
 
 ## Admin Interface Permissions
 

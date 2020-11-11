@@ -30,26 +30,6 @@ A Part is defined in the system by the following parameters:
 
 **Units** - Units of measure (UoM) for this Part. The default is 'pcs'
 
-### Part Options
-
-A Part can provide different functionality based on the following options.
-
-**Virtual** - A *Virtual* part is one which does not physically exist but should still be tracked in the system. This could be a process step, machine time, software license, etc.
-
-**Template** - A *Template* part is one which can have *variants* which exist underneath it. [Read further information about template parts here](../template).
-
-**Assembly** - If a part is designated as an *Assembly* it can be created (or built) from other component parts. As an example, a circuit board assembly is made using multiple electronic components, which are tracked in the system. An *Assembly* Part has a Bill of Materials (BOM) which lists all the required sub-components. [Read further information about BOM management here](../../build/bom).
-
-**Component** - If a part is designated as a *Component* it can be used as a sub-component of an *Assembly*. [Read further information about BOM management here](../../build/bom)
-
-**Trackable** - If a part is designed as *trackable*, it can be tracked using unique serial numbers.
-
-**Purchaseable** - If a part is designated as *Purchaseable* it can be purchased from external suppliers. Setting this flag allows parts to be added to [purchase orders](../../buy/po).
-
-**Salable** - If a part is designated as *Salable* it can be sold to external customers. Setting this flag allows parts to be added to sales orders.
-
-**Active** - By default, all parts are *Active*. Marking a part as inactive means it is not available for many actions, but the part remains in the database. If a part becomes obsolete, it is recommended that it is marked as inactive, rather than deleting it from the database.
-
 ## Parameters
 
 Parts can have multiple defined [parameters](../parameter).

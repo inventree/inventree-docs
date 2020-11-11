@@ -28,6 +28,8 @@ To install a complete *development* environment for InvenTree, follow the steps 
 
 Installing and running InvenTree should be possible on most operating systems, as it requires only cross-platform Python libraries.
 
+On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
+
 ### Linux
 
 The InvenTree documentation assumes that the operating system is a Linux variant. To install the required python packages to get started on a Linux system, run the following commands:
@@ -51,7 +53,7 @@ InvenTree can be installed and run from the Windows command line, assuming the f
 
 !!! info "WSL"
 
-    Alternatively, if you are running under the Windows operating system you can install and run InvenTree using the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL (Windows Subsystem for Linux)</a> framework. Running under WSL provides a Linux compatible layer which simplifies InvenTree installation.
+    Alternatively, if you are running under the Windows operating system you can install and run InvenTree using the [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) framework. Running under WSL provides a Linux compatible layer which simplifies InvenTree installation.
 
 ### FreeBSD
 
@@ -81,6 +83,15 @@ sudo apt-get install python3-venv
 python3 -m venv inventree-env
 source inventree-env/bin/activate
 ```
+
+??? note "Virtual Environment on Windows"
+	To create and activate a virtual environment in Windows, run the following commands:
+	```
+	py -m venv inventree-env
+	.\inventree-env\Scripts\activate
+	```
+
+	Refer to the [official Python documentation](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to setup a virtual environment on Windows.
 
 This will place the current shell session inside a virtual environment - the terminal should display the ``(inventree-env)`` prefix.
 
@@ -169,6 +180,9 @@ Create an initial superuser (administrator) account for the InvenTree instance:
 ```
 invoke superuser
 ```
+
+!!! warning "Solving Cairo Errors"
+	In the case the above command returns errors with the `Cairo` package, it implies that dependencies for the `weasyprint` package are not installed on the system. To solve them, run through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) then re-run `invoke install` and `invoke superuser`.
 
 ### Run Development Server
 
