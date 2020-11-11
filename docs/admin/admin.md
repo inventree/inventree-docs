@@ -25,6 +25,9 @@ An adminstation panel will be presented as shown below:
 {% include 'img.html' %}
 {% endwith %}
 
+!!! info "Admin URL"
+    To directly access the admin iterface, append /admin/ to the InvenTree site URL - e.g. http://localhost:8000/admin/
+
 ### View Database Objects
 
 Database objects can be listed and filtered directly. The image below shows an example of displaying existing part categories.
