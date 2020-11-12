@@ -11,8 +11,14 @@ In the case that data needs to be migrated from one database installation to ano
 
 ### Export Data
 
+Export the database contents to a JSON file using the following command:
+
+!!! info "Directory"
+    The following command must be performed from the directory which contains the manage.py file
+
 ```
-python3 InvenTree/manage.py dumpdata --exclude contenttypes --exclude auth.permission --indent 2 > data.json
+cd InvenTree
+python3 manage.py dumpdata --exclude contenttypes --exclude auth.permission --indent 2 --output data.json
 ```
 
 This will export all data (including user information) to a json data file.
@@ -32,7 +38,7 @@ invoke migrate
 The new database should now be correctly initialized with the correct table structures requried to import the data. Run the following command to load the databased dump file into the new database.
 
 ```
-python3 InvenTree/manage.py loaddata data.json
+python3 manage.py loaddata data.json
 ```
 
 !!! info "Character Encoding"
