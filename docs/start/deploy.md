@@ -47,6 +47,9 @@ Gunicorn can be installed using PIP:
 pip3 install gunicorn
 ```
 
+!!! warning "Python Environment"
+    Ensure that gunicorn is installed within the same python environment context as the InvenTree install - otherwise gunicorn will not be able to import the correct python modules.
+
 ### Configure Static Directories
 
 Directories for storing *media* files and *static* files should be specified in the ``config.yaml`` configuration file. These directories are the ``MEDIA_ROOT`` and ``STATIC_ROOT`` paths required by the Django app. Ensure that both of these directories are correctly configured for your setup.
