@@ -6,22 +6,26 @@ title: Migrating Data
 
 In the case that data needs to be migrated from one database installation to another, the following procedure can be used to export data, initialize the new database, and re-import the data.
 
+For example, if you wish to migrate from an SQLite database backend to a MySQL database backend, you will need to export the data into a standardized format, and then read it back in to the new database.
+
 !!! warning "Backup Database"
 	Ensure that the original database is securely backed up first!
+
+!!! info "Up to Date"
+    Ensure that the original database is up to date, by running `invoke migrate`
 
 ### Export Data
 
 Export the database contents to a JSON file using the following command:
 
-!!! info "Directory"
-    The following command must be performed from the directory which contains the manage.py file
-
 ```
-cd InvenTree
-python3 manage.py dumpdata --exclude contenttypes --exclude auth.permission --indent 2 --output data.json
+invoke export-records -f data.json
 ```
 
-This will export all data (including user information) to a json data file.
+This will create JSON file at the specified location which contains all database records.
+
+!!! info "Specifying filename"
+    The filename of the exported file can be specified using the `-f` option
 
 ### Initialize New Database
 
@@ -33,13 +37,18 @@ Then, ensure that the database schema are correctly initialized in the new datab
 invoke migrate
 ```
 
+This ensures that the required database tables exist, which must be the case before data can be imported.
+
 ### Import Data
 
 The new database should now be correctly initialized with the correct table structures requried to import the data. Run the following command to load the databased dump file into the new database.
 
 ```
-python3 manage.py loaddata data.json
+invoke import-records -f data.json
 ```
+
+!!! info "Import Filename"
+    A different filename can be specified using the `-f` option 
 
 !!! info "Character Encoding"
 	If the character encoding of the data file does not exactly match the target database, the import operation may not succeed. In this case, some manual editing of the database JSON file may be required.
