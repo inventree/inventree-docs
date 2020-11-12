@@ -50,5 +50,5 @@ invoke import-records -f data.json
 !!! info "Import Filename"
     A different filename can be specified using the `-f` option 
 
-!!! info "Character Encoding"
+!!! warning "Character Encoding"
 	If the character encoding of the data file does not exactly match the target database, the import operation may not succeed. In this case, some manual editing of the database JSON file may be required.
