@@ -32,6 +32,9 @@ To enable access to the InvenTree server from other computers on a local network
 invoke server -a 192.168.120.1:8000
 ```
 
+!!! warning "Not For Production"
+    It should be noted that the *development server* provided with django / InvenTree is probably not suitable for your production environment. Instead, use a proper web-server (such as Gunicorn, below).
+
 ## Gunicorn
 
 Following is a simple tutorial on serving InvenTree using [Gunicorn](https://gunicorn.org/). Gunicorn is a Python WSGI server which provides a multi-worker server which is well suited to handling multiple simultaneous requests. Gunicorn is a solid choice for a production server which is easy to configure and performs well in a multi-user environment.
@@ -43,6 +46,9 @@ Gunicorn can be installed using PIP:
 ```
 pip3 install gunicorn
 ```
+
+!!! warning "Python Environment"
+    Ensure that gunicorn is installed within the same python environment context as the InvenTree install - otherwise gunicorn will not be able to import the correct python modules.
 
 ### Configure Static Directories
 

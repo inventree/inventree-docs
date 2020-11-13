@@ -62,7 +62,7 @@ The `Allocate Stock` form will be displayed. Verify each subpart automatic alloc
 
 #### Manual Allocation
 
-Click on the "Allocated Parts" tab then click on the :fontawesome-solid-plus: icon next to each subpart in the build to manually allocate stock.
+Click on the "Allocated Parts" tab then click on the <span class='fas fa-plus'></span> icon next to each subpart in the build to manually allocate stock.
 
 The `Allocate new Part` form will be displayed. Select a `Stock Item` and fill-out the `Quantity` field then click on the "Submit" button to allocate stock for this subpart.
 
@@ -72,7 +72,7 @@ Click on the "Allocated Parts" tab then click on the "Unallocate" button to unal
 
 ### Cancel Build
 
-To cancel a build, click on :fontawesome-regular-times-circle: icon on the build detail page.
+To cancel a build, click on <span class='fas fa-times-circle'></span> icon on the build detail page.
 
 The `Cancel Build` form will be displayed, click on the confirmation switch then click on the "Cancel Build" button to process the build cancellation.
 
@@ -81,7 +81,7 @@ The `Cancel Build` form will be displayed, click on the confirmation switch then
 
 ### Complete Build
 
-To complete a build, click on :fontawesome-solid-tools: icon on the build detail page, the `Complete Build` form will be displayed.
+To complete a build, click on <span class='fas fa-tools'></span> icon on the build detail page, the `Complete Build` form will be displayed.
 
 !!! info "Incomplete Allocation"
 	If the warning message `Warning: Build order allocation is not complete` is shown, make sure to allocate stock for the build before proceeding with build completion.
