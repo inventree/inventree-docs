@@ -32,7 +32,7 @@ InvenTree functionality is split into a number of distinct roles. A group will h
 - **Purchase** - The *purchase* role is related to accessing Purchase Order data
 - **Sales** - The *sales* role is related to accessing Sales Order data
 
-{% with id="roles", url="admin/roles.png", description="Roles" %}
+{% with id="Roles Admin View", url="admin/roles.png", description="Roles" %}
 {% include 'img.html' %}
 {% endwith %}
 
