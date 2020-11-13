@@ -28,6 +28,8 @@ To install a complete *development* environment for InvenTree, follow the steps 
 
 Installing and running InvenTree should be possible on most operating systems, as it requires only cross-platform Python libraries.
 
+On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
+
 ### Linux
 
 The InvenTree documentation assumes that the operating system is a Linux variant. To install the required python packages to get started on a Linux system, run the following commands:
@@ -178,6 +180,9 @@ Create an initial superuser (administrator) account for the InvenTree instance:
 ```
 invoke superuser
 ```
+
+!!! warning "Solving Cairo Errors"
+	In the case the above command returns errors with the `Cairo` package, it implies that dependencies for the `weasyprint` package are not installed on the system. To solve them, run through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) then re-run `invoke install` and `invoke superuser`.
 
 ### Run Development Server
 

@@ -24,8 +24,15 @@ theme:
 edit_uri: "" # Disable "Edit" button
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/brands.css
+  - stylesheets/regular.css
+  - stylesheets/solid.css
 extra_javascript:
   - javascripts/extra.js
+  - javascripts/fontawesome.js
+  - javascripts/brands.js
+  - javascripts/regular.js
+  - javascripts/solid.js
 
 # Navigation
 nav:
@@ -41,6 +48,7 @@ nav:
   - Parts:
     - Parts: part/part.md
     - Part Views: part/views.md
+    - Tracking: part/trackable.md
     - Parameters: part/parameter.md
     - Templates: part/template.md
     - Tests: part/test.md
@@ -69,6 +77,8 @@ nav:
     - User Permissions: admin/permissions.md
     - Export Data: admin/export.md
     - Import Data: admin/import.md
+    - Python Shell: admin/shell.md
+    - Error Logs: admin/logs.md
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
