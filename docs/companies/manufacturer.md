@@ -35,17 +35,19 @@ After the manufacturer details are loaded, click on the <span class='fas fa-tras
 
 ## Manufacturer Parts
 
-Manufacturer parts are linked to a manufacturer and supplier part: they are the actual "items" sold by a supplier.
+Manufacturer parts are connected to the manufacturer they belong to. Most importantly, they are **linked** to a supplier part. In other words, manufacturer parts do **not** exist without a corresponding supplier part and they are the actual "items" sold by a supplier.
 
 !!! warning
 	**Viewing**, **adding**, **editing** and **deleting** manufacturer parts require the corresponding [Purchase Orders user permissions](../../admin/permissions)
 
 ### Add Manufacturer Part
 
-!!! missing "TODO"
-	This section requires further work
+Adding a manufacturer part is the same process as [adding a supplier part](../supplier#add-supplier-part).
 
 ### Edit Manufacturer Part
 
-!!! missing "TODO"
-	This section requires further work
+Editing a manufacturer part is the same process as [editing a supplier part](../supplier#edit-supplier-part).
+
+### Delete Manufacturer Part
+
+Deleting a manufacturer part is the same process as [deleting a supplier part](../supplier#delete-supplier-part).
