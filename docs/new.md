@@ -6,18 +6,31 @@ title: What's New
 
 ### Release 0.1.4
 
+[Release 0.1.4](https://github.com/inventree/InvenTree/releases/tag/0.1.4) (November 2020) provides a number of major new features and improvements, as well as some crucial bug fixes:
+
 #### Build Management System
 
-Improved build management system:
+The build management system has received a major upgrade, bringing the following improvements:
 
-- Partial builds
-- Batch tracking
+##### Partial Build Completion
 
-!!! TODO
-	More information to come soon
+Previously, build orders had to be completed *atomically* (i.e. if the build order was to create 20x units, then all 20x units had to be created at once).
+
+The new build system allows the user to specify build *outputs* (of varying quantities) against a given build order. The build order cannot be completed until all build outputs are fulfilled.
+
+A *Build Output* is simply a StockItem object which is marked as *in production*. This stock item can be assigned a (unique) serial number which is useful for pre-allocation purposes. It also allows stock to be filtered by production status and determine how many units are being built.
+
+##### Stock Item Tracking
+
+Parts which are marked as *trackable* are now treated differently for the purpose of a build order. Stock items must be assigned against each build output (as was the case previously). When a build output is marked as complete, any *trackable* stock items which are assigned to that build output are installed *into* the build output (which is simply a StockItem). In this manner, if a *trackable* stock item is used to build another stock item, it remains tracked via the stock item it is installed into.
+
+Stock items which are not *trackable* are simply removed from stock when the build output is completed.
+
+##### Stock Allocation Improvements
+
+A number of UX improvements have been made to simplify the process of allocating stock items against a build output (and thus a build order).
 
 #### Related Parts
-##### Definition
 
 Related Part denotes a relationship between two parts, when users want to show their usage is "related" to another part or simply emphasize a link between two parts.
 
@@ -90,5 +103,10 @@ Added support for configuring parameter templates defined by categories.
 
 #### Currency Support
 
-!!! TODO
-	More information to come soon
+A more comprehensive implementation of Currency support has been implemented.
+
+Using the [django-money](https://github.com/django-money/django-money) library enables native support for all currency types, and the (future) possibility of offering real-time currency conversion.
+
+This update is "simply" an architectural change which will allow more comprehensive currency management in a future release.
+
+As part of the new currency library implementation, InvenTree can now track purchase price of stock items (in whichever currency the user chooses).
