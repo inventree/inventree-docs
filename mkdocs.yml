@@ -38,6 +38,7 @@ extra_javascript:
 nav:
   - InvenTree:
     - About InvenTree: index.md
+    - What's New: new.md
     - Contribute: contribute.md
   - Getting Started:
     - Installation: start/install.md
