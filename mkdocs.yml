@@ -61,9 +61,12 @@ nav:
   - Build:
     - Build Parts: build/build.md
     - Bill of Materials (BOM): build/bom.md
-  - Buy:
-    - Suppliers: buy/supplier.md
-    - Purchase Orders: buy/po.md
+  - Companies:
+    - Suppliers: companies/supplier.md
+    - Manufacturers: companies/manufacturer.md
+    - Customers: companies/customer.md
+    - Purchase Orders: companies/po.md
+    - Sales Orders: companies/so.md
   - Report:
     - Labels: report/labels.md
     - Templates: report/report.md
