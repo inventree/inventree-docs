@@ -6,7 +6,7 @@ title: What's New
 
 ### Release 0.1.4
 
-Release 0.1.4 (November 2020) provides a number of major new features and improvements, as well as some crucial bug fixes:
+[Release 0.1.4](https://github.com/inventree/InvenTree/releases/tag/0.1.4) (November 2020) provides a number of major new features and improvements, as well as some crucial bug fixes:
 
 #### Build Management System
 
