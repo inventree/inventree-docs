@@ -40,7 +40,7 @@ MySQL database backend is supported with the native Django implemetation. To run
 To install these required packages, run the following command:
 
 ```
-invoke mysql
+inv mysql
 ```
 
 It is then up to the database adminstrator to create a new MySQL database to store inventree data, in addition to a username/password to access the data.
@@ -61,7 +61,7 @@ PostgreSQL database backend is supported with the native Django implementation. 
 To install these required packages, run the following commands:
 
 ```
-invoke postgresql
+inv postgresql
 ```
 
 It is then up to the database adminstrator to create a new PostgreSQL database to store inventree data, in addition to a username/password to access the data.
