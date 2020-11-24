@@ -28,7 +28,7 @@ git pull origin master
 Updating the database is as simple as calling the `update` script:
 
 ```
-invoke update
+inv update
 ```
 
 This command performs the following steps:

@@ -111,7 +111,7 @@ pip3 install invoke
 To display a list of the available configuration scripts, run the following command:
 
 ```
-invoke --list
+inv --list
 ```
 
 ## Download Source Code
@@ -140,7 +140,7 @@ Now that the source code is downloaded (and optionally you have configured a Pyt
 To setup the InvenTree environment, run the following commands (from the InvenTree source directory):
 
 ```
-invoke install
+inv install
 ```
 
 This installs all required Python packages using pip package manager. It also creates a (default) database configuration file which needs to be edited to meet user needs before proceeding (see next step below).
@@ -166,7 +166,7 @@ For further information on installation configuration, refer to the [Configurati
 Once install settings are correctly configured (in *config.yaml*) run the initial setup script:
 
 ```
-invoke migrate
+inv migrate
 ```
 
 This performs the initial database migrations, creating the required tables, etc.
@@ -178,11 +178,11 @@ The database should now be installed!
 Create an initial superuser (administrator) account for the InvenTree instance:
 
 ```
-invoke superuser
+inv superuser
 ```
 
 !!! warning "Solving Cairo Errors"
-	In the case the above command returns errors with the `Cairo` package, it implies that dependencies for the `weasyprint` package are not installed on the system. To solve them, run through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) then re-run `invoke install` and `invoke superuser`.
+	In the case the above command returns errors with the `Cairo` package, it implies that dependencies for the `weasyprint` package are not installed on the system. To solve them, run through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) then re-run `inv install` and `inv superuser`.
 
 ### Run Development Server
 
@@ -191,13 +191,13 @@ The InvenTree database is now setup and ready to run. A simple development serve
 To launch the development server, run the following commands:
 
 ```
-invoke server
+inv server
 ```
 
 For more server options, run:
 
 ```
-invoke server -h
+inv server -h
 ```
 
 This will launch the InvenTree web interface at `http://127.0.0.1:8000`. For other options refer to the [django docs](https://docs.djangoproject.com/en/2.2/ref/django-admin/)
