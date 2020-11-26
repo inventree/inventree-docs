@@ -54,5 +54,5 @@ In addition to the global label context data, the following variables are made a
 * quantity - *The `quantity` field of the StockItem object*
 * serial - *The `serial` field of the StockItem object*
 * uid - *The `uid` field of the StockItem object*
-* qrcode - *JSON data representing the StockItem object, useful for rendering to a QR code*
+* qr_data - *JSON data representing the StockItem object, useful for rendering to a QR code*
 * tests - *Dict object of TestResult data associated with the StockItem*
