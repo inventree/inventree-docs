@@ -19,7 +19,7 @@ The InvenTree development server is useful for testing and configuration - and i
 To run the development server on a local machine, run the command:
 
 ```
-invoke server -a 127.0.0.1:8000
+inv server -a 127.0.0.1:8000
 ```
 
 Serving on the address `127.0.0.1` means that InvenTree will only be available *on that computer*. The server will be accessible from a web browser on the same computer, but not from any other computers on the local network.
@@ -29,7 +29,7 @@ Serving on the address `127.0.0.1` means that InvenTree will only be available *
 To enable access to the InvenTree server from other computers on a local network, you need to know the IP of the computer running the server. For example, if the server IP address is `192.168.120.1`:
 
 ```
-invoke server -a 192.168.120.1:8000
+inv server -a 192.168.120.1:8000
 ```
 
 !!! warning "Not For Production"
@@ -59,7 +59,7 @@ Directories for storing *media* files and *static* files should be specified in 
 The required static files must be collected into the specified ``STATIC_ROOT`` directory:
 
 ```
-invoke static
+inv static
 ```
 
 This command collects all of the required static files (including script and css files) into the specified directory ready to be served.

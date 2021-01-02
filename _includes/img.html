@@ -7,7 +7,7 @@
 {% if 'http' in url %}
 {% set doc_url = url %}
 {% else %}
-{% set doc_url = '{{ assets }}/images/{{ url }}' %}
+{% set doc_url = assets  + '/images/' + url %}
 {% endif %}
 
 <figure class='image'>

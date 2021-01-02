@@ -91,3 +91,10 @@ Finally, click on the "Complete Build" button to process the build completion.
 
 !!! warning "Completed Build"
 	**A completed build cannot be re-opened**. Make sure to use the confirm only if you are certain that the build is complete.
+
+### Overdue Builds
+
+Build orders may (optionally) have a target complete date specified. If this date is reached but the build order remains incomplete, then the build is considered *overdue*.
+
+- Builds can be filtered by overdue status in the build list
+- Overdue builds will be displayed on the home page

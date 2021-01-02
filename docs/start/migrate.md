@@ -12,14 +12,14 @@ For example, if you wish to migrate from an SQLite database backend to a MySQL d
 	Ensure that the original database is securely backed up first!
 
 !!! info "Up to Date"
-    Ensure that the original database is up to date, by running `invoke migrate`
+    Ensure that the original database is up to date, by running `inv migrate`
 
 ### Export Data
 
 Export the database contents to a JSON file using the following command:
 
 ```
-invoke export-records -f data.json
+inv export-records -f data.json
 ```
 
 This will create JSON file at the specified location which contains all database records.
@@ -34,7 +34,7 @@ Configure the new database using the normal processes (see [Configuration](../co
 Then, ensure that the database schema are correctly initialized in the new database:
 
 ```
-invoke migrate
+inv migrate
 ```
 
 This ensures that the required database tables exist, which must be the case before data can be imported.
@@ -44,7 +44,7 @@ This ensures that the required database tables exist, which must be the case bef
 The new database should now be correctly initialized with the correct table structures requried to import the data. Run the following command to load the databased dump file into the new database.
 
 ```
-invoke import-records -f data.json
+inv import-records -f data.json
 ```
 
 !!! info "Import Filename"
