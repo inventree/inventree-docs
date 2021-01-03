@@ -108,6 +108,9 @@ Install invoke as follows:
 pip3 install invoke
 ```
 
+!!! warning "Invoke Version"
+	InvenTree requires invoke version 1.4.0 or newer. Some platforms may be shipped with older versions of invoke!
+
 To display a list of the available configuration scripts, run the following command:
 
 ```
