@@ -4,7 +4,7 @@ title: Custom Labels
 
 ## Custom Labels
 
-InvenTree supports printing of custom template-based labels, using the [blabel](https://github.com/Edinburgh-Genome-Foundry/blabel) plugin for Python.
+InvenTree supports printing of custom template-based labels, using the [blabel](https://github.com/Edinburgh-Genome-Foundry/blabel) Python library.
 
 Custom labels can be generated using simple HTML templates, with support for QR-codes, and conditional formatting using the Jinja template engine.
 
@@ -15,7 +15,7 @@ Simple (generic) label templates are supplied 'out of the box' with InvenTree - 
 
 ## Label Templates
 
-Label templates are written using a mixture of [HTML](https://www.w3schools.com/html/) and [CSS](https://www.w3schools.com/css). The blabel plugin is based on [weasyprint](https://weasyprint.org/), which supports a *subset* of HTML and CSS features. In addition to supporting HTML and CSS formatting, the label templates support the Jinja templating engine, allowing conditional formatting of the label data.
+Label templates are written using a mixture of [HTML](https://www.w3schools.com/html/) and [CSS](https://www.w3schools.com/css). The blabel library is based on [weasyprint](https://weasyprint.org/), which supports a *subset* of HTML and CSS features. In addition to supporting HTML and CSS formatting, the label templates support the Jinja templating engine, allowing conditional formatting of the label data.
 
 A label template is a single `.html` file which is uploaded to the InvenTree server by the user.
 
