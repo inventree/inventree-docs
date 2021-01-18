@@ -13,7 +13,7 @@ The stock expiry feature is disabled by default, and must be enabled via the set
 {% endwith %}
 
 !!! info "Non Expiring Stock"
-    If a Stock Item is not expected to expire, 
+    If a Stock Item is not expected to expire. 
 
 ### Add Expiry Date
 
