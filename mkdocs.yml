@@ -58,6 +58,7 @@ nav:
     - Adjusting Stock: stock/adjust.md
     - Stocktake: stock/stocktake.md
     - Stock Expiry: stock/expiry.md
+    - Stock Ownership: stock/owner.md
     - Test Results: stock/test.md
   - Build:
     - Build Parts: build/build.md

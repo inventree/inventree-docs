@@ -26,8 +26,10 @@ A *role* is a set of distinct permissions linked to a given subset of InvenTree 
 InvenTree functionality is split into a number of distinct roles. A group will have a set of permissions assigned to each of the following roles:
 
 - **Admin** - The *admin* role is related to assigning user permissions.
+- **Part Category** - The *part category* role is related to accessing Part Category data
 - **Part** - The *part* role is related to accessing Part data
-- **Stock** - The *stock* role is related to accessing Stock data
+- **Stock Location** - The *stock location* role is related to accessing Stock Location data
+- **Stock Item** - The *stock item* role is related to accessing Stock Item data
 - **Build** - The *build* role is related to accessing Build Order and Bill of Materials data
 - **Purchase** - The *purchase* role is related to accessing Purchase Order data
 - **Sales** - The *sales* role is related to accessing Sales Order data
