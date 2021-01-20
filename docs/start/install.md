@@ -70,6 +70,9 @@ pkg install py37-invoke
 
 To install InvenTree you will need python3 (>3.6) installed, as well as PIP (the Python package manager), and the Invoke tool.
 
+!!! warning "Python Version"
+    InvenTree requrires Python 3.6 (or newer). If your system has an older version of Python installed, you will need to follow the update instructions for your OS.
+
 ### Python Virtual Environment
 
 Installing the required Python packages inside a virtual environment allows a local install separate to the system-wide Python installation. While not strictly necessary, using a virtual environment is highly recommended as it prevents conflicts between the different Python installations.
@@ -84,7 +87,7 @@ python3 -m venv inventree-env
 source inventree-env/bin/activate
 ```
 
-??? note "Virtual Environment on Windows"
+!!! note "Virtual Environment on Windows"
 	To create and activate a virtual environment in Windows, run the following commands:
 	```
 	py -m venv inventree-env
