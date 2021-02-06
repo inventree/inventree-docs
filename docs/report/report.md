@@ -55,6 +55,34 @@ The django template system allows for conditional rendering, providing condition
 !!! info "Conditionals"
     Refer to the django documentation for more information.
 
+## Report Options
+
+A number of global reporting options are available for customizing InvenTree reports:
+
+### Default Page Size
+
+The built-in InvenTree report templates (and any reports which are derived from the built-in templates) use the *Page Size* option to set the page size of the generated reports.
+
+{% with id="report_page_size", url="report/report_default_page_size.png", description="Report Page Size" %}
+{% include 'img.html' %}
+{% endwith %}
+
+!!! info "Override Page Size"
+    Custom report templates do not have to make use of the *Page Size* option, although it is made available to the template context.
+
+### Debug Mode
+
+As templates are rendered directly to a PDF object, it can be difficult to debug problems when the PDF does not render exactly as expected. 
+
+Setting the *Debug Mode* option renders the template as raw HTML instead of PDF, allowing the rendering output to be introspected. This feature allows template designers to understand any issues with the generated HTML (before it is passed to the PDF generation engine).
+
+{% with id="report_debu_mode", url="report/report_debug_mode.png", description="Report Debug Mode" %}
+{% include 'img.html' %}
+{% endwith %}
+
+!!! warning "HTML Rendering Limitations"
+    When rendered in debug mode, @page attributes (such as size, etc) will **not** be observed. Additionally, any asset files stored on the InvenTree server will not be rendered. Debug mode is not intended to produce "good looking" documents!
+
 ## Uploading Templates
 
 Custom report templates can be uploaded using the [Admin Interface](../../admin/admin). Only users with admin access can upload and/or edit report template files.
@@ -126,10 +154,10 @@ For example, consider a stocktake report for a particular stock location, where 
 {% endraw %}
 ```
 
-!!! note "Snippet Arguments"
+!!! info "Snippet Arguments"
     Note above that named argument variables can be passed through to the snippet!
 
-And the snippet (very simple for this example) is as follows:
+And the snippet file `stock_row.html` is as follows:
 
 ```html
 {% raw %}
