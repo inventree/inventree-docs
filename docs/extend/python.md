@@ -94,7 +94,7 @@ from inventree.stock import StockItem
 furniture = PartCategory.create(api, {
     'name': 'Furniture',
     'description': 'Chairs, tables, etc',
-    parent, 7
+    'parent': 7,
 })
 
 ## Create a new Part
@@ -113,7 +113,7 @@ item = StockItem.create(api, {
     'part': couch.pk,
     'quantity': 5,
     'notes': 'A stack of couches',
-    location: 10,  ## PK of a StockLocation already in the database...
+    'location': 10,  ## PK of a StockLocation already in the database...
 })
 
 ```
