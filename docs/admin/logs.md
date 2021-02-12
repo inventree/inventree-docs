@@ -23,3 +23,7 @@ A list of error logs is presented.
 
 !!! note "Deleting Logs"
     Error logs should be deleted periodically
+
+## Reporting Errors
+
+Errors should be reported to the [InvenTree GitHub page](https://github.com/inventree/inventree/issues), and include the full error output as recorded to the error log.
