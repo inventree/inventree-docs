@@ -14,7 +14,7 @@ Multiple plugins are supported:
 
 ### Reporting Plugins
 
-InvenTree can generate customized reports (for example stocktake information, packing lists, acceptance test reports, etc). The reporting interface is extremely versatile, allowing the generation of reports in multiple formats (PDF / LaTeX / etc).
+InvenTree can generate customized reports (for example stocktake information, packing lists, acceptance test reports, etc).
 
 !!! missing "TODO"
 	Include more information here on reporting plugins

@@ -70,11 +70,12 @@ nav:
     - Purchase Orders: companies/po.md
     - Sales Orders: companies/so.md
   - Report:
-    - Labels: report/labels.md
     - Templates: report/report.md
-    - Test Reports: report/test.md
-    - Packing List: report/pack.md
-    - Order: report/order.md
+    - Reports:
+      - Test Reports: report/test.md
+      - Packing List: report/pack.md
+      - Order: report/order.md
+    - Labels: report/labels.md
   - Admin:
     - Admin Interface: admin/admin.md
     - User Permissions: admin/permissions.md

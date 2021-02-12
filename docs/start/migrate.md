@@ -52,3 +52,19 @@ inv import-records -f data.json
 
 !!! warning "Character Encoding"
 	If the character encoding of the data file does not exactly match the target database, the import operation may not succeed. In this case, some manual editing of the database JSON file may be required.
+
+### Backup and Restore
+
+To backup your database data and media files, first define a [Backup Location](../config/#backup-location) in your configuration file.
+
+Then run the following command to backup the data:
+```
+inv backup
+```
+
+It should create two separate backup files in the [Backup Location](../config/#backup-location) folder: one for the database data and one for the media files (part pictures, etc.)
+
+To restore your data from a backup, use the following command:
+```
+inv restore
+```

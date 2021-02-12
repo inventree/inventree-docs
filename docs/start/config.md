@@ -148,13 +148,6 @@ The default behaviour of the database backup is to generate backup files for dat
 
 Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
 
-### LaTeX Support
-
-To enable genration of [LaTeX](https://en.wikipedia.org/wiki/LaTeX) reports, latex support must be enabled here.
-
-- **enabled** : Set to True to enable LaTeX support
-- **interpreter** : Select the LaTeX interpreter to be used (must be installed on the local machine!)
-
 ### Authentication Backends
 
 Custom authentication backends can be used by specifying them here
