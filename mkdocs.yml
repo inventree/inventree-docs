@@ -90,6 +90,9 @@ nav:
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
     - Future Features: extend/future.md
+  - App:
+    - App: app/app.md
+    - Privacy: app/privacy.md
 
 # Plugins
 plugins:
