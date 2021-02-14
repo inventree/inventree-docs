@@ -29,7 +29,7 @@ Pictures taken in the InvenTree app are not stored or distributed to any other s
 
 ## Personal Information
 
-The InvenTree app does not collect any personal information about the user(s) of the device onto which the app is installed.
+The InvenTree app does not collect any information which could be used to personally identify the user(s) of the device onto which the app is installed.
 
 ## Error Reporting
 
