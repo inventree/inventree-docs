@@ -74,6 +74,7 @@ nav:
     - Reports:
       - Test Reports: report/test.md
       - Packing List: report/pack.md
+      - Build Order: report/build.md
       - Order: report/order.md
     - Labels: report/labels.md
   - Admin:
