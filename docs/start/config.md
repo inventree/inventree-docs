@@ -69,7 +69,7 @@ Database options are specified under the *database* heading in the configuration
 
 The following database options can be configured:
 
-| Environment Variable | Settings File | Description |
+| Environment Variable | COnfig File | Description |
 | --- | --- | --- |
 | INVENTREE_DB_ENGINE | database.ENGINE | Database backend |
 | INVENTREE_DB_NAME | database.NAME | Database name |
@@ -120,6 +120,24 @@ inv postgresql
 It is then up to the database adminstrator to create a new PostgreSQL database to store inventree data, in addition to a username/password to access the data.
 
 The database options (in the `config.yaml` file) then need to be adjusted to communicate the PostgreSQL backend. Refer to the [Django docs](https://docs.djangoproject.com/en/dev/ref/databases/) for further information.
+
+### Email Backend
+
+InvenTree email settings must be correctly configured to allow sending emails.
+
+Email options are specified under the *email* heading in the configuration file. Alternatively email settings can be set via environment variables.
+
+The following email options can be configured:
+
+| Environment Variable | Config File | Description |
+| --- | --- | --- |
+| INVENTREE_EMAIL_HOST | email.host | Email service host address |
+| INVENTREE_EMAIL_PORT | email.port | Email service host port |
+| INVENTREE_EMAIL_USERNAME | email.username | Account username |
+| INVENTREE_EMAIL_PASSWORD | email.password | Account password |
+| INVENTREE_EMAIL_PREFIX | email.prefix | Email subject prefix - default is "[InvenTree] " |
+| INVENTREE_EMAIL_TLS | email.tls | Enable TLS support |
+| INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support |
 
 ### Allowed Hosts / CORS
 
