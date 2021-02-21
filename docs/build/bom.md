@@ -45,7 +45,7 @@ Consider the example diagram below:
 **Template Part A** has two BOM line items defined: *A1* and *A2*.
 
 - *A1* is inherited by all variant parts underneath *Template Part A*
-- *A3* is not inherited, and is only included in the BOM for *Template Part A*
+- *A2* is not inherited, and is only included in the BOM for *Template Part A*
 
 **Variant B** has two line items:
 
