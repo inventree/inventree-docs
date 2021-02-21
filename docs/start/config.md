@@ -132,7 +132,7 @@ For further information, refer to the following documentation:
 
 ### Static File Storage
 
-By default, static files are stored in the local directory `./inventree_media`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
+By default, static files are stored in the local directory `./inventree_static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_STATIC_ROOT` environment variable.
 
