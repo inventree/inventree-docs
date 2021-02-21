@@ -91,8 +91,13 @@ nav:
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
   - App:
-    - App: app/app.md
+    - InvenTree App: app/app.md
+    - Barcodes: app/barcode.md
+    - Parts: app/part.md
+    - Stock: app/barcode.md
     - Privacy: app/privacy.md
+    - Translation: app/translation.md
+    - Suggestions: app/issues.md
 
 # Plugins
 plugins:
