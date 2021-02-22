@@ -4,18 +4,16 @@ title: Custom Labels
 
 ## Custom Labels
 
-InvenTree supports printing of custom template-based labels, using the [blabel](https://github.com/Edinburgh-Genome-Foundry/blabel) Python library.
+InvenTree supports printing of custom template-based labels, using the [WeasyPrint](https://weasyprint.org/) PDF generation engine. 
 
 Custom labels can be generated using simple HTML templates, with support for QR-codes, and conditional formatting using the Jinja template engine.
 
-!!! info "Documentation"
-	Refer to the [blabel documentation](https://edinburgh-genome-foundry.github.io/blabel/) for further information, and examples of the available features
 
 Simple (generic) label templates are supplied 'out of the box' with InvenTree - however support is provided for generation of extremely specific custom labels, to meet any particular requirement.
 
 ## Label Templates
 
-Label templates are written using a mixture of [HTML](https://www.w3schools.com/html/) and [CSS](https://www.w3schools.com/css). The blabel library is based on [weasyprint](https://weasyprint.org/), which supports a *subset* of HTML and CSS features. In addition to supporting HTML and CSS formatting, the label templates support the Jinja templating engine, allowing conditional formatting of the label data.
+Label templates are written using a mixture of [HTML](https://www.w3schools.com/html/) and [CSS](https://www.w3schools.com/css). [Weasyprint](https://weasyprint.org/) templates support a *subset* of HTML and CSS features. In addition to supporting HTML and CSS formatting, the label templates support the Jinja templating engine, allowing conditional formatting of the label data.
 
 A label template is a single `.html` file which is uploaded to the InvenTree server by the user.
 
@@ -29,8 +27,7 @@ Below is a reasonably simple example of a label template which demostrates much 
 {% raw %}
 <style>
     @page {
-        width: 75mm;
-        height: 24mm;
+        size: 75mm 24mm;
         padding: 1mm;
     }
     
@@ -59,7 +56,7 @@ Below is a reasonably simple example of a label template which demostrates much 
     
 </style>
     
-<img class='qr' src="{{ label_tools.qr_code(location.barcode) }}"/>
+<img class='qr' src="{% qrcode location.format_barcode %}"/>
 
 <div class='location'>
 	{{ location.name }}
@@ -99,11 +96,9 @@ Location Name: {{ location.name }}
 {% endraw %}
 ```
 
-### QR Codes
+### Barcodes
 
-`blabel` supports barcodes and QR codes 'out of the box'. Passing data to render as a barcode or QR code is handled in the template file itself.
-
-Refer to the [blabel docs](https://edinburgh-genome-foundry.github.io/blabel/) for further information.
+Refer to the [barcode documentation](../barcodes).
 
 ### Conditional Formatting
 
@@ -127,9 +122,66 @@ As an example, consider a label template for a StockItem. A user may wish to def
 
 To restrict the label accordingly, we could set the *filters* value to `part__IPN=IPN123`.
 
-### Built-In Templates
+## Built-In Templates
     
 The InvenTree installation provides a number of simple *default* templates which can be used as a starting point for creating custom labels. These built-in templates can be disabled if they are not required.
+
+Built-in templates can also be used to quickly scaffold custom labels, using template inheritance.
+
+### Base Template
+
+For example, InvenTree provides a *base* template from which all of the default label templates are derived. This *base* template provides the essentials for generating a label:
+
+```html
+{% raw %}
+<head>
+    <style>
+        @page {
+            size: {{ width }}mm {{ height }}mm;
+            {% block margin %}
+            margin: 0mm;
+            {% endblock %}
+        }
+
+        img {
+            display: inline-block;
+            image-rendering: pixelated;
+        }
+
+        {% block style %}
+        {% endblock %}
+
+    </style>
+</head>
+
+<body>
+    {% block content %}
+    <!-- Label data rendered here! -->
+    {% endblock %}
+</body>
+
+{% endraw %}
+```
+
+### Extend Base Template
+
+To extend this template in a custom uploaded label, simply extend as follows:
+
+```html
+{% raw %}
+{% extends "label/label_base.html" %}
+
+{% block style %}
+<!-- You can write custom CSS here -->
+{% endblock %}
+
+{% block content %}
+<!-- HTML content goes here! -->
+{% endblock %}
+
+{% endraw %}
+```
+
 
 ## Stock Item Labels
 

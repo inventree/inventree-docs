@@ -51,7 +51,7 @@ If a part is designated as a *Component* it can be used as a sub-component of an
 
 Trackable parts can be assigned batch numbers or serial numbers which uniquely identify a particular stock item. Trackable parts also provide other features (and restrictions) in the InvenTree ecosystem.
 
-[Read further information about trackable parts here](/../trackable).
+[Read further information about trackable parts here](../trackable).
 
 ### Purchaseable
 
