@@ -88,6 +88,8 @@ stock_item.uploadTestResult("Firmware", True, value="0x12345678", attachment="de
 ```python
 from inventree.part import Part, PartCategory
 from inventree.stock import StockItem
+from inventree.base import Parameter
+from inventree.base import ParameterTemplate
 
 ## Create a new PartCategory object,
 ## underneath the existing category with pk 7
@@ -107,6 +109,15 @@ couch = Part.create(api, {
     'virtual': False,
     ## Note - You do not have to fill out *all* fields
 })
+
+## Before we can add parameters to the couch, we neeed to create the parameter templates
+## These parameter templates need to be defined only once and can be used for all other parts. 
+LengthTemplate = ParameterTemplate.create(api, { 'name' : 'Length', 'units' : 'Meters' })
+WeightTemplate = ParameterTemplate.create(api, { 'name' : 'Weight', 'units' : 'kg' })
+
+## Now we create the parameters
+ParameterLength = Parameter.create(api, { 'part': couch.pk, 'template': LengthTemplate.pk, 'data' : 2 })
+ParameterWeight = Parameter.create(api, { 'part': couch.pk, 'template': WeightTemplate.pk, 'data' : 60 })
 
 ## Create a new StockItem
 item = StockItem.create(api, {
