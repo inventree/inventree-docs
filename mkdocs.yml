@@ -38,6 +38,7 @@ extra_javascript:
 nav:
   - InvenTree:
     - About InvenTree: index.md
+    - Features: features.md
     - What's New: releases/new.md
     - FAQ: faq.md
     - Contribute: contribute.md
@@ -96,7 +97,8 @@ nav:
     - InvenTree App: app/app.md
     - Barcodes: app/barcode.md
     - Parts: app/part.md
-    - Stock: app/barcode.md
+    - Stock: app/stock.md
+    - Settings: app/settings.md
     - Privacy: app/privacy.md
     - Translation: app/translation.md
     - Suggestions: app/issues.md

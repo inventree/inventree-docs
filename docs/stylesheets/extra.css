@@ -68,3 +68,15 @@ p {
 .md-typeset h2:first-of-type {
 	margin-top: 0em;
 }
+
+.red {
+	color: #C55;
+}
+
+.green {
+	color: #5C5;
+}
+
+.blue {
+	color: #55C;
+}
