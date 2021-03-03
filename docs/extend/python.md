@@ -170,4 +170,4 @@ SupplierPart.create(api,{
 })
 ```
 
-Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store. Her we can add price tags later on.
+Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.
