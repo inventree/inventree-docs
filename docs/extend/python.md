@@ -134,6 +134,9 @@ We can add manufacturers and suppliers to parts. If we add a manufacturer, a sup
 
 ```python
 from inventree.company import Company
+
+...
+
 acme = Company.create(api, {
     'name' : 'ACME',
     'description':'A Company that makes everything',
@@ -156,6 +159,9 @@ Please recognize the different flag settings for is_supplier and is_manufacturer
 
 ```python
 from inventree.company import SupplierPart
+
+...
+
 SupplierPart.create(api,{
     'part':couch.pk,
     'supplier':xstore.pk,
@@ -165,5 +171,3 @@ SupplierPart.create(api,{
 ```
 
 Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store. Her we can add price tags later on.
-
-```
