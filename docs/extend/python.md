@@ -126,5 +126,48 @@ item = StockItem.create(api, {
     'notes': 'A stack of couches',
     'location': 10,  ## PK of a StockLocation already in the database...
 })
-
 ```
+
+#### Adding manufacturers and supplier
+
+We can add manufacturers and suppliers to parts. If we add a manufacturer, a supplier is also mandatory. So we first need to create two companies, ACME (manufacturer) and X-Store (supplier).
+
+```python
+from inventree.company import Company
+
+...
+
+acme = Company.create(api, {
+    'name' : 'ACME',
+    'description':'A Company that makes everything',
+    'website':'https://www.acme.bla',
+    'is_customer':0,
+    'is_manufacturer':1,
+    'is_supplier':0
+})
+xstore = Company.create(api, {
+    'name' : 'X-Store',
+    'description':'A really cool online store',
+    'website':'https://www.xst.bla',
+    'is_customer':0,
+    'is_manufacturer':0,
+    'is_supplier':1
+})
+```
+
+Please recognize the different flag settings for is_supplier and is_manufacturer. Now lets add those to our couch:
+
+```python
+from inventree.company import SupplierPart
+
+...
+
+SupplierPart.create(api,{
+    'part':couch.pk,
+    'supplier':xstore.pk,
+    'SKU':'some_code',
+    'manufacturer':acme.pk
+})
+```
+
+Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.
