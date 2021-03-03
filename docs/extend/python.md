@@ -126,6 +126,7 @@ item = StockItem.create(api, {
     'notes': 'A stack of couches',
     'location': 10,  ## PK of a StockLocation already in the database...
 })
+```
 
 #### Adding manufacturers and supplier
 
