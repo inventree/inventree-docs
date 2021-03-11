@@ -130,14 +130,14 @@ from inventree.stock import StockLocation
 from inventree.stock import StockItem
 
 ## Create the stock locations. Leave the parent empty for top level hierarchy
-Aisle3 = StockLocation.create(api, {'name':'Aisle','description':'Aisle for sofas','parent':''})
-Shelve43 = StockLocation.create(api, {'name':'Shelve43','description':'Shelve for sofas','parent':Aisle2.pk})
-Box12 = StockLocation.create(api, {'name':'Box12','description':'green box','parent':shelve43.pk})
-Box13 = StockLocation.create(api, {'name':'Box13','description':'red box','parent':shelve43.pk})
+Aisle3 = StockLocation.create(api, {'name':'Aisle 3','description':'Aisle for sofas','parent':''})
+Shelve43 = StockLocation.create(api, {'name':'Shelve 43','description':'Shelve for sofas','parent':Aisle3.pk})
+Box12 = StockLocation.create(api, {'name':'Box 12','description':'green box','parent':Shelve43.pk})
+Box13 = StockLocation.create(api, {'name':'Box 13','description':'red box','parent':Shelve43.pk})
 
-## Fill them with items
+## Now fill them with items
 Id1 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 10, 'notes': 'new ones', 'location': Box12.pk, ‘status’:10 })
-Id1 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 3, 'notes': 'new ones', 'location': Box13.pk, ‘status’:55 })
+Id2 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 3, 'notes': 'new ones', 'location': Box13.pk, ‘status’:55 })
 
 ```
 Please recognize the different status flags. 10 means OK, 55 means damaged. We have the following choices:
