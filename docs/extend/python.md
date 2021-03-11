@@ -137,7 +137,7 @@ Box13 = StockLocation.create(api, {'name':'Box 13','description':'red box','pare
 
 ## Now fill them with items
 Id1 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 10, 'notes': 'new ones', 'location': Box12.pk, ‘status’:10 })
-Id2 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 3, 'notes': 'new ones', 'location': Box13.pk, ‘status’:55 })
+Id2 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 3, 'notes': 'old  ones', 'location': Box13.pk, ‘status’:55 })
 
 ```
 Please recognize the different status flags. 10 means OK, 55 means damaged. We have the following choices:
