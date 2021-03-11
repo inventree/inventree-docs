@@ -129,7 +129,7 @@ If we have several sofas on stock we need to know there we have stored them. So 
 from inventree.stock import StockLocation
 from inventree.stock import StockItem
 
-## Create the stock locations
+## Create the stock locations. Leave the parent empty for top level hierarchy
 Aisle3 = StockLocation.create(api, {'name':'Aisle','description':'Aisle for sofas','parent':''})
 Shelve43 = StockLocation.create(api, {'name':'Shelve43','description':'Shelve for sofas','parent':Aisle2.pk})
 Box12 = StockLocation.create(api, {'name':'Box12','description':'green box','parent':shelve43.pk})
@@ -142,13 +142,13 @@ Id1 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 3, 'notes': 'new ones
 ```
 Please recognize the different status flags. 10 means OK, 55 means damaged. We have the following choices:
 
-10 OK
-50 Attention needed
-55 Damaged
-60 Destroyed
-65 Rejected
-70 Lost
-85 Returned
+* 10 OK
+* 50 Attention needed
+* 55 Damaged
+* 60 Destroyed
+* 65 Rejected
+* 70 Lost
+* 85 Returned
 
 #### Adding manufacturers and supplier
 
