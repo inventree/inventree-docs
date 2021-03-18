@@ -118,6 +118,9 @@ WeightTemplate = ParameterTemplate.create(api, { 'name' : 'Weight', 'units' : 'k
 ## Now we create the parameters
 ParameterLength = Parameter.create(api, { 'part': couch.pk, 'template': LengthTemplate.pk, 'data' : 2 })
 ParameterWeight = Parameter.create(api, { 'part': couch.pk, 'template': WeightTemplate.pk, 'data' : 60 })
+
+## Add a picture to the part
+couch.upload_image('my_nice_couch.jpg')
 ```
 
 #### Adding a location to the sofa
