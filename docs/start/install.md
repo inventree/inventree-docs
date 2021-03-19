@@ -213,7 +213,7 @@ inv server
 For more server options, run:
 
 ```
-inv server -a
+inv server -h
 ```
 
 This will launch the InvenTree web interface at `http://127.0.0.1:8000`. For other options refer to the [django docs](https://docs.djangoproject.com/en/2.2/ref/django-admin/)
