@@ -105,6 +105,8 @@ python3 -m venv inventree-env
 source inventree-env/bin/activate
 ```
 
+!!! If "source inventree-env/bin/activate" is not working try ". inventree-env/bin/activate"
+
 !!! note "Virtual Environment on Windows"
 	To create and activate a virtual environment in Windows, run the following commands:
 	```
