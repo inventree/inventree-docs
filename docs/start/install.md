@@ -66,6 +66,24 @@ pkg install py37-wheel
 pkg install py37-invoke
 ```
 
+## Download Source Code
+
+Download the InvenTree source code to a local directory. It is recommended to perform this step using git, as this allows the InvenTree installation to be easily updated to the latest version.
+
+```
+git clone https://github.com/inventree/inventree/
+```
+
+Alternatively, the source can be downloaded as a [.zip archive](https://github.com/inventree/InvenTree/archive/master.zip).
+
+Once the source is downloaded, cd into the source directory:
+
+```
+cd /path/to/inventree/
+```
+
+*(substitute /path/to/inventree/ with the directory where you have downloaded the source code)*.
+
 ## Python Setup
 
 To install InvenTree you will need python3 (>3.6) installed, as well as PIP (the Python package manager), and the Invoke tool.
@@ -86,6 +104,16 @@ sudo apt-get install python3-venv
 python3 -m venv inventree-env
 source inventree-env/bin/activate
 ```
+
+!!! note "Activate Virtual Environment"
+	if 
+	```
+	source inventree-env/bin/activate
+	```
+	is not working try 
+	```
+	. inventree-env/bin/activate
+	```
 
 !!! note "Virtual Environment on Windows"
 	To create and activate a virtual environment in Windows, run the following commands:
@@ -119,24 +147,6 @@ To display a list of the available configuration scripts, run the following comm
 ```
 inv --list
 ```
-
-## Download Source Code
-
-Download the InvenTree source code to a local directory. It is recommended to perform this step using git, as this allows the InvenTree installation to be easily updated to the latest version.
-
-```
-git clone https://github.com/inventree/inventree/
-```
-
-Alternatively, the source can be downloaded as a [.zip archive](https://github.com/inventree/InvenTree/archive/master.zip).
-
-Once the source is downloaded, cd into the source directory:
-
-```
-cd /path/to/inventree/
-```
-
-*(substitute /path/to/inventree/ with the directory where you have downloaded the source code)*.
 
 ## Installation
 
