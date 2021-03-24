@@ -30,24 +30,6 @@ To display a list of the available configuration scripts, run the following comm
 inv --list
 ```
 
-## Installation
-
-Now that the source code is downloaded (and optionally you have configured a Python virtual environment), the Python packages required to run InvenTree can be installed. InvenTree is a Python/Django application and relies on the pip package manager. All packages required to develop and test InvenTree are installed via pip. Package requirements can be found in ``requirements.txt``.
-
-
-To setup the InvenTree environment, run the following commands (from the InvenTree source directory):
-
-```
-inv install
-```
-
-This installs all required Python packages using pip package manager. It also creates a (default) database configuration file which needs to be edited to meet user needs before proceeding (see next step below).
-
-Additionally, this step creates a *SECRET_KEY* file which is used for the django authentication framework. 
-
-!!! warning "Keep it secret, keep it safe"
-    The SECRET_KEY file should never be shared or made public.
-
 ### Database Configuration
 
 Once the required packages are installed, the database configuration must be adjusted to suit your particular needs. InvenTree provides a simple default setup which should work *out of the box* for testing and debug purposes.
