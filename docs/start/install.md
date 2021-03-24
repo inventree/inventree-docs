@@ -36,11 +36,6 @@ Once the required packages are installed, the database configuration must be adj
 
 As part of the previous *install* step, a configuration file (**config.yaml**) is created. The configuration file provides administrators control over various setup options without digging into the Django *settings.py* script. The default setup uses a local sqlite database with *DEBUG* mode enabled.
 
-For further information on installation configuration, refer to the [Configuration](../config) section.
-
-!!! warning "Configure Database"
-    Ensure database settings are correctly configured in `config.yaml` before proceeding to the next step!
-
 ### Initialize Database
 
 Once install settings are correctly configured (in *config.yaml*) run the initial setup script:

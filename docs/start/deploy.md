@@ -19,12 +19,6 @@ Install required system packages (as superuser).
 
 First, install required system packages as per the [OS requirements](../intro#os-requirements).
 
-Then, install the supervisor process manager:
-
-```
-sudo apt-get install supervisor
-```
-
 Next, install the system packages required for your particular database:
 
 ### MySQL
@@ -134,6 +128,10 @@ Edit the configuration file at  `/home/inventree/src/InvenTree/config.yaml`.
 !!! warning "Configure Database"
     Ensure database settings are correctly configured in `config.yaml` before proceeding to the next step!
 
+## Create Database
+
+!!! todo "TODO"
+
 # Development Server
 
 The InvenTree development server is useful for testing and configuration - and it may be wholly sufficient for a small-scale installation.
@@ -158,6 +156,16 @@ inv server -a 192.168.120.1:8000
 
 !!! warning "Not For Production"
     It should be noted that the *development server* provided with django / InvenTree is probably not suitable for your production environment. Instead, use a proper web-server (such as Gunicorn, below).
+
+## Install Supervisor
+
+!!! todo "More details here"
+
+Install the supervisor process manager:
+
+```
+sudo apt-get install supervisor
+```
 
 ## Gunicorn
 
