@@ -1,135 +1,17 @@
 ---
-title: Install InvenTree
+title: Installation Instructions
 ---
 
-## Introduction
+## Development Server
 
-The InvenTree server application communicates with a backend database, and serves data to the user(s) via a web framework and an API. Before users can interact with the InvenTree system, the server must be installed and properly configured, and then the server process must be started (at a network location which is accessible to the users).
+The following installation instructions can be used to install InvenTree and run a server which provides a simple development environment.
 
-### Supported Databases
+!!! warning "Deployment"
+    Refer to the [deployment instructions](../deploy) to implement a much more robust server setup.
 
-InvenTree can be used by any database backend which is supported by the [Django framework](https://docs.djangoproject.com/en/3.0/ref/databases/):
+## Download Code
 
-* SQLite
-* PostgreSQL
-* MariaDB
-* MySQL
-* Oracle
 
-Database selection should be determined by your particular installation requirements. By default, InvenTree uses SQLite which provides a simple file-based database that allows a quick setup for development and testing.
-
-### Serving Data
-
-Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users. Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](../deploy).
-
-## OS Requirements
-
-To install a complete *development* environment for InvenTree, follow the steps presented below. A production environment will require further work as per the particular application requirements. 
-
-Installing and running InvenTree should be possible on most operating systems, as it requires only cross-platform Python libraries.
-
-On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
-
-### Linux
-
-The InvenTree documentation assumes that the operating system is a Linux variant. To install the required python packages to get started on a Linux system, run the following commands:
-
-```
-sudo apt-get update
-sudo apt-get install python3 python3-dev
-sudo apt-get install python3-pip python3-invoke
-```
-
-!!! warning "Sudo"
-    `apt-get` commands will (most likely) be required to run under sudo. Take care not to run the installation scripts under sudo, as this may alter the system python path and cause the InvenTree installation to not work correctly
-
-### Windows
-
-InvenTree can be installed and run from the Windows command line, assuming the following binaries are available in the system PATH:
-
-- python3
-- pip3
-- invoke
-
-!!! info "WSL"
-
-    Alternatively, if you are running under the Windows operating system you can install and run InvenTree using the [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) framework. Running under WSL provides a Linux compatible layer which simplifies InvenTree installation.
-
-### FreeBSD
-
-If you are running the FreeBSD operating system, run the following commands to install the required Python packages:
-
-```
-pkg install python
-pkg install py37-pip
-pkg install py37-wheel
-pkg install py37-invoke
-```
-
-## Download Source Code
-
-Download the InvenTree source code to a local directory. It is recommended to perform this step using git, as this allows the InvenTree installation to be easily updated to the latest version.
-
-```
-git clone https://github.com/inventree/inventree/
-```
-
-Alternatively, the source can be downloaded as a [.zip archive](https://github.com/inventree/InvenTree/archive/master.zip).
-
-Once the source is downloaded, cd into the source directory:
-
-```
-cd /path/to/inventree/
-```
-
-*(substitute /path/to/inventree/ with the directory where you have downloaded the source code)*.
-
-## Python Setup
-
-To install InvenTree you will need python3 (>3.6) installed, as well as PIP (the Python package manager), and the Invoke tool.
-
-!!! warning "Python Version"
-    InvenTree requrires Python 3.6 (or newer). If your system has an older version of Python installed, you will need to follow the update instructions for your OS.
-
-### Python Virtual Environment
-
-Installing the required Python packages inside a virtual environment allows a local install separate to the system-wide Python installation. While not strictly necessary, using a virtual environment is highly recommended as it prevents conflicts between the different Python installations.
-
-You can read more about Python virtual environments [here](https://docs.python.org/3/tutorial/venv.html).
-
-To configure Inventree inside a virtual environment, ``cd`` into the inventree base directory and run the following commands:
-
-```
-sudo apt-get install python3-venv
-python3 -m venv inventree-env
-source inventree-env/bin/activate
-```
-
-!!! note "Activate Virtual Environment"
-	if 
-	```
-	source inventree-env/bin/activate
-	```
-	is not working try 
-	```
-	. inventree-env/bin/activate
-	```
-
-!!! note "Virtual Environment on Windows"
-	To create and activate a virtual environment in Windows, run the following commands:
-	```
-	py -m venv inventree-env
-	.\inventree-env\Scripts\activate
-	```
-
-	Refer to the [official Python documentation](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to setup a virtual environment on Windows.
-
-This will place the current shell session inside a virtual environment - the terminal should display the ``(inventree-env)`` prefix.
-
-!!! warning "Activate virtual environment"
-    Remember to activate the virtual environment when starting each shell session, before running Inventree commands. This will ensure that the correct environment is being used.
-
-### Invoke
 
 InvenTree setup is performed using the [invoke](https://www.pyinvoke.org/) Python build tool. Various useful scripts are defined in the `tasks.py` file.
 

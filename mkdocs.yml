@@ -43,9 +43,10 @@ nav:
     - FAQ: faq.md
     - Contribute: contribute.md
   - Getting Started:
-    - Installation: start/install.md
-    - Configuration: start/config.md
+    - Introduction: start/intro.md
+    - Development: start/install.md
     - Deploying: start/deploy.md
+    - Configure: start/config.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
   - Parts:
