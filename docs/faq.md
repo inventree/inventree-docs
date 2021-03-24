@@ -16,6 +16,10 @@ or
 
 <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 
+### Problems Installing on Windows
+
+InvenTree installation is not officially supported natively on Windows. Install using the WSL framework.
+
 ### Command 'inv' / 'invoke' not found
 
 If the `inv` or `invoke` command does not work, it means that the [invoke](https://pypi.org/project/invoke/) python library has not been correctly installed. 

@@ -10,6 +10,78 @@ Django apps provide multiple deployment methods - see the [Django documentation]
 
 There are also numerous online tutorials describing how to deploy a Django application either locally or on an online platform.
 
+The following instructions provide a reasonably performant server, using [gunicorn](https://gunicorn.org/) as a webserver, and [supervisor](http://supervisord.org/) as a process manager.
+    
+## Initial Setup
+
+### Install System Packages
+
+Install required system packages (as superuser).
+
+First, install required system packages as per the [OS requirements](../intro#os-requirements).
+
+Then, install the supervisor process manager:
+
+```
+sudo apt-get install supervisor
+```
+
+### Create InvenTree User
+
+It is highly recommended that the InvenTree server is not run under root. Create a user account from which we will run the server:
+
+```
+sudo useradd --create-home inventree
+```
+
+InvenTree source code, log files, etc will be located under the `/home/inventree/` directory.
+
+Switch to the `inventree` user so commands are performed in the correct context:
+
+```
+sudo su inventree
+```
+
+### Download Source Code
+
+Download InvenTree source code, into the `./src` directory:
+
+```
+cd /home/inventree
+git clone https://github.com/inventree/inventree src
+```
+
+### Create Virtual Environment
+
+Create a python virtual environment for installting required Python packages and binaries:
+
+```
+python3 -m venv env
+source ./env/bin/activate
+```
+
+The shell prompt should now display the `(env)` prefix.
+
+### Install Python Packages
+
+```
+pip3 install -U -r src/requirements.txt
+```
+
+This command will install all of the python binaries and library files required for the InvenTree installation.
+
+### Create Required Directories
+
+```
+mkdir log static media
+```
+
+This step creates directories required by InvenTree:
+
+* **log** - Store InvenTree log files
+* **static** - Location of static files for the web server
+* **media** - Location of uploaded media files
+
 ### Development Server
 
 The InvenTree development server is useful for testing and configuration - and it may be wholly sufficient for a small-scale installation.
