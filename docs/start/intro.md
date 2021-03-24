@@ -74,6 +74,10 @@ InvenTree runs on [Python](https://python.org).
 !!! warning "Python Version"
     InvenTree requrires Python 3.6 (or newer). If your system has an older version of Python installed, you will need to follow the update instructions for your OS.
 
+### Invoke
+
+InvenTree makes use of the [invoke](https://www.pyinvoke.org/) python toolkit for performing various administrative actions
+
 ### Virtual Environment
 
 Installing the required Python packages inside a virtual environment allows a local install separate to the system-wide Python installation. While not strictly necessary, using a virtual environment is **highly recommended** as it prevents conflicts between the different Python installations.

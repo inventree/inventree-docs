@@ -12,9 +12,8 @@ There are also numerous online tutorials describing how to deploy a Django appli
 
 The following instructions provide a reasonably performant server, using [gunicorn](https://gunicorn.org/) as a webserver, and [supervisor](http://supervisord.org/) as a process manager.
     
-## Initial Setup
 
-### Install System Packages
+## Install System Packages
 
 Install required system packages (as superuser).
 
@@ -25,6 +24,22 @@ Then, install the supervisor process manager:
 ```
 sudo apt-get install supervisor
 ```
+
+Next, install the system packages required for your particular database:
+
+### MySQL
+
+```
+sudo apt-get install mysql-server libmysqlclient-dev
+```
+
+### Postgresql
+
+```
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+```
+
+### Initial Setup
 
 ### Create InvenTree User
 
@@ -62,18 +77,10 @@ source ./env/bin/activate
 
 The shell prompt should now display the `(env)` prefix.
 
-### Install Python Packages
-
-```
-pip3 install -U -r src/requirements.txt
-```
-
-This command will install all of the python binaries and library files required for the InvenTree installation.
-
 ### Create Required Directories
 
 ```
-mkdir log static media
+mkdir log static media backup
 ```
 
 This step creates directories required by InvenTree:
@@ -81,8 +88,53 @@ This step creates directories required by InvenTree:
 * **log** - Store InvenTree log files
 * **static** - Location of static files for the web server
 * **media** - Location of uploaded media files
+* **backup** - Location of database backup files
 
-### Development Server
+## Install InvenTree Packages
+
+The Python packages required by the InvenTree server must be installed into the virtual environment. 
+
+Run the `invoke install` command (from within the src directory):
+
+```
+cd src
+invoke install
+```
+
+This installs all required Python packages using pip package manager. It also creates a (default) database configuration file which needs to be edited to meet user needs before proceeding (see next step below).
+
+Additionally, this step creates a *SECRET_KEY* file which is used for the django authentication framework. 
+
+!!! warning "Keep it secret, keep it safe"
+    The SECRET_KEY file should never be shared or made public.
+
+You will also need to install the python packages required for your particular database backend:
+
+### MySQL
+
+```
+pip3 install mysqlclient
+```
+
+### Postgresql
+
+```
+pip3 install psycopg2
+```
+
+## Configure InvenTree Options
+
+Once the required software packages are installed, the database and server options must be configured.
+
+Edit the configuration file at  `/home/inventree/src/InvenTree/config.yaml`.
+
+!!! info "Config Guidelines"
+    Refer to the [configuration guidelines](../config) for full details.
+
+!!! warning "Configure Database"
+    Ensure database settings are correctly configured in `config.yaml` before proceeding to the next step!
+
+# Development Server
 
 The InvenTree development server is useful for testing and configuration - and it may be wholly sufficient for a small-scale installation.
 
