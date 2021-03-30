@@ -6,7 +6,10 @@ title: Database Configuration
 
 Admin users will need to adjust the InvenTree installation to meet the particular needs of their setup. For example, pointing to the correct database backend, or specifying a list of allowed hosts.
 
-The Django configuration parameters are found in the normal place (*settings.py*). However the settings presented in this file should not be adjusted as they will alter the core behaviour of the InvenTree application.
+InvenTree system settings can be specified in a configuration file, or via environment variables.
+
+!!! info "Environment Variables"
+    Settings specified using environment variables take priority
 
 ### Configuration File
 
@@ -90,12 +93,6 @@ MySQL database backend is supported with the native Django implemetation. To run
 * libmysqlclient-dev - *Required for connecting to the MySQL database in Python*
 * (pip) mysqlclient - *Python package for communication with MySQL database*
 
-To install these required packages, run the following command:
-
-```
-inv mysql
-```
-
 It is then up to the database adminstrator to create a new MySQL database to store inventree data, in addition to a username/password to access the data.
 
 !!! info "MySQL Collation"
@@ -110,12 +107,6 @@ PostgreSQL database backend is supported with the native Django implementation. 
 * postgresql-contrib
 * libpq-dev
 * (pip3) psycopg2
-
-To install these required packages, run the following commands:
-
-```
-inv postgresql
-```
 
 It is then up to the database adminstrator to create a new PostgreSQL database to store inventree data, in addition to a username/password to access the data.
 
@@ -132,19 +123,19 @@ For further information, refer to the following documentation:
 
 ### Static File Storage
 
-By default, static files are stored in the local directory `./inventree_static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
+By default, static files are stored in the local directory `/home/inventree/static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_STATIC_ROOT` environment variable.
 
 ### Uploaded File Storage
 
-By default, uploaded media files are stored in the local directory `./inventree_media`. This directory should be changed by specifying the `media_root` option in the config file based on the particular installation requirements.
+By default, uploaded media files are stored in the local directory `/home/inventree/media`. This directory should be changed by specifying the `media_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
 ### Backup Location
 
-The default behaviour of the database backup is to generate backup files for database tables and media files to the user's temporary directory. The target directory can be overridden by setting the `backup_dir` parameter in the config file.
+The default behaviour of the database backup is to generate backup files for database tables and media files to `/home/inventree/backup`. The target directory can be overridden by setting the `backup_dir` parameter in the config file.
 
 Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
 

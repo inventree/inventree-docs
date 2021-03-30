@@ -44,9 +44,10 @@ nav:
     - Contribute: contribute.md
   - Getting Started:
     - Introduction: start/intro.md
+    - Configuration: start/config.md
     - Development: start/install.md
-    - Deploying: start/deploy.md
-    - Configure: start/config.md
+    - Production: start/deploy.md
+    - Docker: start/docker.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
   - Parts:
@@ -88,6 +89,7 @@ nav:
     - Import Data: admin/import.md
     - Python Shell: admin/shell.md
     - Error Logs: admin/logs.md
+    - Background Tasks: admin/tasks.md
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
