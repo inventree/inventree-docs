@@ -37,7 +37,7 @@ Once a database is setup, you need a way of accessing the data. InvenTree provid
 
 ### Background Tasks
 
-A separate application handles management of [background tasks](../tasks), separate to user-facing web requests.
+A separate application handles management of [background tasks](../../admin/tasks), separate to user-facing web requests.
 
 ## OS Requirements
 
@@ -125,15 +125,29 @@ git clone https://github.com/inventree/inventree/
 
 Alternatively, the source can be downloaded as a [.zip archive](https://github.com/inventree/InvenTree/archive/master.zip).
 
-## Development Setup
+## Installation Guides
+
+There are multiple ways to get an InvenTree server up and running, of various complexity (and robustness)! 
+
+### Development Server
 
 To setup a *simple* development server, refer to the [development instructions](../install).
 
 These instructions are useful for those wishing to run a development server. This setup may suffice for a small-scale installation with only a small number of users.
 
-However for a robust server setup which supports high traffic and multiple users, it is highly recommended that the [deployment guide](../deploy) is followed instead.
+!!! warning "Not for production"
+    The development server is not to be used for a production environment. 
 
-## Deployment Guide
+For a robust server setup which supports high traffic and multiple users, it is highly recommended that the [deployment guide](../deploy) is followed instead.
+
+### Production Server
+
+A production server install requires greater consideration.
 
 To properly deploy a robust InvenTree server setup, refer to the [deployment instructions](../deploy).
 
+### Docker
+
+InvenTree can be installed using docker, if that's your thing.
+
+Refer to the [docker instructions](../docker).

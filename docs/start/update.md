@@ -13,6 +13,9 @@ Administrators wishing to update InvenTree to the latest version should follow t
 
 Ensure the InvenTree server is stopped. This will depend on the particulars of your database installation.
 
+!!! info "Stop Server"
+    The method by which the InvenTree server is stopped depends on your particular installation!
+
 ### Update Source Code
 
 Update the InvenTree source code to the latest version (or a particular commit if required).
