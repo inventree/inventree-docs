@@ -15,10 +15,11 @@ InvenTree system settings can be specified in a configuration file, or via envir
 
 To support install specific settings, a simple configuration file ``config.yaml`` is provided. This configuration file is loaded by the InvenTree server at runtime. Settings specific to a given install should be adjusted in ``config.yaml``.
 
-!!! info "Config file location"
-    The InvenTree config file is located at `./InvenTree/config.yaml`
+The default InvenTree config file is located at `./InvenTree/config.yaml`
 
-The default configuration file launches a *DEBUG* configuration with a simple SQLITE database backend. This default configuration file is shown below:
+However, the config file can be placed elsewhere, and specified with the `INVENTREE_CONFIG_FILE` environment variable.
+
+The default configuration file file is shown below:
 
 ``` yaml
 {% include 'config.yaml' %}
@@ -37,7 +38,7 @@ In addition to specifying InvenTree options via the `config.yaml` file, these op
 !!! warning Available Variables
     Some configuration options cannot be set via environment variables. Refer to the documentation below.
 
-### Basic Options
+## Basic Options
 
 The following basic options are available:
 
@@ -46,7 +47,7 @@ The following basic options are available:
 | INVENTREE_DEBUG | debug | Enable debug mode |
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal |
 
-### Secret Key
+## Secret Key
 
 InvenTree requires a secret key for providing cryptographic signing - this should be a secret (and unpredictable) value.
 
@@ -64,7 +65,7 @@ A file containing the secret key can be passed via the environment variable `INV
 
 If not specified via environment variables, the fallback secret_key file (automatically generated as part of InvenTree installation) will be used.
 
-### Database Options
+## Database Options
 
 InvenTree provides support for multiple database backends - any backend supported natively by Django can be used. 
 
@@ -82,7 +83,7 @@ The following database options can be configured:
 | INVENTREE_DB_PORT | database.PORT | Database host port (if required) |
 
 
-### Allowed Hosts / CORS
+## Allowed Hosts / CORS
 
 By default, all hosts are allowed, and CORS requests are enabled from any origin. **This is not secure and should be adjusted for your installation**. These options can be changed in the configuration file.
 
@@ -90,6 +91,8 @@ For further information, refer to the following documentation:
 
 * [Django ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.2/ref/settings/#allowed-hosts)
 * [Django CORS headers](https://github.com/OttoYiu/django-cors-headers)
+
+## File Storage Locations
 
 ### Static File Storage
 
@@ -108,6 +111,8 @@ Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` env
 The default behaviour of the database backup is to generate backup files for database tables and media files to `/home/inventree/backup`. The target directory can be overridden by setting the `backup_dir` parameter in the config file.
 
 Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
+
+## Other Options
 
 ### Authentication Backends
 
