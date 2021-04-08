@@ -81,36 +81,6 @@ The following database options can be configured:
 | INVENTREE_DB_HOST | database.HOST | Database host address (if required) |
 | INVENTREE_DB_PORT | database.PORT | Database host port (if required) |
 
-Instructions for particular database backends are provided below:
-
-#### SQLite
-By default, InvenTree uses an sqlite database file : `inventree_db.sqlite3`. This provides a simple, portable database file that is easy to use for debug and testing purposes. 
-
-#### MySQL
-MySQL database backend is supported with the native Django implemetation. To run InvenTree with the MySQL backend, a number of extra packages need to be installed:
-
-* mysql-server - *MySQL backend server*
-* libmysqlclient-dev - *Required for connecting to the MySQL database in Python*
-* (pip) mysqlclient - *Python package for communication with MySQL database*
-
-It is then up to the database adminstrator to create a new MySQL database to store inventree data, in addition to a username/password to access the data.
-
-!!! info "MySQL Collation"
-    When creating the MySQL database, the adminstrator must ensure that the collation option is set to **utf8_unicode_520_ci** to ensure that InvenTree features function correctly.
-
-The database options (in the `config.yaml` file) then need to be adjusted to communicate the MySQL backend. Refer to the [Django docs](https://docs.djangoproject.com/en/dev/ref/databases/) for further information.
-
-#### PostgreSQL
-PostgreSQL database backend is supported with the native Django implementation. Note that to use this backend, the following system packages must be installed:
-
-* postgresql
-* postgresql-contrib
-* libpq-dev
-* (pip3) psycopg2
-
-It is then up to the database adminstrator to create a new PostgreSQL database to store inventree data, in addition to a username/password to access the data.
-
-The database options (in the `config.yaml` file) then need to be adjusted to communicate the PostgreSQL backend. Refer to the [Django docs](https://docs.djangoproject.com/en/dev/ref/databases/) for further information.
 
 ### Allowed Hosts / CORS
 

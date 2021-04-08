@@ -12,15 +12,14 @@ The InvenTree server ecosystem consists of the following components:
 
 A persistent database is required to store stock information. The database backend must be installed and configured separately to the InvenTree application.
 
-InvenTree can be used by any database backend which is supported by the [Django framework](https://docs.djangoproject.com/en/3.0/ref/databases/):
+InvenTree can be used with any of the following database backends:
 
 * SQLite
 * PostgreSQL
 * MariaDB
 * MySQL
-* Oracle
 
-Database selection should be determined by your particular installation requirements. By default, InvenTree uses SQLite which provides a simple file-based database that allows a quick setup for development and testing.
+Database selection should be determined by your particular installation requirements. 
 
 ### Media Files
 
@@ -34,7 +33,6 @@ The webserver code also provides a first-party API for performing database query
 
 Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users.  Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](../deploy).
 
-
 ### Background Tasks
 
 A separate application handles management of [background tasks](../../admin/tasks), separate to user-facing web requests.
@@ -46,7 +44,8 @@ The InvenTree documentation assumes that the operating system is a debian based 
 !!! warning "Installing on Windows"
     Installation on Windows is *not guaranteed* to work (at all). To install on a Windows system, it is highly recommended that you [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps), and then follow installation procedure from within the WSL environment.
 
-On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
+!!! warning "Weasyprint"
+    On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
 
 The following minimum packages are required to be installed on a system level:
 
@@ -76,7 +75,16 @@ InvenTree runs on [Python](https://python.org).
 
 ### Invoke
 
-InvenTree makes use of the [invoke](https://www.pyinvoke.org/) python toolkit for performing various administrative actions
+InvenTree makes use of the [invoke](https://www.pyinvoke.org/) python toolkit for performing various administrative actions.
+
+!!! warning "Invoke Version"
+	InvenTree requires invoke version 1.4.0 or newer. Some platforms may be shipped with older versions of invoke!
+
+To display a list of the available InvenTree administration actions, run the following commands from the top level source directory:
+
+```
+inv --list
+```
 
 ### Virtual Environment
 
@@ -115,6 +123,7 @@ source env/bin/activate
 
 This will place the current shell session inside a virtual environment - the terminal should display the ``(env)`` prefix.
 
+
 ## Downloading Source Code
 
 InvenTree source code is distributed on [GitHub](https://github.com/inventree/inventree/), and the latest version can be downloaded (using Git) with the following command:
@@ -125,29 +134,19 @@ git clone https://github.com/inventree/inventree/
 
 Alternatively, the source can be downloaded as a [.zip archive](https://github.com/inventree/InvenTree/archive/master.zip).
 
+!!! note "Updating via Git"
+    Downloading the source code using Git is recommended, as it allows for simple updates when a new version of InvenTree is released.
+
 ## Installation Guides
 
 There are multiple ways to get an InvenTree server up and running, of various complexity (and robustness)! 
 
-### Development Server
-
-To setup a *simple* development server, refer to the [development instructions](../install).
-
-These instructions are useful for those wishing to run a development server. This setup may suffice for a small-scale installation with only a small number of users.
-
-!!! warning "Not for production"
-    The development server is not to be used for a production environment. 
-
-For a robust server setup which supports high traffic and multiple users, it is highly recommended that the [deployment guide](../deploy) is followed instead.
-
-### Production Server
-
-A production server install requires greater consideration.
-
-To properly deploy a robust InvenTree server setup, refer to the [deployment instructions](../deploy).
-
 ### Docker
 
-InvenTree can be installed using docker, if that's your thing.
+The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker-compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
 
-Refer to the [docker instructions](../docker).
+Refer to the [docker setup instructions](../docker) for further information.
+
+### Bare Metal
+
+If you do not wish to use the docker container, you will need to manually install the required packages and follow through the installation guide. Refer to the [InvenTree installation instructions](../install) for more details.
