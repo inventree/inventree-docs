@@ -25,7 +25,7 @@ Refer to the [features](./features) page for a rundown on the features that Inve
 
 ## Getting Started
 
-Refer to the [installation guide](./start/install) for instructions on installing InvenTree. The server where InvenTree is to be installed will need to meet some basic package requirements, and a certain level of system administration understanding is assumed.
+Refer to the [installation guide](./start/intro) for instructions on installing InvenTree. The server where InvenTree is to be installed will need to meet some basic package requirements, and a certain level of system administration understanding is assumed.
 
 ## Get the App
 
