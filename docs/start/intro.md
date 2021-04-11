@@ -44,28 +44,6 @@ The InvenTree documentation assumes that the operating system is a debian based 
 !!! warning "Installing on Windows"
     Installation on Windows is *not guaranteed* to work (at all). To install on a Windows system, it is highly recommended that you [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps), and then follow installation procedure from within the WSL environment.
 
-!!! warning "Weasyprint"
-    On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
-
-The following minimum packages are required to be installed on a system level:
-
-### Debian
-
-```
-sudo apt-get update
-sudo apt-get install python3 python3-dev
-sudo apt-get install python3-pip python3-invoke python3-venv
-```
-
-### FreeBSD
-
-```
-pkg install python
-pkg install py37-pip
-pkg install py37-wheel
-pkg install py37-invoke
-```
-
 ## Python Requirements
 
 InvenTree runs on [Python](https://python.org).
@@ -92,7 +70,7 @@ Installing the required Python packages inside a virtual environment allows a lo
 
 You can read more about Python virtual environments [here](https://docs.python.org/3/tutorial/venv.html).
 
-!!! note "Virtual Environment"
+!!! info "Virtual Environment"
     The installation intstruction assume that a virtual environment is configured
 
 `cd` into the InvenTree directory, and create a virtual environment with the following command:
@@ -111,7 +89,7 @@ To configure Inventree inside a virtual environment, ``cd`` into the inventree b
 source env/bin/activate
 ```
 
-!!! note "Activate Virtual Environment"
+!!! info "Activate Virtual Environment"
 	if 
 	```
 	source env/bin/activate
@@ -134,7 +112,7 @@ git clone https://github.com/inventree/inventree/
 
 Alternatively, the source can be downloaded as a [.zip archive](https://github.com/inventree/InvenTree/archive/master.zip).
 
-!!! note "Updating via Git"
+!!! info "Updating via Git"
     Downloading the source code using Git is recommended, as it allows for simple updates when a new version of InvenTree is released.
 
 ## Installation Guides

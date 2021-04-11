@@ -4,13 +4,24 @@ title: Deploy InvenTree
 
 ## Initial Setup
 
+Follow the instructions below to install the requried system packages, python modules, and InvenTree source code.
+
 ### Install System Packages
 
-Install required system packages (as superuser).
+Install required system packages (as superuser):
 
-First, install required system packages as per the [OS requirements](../intro#os-requirements).
+!!! warning "OS Specific Requirements"
+    The following packages are required on a debian system. A different distribution may require a slightly different set of packages
 
-Next, install the system packages [required for your particular database](../intro#database-requirements).
+```
+sudo apt-get update
+sudo apt-get install python3 python3-dev
+sudo apt-get install python3-pip python3-invoke python3-venv
+```
+
+!!! warning "Weasyprint"
+    On some systems, the dependencies for the `weasyprint` package might not be installed. Consider running through the [weasyprint installation steps](https://weasyprint.readthedocs.io/en/stable/install.html) before moving forward.
+
 
 ### Create InvenTree User
 
@@ -20,7 +31,7 @@ Next, install the system packages [required for your particular database](../int
 Create a user account from which we will run the server:
 
 ```
-sudo useradd --create-home inventree
+sudo useradd -m -d /home/inventree -s /bin/bash inventree
 ```
 
 InvenTree source code, log files, etc will be located under the `/home/inventree/` directory.
@@ -35,22 +46,20 @@ sudo su inventree
 
 ```
 cd /home/inventree
-mkdir log static media backup
+mkdir log static data
 ```
 
 This step creates directories required by InvenTree:
 
-* **log** - Store InvenTree log files
-* **static** - Location of static files for the web server
-* **media** - Location of uploaded media files
-* **backup** - Location of database backup files
+* `/home/inventree/log` - Store InvenTree log files
+* `/home/inventree/static` - Location of static files for the web server
+* `/home/inventre/data` - Location of stored media and backup files
 
 ### Download Source Code
 
 Download InvenTree source code, into the `./src` directory:
 
 ```
-cd /home/inventree
 git clone https://github.com/inventree/inventree src
 ```
 
@@ -63,21 +72,18 @@ python3 -m venv env
 source ./env/bin/activate
 ```
 
-The shell prompt should now display the `(env)` prefix.
+!!! info "(env) prefix"
+    The shell prompt should now display the `(env)` prefix, showing that you are operating within the context of the python virtual environment
 
 ### Install InvenTree Packages
 
 The Python packages required by the InvenTree server must be installed into the virtual environment. 
 
-Run the `invoke install` command (from within the src directory):
-
 ```
-(env) cd src
-(env) invoke install
+pip install -U -r src/requirements.txt
 ```
 
 This installs all required Python packages using pip package manager. It also creates a (default) database configuration file which needs to be edited to meet user needs before proceeding (see next step below).
-
 
 ## Create Database
 
@@ -89,6 +95,9 @@ SQLite uses a simple portable database file which is easy to use for debug and t
 
 Install required packages as follows:
 
+!!! info "Sudo Actions"
+    Perform sudo actions from a separate shell, as 'inventree' user does not have sudo access
+
 ```
 sudo apt-get install sqlite3
 ```
@@ -97,82 +106,72 @@ A `.sqlite3` database file will be automatically created, at the location specif
 
 ### PostgreSQL
 
+#### Install PostgreSQL
+
 Install required system packages:
+
+!!! info "Sudo Actions"
+    Perform sudo actions from a separate shell, as 'inventree' user does not have sudo access
 
 ```
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
 
+And start the postgresql service:
+
+```
+sudo service postgresql start
+```
+
+#### Create Database and User
+
+We need to create new database, and a postgres user to allow database access.
+
+```
+sudo -u postgres psql
+```
+
+You should now be in an interactive database shell:
+
+```
+create database inventree;
+create user myuser with encrypted password 'mypass';
+grant all privileges on database inventree to myuser;
+```
+
+!!! info "Username / Password"
+    You should change the username and password from the values specified above. This username and password will also be for the InvenTree database connection configuration.
+
+#### Install Python Bindings
+
 The PostgreSQL python binding must also be installed (into your virtual environment):
 
 ```
-(env) pip3 install psycopg2 pgcli
-```
-
-Assuming the postgresql server is installed and running, switch to the `postgres` user and create a new database:
-
-```
-sudo su - postgres
-```
-
-You should now be in a shell session for the `postgres` user. Login to the database server as follows:
-
-```
-psql
-```
-
-Create a new database:
-
-```
-CREATE DATABASE inventree;
-```
-
-*Note: The name of the database will be required in the configuration section*
-
-Create a user account associated with the new database.
-
-```
-CREATE USER inventreeuser WITH PASSWORD "password";
-```
-
-*Note: Choose different username and password values, and remember them for the configuration section*.
-
-Set the following database configuration options:
-
-```
-ALTER ROLE inventreeuser SET client_encoding TO 'utf8';
-ALTER ROLE inventreeuser SET default_transaction_isolation TO 'read committed';
-ALTER ROLE inventreeuser SET timezone TO 'UTC';
-
-GRANT ALL PRIVILEGES ON DATABASE inventree TO inventreeuser;
-```
-
-Exit the postgresql shell:
-
-```
-\q
-```
-
-Exit out of the `postgres` user's shell:
-
-```
-exit
+pip3 install psycopg2 pgcli
 ```
 
 ### MySQL / MariaDB
 
+#### Install Backend
+
 To run InvenTree with the MySQL or MariaDB backends, a number of extra packages need to be installed:
+
+!!! info "Sudo Actions"
+    Perform sudo actions from a separate shell, as 'inventree' user does not have sudo access
 
 ```
 sudo apt-get install mysql-server libmysqlclient-dev
 ```
 
-Install the python bindings for MySQL:
+#### Install Python Bindings
+
+Install the python bindings for MySQL (into the python virtual environment).
 
 ```
-(env) pip3 install mysqlclient mariadb
+pip3 install mysqlclient mariadb
 ```
 
+#### Create Database
 
 Assuming the MySQL server is installed and running, login to the MySQL server as follows:
 
@@ -189,7 +188,7 @@ mysql> CREATE DATABASE inventree;
 Create a new user with complete access to the database:
 
 ```
-mysql> CREATE USER 'inventreeuser'@'%' IDENTIFIED WITH mysql_native_password BY 'inventree';
+mysql> CREATE USER 'myuser'@'%' IDENTIFIED WITH mysql_native_password BY 'mypass';
 mysql> GRANT ALL ON blog_data.* TO 'djangouser'@'%';
 mysql> FLUSH PRIVILEGES;
 ```
@@ -199,6 +198,9 @@ Exit the mysql shell:
 ```
 mysql> EXIT;
 ```
+
+!!! info "Username / Password"
+    You should change the username and password from the values specified above. This username and password will also be for the InvenTree database connection configuration.
 
 ## Configure InvenTree Options
 
@@ -212,7 +214,7 @@ Edit the configuration file at  `/home/inventree/src/InvenTree/config.yaml`.
     Refer to the [configuration guidelines](../config) for full details.
 
 !!! warning "Configure Database"
-    Ensure database settings are correctly configured before proceeding to the next step!
+    Ensure database settings are correctly configured before proceeding to the next step! In particular, check that the database connection settings match the database you have created in the previous step.
 
 ## Initialize Database
 
@@ -223,7 +225,8 @@ The database has been configured above, but is currently empty.
 Run the following command to initialize the database with the required tables.
 
 ```
-(env) invoke update
+cd /home/inventree/src
+invoke update
 ```
 
 ### Create Admin Account
@@ -231,7 +234,7 @@ Run the following command to initialize the database with the required tables.
 Create a superuser (admin) account for the InvenTree installation:
 
 ```
-(env) invoke superuser
+invoke superuser
 ```
 
 !!! success "Ready to Serve"
@@ -252,32 +255,3 @@ Refer to the [development server instructions](../development) for further infor
 In a production environment, a more robust server setup is required.
 
 Refer to the [production server instructions](../production) for further information.
-
-## Install Gunicorn
-
-Gunicorn can be installed using PIP:
-
-```
-pip3 install gunicorn
-```
-
-!!! warning "Python Environment"
-    Ensure that gunicorn is installed within the same python environment context as the InvenTree install - otherwise gunicorn will not be able to import the correct python modules.
-
-
-### Configure Gunicorn
-
-The Gunicorn server can be configured with a simple configuration file (e.g. python script). An example configuration file is provided in ``InvenTree/gunicorn.conf.py``
-
-``` python
-{% include 'gunicorn.conf.py' %}
-```
-
-This file can be used to configure the Gunicorn server to match particular requirements.
-
-### Run Gunicorn
-
-```
-cd InvenTree
-gunicorn -c gunicorn.conf.py InvenTree.wsgi
-```

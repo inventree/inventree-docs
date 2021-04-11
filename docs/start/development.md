@@ -7,10 +7,10 @@ title: Development Server
 !!! warning "Installation"
     Before continuing, ensure that the [installation steps](../install) have been completed.
 
-The following installation instructions can be used to launch a simple development server.
+InvenTree includes a simple server application, suitable for use in a development environment.
 
 !!! warning "Deployment"
-    Refer to the [deployment instructions](../deploy) to implement a much more robust server setup.
+    Refer to the [production server instructions](../production) to implement a much more robust server setup.
 
 ### Running on a Local Machine
 

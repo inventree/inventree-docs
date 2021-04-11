@@ -44,9 +44,11 @@ nav:
     - Contribute: contribute.md
   - Installation:
     - Introduction: start/intro.md
+    - Configuration: start/config.md
     - Docker Installation: start/docker.md
     - Manual Installation: start/install.md
-    - Configuration: start/config.md
+    - Development Server: start/development.md
+    - Production Server: start/production.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
   - Parts:
