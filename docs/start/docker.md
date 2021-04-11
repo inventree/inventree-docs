@@ -68,14 +68,6 @@ Save and edit the `docker-compose.yml` file as required.
 
 The only **required** change is to ensure that the `/path/to/data` entry (at the end of the file) points to the correct directory on your local file system, where you want InvenTree data to be stored.
 
-### Build
-
-Build the docker containers:
-
-```
-docker-compose build
-```
-
 ### Launch Database Server
 
 Before we can create the database, we need to launch the database server container:

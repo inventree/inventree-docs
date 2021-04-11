@@ -1,5 +1,5 @@
 ---
-title: Deploy InvenTree
+title: Install InvenTree
 ---
 
 ## Initial Setup
