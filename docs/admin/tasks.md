@@ -12,11 +12,17 @@ Some tasks (such as sending emails or performing bulk database actions) may take
 
 ### Periodic Tasks
 
-Some tasks must be performed on a periodic basis. 
+Some tasks must be performed on a regular, periodic basis. 
 
 ## Django Q 
 
 InvenTree uses the [django-q](https://django-q.readthedocs.io/en/latest/) background task manager.
+
+### Running Worker
+
+The Django Q work must run separately to the web server. This is started as a separate process, as part of the InvenTree installation instructions.
+
+If the worker is not running, a warning indicator is displayed in the InvenTree menu bar.
 
 ## Admin Interface
 
