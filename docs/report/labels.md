@@ -27,8 +27,10 @@ Below is a reasonably simple example of a label template which demostrates much 
 {% raw %}
 <style>
     @page {
-        size: 75mm 24mm;
+        width: 75mm;
+        height: 24mm;
         padding: 1mm;
+	margin: 0px 0px 0px 0px;
     }
     
     .location {
@@ -55,7 +57,7 @@ Below is a reasonably simple example of a label template which demostrates much 
     }
     
 </style>
-    
+{% load barcode %}    
 <img class='qr' src="{% qrcode location.format_barcode %}"/>
 
 <div class='location'>
