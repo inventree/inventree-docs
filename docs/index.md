@@ -4,6 +4,10 @@ title: InvenTree
 
 ## InvenTree - Intuitive Inventory Management 
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker Pulls](https://img.shields.io/docker/pulls/inventree/inventree)](https://hub.docker.com/inventree/inventree)
+[![Coverage Status](https://coveralls.io/repos/github/inventree/InvenTree/badge.svg)](https://coveralls.io/github/inventree/InvenTree)
+
 InvenTree is an open-source inventory management system which provides intuitive parts management and stock control. 
 
 InvenTree is designed to be lightweight and easy to use for SME or hobbyist applications, where many existing stock management solutions are bloated and cumbersome to use. However, powerful business logic works in the background to ensure that stock tracking history is maintained, and users have ready access to stock level information.
