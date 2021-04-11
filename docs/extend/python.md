@@ -88,13 +88,15 @@ stock_item.uploadTestResult("Firmware", True, value="0x12345678", attachment="de
 ```python
 from inventree.part import Part, PartCategory
 from inventree.stock import StockItem
+from inventree.base import Parameter
+from inventree.base import ParameterTemplate
 
 ## Create a new PartCategory object,
 ## underneath the existing category with pk 7
 furniture = PartCategory.create(api, {
     'name': 'Furniture',
     'description': 'Chairs, tables, etc',
-    parent, 7
+    'parent': 7,
 })
 
 ## Create a new Part
@@ -108,12 +110,91 @@ couch = Part.create(api, {
     ## Note - You do not have to fill out *all* fields
 })
 
-## Create a new StockItem
-item = StockItem.create(api, {
-    'part': couch.pk,
-    'quantity': 5,
-    'notes': 'A stack of couches',
-    location: 10,  ## PK of a StockLocation already in the database...
-})
+## Before we can add parameters to the couch, we neeed to create the parameter templates
+## These parameter templates need to be defined only once and can be used for all other parts. 
+LengthTemplate = ParameterTemplate.create(api, { 'name' : 'Length', 'units' : 'Meters' })
+WeightTemplate = ParameterTemplate.create(api, { 'name' : 'Weight', 'units' : 'kg' })
+
+## Now we create the parameters
+ParameterLength = Parameter.create(api, { 'part': couch.pk, 'template': LengthTemplate.pk, 'data' : 2 })
+ParameterWeight = Parameter.create(api, { 'part': couch.pk, 'template': WeightTemplate.pk, 'data' : 60 })
+
+## Add a picture to the part
+couch.upload_image('my_nice_couch.jpg')
+```
+
+#### Adding a location to the sofa
+
+If we have several sofas on stock we need to know there we have stored them. So let’s add stock locations to the part. Stock locations can be organized in a hierarchical manner e.g. boxes in shelves in aisles in rooms. So each location can have a parent. Let’s assume we have 10 sofas in box 12 and 3 sofas in box 13 located in shelve 43 aisle 3. First we have to create the locations, afterwards we can put the sofas inside.
+
+```python
+
+from inventree.stock import StockLocation
+from inventree.stock import StockItem
+
+...
+
+## Create the stock locations. Leave the parent empty for top level hierarchy
+Aisle3 = StockLocation.create(api, {'name':'Aisle 3','description':'Aisle for sofas','parent':''})
+Shelve43 = StockLocation.create(api, {'name':'Shelve 43','description':'Shelve for sofas','parent':Aisle3.pk})
+Box12 = StockLocation.create(api, {'name':'Box 12','description':'green box','parent':Shelve43.pk})
+Box13 = StockLocation.create(api, {'name':'Box 13','description':'red box','parent':Shelve43.pk})
+
+## Now fill them with items
+Id1 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 10, 'notes': 'new ones', 'location': Box12.pk, ‘status’:10 })
+Id2 = StockItem.create(api, { 'part': sofa.pk, 'quantity': 3, 'notes': 'old ones', 'location': Box13.pk, ‘status’:55 })
 
 ```
+Please recognize the different status flags. 10 means OK, 55 means damaged. We have the following choices:
+
+* 10: OK
+* 50: Attention needed
+* 55: Damaged
+* 60: Destroyed
+* 65: Rejected
+* 70: Lost
+* 85: Returned
+
+#### Adding manufacturers and supplier
+
+We can add manufacturers and suppliers to parts. If we add a manufacturer, a supplier is also mandatory. So we first need to create two companies, ACME (manufacturer) and X-Store (supplier).
+
+```python
+from inventree.company import Company
+
+...
+
+acme = Company.create(api, {
+    'name' : 'ACME',
+    'description':'A Company that makes everything',
+    'website':'https://www.acme.bla',
+    'is_customer':0,
+    'is_manufacturer':1,
+    'is_supplier':0
+})
+xstore = Company.create(api, {
+    'name' : 'X-Store',
+    'description':'A really cool online store',
+    'website':'https://www.xst.bla',
+    'is_customer':0,
+    'is_manufacturer':0,
+    'is_supplier':1
+})
+```
+
+Please recognize the different flag settings for is_supplier and is_manufacturer. Now lets add those to our couch:
+
+```python
+from inventree.company import SupplierPart
+
+...
+
+SupplierPart.create(api,{
+    'part':couch.pk,
+    'supplier':xstore.pk,
+    'SKU':'some_code',
+    'manufacturer':acme.pk
+})
+```
+
+Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.

@@ -38,12 +38,17 @@ extra_javascript:
 nav:
   - InvenTree:
     - About InvenTree: index.md
+    - Features: features.md
     - What's New: releases/new.md
+    - FAQ: faq.md
     - Contribute: contribute.md
-  - Getting Started:
-    - Installation: start/install.md
+  - Installation:
+    - Introduction: start/intro.md
     - Configuration: start/config.md
-    - Deploying: start/deploy.md
+    - Docker Installation: start/docker.md
+    - Manual Installation: start/install.md
+    - Development Server: start/development.md
+    - Production Server: start/production.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
   - Parts:
@@ -70,11 +75,14 @@ nav:
     - Purchase Orders: companies/po.md
     - Sales Orders: companies/so.md
   - Report:
-    - Labels: report/labels.md
     - Templates: report/report.md
-    - Test Reports: report/test.md
-    - Packing List: report/pack.md
-    - Order: report/order.md
+    - Labels: report/labels.md
+    - Reports:
+      - Test Reports: report/test.md
+      - Packing List: report/pack.md
+      - Build Order: report/build.md
+      - Order: report/order.md
+    - Barcodes: report/barcodes.md
   - Admin:
     - Admin Interface: admin/admin.md
     - User Permissions: admin/permissions.md
@@ -82,13 +90,22 @@ nav:
     - Import Data: admin/import.md
     - Python Shell: admin/shell.md
     - Error Logs: admin/logs.md
+    - Background Tasks: admin/tasks.md
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
     - Plugins: extend/plugins.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
-    - Future Features: extend/future.md
+  - App:
+    - InvenTree App: app/app.md
+    - Barcodes: app/barcode.md
+    - Parts: app/part.md
+    - Stock: app/stock.md
+    - Settings: app/settings.md
+    - Privacy: app/privacy.md
+    - Translation: app/translation.md
+    - Suggestions: app/issues.md
 
 # Plugins
 plugins:

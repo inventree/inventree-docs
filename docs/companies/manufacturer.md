@@ -15,7 +15,7 @@ To access the manufacturer page, click on the "Buy" navigation tab and click on 
 
 Once the manufacturer page is loaded, click on the "<span class='fas fa-plus-circle'></span> New Manufacturer" button: the "Create new Manufacturer" form opens. Fill-in the manufacturer informations (`Company name` and `Company description` are required) then click on the "Submit" button.
 
-!!! note "Manufacturer vs Supplier"
+!!! info "Manufacturer vs Supplier"
 	In the case the manufacturer sells directly to customers, you may want to enable the checkbox `is supplier` before submitting the form (you can also enable it later on). Purchase orders rely exclusively on [supplier parts](../supplier#supplier-parts), therefore the manufacturer will need to be set as a supplier too.
 
 ### Edit Manufacturer
