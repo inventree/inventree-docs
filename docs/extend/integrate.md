@@ -13,7 +13,3 @@ A list of known third-party InvenTree extensions is provided below. If you have 
 ### PK2InvenTree
 
 [PK2InvenTree](https://github.com/rgilham/PK2InvenTree) is an open-source tool for migrating an existing [PartKeepr](https://github.com/partkeepr/PartKeepr) database to InvenTree.
-
-### inventree-docker
-
-[inventree-docker](https://github.com/Zeigren/inventree-docker) provides Docker support for InvenTree
