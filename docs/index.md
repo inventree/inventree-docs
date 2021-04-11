@@ -2,7 +2,7 @@
 title: InvenTree
 ---
 
-## InvenTree - Intuitive Inventory Management 
+## Intuitive Inventory Management 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Repo stars](https://img.shields.io/github/stars/inventree/inventree?label=View%20On%20GitHub&style=social)](https://github.com/inventree/inventree)
