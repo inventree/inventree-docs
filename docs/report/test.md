@@ -27,12 +27,14 @@ In the example below, a test report template is uploaded and assigned to the par
 
 ### Context Variables
 
-The following context variables are made available to the TestReport template for rendering:
+In addition to the default report context variables, the following context variables are made available to the TestReport template for rendering:
 
-- **stock_item**: The individual stock item for which this test report is being generated
-- **part**: The Part of which the stock_item is an instance
-- **results**: A dict of test result objects, where the 'key' for each test result is a shortened version of the test name (see below)
-- **result_list**: A list of each test result object
+| Variable | Description |
+| --- | --- |
+| stock_item | The individual stock item for which this test report is being generated |
+| part | The Part of which the stock_item is an instance |
+| results | A dict of test result objects, where the 'key' for each test result is a shortened version of the test name (see below) |
+| result_list | A list of each test result object |
 
 #### Results
 

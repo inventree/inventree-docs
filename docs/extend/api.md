@@ -76,3 +76,29 @@ headers = {
 }
 response = request.get('http://localhost:8080/api/part/', data=data, headers=headers)
 ```
+
+## Authorization
+
+### User Roles
+
+Users can only perform REST API actions which align with their assigned [role permissions](../../admin/permissions/#roles). 
+Once a user has *authenticated* via the API, a list of the available roles can be retrieved from:
+
+`/api/user/roles/`
+
+For example, when accessing the API from a *superuser* account:
+
+{% with id="api_roles", url="api/api_roles.png", description="API superuser roles" %}
+{% include 'img.html' %}
+{% endwith %}
+
+Or, when accessing the API from an account which has read-only permissions:
+
+{% with id="api_roles_2", url="api/api_roles_2.png", description="API user roles" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Permission Denied
+
+If an API action outside of the user's role(s) is attempted, the server will respond with a 403 permission error message.
+

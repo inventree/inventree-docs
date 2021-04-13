@@ -12,7 +12,7 @@ In the admin interface, select the "Errors" view:
 {% include 'img.html' %}
 {% endwith %}
 
-!!! note "URL"
+!!! info "URL"
     Alternatively, navigate to the error list view at /admin/error_report/error/
 
 A list of error logs is presented.
@@ -21,7 +21,7 @@ A list of error logs is presented.
 {% include 'img.html' %}
 {% endwith %}
 
-!!! note "Deleting Logs"
+!!! info "Deleting Logs"
     Error logs should be deleted periodically
 
 ## Reporting Errors

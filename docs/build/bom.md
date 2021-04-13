@@ -6,6 +6,76 @@ title: Bill of Materials
 
 A Bill of Materials (BOM) defines the list of component parts required to make an assembly, [create builds](../build) and allocate inventory.
 
+A part which can be built from other sub components is called an *Assembly*. 
+
+## BOM Line Items
+
+A BOM for a particular assembly is comprised of a number (zero or more) of BOM "Line Items", each of which has the following properties:
+
+| Property | Description |
+| --- | --- |
+| Part | A reference to another *Part* object which is required to build this assembly |
+| Quantity | The quantity of *Part* required for the assembly |
+| Reference | Optional reference field to describe the BOM Line Item, e.g. part designator |
+| Overage | Estimated losses for a build. Can be expressed as absolute values (e.g. 1, 7, etc) or as a percentage (e.g. 2%) |
+| Inherited | A boolean field which indicates whether this BOM Line Item will be "inherited" by BOMs for parts which are a variant (or sub-variant) of the part for which this BOM is defined. |
+| Optional | A boolean field which indicates if this BOM Line Item is "optional" |
+| Note | Optional note field for additional information
+
+!!! missing "Overage"
+    While the overage field exists, it is currently non-functional and has no effect on BOM operation
+
+!!! missing "Optional"
+    The Optional field is currently for indication only - it does not serve a functional purpose (yet)
+
+### Inherited BOM Line Items
+
+When using the InvenTree [template / variant](../../part/template) feature, it may be useful to make use of the *inheritance* capability of BOM Line Items.
+
+If a BOM Line Item is designed as *Inherited*, it will be automatically included in the BOM of any part which is a variant (or sub-variant) of the part for which the BOM Line Item is defined.
+
+This is particulary useful if a template part is defined with the "common" BOM items which exist for all variants of that template.
+
+Consider the example diagram below:
+
+{% with id="inherited_bom", url="build/inherited_bom.png", description="Inherited BOM Line Items" %}
+{% include 'img.html' %}
+{% endwith %}
+
+**Template Part A** has two BOM line items defined: *A1* and *A2*.
+
+- *A1* is inherited by all variant parts underneath *Template Part A*
+- *A2* is not inherited, and is only included in the BOM for *Template Part A*
+
+**Variant B** has two line items:
+
+- *A1* is inherited from parent part *A*
+- *B1* is defined for part *B* (and is also defined as an inherited BOM Line Item)
+
+**Variant C**
+
+- *A1* inherited from *A*
+- *C1* defined for *C*
+
+**Variant D**
+
+- *A1* inherited from *A*
+- *B1* inherited from *B*
+- *D1* defined for *D*
+
+**Variant E**
+
+- Well, you get the idea.
+
+Note that inherited BOM Line Items only flow "downwards" in the variant inheritance chain. Parts which are higher up the variant chain cannot inherit BOM items from child parts.
+
+!!! info "Editing Inherited Items"
+    When editing an inherited BOM Line Item for a template part, the changes are automatically reflected in the BOM of any variant parts.
+
+## BOM Creation
+
+BOMs can be created manually, by adjusting individual line items, or by upload an existing BOM file.
+
 ### Add BOM Item
 
 To manually add a BOM item, navigate to the part/assembly detail page then click on the "BOM" tab. On top of the tab view, click on the <span class='fas fa-edit'></span> icon then, after the page reloads, click on the <span class='fas fa-plus-circle'></span> icon.
