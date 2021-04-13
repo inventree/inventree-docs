@@ -42,10 +42,10 @@ In addition to specifying InvenTree options via the `config.yaml` file, these op
 
 The following basic options are available:
 
-| Environment Variable | Settings File | Description |
-| --- | --- | --- |
-| INVENTREE_DEBUG | debug | Enable debug mode |
-| INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal |
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_DEBUG | debug | Enable debug mode | True |
+| INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
 
 ## Secret Key
 
@@ -73,15 +73,30 @@ Database options are specified under the *database* heading in the configuration
 
 The following database options can be configured:
 
-| Environment Variable | Settings File | Description |
-| --- | --- | --- |
-| INVENTREE_DB_ENGINE | database.ENGINE | Database backend |
-| INVENTREE_DB_NAME | database.NAME | Database name |
-| INVENTREE_DB_USER | database.USER | Database username (if required) |
-| INVENTREE_DB_PASSWORD | database.PASSWORD | Database password (if required) |
-| INVENTREE_DB_HOST | database.HOST | Database host address (if required) |
-| INVENTREE_DB_PORT | database.PORT | Database host port (if required) |
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_DB_ENGINE | database.ENGINE | Database backend | *Not set* |
+| INVENTREE_DB_NAME | database.NAME | Database name | *Not set* |
+| INVENTREE_DB_USER | database.USER | Database username (if required) | *Not set* |
+| INVENTREE_DB_PASSWORD | database.PASSWORD | Database password (if required) | *Not set* |
+| INVENTREE_DB_HOST | database.HOST | Database host address (if required) | *Not set* |
+| INVENTREE_DB_PORT | database.PORT | Database host port (if required) | *Not set* |
 
+## Email Settings
+
+To enable [email functionality](../../admin/email), email settings must be configured here, either via environment variables or within the configuration file.
+
+The following email settings are available:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_EMAIL_BACKEND | email.backend | Email backend module | django.core.mail.backends.smtp.EmailBackend |
+| INVENTREE_EMAIL_HOST | email.host | Email server host | *Not set* |
+| INVENTREE_EMAIL_PORT | email.port | Email server port | 25 |
+| INVENTREE_EMAIL_USERNAME | email.username | Email account username | *Not set* |
+| INVENTREE_EMAIL_PASSWORD | email.password | Email account password | *Not set* |
+| INVENTREE_EMAIL_TLS | email.tls | Enable TLS support | False |
+| INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support | False |
 
 ## Allowed Hosts / CORS
 

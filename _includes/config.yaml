@@ -63,6 +63,31 @@ currencies:
   - NZD
   - USD
 
+# Email backend configuration
+# Ref: https://docs.djangoproject.com/en/dev/topics/email/
+# Available options:
+# host: Email server host address
+# port: Email port
+# username: Account username
+# password: Account password
+# prefix: Email subject prefix
+# tls: Enable TLS support
+# ssl: Enable SSL support
+
+# Alternatively, these options can all be set using environment variables,
+# with the INVENTREE_EMAIL_ prefix:
+# e.g. INVENTREE_EMAIL_HOST / INVENTREE_EMAIL_PORT / INVENTREE_EMAIL_USERNAME
+# Refer to the InvenTree documentation for more information
+
+email:
+  # backend: 'django.core.mail.backends.smtp.EmailBackend'
+  host: ''
+  port: 25
+  username: ''
+  password: ''
+  tls: False
+  ssl: False
+
 # Set debug to False to run in production mode
 # Use the environment variable INVENTREE_DEBUG
 debug: True
@@ -95,9 +120,9 @@ cors:
   # - https://sub.example.com
 
 # MEDIA_ROOT is the local filesystem location for storing uploaded files
-# By default, it is stored under /home/inventree
+# By default, it is stored under /home/inventree/data/media
 # Use environment variable INVENTREE_MEDIA_ROOT
-media_root: '/home/inventree/media'
+media_root: '/home/inventree/data/media'
 
 # STATIC_ROOT is the local filesystem location for storing static files
 # By default, it is stored under /home/inventree
@@ -116,7 +141,7 @@ static_root: '/home/inventree/static'
 # Set the backup_dir parameter to store backup files in a specific location
 # If unspecified, the local user's temp directory will be used
 # Use environment variable INVENTREE_BACKUP_DIR
-backup_dir: '/home/inventree/backup/'
+backup_dir: '/home/inventree/data/backup/'
 
 # Permit custom authentication backends
 #authentication_backends:
