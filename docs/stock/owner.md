@@ -46,7 +46,7 @@ Setting the owner of stock location will automatically:
 * Set the owner of all children locations to the same owner.
 * Set the owner of all stock items at this location to the same owner.
 
-!!! note
+!!! info
 	If the owner of a children location or a stock item is a subset of the specified owner (eg. a user linked to the specified group), the owner won't be updated.
 
 ### Set Stock Item Owner

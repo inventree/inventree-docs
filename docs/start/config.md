@@ -6,16 +6,20 @@ title: Database Configuration
 
 Admin users will need to adjust the InvenTree installation to meet the particular needs of their setup. For example, pointing to the correct database backend, or specifying a list of allowed hosts.
 
-The Django configuration parameters are found in the normal place (*settings.py*). However the settings presented in this file should not be adjusted as they will alter the core behaviour of the InvenTree application.
+InvenTree system settings can be specified in a configuration file, or via environment variables.
+
+!!! info "Environment Variables"
+    Settings specified using environment variables take priority
 
 ### Configuration File
 
 To support install specific settings, a simple configuration file ``config.yaml`` is provided. This configuration file is loaded by the InvenTree server at runtime. Settings specific to a given install should be adjusted in ``config.yaml``.
 
-!!! info "Config file location"
-    The InvenTree config file is located at `./InvenTree/config.yaml`
+The default InvenTree config file is located at `./InvenTree/config.yaml`
 
-The default configuration file launches a *DEBUG* configuration with a simple SQLITE database backend. This default configuration file is shown below:
+However, the config file can be placed elsewhere, and specified with the `INVENTREE_CONFIG_FILE` environment variable.
+
+The default configuration file file is shown below:
 
 ``` yaml
 {% include 'config.yaml' %}
@@ -34,16 +38,16 @@ In addition to specifying InvenTree options via the `config.yaml` file, these op
 !!! warning Available Variables
     Some configuration options cannot be set via environment variables. Refer to the documentation below.
 
-### Basic Options
+## Basic Options
 
 The following basic options are available:
 
-| Environment Variable | Settings File | Description |
-| --- | --- | --- |
-| INVENTREE_DEBUG | debug | Enable debug mode |
-| INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal |
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_DEBUG | debug | Enable debug mode | True |
+| INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
 
-### Secret Key
+## Secret Key
 
 InvenTree requires a secret key for providing cryptographic signing - this should be a secret (and unpredictable) value.
 
@@ -61,7 +65,7 @@ A file containing the secret key can be passed via the environment variable `INV
 
 If not specified via environment variables, the fallback secret_key file (automatically generated as part of InvenTree installation) will be used.
 
-### Database Options
+## Database Options
 
 InvenTree provides support for multiple database backends - any backend supported natively by Django can be used. 
 
@@ -69,59 +73,32 @@ Database options are specified under the *database* heading in the configuration
 
 The following database options can be configured:
 
-| Environment Variable | Settings File | Description |
-| --- | --- | --- |
-| INVENTREE_DB_ENGINE | database.ENGINE | Database backend |
-| INVENTREE_DB_NAME | database.NAME | Database name |
-| INVENTREE_DB_USER | database.USER | Database username (if required) |
-| INVENTREE_DB_PASSWORD | database.PASSWORD | Database password (if required) |
-| INVENTREE_DB_HOST | database.HOST | Database host address (if required) |
-| INVENTREE_DB_PORT | database.PORT | Database host port (if required) |
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_DB_ENGINE | database.ENGINE | Database backend | *Not set* |
+| INVENTREE_DB_NAME | database.NAME | Database name | *Not set* |
+| INVENTREE_DB_USER | database.USER | Database username (if required) | *Not set* |
+| INVENTREE_DB_PASSWORD | database.PASSWORD | Database password (if required) | *Not set* |
+| INVENTREE_DB_HOST | database.HOST | Database host address (if required) | *Not set* |
+| INVENTREE_DB_PORT | database.PORT | Database host port (if required) | *Not set* |
 
-Instructions for particular database backends are provided below:
+## Email Settings
 
-#### SQLite
-By default, InvenTree uses an sqlite database file : `inventree_db.sqlite3`. This provides a simple, portable database file that is easy to use for debug and testing purposes. 
+To enable [email functionality](../../admin/email), email settings must be configured here, either via environment variables or within the configuration file.
 
-#### MySQL
-MySQL database backend is supported with the native Django implemetation. To run InvenTree with the MySQL backend, a number of extra packages need to be installed:
+The following email settings are available:
 
-* mysql-server - *MySQL backend server*
-* libmysqlclient-dev - *Required for connecting to the MySQL database in Python*
-* (pip) mysqlclient - *Python package for communication with MySQL database*
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_EMAIL_BACKEND | email.backend | Email backend module | django.core.mail.backends.smtp.EmailBackend |
+| INVENTREE_EMAIL_HOST | email.host | Email server host | *Not set* |
+| INVENTREE_EMAIL_PORT | email.port | Email server port | 25 |
+| INVENTREE_EMAIL_USERNAME | email.username | Email account username | *Not set* |
+| INVENTREE_EMAIL_PASSWORD | email.password | Email account password | *Not set* |
+| INVENTREE_EMAIL_TLS | email.tls | Enable TLS support | False |
+| INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support | False |
 
-To install these required packages, run the following command:
-
-```
-inv mysql
-```
-
-It is then up to the database adminstrator to create a new MySQL database to store inventree data, in addition to a username/password to access the data.
-
-!!! info "MySQL Collation"
-    When creating the MySQL database, the adminstrator must ensure that the collation option is set to **utf8_unicode_520_ci** to ensure that InvenTree features function correctly.
-
-The database options (in the `config.yaml` file) then need to be adjusted to communicate the MySQL backend. Refer to the [Django docs](https://docs.djangoproject.com/en/dev/ref/databases/) for further information.
-
-#### PostgreSQL
-PostgreSQL database backend is supported with the native Django implementation. Note that to use this backend, the following system packages must be installed:
-
-* postgresql
-* postgresql-contrib
-* libpq-dev
-* (pip3) psycopg2
-
-To install these required packages, run the following commands:
-
-```
-inv postgresql
-```
-
-It is then up to the database adminstrator to create a new PostgreSQL database to store inventree data, in addition to a username/password to access the data.
-
-The database options (in the `config.yaml` file) then need to be adjusted to communicate the PostgreSQL backend. Refer to the [Django docs](https://docs.djangoproject.com/en/dev/ref/databases/) for further information.
-
-### Allowed Hosts / CORS
+## Allowed Hosts / CORS
 
 By default, all hosts are allowed, and CORS requests are enabled from any origin. **This is not secure and should be adjusted for your installation**. These options can be changed in the configuration file.
 
@@ -130,23 +107,27 @@ For further information, refer to the following documentation:
 * [Django ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.2/ref/settings/#allowed-hosts)
 * [Django CORS headers](https://github.com/OttoYiu/django-cors-headers)
 
+## File Storage Locations
+
 ### Static File Storage
 
-By default, static files are stored in the local directory `./inventree_static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
+By default, static files are stored in the local directory `/home/inventree/static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_STATIC_ROOT` environment variable.
 
 ### Uploaded File Storage
 
-By default, uploaded media files are stored in the local directory `./inventree_media`. This directory should be changed by specifying the `media_root` option in the config file based on the particular installation requirements.
+By default, uploaded media files are stored in the local directory `/home/inventree/media`. This directory should be changed by specifying the `media_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
 ### Backup Location
 
-The default behaviour of the database backup is to generate backup files for database tables and media files to the user's temporary directory. The target directory can be overridden by setting the `backup_dir` parameter in the config file.
+The default behaviour of the database backup is to generate backup files for database tables and media files to `/home/inventree/backup`. The target directory can be overridden by setting the `backup_dir` parameter in the config file.
 
 Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
+
+## Other Options
 
 ### Authentication Backends
 

@@ -15,7 +15,7 @@ To access the supplier page, click on the "Buy" navigation tab and click on "Sup
 
 Once the supplier page is loaded, click on the "<span class='fas fa-plus-circle'></span> New Supplier" button: the "Create new Supplier" form opens. Fill-in the supplier informations (`Company name` and `Company description` are required) then click on the "Submit" button.
 
-!!! note "Supplier vs Manufacturer"
+!!! info "Supplier vs Manufacturer"
 	In the case the supplier is a manufacturer who sells directly to customers, you may want to enable the checkbox `is manufacturer` before submitting the form (you can also enable it later on).
 
 ### Edit Supplier

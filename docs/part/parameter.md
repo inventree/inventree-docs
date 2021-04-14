@@ -42,5 +42,5 @@ Select the parameter `Template` you would like to use for this parameter, fill-o
 
 ### Parametric Tables
 
-!!! note "Future Feature Proposal"
+!!! info "Future Feature Proposal"
 	Allow parts to be filtered using parameters. Narrow down the list of parameters to the parts found in each category.

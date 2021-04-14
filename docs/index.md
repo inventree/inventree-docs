@@ -2,7 +2,12 @@
 title: InvenTree
 ---
 
-## InvenTree - Intuitive Inventory Management 
+## Intuitive Inventory Management 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Repo stars](https://img.shields.io/github/stars/inventree/inventree?label=View%20On%20GitHub&style=social)](https://github.com/inventree/inventree)
+[![Docker Pulls](https://img.shields.io/docker/pulls/inventree/inventree)](https://hub.docker.com/r/inventree/inventree)
+
 
 InvenTree is an open-source inventory management system which provides intuitive parts management and stock control. 
 
@@ -20,7 +25,7 @@ Refer to the [features](./features) page for a rundown on the features that Inve
 
 ## Getting Started
 
-Refer to the [installation guide](./start/install) for instructions on installing InvenTree. The server where InvenTree is to be installed will need to meet some basic package requirements, and a certain level of system administration understanding is assumed.
+Refer to the [installation guide](./start/intro) for instructions on installing InvenTree. The server where InvenTree is to be installed will need to meet some basic package requirements, and a certain level of system administration understanding is assumed.
 
 ## Get the App
 
