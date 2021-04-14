@@ -43,8 +43,10 @@ Supplier parts are linked to a supplier and defined as purchasable items.
 ### Add Supplier Part
 
 To create a supplier part, you have the following options:
-* either navigate to a Part detail page then click on the "Suppliers" tab
-* or navigate to a Supplier detail page then click on the "Parts" tab.
+
+1. navigate to a Part detail page then click on the "Suppliers" tab
+0. navigate to a Supplier detail page then click on the "Supplied Parts" tab
+0. navigate to a Manufacturer detail page then click on the "Supplied Parts" tab.
 
 Whichever you pick, click on the "<span class='fas fa-plus-circle'></span> New Supplier Part" button to load the "Create new Supplier Part" form. Fill out the form with the supplier part information then click on the "Submit" button.
 
@@ -52,8 +54,9 @@ Whichever you pick, click on the "<span class='fas fa-plus-circle'></span> New S
 
 To edit a supplier part, first access the supplier part detail page with one of the following options:
 
-* either navigate to a Part detail page, click on the "Suppliers" tab then click on the corresponding "Supplier Part" row value
-* or navigate to a Supplier detail page, click on the "Parts" tab then click on the corresponding "Supplier Part" row value.
+1. navigate to a Part detail page, click on the "Suppliers" tab then click on the corresponding "Supplier Part" link
+0. navigate to a Supplier detail page, click on the "Supplied Parts" tab then click on the corresponding "Supplier Part" link
+0. navigate to a Manufacturer detail page, click on the "Supplied Parts" tab then click on the corresponding "Supplier Part" link.
 
 After the supplier part details are loaded, click on the <span class='fas fa-edit'></span> icon next to the supplier part image. Edit the supplier part information then click on the "Submit" button.
 

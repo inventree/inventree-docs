@@ -42,15 +42,24 @@ Manufacturer parts are linked to a manufacturer and defined as manufacturable it
 
 ### Add Manufacturer Part
 
-!!! warning
-	TODO
+To create a manufacturer part, you have the following options:
+
+* either navigate to a Part detail page then click on the "Manufacturers" tab
+* or navigate to a Manufacturer detail page then click on the "Manufactured Parts" tab.
+
+Whichever you pick, click on the "<span class='fas fa-plus-circle'></span> New Manufacturer Part" button to load the "Create New Manufacturer Part" form. Fill out the form with the manufacturer part information then click on the "Submit" button.
 
 ### Edit Manufacturer Part
 
-!!! warning
-	TODO
+To edit a manufacturer part, first access the manufacturer part detail page with one of the following options:
+
+* either navigate to a Part detail page, click on the "Manufacturers" tab then click on the "MPN" link
+* or navigate to a Manufacturer detail page, click on the "Manufactured Parts" tab then click on the "MPN" link.
+
+After the manufacturer part details are loaded, click on the <span class='fas fa-edit'></span> icon next to the manufacturer part image. Edit the manufacturer part information then click on the "Submit" button.
 
 ### Delete Manufacturer Part
 
-!!! warning
-	TODO
+To delete a manufacturer part, first access the manufacturer part detail page like in the [Edit Manufacturer Part](#edit-manufacturer-part) section.
+
+After the manufacturer part details are loaded, click on the <span class='fas fa-trash-alt'></span> icon next to the manufacturer part image. Review the the information for the manufacturer part to be deleted, confirm the deletion using the checkbox then click on the "Submit" button.
