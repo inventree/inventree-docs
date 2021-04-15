@@ -35,19 +35,31 @@ After the manufacturer details are loaded, click on the <span class='fas fa-tras
 
 ## Manufacturer Parts
 
-Manufacturer parts are connected to the manufacturer they belong to. Most importantly, they are **linked** to a supplier part. In other words, manufacturer parts do **not** exist without a corresponding supplier part and they are the actual "items" sold by a supplier.
+Manufacturer parts are linked to a manufacturer and defined as manufacturable items.
 
 !!! warning
 	**Viewing**, **adding**, **editing** and **deleting** manufacturer parts require the corresponding [Purchase Orders user permissions](../../admin/permissions)
 
 ### Add Manufacturer Part
 
-Adding a manufacturer part is the same process as [adding a supplier part](../supplier#add-supplier-part).
+To create a manufacturer part, you have the following options:
+
+* either navigate to a Part detail page then click on the "Manufacturers" tab
+* or navigate to a Manufacturer detail page then click on the "Manufactured Parts" tab.
+
+Whichever you pick, click on the "<span class='fas fa-plus-circle'></span> New Manufacturer Part" button to load the "Create New Manufacturer Part" form. Fill out the form with the manufacturer part information then click on the "Submit" button.
 
 ### Edit Manufacturer Part
 
-Editing a manufacturer part is the same process as [editing a supplier part](../supplier#edit-supplier-part).
+To edit a manufacturer part, first access the manufacturer part detail page with one of the following options:
+
+* either navigate to a Part detail page, click on the "Manufacturers" tab then click on the "MPN" link
+* or navigate to a Manufacturer detail page, click on the "Manufactured Parts" tab then click on the "MPN" link.
+
+After the manufacturer part details are loaded, click on the <span class='fas fa-edit'></span> icon next to the manufacturer part image. Edit the manufacturer part information then click on the "Submit" button.
 
 ### Delete Manufacturer Part
 
-Deleting a manufacturer part is the same process as [deleting a supplier part](../supplier#delete-supplier-part).
+To delete a manufacturer part, first access the manufacturer part detail page like in the [Edit Manufacturer Part](#edit-manufacturer-part) section.
+
+After the manufacturer part details are loaded, click on the <span class='fas fa-trash-alt'></span> icon next to the manufacturer part image. Review the the information for the manufacturer part to be deleted, confirm the deletion using the checkbox then click on the "Submit" button.
