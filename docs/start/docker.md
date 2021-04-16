@@ -4,7 +4,7 @@ title: Docker Setup
 
 ## Docker Image
 
-The most convenient method of installing and running InvenTree is to use the official [docker image](https://hub.docker.com/inventree/inventree).
+The most convenient method of installing and running InvenTree is to use the official [docker image](https://hub.docker.com/r/inventree/inventree).
 
 The InvenTree docker image contains all the required system packages, python modules, and configuration files for running InvenTree.
 
