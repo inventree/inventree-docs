@@ -30,3 +30,7 @@ Refer to the [installation guide](./start/intro) for instructions on installing 
 ## Get the App
 
 InvenTree is supported by a [companion mobile app](./app/app) which is tightly integrated with the InvenTree database. Lightning fast stock control, in your pocket!
+
+## Source Code
+
+InvenTree source code is available on [GitHub](https://github.com/inventree/inventree)
