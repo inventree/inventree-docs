@@ -8,9 +8,20 @@ The most convenient method of installing and running InvenTree is to use the off
 
 The InvenTree docker image contains all the required system packages, python modules, and configuration files for running InvenTree.
 
+!!! info "Configuration Files"
+    All of the configuration files discussed below are available under the *docker* subdirectory of the [InvenTree source code](https://github.com/inventree/inventree)
+
 ## Docker Compose
 
+It is strongly recommended that you use a [docker-compose](https://docs.docker.com/compose/) script to manage your InvenTree docker image.
+
 An example docker compose script is provided below, which provides a robust "out of the box" setup for running InvenTree.
+
+Firstly, here is the complete `docker-compose.yml` file which can be used "as is" or as a starting point for a custom setup:
+
+``` yaml
+{% include 'docker-compose.yml' %}
+```
 
 ### Containers
 
@@ -18,19 +29,31 @@ The following containers are created:
 
 #### PostgreSQL Database
 
-A postgresql database container which creates a postgres user:password combination (which can be changed)
+A postgresql database container which creates a postgres user:password combination (which can be changed). This uses the official [PostgreSQL image](https://hub.docker.com/_/postgres).
+
+*__Note__: An empty database must be manually created as part of the setup (below)*.
 
 #### Web Server
 
-InvenTree web server running on a Gunicorn backend
+Runs an InvenTree web server instance, powered by a Gunicorn web server. In the default configuration, the web server listens on port `8000`.
 
 #### Background Worker
 
-InvenTree background worker process manager
+Runs the InvenTree background worker process. This spins up a second instance of the *inventree* container, with a different entrypoint command.
 
 #### Nginx
 
-Nginx working as a reverse proxy, separating requests for static files and directing everything else to Gunicorn
+Nginx working as a reverse proxy, separating requests for static files and directing everything else to Gunicorn.
+
+This container uses the official [nginx image](https://hub.docker.com/_/nginx).
+
+An nginx configuration file must be provided to the image. Use the example configuration below as a starting point:
+
+```
+{% include 'nginx.conf' %}
+```
+
+*__Note__: You must save this conf file in the same directory as your docker-compose.yml file*
 
 ### Volumes
 
@@ -47,13 +70,21 @@ InvenTree stores data which is meant to be persistent (e.g. uploaded media files
 
 Static files are shared between multiple containers (but not exposed to the local file system).
 
+## Environment Variables
+
+The InvenTree web server requires a number of configuration options to be specified to connect to the database. These are provided to the docker container(s) using the `environment:` section for each container
+
+In the default configuration, only the following environment variables are required for the `web` and `worker` containers:
+
+- **INVENTREE_DB_USER** - Database username (default=pguser)
+- **INVENTREE_DB_PASSWORD** - Database password (default=pgpassword)
+
+!!! warning "Altering Database Configuration"
+    If the database image is altered from the default postgresql image, then the InvenTree environment variables must be adjusted to match.
+
 ### Docker Compose File
 
 Use the following docker-compose file as a starting point:
-
-``` yaml
-{% include 'docker-compose.yml' %}
-```
 
 ## Initial Setup Process
 
@@ -159,3 +190,15 @@ This command launches the remaining container processes:
 
 !!! success "Up and Running!"
     You should now be able to view the InvenTree login screen at [http://localhost:1337](http://localhost:1337)
+
+## Database Access
+
+## Production Serevr
+
+## Development Server
+
+## Updating InvenTree
+
+## SEcret Key
+
+## Settings file
