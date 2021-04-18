@@ -219,10 +219,27 @@ The following variables are made available to the StockItem label template:
 | part | The Part object which is referenced by the StockItem object |
 | name | The `name` field of the associated Part object | 
 | ipn | The `IPN` field of the associated Part object |
+| revision | The `revision` field of the associated Part object |
 | quantity | The `quantity` field of the StockItem object |
 | serial | The `serial` field of the StockItem object |
 | uid | The `uid` field of the StockItem object |
 | tests | Dict object of TestResult data associated with the StockItem |
+
+### URL-style QR code
+
+Stock Item labels support [QR code](../barcodes#qr-code) containing the stock item URL, which can be
+scanned and opened directly
+on a portable device using the camera or a QR code scanner. To generate a URL-style QR code for stock item in the [label HTML template](../labels#label-templates), add the
+following HTML tag:
+
+``` html
+{% raw %}
+<img class='custom_qr_class' src='{% qrcode qr_url %}'>
+{% endraw %}
+```
+
+Make sure to customize the `custom_qr_class` CSS class to define the position of the QR code
+on the label.
 
 ## Stock Location Labels
 

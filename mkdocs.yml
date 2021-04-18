@@ -90,6 +90,7 @@ nav:
     - Import Data: admin/import.md
     - Python Shell: admin/shell.md
     - Error Logs: admin/logs.md
+    - Email: admin/email.md
     - Background Tasks: admin/tasks.md
   - Extend:
     - API: extend/api.md
