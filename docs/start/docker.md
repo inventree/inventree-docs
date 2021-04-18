@@ -110,6 +110,9 @@ An nginx configuration file must be provided to the image. Use the example confi
 
 *__Note__: You must save this conf file in the same directory as your docker-compose.yml file*
 
+!!! info "Proxy Pass"
+    If you change the name (or port) of the InvenTree web server container, you will need to also adjust the `proxy_pass` setting in the nginx.conf file!
+
 ### Volumes
 
 There are two container volumes created:
