@@ -66,8 +66,9 @@ nav:
     - Stock Ownership: stock/owner.md
     - Test Results: stock/test.md
   - Build:
-    - Build Parts: build/build.md
-    - Bill of Materials (BOM): build/bom.md
+    - Build Orders: build/build.md
+    - Bill of Materials: build/bom.md
+    - Allocating Stock: build/allocate.md
   - Companies:
     - Suppliers: companies/supplier.md
     - Manufacturers: companies/manufacturer.md
