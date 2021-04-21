@@ -1,87 +1,189 @@
 ---
-title: Build Parts
+title: Build Orders
 ---
 
-## Building Parts
+## Build Orders
 
-Build management can be accessed via the *Build* navigation tab.
+A *Build Order* is used to create new stock by assembling component parts, according to a [Bill of Materials](../bom)(BOM).
 
-A "basic" build flow is as follow:
+A BOM can be specified for any [Part](../../part/part) which is designated as an *Assembly*. The BOM consists of other Parts which are designated as *Components*.
 
-1. create a part with the [*Assembly option*](../../part/views/#part-options) turned-on
-0. add a Bill of Material (BOM)
-0. create a "Build Order" for this part
-0. allocate stocks from your inventory
-0. update build status and notes
-0. complete the build.
+A *Build Order* uses the BOM to allocate stock items to the assembly process. As the *Build Order* is completed, the required stock quantities are subtracted from allocated stock items.
+
+### View Build Orders
+
+To navigate to the Build Order display, select *Build* from the main navigation menu:
+
+{% with id="build_display", url="build/build_display.png", description="Display Builds" %}
+{% include "img.html" %}
+{% endwith %}
+
+#### Table View
+
+*Table View* provides a table of Build Orders, which can be filtered to only show the orders you are interested in.
+
+#### Calendar View
+
+*Calendar View* shows a calendar display with upcoming build orders, based on the various dates specified for each build.
+
+## Build Order Details
+
+### Build Parameters
+
+The following parameters are available for each Build Order, and can be edited by the user:
+
+| Parameter | Description |
+| --- | --- |
+| Reference | Build Order reference e.g. '001' |
+| Description | Description of the Build Order |
+| Part | Link to the *Part* which will be created from the Build Order |
+| Quantity | Number of stock items which will be created from this build |
+| Sales Order | Link to a *Sales Order* to which the build outputs will be allocated |
+| Source Location | Stock location to source stock items from (blank = all locations) |
+| Destination Location | Stock location where the build outputs will be located |
+| Target Date | Target date for build completion |
+| Responsible | User (or group of users) who is resonsible for the build |
+| External Link | Link to external webpage |
+| Notes | Build notes, supports markdown |
+
+### Build Output
+
+A *Build Output* creates a new stock instance of the assembly part, of a specified quantity. Each *Build Order* requires at least one build output. Multiple build outputs can be specified if the build is completed in batches.
+
+!!! info "Example - Build Outputs"
+	For example, let's say we wish to create 10 new "Widgets". We create a new build for the widget, which signals an *intent* to assemble the "Widget" in quantity 10. We can produce 5 widgets in a single day, and so we create 2 build outputs, each of quantity 5.
 
 ### Build Status
 
+Each *Build Order* has an associated *Status* flag, which indicates the state of the build:
+
 | Status | Description |
 | ----------- | ----------- |
-| `Pending` | "Build Order" has been created and build is ready for subpart allocation |
-| `Allocated` | All subparts stocks in the part BOM have been allocated |
+| `Pending` | Build has been created and build is ready for subpart allocation |
+| `Production` | One or more build outputs have been created for this build |
 | `Cancelled` | Build has been cancelled |
 | `Completed` | Build has been completed |
 
-### Part BOM
+### Stock Allocations
 
-A Part BOM is required to allocate inventory to a build.
+When a *Build Order* is created, we then have the ability to *allocate* stock items against that build order. The particular parts we need to allocate against the build are specified by the BOM for the part we are assembling.
 
-Read through the [Bill of Materials documentation](../bom).
+- A *Stock Alloction* links a certain quantity of a given *Stock Item* to the build.
+- At least one stock allocation is required for each line in the BOM
+- Multiple stock allocations can be made against a BOM line if a particular stock item does not have sufficient quantity for the build
 
-### Build Order
+!!! info "Example - Stock Allocation"
+	Let's say that to assembly a single "Widget", we require 2 "flanges". So, to complete a build of 10 "Widgets", 20 "flanges" will be required. We *allocate* 20 flanged against this build order.
 
-Builds orders are used to create parts builds.
+Allocating stock to a build does not actually subtrack the stock from the database. Allocations signal an *intent* to take that stock for the purpose of this build. Stock allocations are actioned at the completion of a build.
+
+!!! info "Part Allocation Information"
+    Any part which has stock allocated to a build order will indicate this on the part information page.
+
+For further information, refer to the [stock allocation documentation](../allocate).
+
+## Build Order Display
+
+The detail view for a single build order provides multiple display tabs, as follows:
+
+### Build Details
+
+The *Build Details* tab provides an overview of the Build Order:
+
+{% with id="build_details", url="build/build_details.png", description="Details tab" %}
+{% include "img.html" %}
+{% endwith %}
+
+### Allocate Stock
+
+The *Allocate Stock* tab provides an interface to allocate required stock (as specified by the BOM) to the build:
+
+{% with id="build_allocate", url="build/build_allocate.png", description="Allocation tab" %}
+{% include "img.html" %}
+{% endwith %}
+
+The allocation table (as shown above) shows the stock allocation progress for this build. In the example above, there are two BOM lines, which have been partially allocated.
+
+!!! info "Completed Builds"
+	The *Allocate Stock* tab is not available if the build has been completed!
+
+### Build Outputs
+
+The *Build Outputs* tab shows the outputs (created stock items) associated with this build.
+
+As shown below, there are separate panels for *incomplete* and *completed* build outputs.
+
+{% with id="build_outputs", url="build/build_outputs.png", description="Outputs tab" %}
+{% include "img.html" %}
+{% endwith %}
+
+!!! info "Example: Build Outputs"
+	In the example image above, a single output (serial number 2) has been completed, while serial numbers 1 and 4 are still in progress.
+
+- Build outputs can be created from this screen, by selecting the *Create New Output* button
+- Outputs which are "in progress" can be completed or cancelled
+- Completed outputs (which are simply *stock items*) can be viewed in the stock table at the bottom of the screen
+
+### Child Builds
+
+If there exist any build orders which are *children* of the selected build order, they are displayed in the *Child Builds* tab:
+
+{% with id="build_childs", url="build/build_childs.png", description="Child builds tab" %}
+{% include "img.html" %}
+{% endwith %}
+
+### Attachments
+
+Files attachments can be uploaded against the build order, and displayed in the *Attachments* tab:
+
+{% with id="build_attachments", url="build/build_attachments.png", description="Attachments tab" %}
+{% include "img.html" %}
+{% endwith %}
+
+### Notes
+
+Build order notes (which support markdown formatting) are displayed in the *Notes* tab:
+
+{% with id="build_notes", url="build/build_notes.png", description="Notes tab" %}
+{% include "img.html" %}
+{% endwith %}
+
+## Create Build Order
 
 To create a build order for your part, you have two options:
 
-1. navigate to the Part detail page, click on "Build Orders" tab then click on "Start New Build" button
-0. navigate to the Build page, click on "New Build Order".
+### Part Detail Page
+
+- Navigate to the detail page for the assembly part you wish to create
+- Select the *Build Orders* tab
+- Select *Start new Build*
+
+{% with id="build_create_from_part", url="build/build_create_from_part.png", description="Create build from Part view" %}
+{% include "img.html" %}
+{% endwith %}
+
+### Build Order Page
+
+- Navigate to the Build Order overview page
+- Select *New Build Order*
+
+-----
+
+Either of these options will launch the *Start new Build* form:
 
 {% with id="build_start_new", url="build/build_start_new.png", description="Start New Build Form" %}
 {% include 'img.html' %}
 {% endwith %}
 
-Fill-out the form then click the "Submit" button to create the build.
+Fill-out the form as required, then click the "Submit" button to create the build.
 
-### Stock Allocation
-
-To allocate stock for a build, you have two options:
-
-1. **automatic** allocation: if each subpart has only **one** storage location, InvenTree can allocate stock from this location automatically
-0. **manual** allocation: user can define allocation for each subpart in the build.
-
-During allocation, InvenTree relies on [Stock items](../../stock/stock/#stock-item) to reference parts that will be used for the build. Make sure to read through the [stock documentation](../../stock/stock) before proceeding with stock allocation.
-
-#### Automatic Allocation
-
-Click on the "Allocated Parts" tab then click on the "Auto Allocate" button to automatically allocate stock for this build.
-
-The `Allocate Stock` form will be displayed. Verify each subpart automatic allocation, click on the confirmation switch, then click on the "Submit" button to process the stock allocation.
-
-#### Manual Allocation
-
-Click on the "Allocated Parts" tab then click on the <span class='fas fa-plus'></span> icon next to each subpart in the build to manually allocate stock.
-
-The `Allocate new Part` form will be displayed. Select a `Stock Item` and fill-out the `Quantity` field then click on the "Submit" button to allocate stock for this subpart.
-
-#### Unallocate
-
-Click on the "Allocated Parts" tab then click on the "Unallocate" button to unallocate stock items allocated for this build.
-
-### Cancel Build
-
-To cancel a build, click on <span class='fas fa-times-circle'></span> icon on the build detail page.
-
-The `Cancel Build` form will be displayed, click on the confirmation switch then click on the "Cancel Build" button to process the build cancellation.
-
-!!! warning "Cancelled Build"
-	**A cancelled build cannot be re-opened**. Make sure to use the cancel option only if you are certain that the build won't be processed.
-
-### Complete Build
+### Complete Build Order
 
 To complete a build, click on <span class='fas fa-tools'></span> icon on the build detail page, the `Complete Build` form will be displayed.
+
+#### Build Outputs
+
+If incomplete build outputs remain, the build order will not be able to be completed. All build outputs *must* be completed first.
 
 !!! info "Incomplete Allocation"
 	If the warning message `Warning: Build order allocation is not complete` is shown, make sure to allocate stock for the build before proceeding with build completion.
@@ -92,7 +194,16 @@ Finally, click on the "Complete Build" button to process the build completion.
 !!! warning "Completed Build"
 	**A completed build cannot be re-opened**. Make sure to use the confirm only if you are certain that the build is complete.
 
-### Overdue Builds
+## Cancel Build Order
+
+To cancel a build, click on <span class='fas fa-times-circle'></span> icon on the build detail page.
+
+The `Cancel Build` form will be displayed, click on the confirmation switch then click on the "Cancel Build" button to process the build cancellation.
+
+!!! warning "Cancelled Build"
+	**A cancelled build cannot be re-opened**. Make sure to use the cancel option only if you are certain that the build won't be processed.
+
+## Overdue Builds
 
 Build orders may (optionally) have a target complete date specified. If this date is reached but the build order remains incomplete, then the build is considered *overdue*.
 

@@ -22,6 +22,15 @@
 	transition: opacity .3s;
 }
 
+.image-inventree {
+	border-radius: 2px;
+	border: 1px solid #ddd;
+}
+
+.image-inventree:hover {
+	opacity: 75%;
+}
+
 .overlay img {
 	/* Maximum image size */
 	max-width: 90%;
