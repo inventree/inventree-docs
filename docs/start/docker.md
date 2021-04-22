@@ -12,28 +12,25 @@ The InvenTree docker image contains all the required system packages, python mod
 
 InvenTree run-time configuration options described in the [configuration documentation](../config) can be passed to the InvenTree container as environment variables.
 
-Additionally, the following environment variables are used to control functionality specific to the docker container:
-
-| Variable | Description | Default |
-| --- | --- | --- |
-| INVENTREE_WEB_PORT | Internal container port on which the InvenTree web server is hosted | 8000 |
-
 The following environment variables for InvenTree server configuration are specified as part of the docker image, and can be overridden if required:
 
-| Variable | Value |
+| Variable | Description | Default Value |
+| --- | --- | --- |
+| INVENTREE_LOG_LEVEL | InvenTree logging verbosity level |INFO |
+| INVENTREE_CONFIG_FILE | Location (within the docker image) of the InvenTree configuration file | /home/inventree/data/config.yaml |
+| INVENTREE_SECRET_KEY_FILE | Location (within the docker image) of the InvenTree sercret key file | /home/inventree/data/secret_key.txt |
+| INVENTREE_WEB_PORT | Internal container port on which the InvenTree web server is hosted | 8000 |
+
+The following environment variables are explicitly **not configured** and *must* be passed to the container instance:
+
+| Variable | Description |
 | --- | --- |
-| INVENTREE_LOG_LEVEL | INFO |
-| INVENTREE_CONFIG_FILE | /home/inventree/data/config.yaml |
-| INVENTREE_SECRET_KEY_FILE | /home/inventree/data/secret_key.txt |
-| INVENTREE_DB_ENGINE | postgresql |
-| INVENTREE_DB_NAME | inventree |
-| INVENTREE_DB_HOST | db |
-| INVENTREE_DB_PORT | 5432 |
-
-The following environment variables are explicitly **not configured** and must be passed to the container instance:
-
-- INVENTREE_DB_USER
-- INVENTREE_DB_PASSWORD
+| INVENTREE_DB_ENGINE | Database engine (e.g. 'postgresql') |
+| INVENTREE_DB_NAME | Database name (e.g. 'inventree') |
+| INVENTREE_DB_HOST | Database server host (e.g. 'inventree-server' if using default docker-compose script) |
+| INVENTREE_DB_PORT | Database server port (e.g. '5432') |
+| INVENTREE_DB_USER | Database user name (e.g. 'pguser') |
+| INVENTREE_DB_PASSWORD | Database user password (e.g. 'pgpassword') |
 
 ### Data Directory
 
@@ -156,7 +153,7 @@ The only **required** change is to ensure that the `/path/to/data` entry (at the
 Before we can create the database, we need to launch the database server container:
 
 ```
-docker-compose up -d db
+docker-compose up -d inventree-db
 ```
 
 This starts the database container.
@@ -168,7 +165,7 @@ As this is the first time we are interacting with the docker containers, the Inv
 Run the following command to open a shell session for the database:
 
 ```
-docker-compose run inventree pgcli -h db -p 5432 -u pguser
+docker-compose run inventree-server pgcli -h inventree-db -p 5432 -u pguser
 ```
 
 !!! info "User"
@@ -189,7 +186,7 @@ Then exit the shell with <kbd>Ctrl</kbd>+<kbd>d</kbd>
 The database has now been created, but it is empty! We need to perform the initial database migrations:
 
 ```
-docker-compose run inventree invoke migrate
+docker-compose run inventree-server invoke migrate
 ```
 
 This will perform the required schema updates to create the required database tables.
@@ -199,7 +196,7 @@ This will perform the required schema updates to create the required database ta
 On first run, the required static files must be collected into the `static` volume:
 
 ```
-docker-compose run inventree invoke static
+docker-compose run inventree-server invoke static
 ```
 
 ### Create Admin Account
@@ -207,7 +204,7 @@ docker-compose run inventree invoke static
 You need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
 
 ```
-docker-compose run inventree invoke superuser
+docker-compose run inventree-server invoke superuser
 ```
 
 ### Configure InvenTree Options
@@ -236,11 +233,11 @@ Now that the database has been created, migrations applied, and you have created
 docker-compose up -d
 ```
 
-This command launches the remaining container processes:
+This command launches the remaining containers:
 
-- `inventree` - InvenTree web server
-- `worker` - Background worker
-- `nginx` - Nginx reverse proxy
+- `inventree-server` - InvenTree web server
+- `inventree-worker` - Background worker
+- `inventree-nginx` - Nginx reverse proxy
 
 !!! success "Up and Running!"
     You should now be able to view the InvenTree login screen at [http://localhost:1337](http://localhost:1337)
