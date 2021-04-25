@@ -121,12 +121,6 @@ By default, uploaded media files are stored in the local directory `/home/invent
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
-### Backup Location
-
-The default behaviour of the database backup is to generate backup files for database tables and media files to `/home/inventree/backup`. The target directory can be overridden by setting the `backup_dir` parameter in the config file.
-
-Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
-
 ## Other Options
 
 ### Authentication Backends
