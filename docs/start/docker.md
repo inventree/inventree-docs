@@ -273,3 +273,17 @@ As part of the server initialization process, data migrations and static file up
 ```
 docker-compose up -d
 ``` 
+
+## Data Backup
+
+Database and media files are stored external to the container, in the volume location specified in the `docker-compose.yml` file. It is strongly recommended that a backup of the files in this volume is performed on a regular basis.
+
+### Exporting Database as JSON
+
+To export the database to an agnostic JSON file, perform the following command:
+
+```
+docker-compose run inventree-server invoke export-records /home/inventree/data/data.json
+```
+
+This will export database records to the file `data.json` in your mounted volume directory.

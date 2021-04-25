@@ -53,7 +53,7 @@ This step creates directories required by InvenTree:
 
 * `/home/inventree/log` - Store InvenTree log files
 * `/home/inventree/static` - Location of static files for the web server
-* `/home/inventre/data` - Location of stored media and backup files
+* `/home/inventre/data` - Location of uploaded media files
 
 ### Download Source Code
 
