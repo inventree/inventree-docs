@@ -11,6 +11,23 @@ For many parts in an InvenTree database, simply tracking current stock levels (a
 Any stock item associated with a trackable part *must* have either a batch number or a serial number. This includes stock created manually or via an internal process (such as a [Purchase Order](../../buy/po) or a [Build Order](/../../build/build)).
 
 
+## Assign Serial Numbers
+
+Serial numbers (if activate for a part) are used in multiple forms and processes in InvenTree.
+
+For faster input there are several ways to define the wanted serial numbers(SN):
+
+| Marker | Input | Result | Description |
+| --- | --- | --- | --- |
+|  | `1` | `[1]` | single SN |
+| , | `1,3,5` | `[1, 3, 5]` | list of SNs |
+| - | `1-5` | `[1, 2, 3, 4, 5]` | strech of SN |
+| \<start>+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from \<start> |
+| \<start>+\<lenght> | `2+2` | `[2, 3, 4]` | \<length> SNs add. to \<start> |
+
+These rules can be mix-and-matched with whitespaces or commas separating them.  
+For example:  
+`1 3-5 9+2` or `1,3-5,9+2` result in `[1, 3, 4, 5, 9, 10, 11]`
 
 
 ## Build Orders
