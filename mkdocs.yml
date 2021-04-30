@@ -42,6 +42,7 @@ nav:
     - What's New: releases/new.md
     - FAQ: faq.md
     - Contribute: contribute.md
+    - Credits: credits.md
   - Installation:
     - Introduction: start/intro.md
     - Configuration: start/config.md

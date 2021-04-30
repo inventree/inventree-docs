@@ -1,0 +1,40 @@
+---
+title: Credits
+---
+
+## Required Packages
+
+InvenTree relies on the following Python libraries:
+
+| Library | License | Description |
+| --- | --- | --- |
+| [Django](https://pypi.org/project/Django/) | BSD | Python web framework | 
+| [invoke](https://www.pyinvoke.org/) | BSD | Task execution tool |
+| [wheel](https://wheel.readthedocs.io/en/stable/) | MIT | Python packaging |
+| [pillow](https://pypi.org/project/Pillow/) | HPND | Image manipulation |
+| [djangorestframework](https://pypi.org/project/djangorestframework/) | BSD | REST API |
+| [django-cors-headers](https://pypi.org/project/django-cors-headers/) | MIT | CORS headers |
+| [django-filter](https://pypi.org/project/django-filter/) | BSD | Advanced filtering for REST API |
+| [django-mptt](https://pypi.org/project/django-mptt/) | MIT | Modified preorder tree traversal |
+| [django-sql-utils](https://pypi.org/project/django-sql-utils/) | MIT | Advanced SQL subqueries |
+| [django-markdownx](https://pypi.org/project/django-markdownx/) | BSD | Markdown editor |
+| [django-markdownify](https://pypi.org/project/django-markdownify/) | MIT | Markdown template filters |
+| [coreapi](https://pypi.org/project/coreapi/) | BSD | API auto documentation |
+| [pygments](https://pypi.org/project/Pygments/) | BSD | Syntax highlighting |
+| [tablib](https://pypi.org/project/tablib/) | MIT | Data import/export |
+| [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) | MIT | Advanced form rendering |
+| [django-import-export](https://pypi.org/project/django-import-export/) | BSD | Data import/export in admin interface |
+| [django-cleanup](https://pypi.org/project/django-cleanup/) | MIT | Automated cleanup of django media files |
+| [rapidfuzz](https://pypi.org/project/rapidfuzz/) | MIT | Fuzzy string matching |
+| [django-stdimage](https://pypi.org/project/django-stdimage/) | MIT | Advanced image fields for django |
+| [django-weasyprint](https://pypi.org/project/django-weasyprint/) | Apache 2.0 | PDF generation |
+| [django-debug-toolbar](https://pypi.org/project/django-debug-toolbar/) | BSD | Debug interface |
+| [django-admin-shell](https://pypi.org/project/django-admin-shell/) | MIT | Command line shell for the admin interface |
+| [django-money](https://pypi.org/project/django-money/) | BSD | Currency support |
+| [certifi](https://pypi.org/project/certifi/) | MPL 2.0 | Web certification |
+| [django-error-report](https://pypi.org/project/django-error-report/) | BSD | Error / excepttion management |
+| [django-test-migrations](https://pypi.org/project/django-test-migrations/) | MIT | Unit testing for database migrations |
+| [python-barcode](https://pypi.org/project/python-barcode/) | MIT | Barcode support |
+| [qrcode](https://pypi.org/project/qrcode/) | BSD | QR code support |
+| [django-q](https://pypi.org/project/django-q/) | MIT | Background task manager |
+| [gunicorn](https://pypi.org/project/gunicorn/) | MIT | Web server |
