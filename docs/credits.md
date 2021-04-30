@@ -2,7 +2,7 @@
 title: Credits
 ---
 
-## Required Packages
+## Python Packages
 
 InvenTree relies on the following Python libraries:
 
@@ -38,3 +38,19 @@ InvenTree relies on the following Python libraries:
 | [qrcode](https://pypi.org/project/qrcode/) | BSD | QR code support |
 | [django-q](https://pypi.org/project/django-q/) | MIT | Background task manager |
 | [gunicorn](https://pypi.org/project/gunicorn/) | MIT | Web server |
+
+## Frontend libraries
+
+InvenTree relies on the following frontend libraries and components:
+
+| Name | License | Description |
+| --- | --- | --- |
+| [Bootstrap](https://github.com/twbs/bootstrap/) | MIT | Frontend framework |
+| [jquery](https://github.com/jquery/jquery) | MIT | JS framework |
+| [Bootstrap table](https://github.com/wenzhixin/bootstrap-table/) | MIT | Table rendering |
+| [Font Awesome - Icons](https://fontawesome.com/) | CC BY 4.0 License | Icons |
+| [Font Awesome - Code](https://fontawesome.com/) | MIT | Delivery code for icons |
+| [Select2](https://github.com/select2/select2/) | MIT | Searchable selection box |
+| [fullcalendar](https://github.com/fullcalendar/fullcalendar/) | MIT | Calender rendering |
+| [Moment JS](https://github.com/moment/momentjs.com/) | MIT | Time and date rendering |
+| [jquery-treegrid](https://github.com/maxazan/jquery-treegrid/) | MIT | Treegrid rendering |
