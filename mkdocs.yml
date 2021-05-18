@@ -60,6 +60,7 @@ nav:
     - Parameters: part/parameter.md
     - Templates: part/template.md
     - Tests: part/test.md
+    - Pricing: part/pricing.md
   - Stock:
     - Stock Items: stock/stock.md
     - Adjusting Stock: stock/adjust.md
