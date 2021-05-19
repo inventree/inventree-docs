@@ -104,6 +104,9 @@ sudo apt-get install sqlite3
 
 A `.sqlite3` database file will be automatically created, at the location specified in the configuration options. No further steps necessary.
 
+!!! warning "SQLite Case Sensitivity"
+    SQLite has a known [string matching limitation](https://docs.djangoproject.com/en/dev/ref/databases/#substring-matching-and-case-sensitivity) for non ASCII characters. If you are using non ASCII characters (e.g. Cyrillic text), it is recommended that you do not use SQLite, as search functionality will not work correctly.
+
 ### PostgreSQL
 
 #### Install PostgreSQL
