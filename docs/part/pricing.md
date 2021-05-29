@@ -8,10 +8,6 @@ InvenTree provides multi-currency pricing support via the [django-money](https:/
 
 ## Currency Conversion
 
-If multiple currency support is required, automatic updating of currency conversion rates can be provided via the [fixer.io](https://fixer.io) API.
+Automatic updating of currency conversion rates can be provided via the [exchangerate.host](https://exchangerate.host/#/) API.
 
-If a valid API key for the fixer.io service is provided, the InvenTree background worker will update the currency exchanges rates once per day.
-
-### API Key
-
-A free API key can be obtained by creating an account with fixer.io. 
+Currency exchange rates are updated once per day.
