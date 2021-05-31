@@ -52,6 +52,7 @@ InvenTree relies on the following frontend libraries and components:
 | [Font Awesome - Code](https://fontawesome.com/) | MIT | Delivery code for icons |
 | [Select2](https://github.com/select2/select2/) | MIT | Searchable selection box |
 | [fullcalendar](https://github.com/fullcalendar/fullcalendar/) | MIT | Calender rendering |
+| [chart.js](https://github.com/chartjs/Chart.js) | MIT | charts |
 | [Moment JS](https://github.com/moment/momentjs.com/) | MIT | Time and date rendering |
 | [jquery-treegrid](https://github.com/maxazan/jquery-treegrid/) | MIT | Treegrid rendering |
 | [clipboard.js](https://github.com/zenorocha/clipboard.js) | MIT | text copying |
