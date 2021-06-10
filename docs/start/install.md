@@ -214,7 +214,7 @@ InvenTree configuration can be performed using environment variables, or the `co
 Edit the configuration file at  `/home/inventree/src/InvenTree/config.yaml`.
 
 !!! info "Config Guidelines"
-    Refer to the [configuration guidelines](../config) for full details.
+    Refer to the [configuration guidelines](./config.md) for full details.
 
 !!! warning "Configure Database"
     Ensure database settings are correctly configured before proceeding to the next step! In particular, check that the database connection settings match the database you have created in the previous step.
@@ -251,10 +251,10 @@ The InvenTree database is now setup and ready to run. A simple development serve
 
 The InvenTree development server is useful for testing and configuration - and it may be wholly sufficient for a small-scale installation.
 
-Refer to the [development server instructions](../development) for further information.
+Refer to the [development server instructions](./development.md) for further information.
 
 ### Production Server
 
 In a production environment, a more robust server setup is required.
 
-Refer to the [production server instructions](../production) for further information.
+Refer to the [production server instructions](./production.md) for further information.

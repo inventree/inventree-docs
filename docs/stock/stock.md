@@ -8,7 +8,7 @@ A stock location represents a physical real-world location where *Stock Items* a
 
 ## Stock Item
 
-A *Stock Item* is an actual instance of a [*Part*](../../part/part) item. It represents a physical quantity of the *Part* in a specific location.
+A *Stock Item* is an actual instance of a [*Part*](../part/part.md) item. It represents a physical quantity of the *Part* in a specific location.
 
 ### Stock Item Details
 

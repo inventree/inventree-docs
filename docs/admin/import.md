@@ -31,7 +31,7 @@ Select the data file to import, and the data format. Press the "Submit" button t
 
 ### File Format
 
-The uploaded data file must meet a number of formatting requirements for successful data upload. A simple way of ensuring that the file format is correct is to first [export data](../export) for the model in question, and delete all data rows (not the header row) from the exported data file.
+The uploaded data file must meet a number of formatting requirements for successful data upload. A simple way of ensuring that the file format is correct is to first [export data](./export.md) for the model in question, and delete all data rows (not the header row) from the exported data file.
 
 Then, the same file can be used as a template for uploading more data to the server.
 

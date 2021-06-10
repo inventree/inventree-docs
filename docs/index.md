@@ -21,15 +21,15 @@ InvenTree is designed to allow for a flexible installation. You could run the In
 
 ## Features
 
-Refer to the [features](./features) page for a rundown on the features that InvenTree provides out of the box.
+Refer to the [features](./features.md) page for a rundown on the features that InvenTree provides out of the box.
 
 ## Getting Started
 
-Refer to the [installation guide](./start/intro) for instructions on installing InvenTree. The server where InvenTree is to be installed will need to meet some basic package requirements, and a certain level of system administration understanding is assumed.
+Refer to the [installation guide](./start/intro.md) for instructions on installing InvenTree. The server where InvenTree is to be installed will need to meet some basic package requirements, and a certain level of system administration understanding is assumed.
 
 ## Get the App
 
-InvenTree is supported by a [companion mobile app](./app/app) which is tightly integrated with the InvenTree database. Lightning fast stock control, in your pocket!
+InvenTree is supported by a [companion mobile app](./app/app.md) which is tightly integrated with the InvenTree database. Lightning fast stock control, in your pocket!
 
 ## Source Code
 

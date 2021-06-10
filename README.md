@@ -44,10 +44,12 @@ Refer to the [reference documentation](https://squidfunk.github.io/mkdocs-materi
 
 Links to internal documentation pages **must** use relative pathing, otherwise the link will be broken by the readthedocs URL formatting.
 
+Also, linking to an internal page must use the `.md` suffix!
+
 For example, to link to the page `/part/views` from `/stock/stocktake`, the link must be formed as follows:
 
 ```
-Click [here](../../part/views)
+Click [here](../part/views.md)
 ```
 
 *Formatting the link as follows:*

@@ -4,9 +4,9 @@ title: Build Orders
 
 ## Build Orders
 
-A *Build Order* is used to create new stock by assembling component parts, according to a [Bill of Materials](../bom)(BOM).
+A *Build Order* is used to create new stock by assembling component parts, according to a [Bill of Materials](./bom.md)(BOM).
 
-A BOM can be specified for any [Part](../../part/part) which is designated as an *Assembly*. The BOM consists of other Parts which are designated as *Components*.
+A BOM can be specified for any [Part](../part/part.md) which is designated as an *Assembly*. The BOM consists of other Parts which are designated as *Components*.
 
 A *Build Order* uses the BOM to allocate stock items to the assembly process. As the *Build Order* is completed, the required stock quantities are subtracted from allocated stock items.
 
@@ -80,7 +80,7 @@ Allocating stock to a build does not actually subtrack the stock from the databa
 !!! info "Part Allocation Information"
     Any part which has stock allocated to a build order will indicate this on the part information page.
 
-For further information, refer to the [stock allocation documentation](../allocate).
+For further information, refer to the [stock allocation documentation](./allocate.md).
 
 ## Build Order Display
 

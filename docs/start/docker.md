@@ -10,7 +10,7 @@ The InvenTree docker image contains all the required system packages, python mod
 
 ### Environment Variables
 
-InvenTree run-time configuration options described in the [configuration documentation](../config) can be passed to the InvenTree container as environment variables.
+InvenTree run-time configuration options described in the [configuration documentation](./config.md) can be passed to the InvenTree container as environment variables.
 
 The following environment variables for InvenTree server configuration are specified as part of the docker image, and can be overridden if required:
 
@@ -46,7 +46,7 @@ Static files are stored internal to the container instance, at the location `/ho
 
 ### Configuration File
 
-As discussed in the [configuration documentation](../config), InvenTree run-time settings can be provided in a configuration file.
+As discussed in the [configuration documentation](./config.md), InvenTree run-time settings can be provided in a configuration file.
 
 By default, the docker container expects this configuration file in the location `/home/inventree/data/config.yaml`. If this file does not exist, it will be automatically created from a default template file.
 
@@ -56,7 +56,7 @@ As this config file is inside the "data" directory (which should be mounted as a
 
 InvenTree uses a secret key to provide cryptographic signing for the application.
 
-As specified in the [configuration documentation](../config/#secret-key) this can be passed to the InvenTree application directly as an environment variable, or provided via a file.
+As specified in the [configuration documentation](./config.md#secret-key) this can be passed to the InvenTree application directly as an environment variable, or provided via a file.
 
 By default, the InvenTree container expects the `INVENTREE_SECRET_KEY_FILE` to exist at `/home/inventree/data/secret_key.txt`. If this file does not exist, it will be created and a new key will be randomly generated.
 
@@ -223,7 +223,7 @@ Alter (or add) environment variables into the docker-compose `environment` secti
 
 A configuration file `config.yaml` has been created in the data volume (at the location specified on your local disk).
 
-Edit this file (as per the [configuration guidelines](../config)).
+Edit this file (as per the [configuration guidelines](./config.md)).
 
 ### Run Web Server
 
