@@ -4,7 +4,7 @@ title: InvenTree Mobile App
 
 ## InvenTree Mobile App
 
-The InvenTree Mobile App brings stock control to your pocket. Integrating seamlessly with the [InvenTree API](../../extend/api), the app provides immediate access to inventory data without requiring physical access to a computer.
+The InvenTree Mobile App brings stock control to your pocket. Integrating seamlessly with the [InvenTree API](../extend/api.md), the app provides immediate access to inventory data without requiring physical access to a computer.
 
 Native barcode support provides a multitude of context-sensitive stock control actions, allowing streamlined inventory management at your fingertips. The app has been optimized for speed, providing instant access to stock knowledge and handy on-site functionality.
 
@@ -95,7 +95,7 @@ Select *InvenTree* to navigate to the [home screen](#home-screen).
 
 ### Scan Barcode
 
-Select *Scan Barcode* to open the barcode scanner, and scan an InvenTree stock item or location to instantly jump to the relevent view. Refer to the [barcode documentation](./barcode) for more information.
+Select *Scan Barcode* to open the barcode scanner, and scan an InvenTree stock item or location to instantly jump to the relevent view. Refer to the [barcode documentation](./barcode.md) for more information.
 
 ### Search
 
@@ -103,15 +103,15 @@ Select *Search* to open a global search screen.
 
 ### Parts
 
-Select *Parts* to navigate to the [Parts](./parts) view.
+Select *Parts* to navigate to the [Parts](./part.md) view.
 
 ### Stock
 
-Select *Stock* to navigate to the [Stock](./stock) view.
+Select *Stock* to navigate to the [Stock](./stock.md) view.
 
 ### Settings
 
-Select *Settings* to navigate to the app [settings](./settings) menu.
+Select *Settings* to navigate to the app [settings](./settings.md) menu.
 
 ## Home Screen
 

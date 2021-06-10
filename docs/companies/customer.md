@@ -9,7 +9,7 @@ A customer is an external client to whom parts are sold.
 To access the customer page, click on the "Sell" navigation tab and click on "Customers" option in the dropdown list.
 
 !!! warning
-	**Viewing**, **adding**, **editing** and **deleting** customers require the corresponding [Sales Orders user permissions](../../admin/permissions)
+	**Viewing**, **adding**, **editing** and **deleting** customers require the corresponding [Sales Orders user permissions](../admin/permissions.md)
 
 ### Add Customer
 

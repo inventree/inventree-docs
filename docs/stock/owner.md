@@ -17,7 +17,7 @@ The stock ownership feature is disabled by default, and must be enabled via the 
 
 ### Owner: Group vs User
 
-There are two types of owners in InvenTree: [groups](../../admin/permissions/#group) and [users](../../admin/permissions/#user).
+There are two types of owners in InvenTree: [groups](../admin/permissions.md#group) and [users](../admin/permissions.md#user).
 
 * If a group is selected as owner, **all** users linked to the specified group will be able to edit the stock location or item.
 * If a user is selected as owner, only the specified user will be able to edit the stock location or item.
@@ -33,7 +33,7 @@ When selecting an owner, in the drop-down list, groups are annotated with the `(
 To specify the owner of a stock location, navigate to the stock location detail page. Click on the <span class='fas fa-sitemap'></span> icon under the location's name then click on "Edit Location".
 
 !!! warning
-	If you cannot see the <span class='fas fa-sitemap'></span> icon, it means that you do **not** have permissions to edit stock locations. Refer to [the permissions documentation](../../admin/permissions/#roles) and/or contact your InvenTree administrator.
+	If you cannot see the <span class='fas fa-sitemap'></span> icon, it means that you do **not** have permissions to edit stock locations. Refer to [the permissions documentation/../admin/permissions.md#roles) and/or contact your InvenTree administrator.
 
 In the "Edit Stock Location" form, select the owner and click the "Submit" button:
 

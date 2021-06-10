@@ -8,15 +8,15 @@ For information on the latest and greatest InvenTree features, refer to the rele
 
 | Release | Date |
 | ------- | ---- |
-| [0.2.3](../0.2.3) | *In Developement* |
-| [0.2.2](../0.2.2) | May 2021 |
-| [0.2.1](../0.2.1) | April 2021 |
-| [0.2.0](../0.2.0) | April 2021 |
-| [0.1.8](../0.1.8) | April 2021 |
-| [0.1.7](../0.1.7) | March 2021 |
-| [0.1.6](../0.1.6) | February 2021 |
-| [0.1.5](../0.1.5) | January 2021 |
-| [0.1.4](../0.1.4) | November 2020 |
+| [0.2.3](./0.2.3.md) | *In Developement* |
+| [0.2.2](./0.2.2.md) | May 2021 |
+| [0.2.1](./0.2.1.md) | April 2021 |
+| [0.2.0](./0.2.0.md) | April 2021 |
+| [0.1.8](./0.1.8.md) | April 2021 |
+| [0.1.7](./0.1.7.md) | March 2021 |
+| [0.1.6](./0.1.6.md) | February 2021 |
+| [0.1.5](./0.1.5.md) | January 2021 |
+| [0.1.4](./0.1.4.md) | November 2020 |
 
 ## Upcoming Features
 

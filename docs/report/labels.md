@@ -100,7 +100,7 @@ Location Name: {{ location.name }}
 
 ### Barcodes
 
-Refer to the [barcode documentation](../barcodes).
+Refer to the [barcode documentation](./barcodes.md).
 
 ### Conditional Formatting
 
@@ -227,9 +227,9 @@ The following variables are made available to the StockItem label template:
 
 ### URL-style QR code
 
-Stock Item labels support [QR code](../barcodes#qr-code) containing the stock item URL, which can be
+Stock Item labels support [QR code](./barcodes.md#qr-code) containing the stock item URL, which can be
 scanned and opened directly
-on a portable device using the camera or a QR code scanner. To generate a URL-style QR code for stock item in the [label HTML template](../labels#label-templates), add the
+on a portable device using the camera or a QR code scanner. To generate a URL-style QR code for stock item in the [label HTML template](./labels.md#label-templates), add the
 following HTML tag:
 
 ``` html

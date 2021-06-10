@@ -32,13 +32,13 @@ A Part is defined in the system by the following parameters:
 
 ## Parameters
 
-Parts can have multiple defined [parameters](../parameter).
+Parts can have multiple defined [parameters](./parameter.md).
 
 ## Variants
 
 If a part is a *Template Part* then the *Variants* tab will be visible.
 
-[Read about Part templates](../template)
+[Read about Part templates](./template.md)
 
 ## Stock
 
@@ -70,7 +70,7 @@ The *Allocated* tab displays how many units of this part have been allocated to 
 
 ## BOM
 
-The *BOM* tab displays the [Bill of Materials](../../build/bom) - a list of sub-components used to build an assembly. Each row in the BOM specifies a quantity of another Part which is required to build the assembly. This tab is only visible if the Part is an *assembly* (meaning it can be build from other parts).
+The *BOM* tab displays the [Bill of Materials](../build/bom.md) - a list of sub-components used to build an assembly. Each row in the BOM specifies a quantity of another Part which is required to build the assembly. This tab is only visible if the Part is an *assembly* (meaning it can be build from other parts).
 
 ## Build Orders
 
@@ -102,7 +102,7 @@ The *Sales Orders* tab shows a list of the sales orders for this part. It provid
 
 ## Tests
 
-If a part is marked as *trackable*, the user can define tests which must be performed on any stock items which are instances of this part. [Read more about testing](../test).
+If a part is marked as *trackable*, the user can define tests which must be performed on any stock items which are instances of this part. [Read more about testing](./test.md).
 
 ## Attachments
 

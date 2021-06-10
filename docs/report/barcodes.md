@@ -4,7 +4,7 @@ title: Barcode Generation
 
 ## Barcode Generation
 
-Both [report](../report) and [label](../labels) templates can render custom barcode data to in-line images.
+Both [report](./report.md) and [label](./labels.md) templates can render custom barcode data to in-line images.
 
 !!! info "img"
     Barcode data must be rendered inside an `<img>` tag.

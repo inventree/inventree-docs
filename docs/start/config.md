@@ -84,7 +84,7 @@ The following database options can be configured:
 
 ## Email Settings
 
-To enable [email functionality](../../admin/email), email settings must be configured here, either via environment variables or within the configuration file.
+To enable [email functionality](../admin/email.md), email settings must be configured here, either via environment variables or within the configuration file.
 
 The following email settings are available:
 

@@ -103,7 +103,7 @@ Setting the *Debug Mode* option renders the template as raw HTML instead of PDF,
 
 ## Uploading Templates
 
-Custom report templates can be uploaded using the [Admin Interface](../../admin/admin). Only users with admin access can upload and/or edit report template files.
+Custom report templates can be uploaded using the [Admin Interface(../admin/admin.md). Only users with admin access can upload and/or edit report template files.
 
 ## Report Assets
 
@@ -193,17 +193,17 @@ InvenTree supports the following reporting functionality:
 
 ### Test Report
 
-[Test Report](../test): Format results of a test report against for a particular StockItem
+[Test Report](./test.md): Format results of a test report against for a particular StockItem
 
 ### Packing List
-[Packing List](../pack): Format a list of items for shipping or transfer
+[Packing List](./pack.md): Format a list of items for shipping or transfer
 
 ### Build Report
 
-[Build Order](../build): Format a build order report
+[Build Order](./build.md): Format a build order report
 
 ### Purchase Order
-[Purchase Order report](../order): Order line items 
+[Purchase Order report](./order.md): Order line items 
 
 ### Sales Order
 Sales Order: TODO

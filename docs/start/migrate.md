@@ -29,7 +29,7 @@ This will create JSON file at the specified location which contains all database
 
 ### Initialize New Database
 
-Configure the new database using the normal processes (see [Configuration](../config))
+Configure the new database using the normal processes (see [Configuration](./config.md))
 
 Then, ensure that the database schema are correctly initialized in the new database:
 

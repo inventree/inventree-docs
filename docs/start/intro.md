@@ -31,11 +31,11 @@ The bulk of the InvenTree code base supports the custom web server application. 
 
 The webserver code also provides a first-party API for performing database query actions.
 
-Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users.  Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](../deploy).
+Once a database is setup, you need a way of accessing the data. InvenTree provides a "server" application out of the box, but this may not scale particularly well with multiple users.  Instead, InvenTree can be served using a webserver such as [Gunicorn](https://gunicorn.org/). For more information see the [deployment documentation](./production.md).
 
 ### Background Tasks
 
-A separate application handles management of [background tasks](../../admin/tasks), separate to user-facing web requests.
+A separate application handles management of [background tasks](../admin/tasks.md), separate to user-facing web requests.
 
 ## OS Requirements
 
@@ -123,7 +123,7 @@ There are multiple ways to get an InvenTree server up and running, of various co
 
 The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker-compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
 
-Refer to the [docker setup instructions](../docker) for further information.
+Refer to the [docker setup instructions](./docker.md) for further information.
 
 ### Bare Metal
 

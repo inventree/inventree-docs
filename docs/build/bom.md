@@ -4,7 +4,7 @@ title: Bill of Materials
 
 ## Bill of Materials
 
-A Bill of Materials (BOM) defines the list of component parts required to make an assembly, [create builds](../build) and allocate inventory.
+A Bill of Materials (BOM) defines the list of component parts required to make an assembly, [create builds](./build.md) and allocate inventory.
 
 A part which can be built from other sub components is called an *Assembly*. 
 
@@ -30,7 +30,7 @@ A BOM for a particular assembly is comprised of a number (zero or more) of BOM "
 
 ### Inherited BOM Line Items
 
-When using the InvenTree [template / variant](../../part/template) feature, it may be useful to make use of the *inheritance* capability of BOM Line Items.
+When using the InvenTree [template / variant](../part/template.md) feature, it may be useful to make use of the *inheritance* capability of BOM Line Items.
 
 If a BOM Line Item is designed as *Inherited*, it will be automatically included in the BOM of any part which is a variant (or sub-variant) of the part for which the BOM Line Item is defined.
 

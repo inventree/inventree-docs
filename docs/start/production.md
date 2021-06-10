@@ -5,7 +5,7 @@ title: Production Server
 ## Production Server
 
 !!! warning "Installation"
-    Before continuing, ensure that the [installation steps](../install) have been completed.
+    Before continuing, ensure that the [installation steps](./install.md) have been completed.
 
 The following instructions provide a reasonably performant server, using [gunicorn](https://gunicorn.org/) as a webserver, and [supervisor](http://supervisord.org/) as a process manager.
 

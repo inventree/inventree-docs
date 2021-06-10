@@ -25,7 +25,7 @@ The category part list provides an overview of each part:
 
 The list of parts underneath a given category can be filtered by multiple user-configurable filters, which is especially useful when a large number of parts exist under a certain category.
 
-Clicking on the part name links to the [*Part Detail*](../views) view.
+Clicking on the part name links to the [*Part Detail*](./views.md) view.
 
 ## Part Options
 
@@ -37,25 +37,25 @@ A *Virtual* part is one which does not physically exist but should still be trac
 
 ### Template
 
-A *Template* part is one which can have *variants* which exist underneath it. [Read further information about template parts here](../template).
+A *Template* part is one which can have *variants* which exist underneath it. [Read further information about template parts here](./template.md).
 
 ### Assembly
 
-If a part is designated as an *Assembly* it can be created (or built) from other component parts. As an example, a circuit board assembly is made using multiple electronic components, which are tracked in the system. An *Assembly* Part has a Bill of Materials (BOM) which lists all the required sub-components. [Read further information about BOM management here](../../build/bom).
+If a part is designated as an *Assembly* it can be created (or built) from other component parts. As an example, a circuit board assembly is made using multiple electronic components, which are tracked in the system. An *Assembly* Part has a Bill of Materials (BOM) which lists all the required sub-components. [Read further information about BOM management here](../build/bom.md).
 
 ### Component
 
-If a part is designated as a *Component* it can be used as a sub-component of an *Assembly*. [Read further information about BOM management here](../../build/bom)
+If a part is designated as a *Component* it can be used as a sub-component of an *Assembly*. [Read further information about BOM management here](../build/bom.md)
 
 ### Trackable
 
 Trackable parts can be assigned batch numbers or serial numbers which uniquely identify a particular stock item. Trackable parts also provide other features (and restrictions) in the InvenTree ecosystem.
 
-[Read further information about trackable parts here](../trackable).
+[Read further information about trackable parts here](./trackable.md).
 
 ### Purchaseable
 
-If a part is designated as *Purchaseable* it can be purchased from external suppliers. Setting this flag allows parts to be added to [purchase orders](../../buy/po).
+If a part is designated as *Purchaseable* it can be purchased from external suppliers. Setting this flag allows parts to be added to [purchase orders](../companies/po.md).
 
 ### Salable
 

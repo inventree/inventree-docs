@@ -81,7 +81,7 @@ response = request.get('http://localhost:8080/api/part/', data=data, headers=hea
 
 ### User Roles
 
-Users can only perform REST API actions which align with their assigned [role permissions](../../admin/permissions/#roles). 
+Users can only perform REST API actions which align with their assigned [role permissions](../admin/permissions.md#roles). 
 Once a user has *authenticated* via the API, a list of the available roles can be retrieved from:
 
 `/api/user/roles/`

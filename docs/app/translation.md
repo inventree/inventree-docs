@@ -10,8 +10,6 @@ As with the web application, translations are community contributed - if the app
 
 ## Contributing
 
-Translation files for the InvenTree app are [available on GitHub](https://github.com/inventree/inventree-app-i18n/).
-
-A Python helper script simplifies the translation process by presenting the user with words or phrases which require translation, one item at a time.
+Translation for the InvenTree mobile app is provided by the [crowdin](https://crowdin.com/project/inventree) service. Contributions are welcomed and encouraged, and the process of providing or improving translated strings is extremely simple!
 
 Full translation efforts, while appreciated, are not required. Please feel free to contribute as much as you can!

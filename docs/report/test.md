@@ -4,7 +4,7 @@ title: Test Report
 
 ## Test Report
 
-InvenTree provides [test result](../../stock/test) tracking functionality which allows the users to keep track of any tests which have been performed on a given stock item.
+InvenTree provides [test result](../stock/test.md) tracking functionality which allows the users to keep track of any tests which have been performed on a given stock item.
 
 Custom test reports may be generated against any given stock item. All testing data is made available to the template for custom rendering as required.
 
