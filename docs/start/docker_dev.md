@@ -110,6 +110,8 @@ source ./dev/env/bin/activate
 invoke superuser
 ```
 
+Once you have entered the credentials for the superuser account, type `exit` to exit the bash shell.
+
 ### Start Background Worker
 
 The InvenTree web server should now be running - but the background worker has not yet been started:
