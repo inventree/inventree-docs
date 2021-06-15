@@ -101,8 +101,7 @@ source env/bin/activate
 
 This will place the current shell session inside a virtual environment - the terminal should display the ``(env)`` prefix.
 
-
-## Downloading Source Code
+## InvenTree Source Code
 
 InvenTree source code is distributed on [GitHub](https://github.com/inventree/inventree/), and the latest version can be downloaded (using Git) with the following command:
 
@@ -123,8 +122,16 @@ There are multiple ways to get an InvenTree server up and running, of various co
 
 The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker-compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
 
-Refer to the [docker setup instructions](./docker.md) for further information.
+Refer to the following guides for further instructions:
+
+- [**Docker development server setup guide**](./docker_dev.md)
+- [**Docker production server setup guide**](./docker.md)
 
 ### Bare Metal
 
-If you do not wish to use the docker container, you will need to manually install the required packages and follow through the installation guide. Refer to the [InvenTree installation instructions](../install) for more details.
+If you do not wish to use the docker container, you will need to manually install the required packages and follow through the installation guide.
+
+Refer to the following guides for further instructions:
+
+- [**Bare metal development server setup guide**](./development.md)
+- [**Bare metal production server setup guide**](./install.md)

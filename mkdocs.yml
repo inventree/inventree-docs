@@ -47,11 +47,8 @@ nav:
   - Installation:
     - Introduction: start/intro.md
     - Configuration: start/config.md
-    - Docker Installation: start/docker.md
-    - Docker Development: start/docker_dev.md
-    - Manual Installation: start/install.md
-    - Development Server: start/development.md
-    - Production Server: start/production.md
+    - Docker Setup: start/docker.md
+    - Bare Metal Setup: start/install.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
   - Parts:

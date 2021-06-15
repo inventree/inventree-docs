@@ -1,12 +1,12 @@
 ---
-title: Docker Development Setup
+title: Docker Development Server
 ---
 
-## Docker Development Setup
+## Docker Development Server
 
-You can also use docker to launch and manage a development server, in a similar fashion to managing a production server.
+You can use docker to launch and manage a development server, in a similar fashion to managing a production server.
 
-There are some key differences compared to the docker production setup:
+There are some key differences compared to the [docker production setup](./docker_prod.md):
 
 - The docker image is built locally, rather than being downloaded from DockerHub
 - The docker image points to the source code on your local machine, instead of cloning from GitHub
@@ -33,7 +33,7 @@ This script specifies the following containers:
 First download the source code from GitHub:
 
 ```
-git clone git@github.com:inventree/InvenTree.git
+git clone git@github.com:inventree/InvenTree.git inventree
 cd inventree/docker
 ```
 
