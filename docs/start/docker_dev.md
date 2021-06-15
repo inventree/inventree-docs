@@ -139,3 +139,19 @@ To stop the InvenTree development server, simply run the following command:
 ```
 docker-compose -f docker-compose-dev.yml down
 ```
+
+## Editing InvenTree Source
+
+Any changes made to the InvenTree source code are automatically detected by the services running under docker.
+
+Thus, you can freely edit the InvenTree source files in your editor of choice.
+
+### Database Updates
+
+Any updates which require a database schema change must be reflected in the database itself.
+
+To run database migrations inside the docker container, run the following command:
+
+```
+docker-compose -f docker-compose.dev.yml run inventree-dev-server invoke update
+```
