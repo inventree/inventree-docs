@@ -8,7 +8,8 @@ For information on the latest and greatest InvenTree features, refer to the rele
 
 | Release | Date |
 | ------- | ---- |
-| [0.2.3](./0.2.3.md) | *In Developement* |
+| [0.2.4](./0.2.4.md) | *In development* |
+| [0.2.3](./0.2.3.md) | June 2021 |
 | [0.2.2](./0.2.2.md) | May 2021 |
 | [0.2.1](./0.2.1.md) | April 2021 |
 | [0.2.0](./0.2.0.md) | April 2021 |
