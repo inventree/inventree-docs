@@ -134,6 +134,9 @@ markdown_extensions:
 extra:
   static_folder_source: ./InvenTree/InvenTree/static/
   static_folder_local_default: ./inventree_static/
+  version:
+    provider: mike
+    default: latest
 
 use_directory_urls: true
 strict: true
