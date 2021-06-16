@@ -22,6 +22,13 @@ Firstly, here is the complete `docker-compose.yml` file which can be used "as is
 
 The following containers are created:
 
+| Container | Description |
+| --- | --- |
+| inventree-db | PostgreSQL database |
+| inventree-server | Gunicorn web server |
+| invenrtee-worker | django-q background worker |
+| inventree-proxy | nginx proxy |
+
 #### PostgreSQL Database
 
 A postgresql database container which creates a postgres user:password combination (which can be changed). This uses the official [PostgreSQL image](https://hub.docker.com/_/postgres).
@@ -38,7 +45,7 @@ Runs the InvenTree background worker process. This spins up a second instance of
 
 #### Nginx
 
-Nginx working as a reverse proxy, separating requests for static files and directing everything else to Gunicorn.
+Nginx working as a reverse proxy, separating requests for static and media files, and directing everything else to Gunicorn.
 
 This container uses the official [nginx image](https://hub.docker.com/_/nginx).
 
@@ -53,20 +60,21 @@ An nginx configuration file must be provided to the image. Use the example confi
 !!! info "Proxy Pass"
     If you change the name (or port) of the InvenTree web server container, you will need to also adjust the `proxy_pass` setting in the nginx.conf file!
 
-### Volumes
-
-There are two container volumes created:
-
-#### Data
+### Data Volume
 
 InvenTree stores data which is meant to be persistent (e.g. uploaded media files, database data, etc) in a volume which is mapped to a local system directory.
 
 !!! info "Data Directory"
     Make sure you change the path to the local directory where you want persistent data to be stored.
 
-#### Static
+The InvenTree docker server will manage the following directories and files within the 'data' volume:
 
-Static files are shared between multiple containers (but not exposed to the local file system).
+| Path | Description |
+| --- | --- |
+| ./config.yaml | InvenTree server configuration file |
+| ./secret_key.txt | Secret key file |
+| ./media | Directory for storing uploaded media files |
+| ./static | Directory for storing static files |
 
 ## Production Setup
 
@@ -76,8 +84,8 @@ With the docker-compose recipe above, follow the instructions below to initializ
 
 The following files are required on your local machine (use the examples above, or edit as required):
 
-- docker-compose.yml
-- nginx.conf
+- [docker-compose.yml](https://github.com/inventree/InvenTree/blob/master/docker/docker-compose.yml)
+- [nginx.conf](https://github.com/inventree/InvenTree/blob/master/docker/nginx.conf)
 
 !!! info "Command Directory"
     It is assumed that all commands will be run from the directory where `docker-compose.yml` is located. 

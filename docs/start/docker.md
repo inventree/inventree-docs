@@ -40,10 +40,6 @@ InvenTree data are stored inside the container at `/home/inventree/data`.
 
 This directory should be mounted as a volume which points to a directory on your local machine.
 
-### Static Directory
-
-Static files are stored internal to the container instance, at the location `/home/inventree/static`
-
 ### Configuration File
 
 As discussed in the [configuration documentation](./config.md), InvenTree run-time settings can be provided in a configuration file.
