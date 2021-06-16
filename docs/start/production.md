@@ -92,3 +92,13 @@ The process status can be viewed [in your web browser](http://localhost:9001).
 ## Production Ready
 
 The InvenTree server (and background task manager) should now be running!
+
+### Next Steps
+
+You (or your system administrator) may wish to perform further steps such as placing the InvenTree server behind a reverse-proxy such as [nginx](https://www.nginx.com/).
+
+As production environment options are many and varied, such tasks are outside the scope of this documentation.
+
+There are many great online tutorials about running django applications in production!
+
+As a starting point, you can refer to the [docker production example](./docker_prod.md) for a demonstration of running InvenTree behind a nginx proxy.
