@@ -101,8 +101,7 @@ source env/bin/activate
 
 This will place the current shell session inside a virtual environment - the terminal should display the ``(env)`` prefix.
 
-
-## Downloading Source Code
+## InvenTree Source Code
 
 InvenTree source code is distributed on [GitHub](https://github.com/inventree/inventree/), and the latest version can be downloaded (using Git) with the following command:
 
@@ -123,8 +122,46 @@ There are multiple ways to get an InvenTree server up and running, of various co
 
 The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker-compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
 
-Refer to the [docker setup instructions](./docker.md) for further information.
+Refer to the following guides for further instructions:
+
+- [**Docker development server setup guide**](./docker_dev.md)
+- [**Docker production server setup guide**](./docker.md)
 
 ### Bare Metal
 
-If you do not wish to use the docker container, you will need to manually install the required packages and follow through the installation guide. Refer to the [InvenTree installation instructions](../install) for more details.
+If you do not wish to use the docker container, you will need to manually install the required packages and follow through the installation guide.
+
+Refer to the following guides for further instructions:
+
+- [**Bare metal development server setup guide**](./development.md)
+- [**Bare metal production server setup guide**](./install.md)
+
+## Debug Mode
+
+By default, the InvenTree web server is configured to run in [DEBUG mode](https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-DEBUG). 
+
+Running in DEBUG mode provides many handy development features, however it is strongly recommended *NOT* to run in DEBUG mode in a production environment. This recommendation is made because DEBUG mode leaks a lot of information about your installation and may pose a security risk.
+
+So, for a production setup, you should set `INVENTREE_DEBUG=false` in the [configuration options](./config.md).
+
+### Potential Issues
+
+However, turning off DEBUG mode creates further work for the system administrator. In particular, when running in DEBUG mode, the InvenTree web server natively manages *static* and *media* files, which means that the InvenTree server can run "monolithically" without the need for a separate web server.
+
+With DEBUG mode turned off, a separate web server is required for serving *static* and *media* files. You can find further information in the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/deployment/).
+
+There are *many* different ways that a sysadmin might wish to handle this.
+
+The [docker production example](./docker_prod.md) provides an example using [Nginx](https://www.nginx.com/) to serve *static* and *media* files, and redirecting other requests to the InvenTree web server itself.
+
+You may use this as a jumping off point, or use an entirely different server setup.
+
+#### Static Files
+
+Static files can be served without any need for authentication. In fact, they must be accessible *without* authentication, otherwise the unauthenticated views (such as the login screen) will not function correctly.
+
+#### Media Files
+
+It is highly recommended that the *media* files are served in such a way that user authentication is required.
+
+Refer to the [docker production example](./docker_prod.md) for a demonstration of using nginx to serve media files only to authenticated users, and forward authentication requests to the InvenTree web server.
