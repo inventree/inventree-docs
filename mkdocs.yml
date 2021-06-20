@@ -51,6 +51,7 @@ nav:
     - Bare Metal Setup: start/install.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
+    - Demo Dataset: start/demo.md
   - Parts:
     - Parts: part/part.md
     - Part Views: part/views.md
