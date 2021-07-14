@@ -3,7 +3,6 @@ site_url: https://inventree.readthedocs.io
 site_name: InvenTree Documentation
 site_description: InvenTree - Open Source Inventory Management
 site_author: InvenTree
-google_analytics: ['UA-143467500-1', 'inventree-docs']
 
 # Repository
 repo_url: https://github.com/inventree/inventree-docs
@@ -135,6 +134,12 @@ markdown_extensions:
 extra:
   static_folder_source: ./InvenTree/InvenTree/static/
   static_folder_local_default: ./inventree_static/
+
+  # Site Analytics
+  # See https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
+  analytics:
+    provider: google
+    property: UA-143467500-1
 
 use_directory_urls: true
 strict: true
