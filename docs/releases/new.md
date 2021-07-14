@@ -26,7 +26,7 @@ For information on the latest and greatest InvenTree features, refer to the rele
 
 | Release | Date |
 | ------- | ---- |
-| [0.3.0](./0.3.0.md) | *In development* |
+| [0.3.0](./0.3.0.md) | July 2021 |
 | [0.2.4](./0.2.4.md) | June 2021 |
 | [0.2.3](./0.2.3.md) | June 2021 |
 | [0.2.2](./0.2.2.md) | May 2021 |
