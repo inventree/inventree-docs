@@ -67,6 +67,7 @@ The *installed_items* context variable is a list of all `StockItem` instances wh
         <td>{{ sub_item.full_name }}</td>
         <td>Serial Number: {{ sub_item.serial }}</td>
         <td>Pass: {{ sub_item.passedAllRequiredTests }}</td>
+    </tr>
     {% endfor %}
 </table>
 {% endraw %}
