@@ -35,6 +35,7 @@ In addition to the default report context variables, the following context varia
 | part | The Part of which the stock_item is an instance |
 | results | A dict of test result objects, where the 'key' for each test result is a shortened version of the test name (see below) |
 | result_list | A list of each test result object |
+| installed_items | A flattened list representing all `StockItem` objects which are *installed inside* the referenced `StockItem` object |
 
 #### Results
 
@@ -52,4 +53,22 @@ Say for example that a Part "Electronic Widget" has a stock item with serial num
 Firmware Checksum: {% raw %}{{ results.firmwarechecksum.value }}.
 Uploaded by {{ results.firmwarechecksum.user }}{% endraw %}
 </p>
+```
+
+#### Installed Items
+
+The *installed_items* context variable is a list of all `StockItem` instances which are installed inside the `StockItem` referenced by the report template. Each `StockItem` can be dereferenced as follows:
+
+```html
+{% raw %}
+<table>
+    {% for sub_item in installed_items %}
+    <tr>
+        <td>{{ sub_item.full_name }}</td>
+        <td>Serial Number: {{ sub_item.serial }}</td>
+        <td>Pass: {{ sub_item.passedAllRequiredTests }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endraw %}
 ```
