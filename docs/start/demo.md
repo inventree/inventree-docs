@@ -30,7 +30,7 @@ Download the demo dataset, e.g. using git:
 git clone git@github.com:inventree/demo-dataset.git ~/inventree-data
 ```
 
-!!! info "Data Directory
+!!! info "Data Directory"
     For the purpose of these instructions it is assumed that the demo data repository has been cloned to ~/inventree-data.
 
 ### Initialize Database
