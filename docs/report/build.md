@@ -17,8 +17,10 @@ In addition to the default report context variables, the following context varia
 
 | Variable | Description |
 | --- | --- |
-| build | The build object the report is being generated against |
-| part | The part object that the build references |
+| build | The [Build](./context_variables.md#build) object the report is being generated against |
+| part | The [Part](./context_variables.md#part) object that the build references |
 | reference | The build order reference string |
 | quantity | Build order quantity |
+
+
 

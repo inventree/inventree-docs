@@ -31,11 +31,11 @@ In addition to the default report context variables, the following context varia
 
 | Variable | Description |
 | --- | --- |
-| stock_item | The individual stock item for which this test report is being generated |
-| part | The Part of which the stock_item is an instance |
+| stock_item | The individual [StockItem](./context_variables.md#stockitem) object for which this test report is being generated |
+| part | The [Part](./context_variables.md#part) object of which the stock_item is an instance |
 | results | A dict of test result objects, where the 'key' for each test result is a shortened version of the test name (see below) |
 | result_list | A list of each test result object |
-| installed_items | A flattened list representing all `StockItem` objects which are *installed inside* the referenced `StockItem` object |
+| installed_items | A flattened list representing all [StockItem](./context_variables.md#stockitem) objects which are *installed inside* the referenced [StockItem](./context_variables.md#stockitem) object |
 
 #### Results
 
@@ -57,7 +57,7 @@ Uploaded by {{ results.firmwarechecksum.user }}{% endraw %}
 
 #### Installed Items
 
-The *installed_items* context variable is a list of all `StockItem` instances which are installed inside the `StockItem` referenced by the report template. Each `StockItem` can be dereferenced as follows:
+The *installed_items* context variable is a list of all [StockItem](./context_variables.md#stockitem) instances which are installed inside the [StockItem](./context_variables.md#stockitem) referenced by the report template. Each [StockItem](./context_variables.md#stockitem) can be dereferenced as follows:
 
 ```html
 {% raw %}

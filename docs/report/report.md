@@ -50,21 +50,7 @@ For example, rendering the name of a part (which is available in the particular 
 
 ### Context Data
 
-Each report has access to a number of context variables by default. The following context variables are provided to every report template:
-
-| Variable | Description |
-| --- | --- |
-| date | Current date, represented as a Python datetime.date object |
-| datetime | Current datetime, represented as a Python datetime object |
-| default_page_size | InvenTree default page size variable |
-| report_name | Name of the report template |
-| report_description | Description of the report template |
-| report_revision | Revision of the report template |
-| request | Django request object |
-| user | User who made the request to render the template |
-
-!!! info "Specific Report Context"
-    Specific report types may have additional context variables
+Please refer to the [Context variables](./context_variables.md) page.
 
 ### Conditional Rendering
 

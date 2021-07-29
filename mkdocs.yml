@@ -85,6 +85,7 @@ nav:
       - Build Order: report/build.md
       - Order: report/order.md
     - Barcodes: report/barcodes.md
+    - Context Variables: report/context_variables.md
   - Admin:
     - Admin Interface: admin/admin.md
     - User Permissions: admin/permissions.md
