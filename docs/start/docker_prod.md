@@ -6,6 +6,9 @@ title: Docker Production Server
 
 Using the [InvenTree docker image](./docker.md) streamlines the setup process for an InvenTree production server.
 
+!!! warning "Static and Media Files"
+    The sample docker-compose configuration shown on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly. When running with `debug=False`, django *will not serve these files* - see the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
+
 ## Docker Compose
 
 It is strongly recommended that you use a [docker-compose](https://docs.docker.com/compose/) script to manage your InvenTree docker image.
