@@ -98,6 +98,8 @@ Location Name: {{ location.name }}
 {% endraw %}
 ```
 
+Refer to the [context variables documentation](./context_variables.md).
+
 ### Barcodes
 
 Refer to the [barcode documentation](./barcodes.md).
@@ -214,8 +216,8 @@ The following variables are made available to the StockItem label template:
 
 | Variable | Description |
 | -------- | ----------- |
-| item | The StockItem object itself |
-| part | The Part object which is referenced by the StockItem object |
+| item | The [StockItem](./context_variables.md#stockitem) object itself |
+| part | The [Part](./context_variables.md#part) object which is referenced by the [StockItem](./context_variables.md#stockitem) object |
 | name | The `name` field of the associated Part object | 
 | ipn | The `IPN` field of the associated Part object |
 | revision | The `revision` field of the associated Part object |
@@ -259,7 +261,7 @@ The following variables are made available to the StockLocation label template:
 
 | Variable | Description |
 | -------- | ----------- |
-| location | The StockLocation object itself |
+| location | The [StockLocation](./context_variables.md#stocklocation) object itself |
 
 ## Part Labels
 
@@ -283,8 +285,8 @@ The following context variables are made available to the Part label template:
 
 | Variable | Description |
 | -------- | ----------- |
-| part | The part object |
-| category | The PartCategory which contains the Part |
+| part | The [Part](./context_variables.md#part) object |
+| category | The [Part Category](./context_variables.md#part-category) which contains the Part |
 | name | The name of the part |
 | description | The description text for the part |
 | IPN | Internal part number (IPN) for the part |
