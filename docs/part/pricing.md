@@ -31,12 +31,12 @@ All money-values are adjusted to the default currency at the current exchange ra
 
 ### Supplier cost / prices
 
-Shows how much it would cost to purchase the part right now from a supplier/manufacturer (can have [price ranges](#Price ranges)).  
+Shows how much it would cost to purchase the part right now from a supplier/manufacturer (can have [price ranges](#price-ranges)).  
 Also provides a graph of historical prices collected from stock in the tab **Purchase Price**.
 
 ### Internal cost / prices
 
-Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assambly the internal cost has to contain the cost for all sub-parts). [Price ranges](#Price ranges) are supported.
+Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assambly the internal cost has to contain the cost for all sub-parts). [Price ranges](#price-ranges) are supported.
 
 ### BOM cost
 
@@ -44,7 +44,7 @@ If a part is an assembly this panel will show the cost (possibly as range) for a
 
 ### Sale cost / prices
 
-Sale prices are always to customers (through [sale orders](../companies/so.md)) and support [price ranges](#Price ranges).
+Sale prices are always to customers (through [sale orders](../companies/so.md)) and support [price ranges](#price-ranges).
 
 The panel also shows historical sale price information collected from past [purchase orders](../companies/po.md).
 
