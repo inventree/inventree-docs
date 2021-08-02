@@ -145,5 +145,13 @@ extra:
     provider: google
     property: UA-143467500-1
 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/inventree/inventree
+      name: InvenTree on GitHub
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/inventree/inventree
+      name: InvenTree on Docker
+
 use_directory_urls: true
 strict: true
