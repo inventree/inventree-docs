@@ -6,9 +6,12 @@ title: Pricing
 
 InvenTree provides multi-currency pricing support via the [django-money](https://django-money.readthedocs.io/en/latest/) library.
 
+### Terminology
+
 Cost - The theoretical amount of money required to pay for something.  
 Price - The actual amount of money paid.  
 
+### Pricing points
 
 | Price | Description | Linked to |
 | --- | --- | ---| 
@@ -27,6 +30,7 @@ The pricing tab of a part provides all avalable pricing information for that par
 As parts can have price ranges it is important to set the correct amount in the first panel to get an accurate price.
 
 ### Currency in the graphs and tables
+
 All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#/#currency-conversion) for more information). This can squew historical data but is necessary to easaly compare values.
 
 ### Supplier cost / prices
@@ -47,12 +51,6 @@ If a part is an assembly this panel will show the cost (possibly as range) for a
 Sale prices are always to customers (through [sale orders](../companies/so.md)) and support [price ranges](#price-ranges).
 
 The panel also shows historical sale price information collected from past [purchase orders](../companies/po.md).
-
-## Considerations for pricing
-
-Pricing in InvenTree supports various degrees of complexity. The following use cases provide an insight into possible ways to use the available tools.
-
-TODO
 
 ## Currency conversion
 
