@@ -1,0 +1,14 @@
+<div class="container carousel-container">
+    <div id="image-carousel" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+
+        {% for idx in range(image_count) %}
+        <li data-target="#image-carousel" data-slide-to="{{ idx }}" {% if idx == 0 %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+  

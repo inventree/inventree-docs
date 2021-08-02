@@ -20,22 +20,19 @@ If you find a bug or a feature that does not work correctly, please report it on
 
 ### Translation
 
-![de translation](https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=flat&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14720186-452300.json)
-![fr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=flat&query=%24.progress.3.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14720186-452300.json)
-![it translation](https://img.shields.io/badge/dynamic/json?color=blue&label=it&style=flat&query=%24.progress.4.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14720186-452300.json)
-![pl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pl&style=flat&query=%24.progress.5.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14720186-452300.json)
-![ru translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=flat&query=%24.progress.6.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14720186-452300.json)
-![zh-CN translation](https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=flat&query=%24.progress.7.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-14720186-452300.json)
+InvenTree provides a translation layer for both the web interface and mobile app. Native language translation requires effort from translators to provide multi-lingual support. If you wish to translate InvenTree to a new language (or improve an existing translation), such contributions would be greatly appreciated!.
 
-InvenTree provides a translation layer for the web interface, this requires effort from translators to provide multi-lingual support. If you wish to translate InvenTree to a new language (or improve an existing translation), such contributions would be greatly appreciated!.
+Native language translation of the InvenTree web application is [community contributed via crowdin](https://crowdin.com/project/inventree).
 
-Native language translation of the InvenTree web application is [community contributed via crowdin](https://crowdin.com/project/inventree). **Contributions are welcomed and encouraged**.
+_**Contributions are welcomed and encouraged!**._
 
 To contribute to the translation effort, navigate to the [InvenTree crowdin project](https://crowdin.com/project/inventree), create a free account, and start making translations suggestions for your language of choice!
 
 ### Documentation
 
 Documenting a large software project is a challenging and ongoing effort. If you are able to provide assistance in improving this documentation set, please consider doing so! Documentation contributions can be made on [GitHub](https://github.com/inventree/inventree-docs).
+
+If you see any sections of the documentation that require work (i.e. denoted with "TODO") - please consider providing assistance in these sections!
 
 ### Donate
 
@@ -45,7 +42,9 @@ Documenting a large software project is a challenging and ongoing effort. If you
 {% set assets = '/assets' %}
 {% endif %}
 
-If you are unable to provide contributions as listed above, or you find InvenTree to be useful, please consider donating to support its ongoing development.
+Finally, if you are unable to provide contributions as listed above, or you find InvenTree to be useful, please consider donating to support its ongoing development.
 
 [ Donate <span class='fas fa-smile'></span> ](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T4M976M5URSUE&currency_code=AUD){: .md-button .md-button--primary }
 <img src="{{ assets }}/paypal-logo-small-min-300x136.png" border="0" alt="PayPal Logo" style="width: 136px; length:300px; vertical-align:middle; padding-left: 20px">
+
+Financial donations directly support the ongoing development of the InvenTree project. If you benefit from the InvenTree project, please consider contributing to maintain vibrant development of this software!

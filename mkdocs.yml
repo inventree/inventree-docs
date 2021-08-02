@@ -27,19 +27,22 @@ extra_css:
   - stylesheets/brands.css
   - stylesheets/regular.css
   - stylesheets/solid.css
+  - stylesheets/bootstrap.css
 extra_javascript:
   - javascripts/extra.js
   - javascripts/fontawesome.js
   - javascripts/brands.js
   - javascripts/regular.js
   - javascripts/solid.js
+  - https://code.jquery.com/jquery-3.6.0.js
+  - https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js
 
 # Navigation
 nav:
   - InvenTree:
     - About InvenTree: index.md
     - Features: features.md
-    - What's New: releases/new.md
+    - Release Notes: releases/release_notes.md
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
@@ -103,6 +106,7 @@ nav:
     - Third-Party: extend/integrate.md
   - App:
     - InvenTree App: app/app.md
+    - Connect: app/connect.md
     - Barcodes: app/barcode.md
     - Parts: app/part.md
     - Stock: app/stock.md
@@ -114,6 +118,7 @@ nav:
 # Plugins
 plugins:
   - search
+  - git-revision-date-localized
   - macros:
       include_dir: _includes
 
@@ -141,6 +146,14 @@ extra:
   analytics:
     provider: google
     property: UA-143467500-1
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/inventree/inventree
+      name: InvenTree on GitHub
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/inventree/inventree
+      name: InvenTree on Docker
 
 use_directory_urls: true
 strict: true

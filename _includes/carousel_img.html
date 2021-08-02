@@ -1,0 +1,15 @@
+{% if 'readthedocs.org' in config.docs_dir %}
+{% set assets = '/en/latest/assets' %}
+{% else %}
+{% set assets = '/assets' %}
+{% endif %}
+
+{% if 'http' in src %}
+{% set img_url = src %}
+{% else %}
+{% set img_url = assets  + '/images/' + src %}
+{% endif %}
+
+<div class='item{% if active %} active{% endif %}'>
+    <img class='center' src='{{ img_url }}' alt='{{ alt }}' style='{% if max_height %}max-height: {{ max_height }}; {% endif %}'>
+</div>

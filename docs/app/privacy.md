@@ -33,4 +33,4 @@ The InvenTree app does not collect any information which could be used to person
 
 ## Third Party Access
 
-The InvenTree app does not share any information with third parties.
+The InvenTree app does not share any personal information with third parties.
