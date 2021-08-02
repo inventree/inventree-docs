@@ -13,3 +13,8 @@ A list of known third-party InvenTree extensions is provided below. If you have 
 ### PK2InvenTree
 
 [PK2InvenTree](https://github.com/rgilham/PK2InvenTree) is an open-source tool for migrating an existing [PartKeepr](https://github.com/partkeepr/PartKeepr) database to InvenTree.
+
+### F360-InvenTree
+
+[F360-InvenTree](https://github.com/matmair/F360-InvenTree/) is a tool for creating links between Autodesk Fusion 360 components and InvenTree parts.  
+Still under heavy development.
