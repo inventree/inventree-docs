@@ -23,36 +23,38 @@ Price - The actual amount of money paid.
 
 The pricing tab of a part provides all avalable pricing information for that part. It shows all price ranges and provides tools to calculate them.
 
-### price ranges
-As parts can have price ranges[#] it is important to set the correct amount in the first panel to get an accurate price.
+### Price ranges
+As parts can have price ranges it is important to set the correct amount in the first panel to get an accurate price.
 
-### currencies
-All money-values are adjusted to the default currency at the current exchange rates (see [#] for more information). This can squew historical data but is necessary to easaly compare values.
+### Currency in the graphs and tables
+All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#Currency Conversion) for more information). This can squew historical data but is necessary to easaly compare values.
 
 ### Supplier cost / prices
 
-Shows how much it would cost to purchase the part right now from a supplier/manufacturer (can have price ranges[#]).  
+Shows how much it would cost to purchase the part right now from a supplier/manufacturer (can have [price ranges](#Price ranges)).  
 Also provides a graph of historical prices collected from stock in the tab **Purchase Price**.
 
 ### Internal cost / prices
 
-Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assambly the internal cost has to contain the cost for all sub-parts). Price ranges[#] are supported.
+Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assambly the internal cost has to contain the cost for all sub-parts). [Price ranges](#Price ranges) are supported.
 
-### BOM Cost
+### BOM cost
 
 If a part is an assembly this panel will show the cost (possibly as range) for all sub-parts and a graph how much each part contirbutes to the total cost.
 
 ### Sale cost / prices
 
-Sale prices are always to customers (through sale orders[#]) and support price ranges[#].
+Sale prices are always to customers (through [sale orders](../companies/so.md)) and support [price ranges](#Price ranges).
 
-The panel also shows historical sale price information collected from past purchase orders.
+The panel also shows historical sale price information collected from past [purchase orders](../companies/po.md).
 
 ## Considerations for pricing
 
 Pricing in InvenTree supports various degrees of complexity. The following use cases provide an insight into possible ways to use the available tools.
 
-## Currency Conversion
+TODO
+
+## Currency conversion
 
 Automatic updating of currency conversion rates can be provided via the [exchangerate.host](https://exchangerate.host/#/) API.
 
