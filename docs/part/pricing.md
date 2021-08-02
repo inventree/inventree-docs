@@ -16,19 +16,19 @@ Price - The actual amount of money paid.
 | Price | Description | Linked to |
 | --- | --- | ---| 
 | Supplier Cost | How much it costs to theoretically purchase a part from a given supplier | Supplier |
-| Purchase Price | Historical pricing information for parts actually purchased | Stock Item |
+| Purchase Price | Historical pricing information for parts purchased | Stock Item |
 | Internal Cost | How much a part costs to make | Part |
 | BOM Cost | Total cost for an assembly (total cost of component items) | Part |
 | Sale Cost | How much a salable item is sold for (with cost-breaks) | Part |
-| Sale Price | How much an item was actually sold for | Sales Order |
+| Sale Price | How much an item was sold for | Sales Order |
 
 ## Pricing Tab
 
-The pricing tab of a part provides all avalable pricing information for that part. It shows all price ranges and provides tools to calculate them.
+The pricing tab of a part provides all available pricing information for that part. It shows all price ranges and provides tools to calculate them.
 
 ### Price ranges
 
-A price range describes the unit price for a part at different buying / selling quantities (one par is called price point followin). Many suppliers sell their parts with different price points depending on packaging and quantities. That can be replicated in InvenTree with price ranges.
+A price range describes the unit price for a part at different buying / selling quantities (one par is called price point following). Many suppliers sell their parts with different price points depending on packaging and quantities. That can be replicated in InvenTree with price ranges.
 
 The simplest price range just contains one price point - this will be created when a part gets assigned a price in a form.
 
@@ -37,7 +37,7 @@ The simplest price range just contains one price point - this will be created wh
 
 ### Currency in the graphs and tables
 
-All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#/#currency-conversion) for more information). This can squew historical data but is necessary to easaly compare values.
+All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#/#currency-conversion) for more information). This can distort historical data but is necessary to easily compare values.
 
 ### Supplier cost / prices
 
@@ -46,11 +46,11 @@ Also provides a graph of historical prices collected from stock in the tab **Pur
 
 ### Internal cost / prices
 
-Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assambly the internal cost has to contain the cost for all sub-parts). [Price ranges](#price-ranges) are supported.
+Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assembly the internal cost must contain the cost for all sub-parts). [Price ranges](#price-ranges) are supported.
 
 ### BOM cost
 
-If a part is an assembly this panel will show the cost (possibly as range) for all sub-parts and a graph how much each part contirbutes to the total cost.
+If a part is an assembly this panel will show the cost (possibly as range) for all sub-parts and a graph how much each part contributes to the total cost.
 
 ### Sale cost / prices
 
