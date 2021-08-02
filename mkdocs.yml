@@ -106,6 +106,7 @@ nav:
     - Third-Party: extend/integrate.md
   - App:
     - InvenTree App: app/app.md
+    - Connect: app/connect.md
     - Barcodes: app/barcode.md
     - Parts: app/part.md
     - Stock: app/stock.md

@@ -11,5 +11,5 @@
 {% endif %}
 
 <div class='item{% if active %} active{% endif %}'>
-    <img src='{{ img_url }}' alt='{{ alt }}' style='width: 100%'>
+    <img class='center' src='{{ img_url }}' alt='{{ alt }}' style='{% if max_height %}max-height: {{ max_height }}; {% endif %}'>
 </div>
