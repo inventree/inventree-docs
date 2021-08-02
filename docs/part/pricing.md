@@ -27,7 +27,7 @@ The pricing tab of a part provides all avalable pricing information for that par
 As parts can have price ranges it is important to set the correct amount in the first panel to get an accurate price.
 
 ### Currency in the graphs and tables
-All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#Currency Conversion) for more information). This can squew historical data but is necessary to easaly compare values.
+All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#/#currency-conversion) for more information). This can squew historical data but is necessary to easaly compare values.
 
 ### Supplier cost / prices
 
