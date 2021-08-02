@@ -117,6 +117,7 @@ nav:
 # Plugins
 plugins:
   - search
+  - git-revision-date-localized
   - macros:
       include_dir: _includes
 
