@@ -1,43 +1,48 @@
 ---
-title: What's New
+title: InvenTree Release Notes
 ---
 
 ## Releases
 
-### Version Numbering
+The InvenTree project follows the formalized release numbering scheme, according to the [semantic versioning specification](https://semver.org/).
 
-The InvenTree project follows the formalized release numbering scheme, according to the [semantic versioning specification](https://semver.org/). Each release will be numbered `MAJOR.MINOR.PATCH`:
+### 0.5.x
 
-#### MAJOR
+*Version 0.5.x is in developement.*
 
-Major release number will be incremented for large, incompatible changes to the API or other features.
+### 0.4.x
 
-#### MINOR
+| Release | Date |
+| --- | --- |
+| [0.4.2](./0.4.2.md) | 2021-08-02 |
+| [0.4.1](./0.4.1.md) | 2021-07-31 |
+| [0.4.0](./0.4.0.md) | 2021-07-28 | 
 
-Minor release number will be incremented when new features are added in a backwards compatible manner
-
-#### PATCH
-
-Patch release number will be incremented when making bug fixes or small changes to existing features.
-
-### Release Notes
-
-For information on the latest and greatest InvenTree features, refer to the release documentation below:
+### 0.3.x
 
 | Release | Date |
 | ------- | ---- |
-| [0.4.0](./0.4.0.md) | July 2021 |
-| [0.3.0](./0.3.0.md) | July 2021 |
-| [0.2.4](./0.2.4.md) | June 2021 |
-| [0.2.3](./0.2.3.md) | June 2021 |
-| [0.2.2](./0.2.2.md) | May 2021 |
-| [0.2.1](./0.2.1.md) | April 2021 |
-| [0.2.0](./0.2.0.md) | April 2021 |
-| [0.1.8](./0.1.8.md) | April 2021 |
-| [0.1.7](./0.1.7.md) | March 2021 |
-| [0.1.6](./0.1.6.md) | February 2021 |
-| [0.1.5](./0.1.5.md) | January 2021 |
-| [0.1.4](./0.1.4.md) | November 2020 |
+| [0.3.0](./0.3.0.md) | 2021-07-15 |
+
+### 0.2.x
+
+| Release | Date |
+| --- | --- |
+| [0.2.4](./0.2.4.md) | 2021-06-27 |
+| [0.2.3](./0.2.3.md) | 2021-06-16 |
+| [0.2.2](./0.2.2.md) | 2021-05-29 |
+| [0.2.1](./0.2.1.md) | 2021-04-18 |
+| [0.2.0](./0.2.0.md) | 2021-04-11 |
+
+### 0.1.x
+
+| Release | Date |
+| --- | --- |
+| [0.1.8](./0.1.8.md) | 2021-04-10 |
+| [0.1.7](./0.1.7.md) | 2021-03-04 |
+| [0.1.6](./0.1.6.md) | 2021-02-21 |
+| [0.1.5](./0.1.5.md) | 2021-01-19 |
+| [0.1.4](./0.1.4.md) | 2020-11-15 |
 
 ## Upcoming Features
 
