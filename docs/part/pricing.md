@@ -27,7 +27,13 @@ Price - The actual amount of money paid.
 The pricing tab of a part provides all avalable pricing information for that part. It shows all price ranges and provides tools to calculate them.
 
 ### Price ranges
-As parts can have price ranges it is important to set the correct amount in the first panel to get an accurate price.
+
+A price range describes the unit price for a part at different buying / selling quantities (one par is called price point followin). Many suppliers sell their parts with different price points depending on packaging and quantities. That can be replicated in InvenTree with price ranges.
+
+The simplest price range just contains one price point - this will be created when a part gets assigned a price in a form.
+
+!!! warning "Supported Models"
+    As parts can have price ranges it is important to set the correct amount in the first panel to get an accurate price.
 
 ### Currency in the graphs and tables
 
