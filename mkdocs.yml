@@ -39,7 +39,7 @@ nav:
   - InvenTree:
     - About InvenTree: index.md
     - Features: features.md
-    - What's New: releases/new.md
+    - Release Notes: releases/release_notes.md
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
