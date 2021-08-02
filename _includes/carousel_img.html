@@ -1,3 +1,15 @@
-<div class='item'>
-    <img src='{{ src }}' alt='{{ alt }}' style='width: 100%'>
+{% if 'readthedocs.org' in config.docs_dir %}
+{% set assets = '/en/latest/assets' %}
+{% else %}
+{% set assets = '/assets' %}
+{% endif %}
+
+{% if 'http' in src %}
+{% set img_url = src %}
+{% else %}
+{% set img_url = assets  + '/images/' + src %}
+{% endif %}
+
+<div class='item{% if active %} active{% endif %}'>
+    <img src='{{ img_url }}' alt='{{ alt }}' style='width: 100%'>
 </div>
