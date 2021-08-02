@@ -6290,6 +6290,9 @@ html {
   .popover-content {
     padding: 9px 14px;
   }
+  .carousel-container {
+      width: 100%;
+  }
   .carousel {
     position: relative;
   }
