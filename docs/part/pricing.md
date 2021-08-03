@@ -64,4 +64,3 @@ Automatic updating of currency conversion rates can be provided via the [exchang
 
 Currency exchange rates are updated once per day.
 
-The rates can also be set manually in the settings. Be aware that most companies trade with hourly or daily rates – setting a static rate can lead to big differences to the real world.
