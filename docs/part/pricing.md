@@ -37,7 +37,7 @@ The simplest price range just contains one price point - this will be created wh
 
 ### Currency in the graphs and tables
 
-All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#/#currency-conversion) for more information). This can distort historical data but is necessary to easily compare values.
+All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#currency-conversion) for more information). This can distort historical data but is necessary to easily compare values.
 
 ### Supplier cost / prices
 
