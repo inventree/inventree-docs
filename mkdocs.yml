@@ -14,6 +14,7 @@ theme:
   custom_dir: _includes/overrides
   palette:
     scheme: default
+    accent: light blue
   logo: assets/logo.png
   favicon: assets/favicon.ico
   icon:
@@ -40,13 +41,12 @@ extra_javascript:
 # Navigation
 nav:
   - InvenTree:
-    - About InvenTree: index.md
     - Features: features.md
     - Release Notes: releases/release_notes.md
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
-  - Installation:
+  - Install:
     - Introduction: start/intro.md
     - Configuration: start/config.md
     - Docker Setup: start/docker.md
