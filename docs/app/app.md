@@ -2,7 +2,9 @@
 title: InvenTree Mobile App
 ---
 
-## InvenTree Mobile App
+{% include "app_carousel.html" %}
+
+-----
 
 The InvenTree Mobile App brings stock control to your pocket. Integrating seamlessly with the [InvenTree API](../extend/api.md), the app provides immediate access to inventory data without requiring physical access to a computer.
 
@@ -18,5 +20,3 @@ The InvenTree App can be downloaded for Android devices via the [Play Store](htt
 
 !!! missing "Not Yet Available"
     The InvenTree app is not yet available for iOS devices
-
-{% include "app_carousel.html" %}
