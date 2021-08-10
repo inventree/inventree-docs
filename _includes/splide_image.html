@@ -10,6 +10,6 @@
 {% set img_url = assets  + '/images/' + src %}
 {% endif %}
 
-<div class='item{% if active %} active{% endif %}'>
-    <img class='center' src='{{ img_url }}' alt='{{ alt }}' style='{% if min_height %}min-height: {{ min_height }}; {% endif %}{% if max_height %}max-height: {{ max_height }}; {% endif %}'>
-</div>
+<li class='splide__slide'>
+    <img src='{{ img_url }}'>
+</li>

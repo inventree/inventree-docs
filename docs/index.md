@@ -12,6 +12,8 @@ hide:
 
 --------------
 
-{% include "index_carousel.html" %}
+{% with directory="indexgallery" %}
+{% include "carousel.html" %}
+{% endwith %}
 
 --------------

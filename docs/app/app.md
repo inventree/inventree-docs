@@ -2,7 +2,9 @@
 title: InvenTree Mobile App
 ---
 
-{% include "app_carousel.html" %}
+{% with directory="appgallery" %}
+{% include "carousel.html" %}
+{% endwith %}
 
 -----
 
