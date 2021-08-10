@@ -16,7 +16,7 @@ The InvenTree project follows the formalized release numbering scheme, according
 
 | Release | Date | Docker |
 | --- | --- | --- |
-| [0.4.5](./0.4.5.md) | 2021-08-10 | - |
+| [0.4.5](./0.4.5.md) | 2021-08-10 | [inventree:0.4.5](https://hub.docker.com/layers/inventree/inventree/0.4.5/images/sha256-87c84512b31b9a5a0810c79fcb9a9f4515395d0c610619017e41d28b52946eaa?context=explore) |
 | [0.4.4](./0.4.4.md) | 2021-08-09 | [inventree:0.4.4](https://hub.docker.com/layers/inventree/inventree/0.4.4/images/sha256-adf5f8515a1a1f8b35404e1bb634ef31572baf9472fd5e6920327953c822e477?context=explore) |
 | [0.4.3](./0.4.3.md) | 2021-08-05 | [inventree:0.4.3](https://hub.docker.com/layers/inventree/inventree/0.4.3/images/sha256-441af7821e59c1f96e012fe3060497aa8da9d085701513d1eab3a45c42297fc8?context=explore) |
 | [0.4.2](./0.4.2.md) | 2021-08-02 | [inventree:0.4.2](https://hub.docker.com/layers/inventree/inventree/0.4.2/images/sha256-987c656ec21cc8f8dc1c1d74d5443368161b6ef27cb823edcbcddd5aa28ccf6c?context=explore) |
