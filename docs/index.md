@@ -8,8 +8,6 @@ hide:
 
 ## Intuitive inventory management
 
-*An open source inventory management suite that simply works*
-
 --------------
 
 {% with directory="indexgallery" %}
