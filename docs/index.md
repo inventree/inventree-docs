@@ -8,10 +8,10 @@ hide:
 
 ## Intuitive inventory management
 
-*An open source inventory management suite that simply works*
-
 --------------
 
-{% include "index_carousel.html" %}
+{% with directory="indexgallery" %}
+{% include "carousel.html" %}
+{% endwith %}
 
 --------------

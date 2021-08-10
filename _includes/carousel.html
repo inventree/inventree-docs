@@ -1,0 +1,31 @@
+<div class='splide'>
+    <div class='splide__track'>
+        <ul class='splide__list'>
+            {% for img in listimages(directory) %}
+            {% with src=img %}
+            {% include "splide_image.html" %}
+            {% endwith %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script>
+	document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide(
+            '.splide', {
+                type: 'loop',
+                perPage: 2,
+                autoplay: true,
+                pagination: false,
+                // cover: true,
+                height: '25rem',
+                focus: 'center',
+                padding: {
+                    left: '5rem',
+                    right: '5rem',
+                }
+            }
+        ).mount();
+	} );
+</script>
