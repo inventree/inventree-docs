@@ -44,6 +44,7 @@ extra_javascript:
 nav:
   - InvenTree:
     - Features: features.md
+    - In Development: upcoming.md
     - Release Notes: releases/release_notes.md
     - FAQ: faq.md
     - Contribute: contribute.md
@@ -158,4 +159,4 @@ extra:
       name: InvenTree on Docker
 
 use_directory_urls: true
-strict: false
+strict: true
