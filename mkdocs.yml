@@ -59,6 +59,7 @@ nav:
     - Demo Dataset: start/demo.md
   - Parts:
     - Parts: part/part.md
+    - Creating Parts: part/create.md
     - Part Views: part/views.md
     - Tracking: part/trackable.md
     - Parameters: part/parameter.md
