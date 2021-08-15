@@ -8,13 +8,13 @@ The InvenTree project follows the formalized release numbering scheme, according
 
 ### 0.5.x
 
-| Release | Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
+| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
 | [0.5.0](./0.5.0.md) | *In development* | - | - |
 
 ### 0.4.x
 
-| Release | Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
+| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
 | [0.4.5](./0.4.5.md) | 2021-08-10 | [0.4.5](https://github.com/inventree/InvenTree/releases/tag/0.4.5) | [inventree:0.4.5](https://hub.docker.com/layers/inventree/inventree/0.4.5/images/sha256-87c84512b31b9a5a0810c79fcb9a9f4515395d0c610619017e41d28b52946eaa?context=explore) |
 | [0.4.4](./0.4.4.md) | 2021-08-09 | [0.4.4](https://github.com/inventree/InvenTree/releases/tag/0.4.4) | [inventree:0.4.4](https://hub.docker.com/layers/inventree/inventree/0.4.4/images/sha256-adf5f8515a1a1f8b35404e1bb634ef31572baf9472fd5e6920327953c822e477?context=explore) |
@@ -25,13 +25,13 @@ The InvenTree project follows the formalized release numbering scheme, according
 
 ### 0.3.x
 
-| Release | Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
+| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
 | [0.3.0](./0.3.0.md) | 2021-07-15 | [0.3.0](https://github.com/inventree/InvenTree/releases/tag/0.3.0) | [inventree:0.3.0](https://hub.docker.com/layers/inventree/inventree/0.3.0/images/sha256-b442a236fbc4b91e1e5fdbba2a080655e30447422aaa2e32cd6053571900b2c3?context=explore) |
 
 ### 0.2.x
 
-| Release | Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
+| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
 | [0.2.4](./0.2.4.md) | 2021-06-27 | [0.2.4](https://github.com/inventree/InvenTree/releases/tag/0.2.4) | [inventree:0.2.4](https://hub.docker.com/layers/inventree/inventree/0.2.4/images/sha256-a7a9f860d4ef47cda83ca79edc147a6b7d4c86860cd92d37e5e4fc5bec95da82?context=explore) |
 | [0.2.3](./0.2.3.md) | 2021-06-16 | [0.2.3](https://github.com/inventree/InvenTree/releases/tag/0.2.3) | [inventree:0.2.3](https://hub.docker.com/layers/inventree/inventree/0.2.3/images/sha256-527c78eb7e32cbf67f82ba5226f9a9486c1de58c03057c7c9edc7626f6127f02?context=explore) |
@@ -41,7 +41,7 @@ The InvenTree project follows the formalized release numbering scheme, according
 
 ### 0.1.x
 
-| Release | Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
+| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
 | [0.1.8](./0.1.8.md) | 2021-04-10 | [0.1.8](https://github.com/inventree/InvenTree/releases/tag/0.1.8) | - |
 | [0.1.7](./0.1.7.md) | 2021-03-04 | [0.1.7](https://github.com/inventree/InvenTree/releases/tag/0.1.7) | - |
