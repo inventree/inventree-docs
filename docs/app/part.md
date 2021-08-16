@@ -4,7 +4,7 @@ title: Part Views
 
 ## Part Category View
 
-From the *home screen*, select *Parts* to open the top-level part category display.
+From the *home screen*, select *Parts* to open the top-level part category view.
 
 ### Detail Tab
 
