@@ -27,5 +27,6 @@ The following code types are known to be supported
 
 ## Actions
 
-!!! todo "TODO"
-    This section requires further work
+The InvenTree app uses barcodes where possible to provide efficient stock control operations.
+
+If there is a new barcode feature you would like to see, [let us know on GitHub](https://github.com/inventree/InvenTree/issues?q=is%3Aopen+is%3Aissue+label%3Aapp)!
