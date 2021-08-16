@@ -4,7 +4,7 @@ title: App Translations
 
 ## Translation Support
 
-The InvenTree app, much like the InvenTree web-based application, is designed to support multiple language translations.
+The InvenTree app is designed to support multiple language translations.
 
 As with the web application, translations are community contributed - if the app does not support your native language, contributions are very welcome!
 

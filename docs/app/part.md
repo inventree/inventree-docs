@@ -6,7 +6,7 @@ title: Part Views
 
 From the *home screen*, select *Parts* to open the top-level part category view.
 
-### Detail Tab
+### Details Tab
 
 The *Details* tab shows information about the selected part category. In particular, it shows the name and description of the category, a link to the parent category (if available) and a list of subcategories.
 
@@ -16,7 +16,7 @@ The *Details* tab shows information about the selected part category. In particu
 
 #### Parent Category
 
-If the current category has a parent category (i.e. it is not a top-level category) then a link is provided to the parent category. Press this link to navigate to the category detail page for the parent category.
+If the current category has a parent category (i.e. it is not a top-level category) then a link is provided to the parent category. Tap the *parent category* tile to navigate to the category detail page for the parent category.
 
 #### Subcategories
 
