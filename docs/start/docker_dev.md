@@ -90,7 +90,7 @@ docker-compose -f docker-compose.dev.yml up -d
 ```
 
 !!! success "Check Connection"
-    Check that the server is running at [http://localhost:8000](http://localhost:8000)
+    Check that the server is running at [http://localhost:8000](http://localhost:8000). The server may take a few minutes to be ready.
 
 ## Restarting Services
 
