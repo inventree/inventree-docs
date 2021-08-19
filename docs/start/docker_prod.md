@@ -13,17 +13,11 @@ Using the [InvenTree docker image](./docker.md) streamlines the setup process fo
 
 It is strongly recommended that you use a [docker-compose](https://docs.docker.com/compose/) script to manage your InvenTree docker image.
 
-An example docker compose script is provided below, which provides a robust "out of the box" setup for running InvenTree.
-
-Firstly, here is the complete `docker-compose.yml` file which can be used "as is" or as a starting point for a custom setup:
-
-``` yaml
-{% include 'docker-compose.yml' %}
-```
+An example docker compose file can be [found here](https://github.com/inventree/InvenTree/blob/master/docker/docker-compose.yml) - the documentation below will be using this docker compose file.
 
 ### Containers
 
-The following containers are created:
+The example docker-compose file launches the following containers:
 
 | Container | Description |
 | --- | --- |
@@ -52,11 +46,7 @@ Nginx working as a reverse proxy, separating requests for static and media files
 
 This container uses the official [nginx image](https://hub.docker.com/_/nginx).
 
-An nginx configuration file must be provided to the image. Use the example configuration below as a starting point:
-
-```
-{% include 'nginx.conf' %}
-```
+An nginx configuration file must be provided to the image. Use the [example configuration file](https://github.com/inventree/InvenTree/blob/master/docker/nginx.conf) as a starting point.
 
 *__Note__: You must save this conf file in the same directory as your docker-compose.yml file*
 
@@ -87,20 +77,26 @@ With the docker-compose recipe above, follow the instructions below to initializ
 
 The following files are required on your local machine (use the examples above, or edit as required):
 
-- [docker-compose.yml](https://github.com/inventree/InvenTree/blob/master/docker/docker-compose.yml)
-- [nginx.conf](https://github.com/inventree/InvenTree/blob/master/docker/nginx.conf)
+| File | Description |
+| --- | --- |
+| [docker-compose.yml](https://github.com/inventree/InvenTree/blob/master/docker/docker-compose.yml) | docker-compose script |
+| [nginx.conf](https://github.com/inventree/InvenTree/blob/master/docker/nginx.conf) | nginx proxy server configuration file |
+| [prod-config.env](https://github.com/inventree/InvenTree/blob/master/docker/prod-config.env) | Docker container environment variables |
 
 !!! info "Command Directory"
-    It is assumed that all commands will be run from the directory where `docker-compose.yml` is located. 
+    It is assumed that all following commands will be run from the directory where `docker-compose.yml` is located. 
 
-### Configure Compose File
+#### Edit Configuration Files
 
-Save and edit the `docker-compose.yml` file as required.
+Edit the `docker-compose.yml` file as required.
 
-The only **required** change is to ensure that the `/path/to/data` entry (at the end of the file) points to the correct directory on your local file system, where you want InvenTree data to be stored.
+!!! warning "Change Data Directory"
+    The only **required** change is to ensure that the `/path/to/data` entry (at the end of the file) points to the correct directory on your local file system, where you want InvenTree data to be stored.
 
 !!! info "Database Credentials"
     You may also wish to change the default postgresql username and password!
+
+You may also edit the `nginx.conf` and `prod-config.env` files if necessary.
 
 ### Launch Database Container
 
@@ -110,11 +106,14 @@ Before we can create the database, we need to launch the database server contain
 docker-compose up -d inventree-db
 ```
 
-This starts the database container.
+This starts the database container (in this example, a PostgreSQL server).
 
 ### Create Database
 
-As this is the first time we are interacting with the docker containers, the InvenTree database has not yet been created.
+If this is the first time we are interacting with the docker containers, the InvenTree database has not yet been created.
+
+!!! success "First Run Only"
+    If you have already created the InvenTree database you can progress to the next step
 
 Run the following command to open a shell session for the database:
 
@@ -135,27 +134,24 @@ create database inventree;
 
 Then exit the shell with <kbd>Ctrl</kbd>+<kbd>d</kbd>
 
-### Perform Database Migrations
+### Database Setup
 
-The database has now been created, but it is empty! We need to perform the initial database migrations:
-
-```
-docker-compose run inventree-server invoke migrate
-```
-
-This will perform the required schema updates to create the required database tables.
-
-### Collect Static Files
-
-On first run, the required static files must be collected into the `static` volume:
+The database has now been created, but it is empty! Perform the initial database setup by running the following command:
 
 ```
-docker-compose run inventree-server invoke static
+docker-compose run inventree-server invoke update
 ```
+
+This command performs the following steps:
+
+- Ensure required python packages are installed
+- Perform the required schema updates to create the required database tables
+- Update translation files
+- Collect all required static files into a directory where they can be served by nginx
 
 ### Create Admin Account
 
-You need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
+If you are creating the initial database, you need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
 
 ```
 docker-compose run inventree-server invoke superuser
