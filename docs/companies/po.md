@@ -4,7 +4,7 @@ title: Purchase Order
 
 ## Purchase Orders
 
-To access the purchase order page, click on the "Buy" navigation tab and click on "Purchase Orders" option in the dropdown list.
+To access the purchase order page, click on the <span class="badge inventree nav main"><span class='fas fa-shopping-cart'></span> Buy</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-list'></span> Purchase Orders</span> option in the dropdown list.
 
 !!! missing "TODO"
 	This section requires further work

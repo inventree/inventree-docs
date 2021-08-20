@@ -41,4 +41,4 @@ The `Create Variant` form will be displayed:
 {% include 'img.html' %}
 {% endwith %}
 
-Fill-out the form then click on the "Submit" button to create the variant.
+Fill-out the form then click on <span class="badge inventree confirm">Submit</span> to create the variant.
