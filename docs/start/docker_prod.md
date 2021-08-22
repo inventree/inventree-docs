@@ -233,7 +233,7 @@ Database and media files are stored external to the container, in the volume loc
 To export the database to an agnostic JSON file, perform the following command:
 
 ```
-docker-compose run inventree-server invoke export-records /home/inventree/data/data.json
+docker-compose run inventree-server invoke export-records -f /home/inventree/data/data.json
 ```
 
 This will export database records to the file `data.json` in your mounted volume directory.
