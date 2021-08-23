@@ -68,6 +68,10 @@ p {
 	text-align: justify;
 }
 
+div:nth-of-type(1) p {
+	padding-top: 12px;
+}
+
 /* Remove page title  */
 .md-content h1:first-child {
 	display: none;
@@ -88,4 +92,40 @@ p {
 
 .blue {
 	color: #55C;
+}
+
+.badge.inventree {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 5px;
+	padding: 6px 12px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.badge.inventree.nav.main {
+	background-color: #e7e7e7;
+	color: #777;
+	border-width: 0px;
+}
+
+.badge.inventree.nav.side {
+	background-color: #fff;
+	color: #337ab7;
+	border-color: #ddd;
+	font-size: 100%;
+	font-weight: 500;
+}
+
+.badge.inventree.add {
+	background-color: #449d44;
+	border-color: #398439;
+	color: #fff;
+}
+
+.badge.inventree.confirm {
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	color: #fff;
 }

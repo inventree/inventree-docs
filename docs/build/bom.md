@@ -85,7 +85,7 @@ The `Create BOM Item` form will be displayed:
 {% include 'img.html' %}
 {% endwith %}
 
-Fill-out the `Quantity` (required), `Reference`, `Overage` and `Note` (optional) fields then click on the "Submit" button to add the BOM item to this part's BOM.
+Fill-out the `Quantity` (required), `Reference`, `Overage` and `Note` (optional) fields then click on <span class="badge inventree confirm">Submit</span> to add the BOM item to this part's BOM.
 
 ### Upload BOM
 
@@ -145,7 +145,7 @@ After [adding BOM items manually](#add-bom-item) or [uploading a BOM file](#uplo
 
 The first message in the red box `The BOM for PCBA TEST has changed, and must be validated.` points out that InvenTree BOM needs to be "validated". BOM validation is a way to ensure a BOM does not have duplicate items/parts.
 
-To process with BOM validation, click on the <span class='fas fa-clipboard-check'></span> icon and the `Validate BOM` form will be displayed. Click one the "Validate" switch then click on the "Submit" button.
+To process with BOM validation, click on the <span class='fas fa-clipboard-check'></span> icon and the `Validate BOM` form will be displayed. Click one the "Validate" switch then click on <span class="badge inventree confirm">Submit</span>
 
 Voilà, this Bill of Materials is validated <span class='far fa-smile'></span>
 
