@@ -10,7 +10,14 @@ To access the sales order page, click on the <span class="badge inventree nav ma
 
 ### Create Sales Order
 
-Once the sales order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Sales Order</span> which opens the "Create Sales Order" form. Fill out the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> 
+Once the sales order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Sales Order</span> which opens the "Create Sales Order" form.
+
+A sales order is linked to a specific customer, select one in the list of existing customers.
+
+!!! warning
+	Only companies with the "Customer" attribute enabled will be shown and can be selected
+
+Fill out the rest of the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> 
 
 ### Add Line Items
 
@@ -19,7 +26,7 @@ On the sales order detail page, user can link parts to the sales order selecting
 Once the "Add Line Item" form opens, select a part in the list.
 
 !!! warning
-    Only parts that have the "Salable" attribute enabled will be shown and can be selected in this step
+    Only parts that have the "Salable" attribute enabled will be shown and can be selected
 
 Fill out the rest of the form then click on <span class="badge inventree confirm">Submit</span> 
 
@@ -32,7 +39,7 @@ After adding line item and connecting a part to the sales order, user can either
 
 ### Ship Order
 
-After all parts and stock items have been allocated, click on the  <span class='fas fa-paper-plane'></span> button on the main sales order detail panel and confirm the order has been sent.
+After all parts and stock items have been allocated, click on the <span class='fas fa-paper-plane'></span> button on the main sales order detail panel and confirm the order has been sent.
 
 The sales order will be marked as __shipped__ and can __not__ be edited anymore.
 
