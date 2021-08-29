@@ -26,6 +26,9 @@ Price - The actual amount of money paid.
 
 The pricing tab of a part provides all available pricing information for that part. It shows all price ranges and provides tools to calculate them.
 
+!!! tip "Tooltips for prices"
+    If a part has a BOM the pricing ranges in the pricing tab will contain a information-bubble with more details how the specific prices were composed.
+
 ### Price ranges
 
 A price range describes the unit price for a part at different buying / selling quantities (one par is called price point following). Many suppliers sell their parts with different price points depending on packaging and quantities. That can be replicated in InvenTree with price ranges.
