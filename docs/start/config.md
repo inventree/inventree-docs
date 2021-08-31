@@ -97,6 +97,7 @@ The following email settings are available:
 | INVENTREE_EMAIL_PASSWORD | email.password | Email account password | *Not set* |
 | INVENTREE_EMAIL_TLS | email.tls | Enable TLS support | False |
 | INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support | False |
+| INVENTREE_EMAIL_SENDER | email.sender | Name of sender | *Not set* |
 
 ## Allowed Hosts / CORS
 
