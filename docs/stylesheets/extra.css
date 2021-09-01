@@ -27,7 +27,7 @@
 	border: 1px solid #ddd;
 }
 
-.image-inventree:hover {
+.image-inventree>a>img.img-inline:hover {
 	opacity: 75%;
 }
 
