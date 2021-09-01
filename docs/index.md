@@ -6,7 +6,7 @@ hide:
     - navigation
 ---
 
-## Intuitive inventory management
+## Intuitive Inventory Management
 
 --------------
 
