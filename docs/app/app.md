@@ -2,7 +2,7 @@
 title: InvenTree Mobile App
 ---
 
-{% with directory="appgallery" %}
+{% with directory="appgallery", per_page=2 %}
 {% include "carousel.html" %}
 {% endwith %}
 
@@ -14,11 +14,12 @@ Native barcode support provides a multitude of context-sensitive stock control a
 
 ## Download
 
+The InvenTree app can be downloaded from either the Android or Apple app stores, or accessed via the links below:
+
 ### Android
 
-The InvenTree App can be downloaded for Android devices via the [Play Store](https://play.google.com/store/apps/details?id=inventree.inventree_app).
+<span class='fab fa-android'></span> [Android Play Store](https://play.google.com/store/apps/details?id=inventree.inventree_app).
 
 ### iOS
 
-!!! missing "Not Yet Available"
-    The InvenTree app is not yet available for iOS devices
+<span class='fab fa-apple'></span> [Apple App Store](https://apps.apple.com/au/app/inventree/id1581731101#?platform=iphone)
