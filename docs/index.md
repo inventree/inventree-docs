@@ -10,7 +10,7 @@ hide:
 
 --------------
 
-{% with directory="indexgallery" %}
+{% with directory="indexgallery", per_page=1 %}
 {% include "carousel.html" %}
 {% endwith %}
 
