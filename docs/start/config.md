@@ -122,11 +122,19 @@ By default, uploaded media files are stored in the local directory `/home/invent
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
-## Other Options
+## Authentication
+
+### Single Sign on
+
+
+### Login Options
+
 
 ### Authentication Backends
 
 Custom authentication backends can be used by specifying them here
+
+## Other Options
 
 ### Middleware
 
