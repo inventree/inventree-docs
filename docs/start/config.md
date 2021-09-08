@@ -129,6 +129,11 @@ Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` env
 
 ### Login Options
 
+The login-experience can be altered with the following settings:
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_LOGIN_CONFIRM_DAYS | login_confirm_days | Duration for which confirmation links are valid | 3 |
+| INVENTREE_LOGIN_ATTEMPTS | login_attempts | Count of allowed login attempts before blocking user | 5 |
 
 ### Authentication Backends
 
