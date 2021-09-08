@@ -130,6 +130,9 @@ SSO backends for all wanted providers need to be added to the config file as a l
 
 If the selected providers need additional settings they must be added as dicts under the key `social_providers`. The correct settings can be found in the django-allauths [provider documentation](https://django-allauth.readthedocs.io/en/latest/providers.html).
 
+!!! note "You are not done"
+    SSO still needs credentials for all providers and has to be enabled in the [settings](../admin/settings.md)!
+
 
 ### Login Options
 
