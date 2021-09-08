@@ -137,7 +137,7 @@ The login-experience can be altered with the following settings:
 
 ### Authentication Backends
 
-Custom authentication backends can be used by specifying them here. These can for exampe be used to ad LDAP / AD login to InvenTree
+Custom authentication backends can be used by specifying them here. These can for exampel be used to add [LDAP / AD login](https://django-auth-ldap.readthedocs.io/en/latest/) to InvenTree
 
 ## Other Options
 
