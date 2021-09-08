@@ -126,6 +126,10 @@ Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` env
 
 ### Single Sign on
 
+SSO backends for all wanted providers need to be added to the config file as a list under the key `social_backends`. The correct backend-name can be found in django-allauths [configuration documentation](https://django-allauth.readthedocs.io/en/latest/installation.html#django).
+
+If the selected providers need additional settings they must be added as dicts under the key `social_providers`. The correct settings can be found in the django-allauths [provider documentation](https://django-allauth.readthedocs.io/en/latest/providers.html).
+
 
 ### Login Options
 
