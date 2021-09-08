@@ -137,7 +137,7 @@ The login-experience can be altered with the following settings:
 
 ### Authentication Backends
 
-Custom authentication backends can be used by specifying them here
+Custom authentication backends can be used by specifying them here. These can for exampe be used to ad LDAP / AD login to InvenTree
 
 ## Other Options
 
