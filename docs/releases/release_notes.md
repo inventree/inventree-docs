@@ -2,9 +2,27 @@
 title: Release Notes
 ---
 
-## Releases
+## InvenTree Versioning
 
 The InvenTree project follows the formalized release numbering scheme, according to the [semantic versioning specification](https://semver.org/).
+
+### Stable Branch
+
+The head of the *stable* code branch represents the most recent stable tagged release of InvenTree. 
+
+!!! info "<span class='fab fa-docker'></span> Stable Docker"
+    To pull down the latest *stable* release of InvenTree in docker, use `inventree/inventree:stable`
+
+### Development Branch
+
+The head of the *master* code branch represents the "latest and greatest" working codebase. All features and bug fixes are merged into the master branch, in addition to relevent stable release branches.
+
+!!! info "<span class='fab fa-docker'></span> Latest Docker"
+    To pull down the latest *development* version of InvenTree in docker, use `inventree/inventree:latest`
+
+## Stable Releases
+
+Tagged released are shown below. Click on the release notes for each version to learn more.
 
 ### 0.5.x
 
