@@ -17,7 +17,7 @@ The main part view is divided into 4 different panels:
 ## Categories
 
 The categories of each part is displayed on the top navigation bar as show in the above screenshot.
-[Click here](../part/#part-category) for more information about categories.
+[Click here](./part.md#part-category) for more information about categories.
 
 ## Part Details
 
@@ -52,7 +52,9 @@ The Part view page organizes part data into sections, displayed as tabs. Each ta
 
 ### Parameters
 
-Parts can have multiple defined [parameters](./parameter.md).
+Parts can have multiple defined parameters.
+
+[Read about Part parameters](./parameter.md)
 
 ### Variants
 
@@ -102,11 +104,11 @@ The *Used In* tab displays a list of other parts that this part is used to make.
 
 ### Suppliers
 
-The *Suppliers* tab displays all the *Supplier Parts* for the selected *Part*. 
+The *Suppliers* tab displays all the *Part Suppliers* and *Part Manufacturers* for the selected *Part*. 
 
 This tab is only visible if the *Part* is designated as *Purchaseable*.
 
-{% with id="part_suppliers", url="part/part_suppliers.png", description="Part Suppliers" %}
+{% with id="part_manufacturers_suppliers", url="part/part_manufacturers_suppliers.png", description="Part Suppliers and Manufacturers" %}
 {% include 'img.html' %}
 {% endwith %}
 
