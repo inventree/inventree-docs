@@ -68,6 +68,7 @@ nav:
     - Pricing: part/pricing.md
   - Stock:
     - Stock Items: stock/stock.md
+    - Stock Status: stock/status.md
     - Adjusting Stock: stock/adjust.md
     - Stocktake: stock/stocktake.md
     - Stock Expiry: stock/expiry.md
