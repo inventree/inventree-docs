@@ -116,7 +116,7 @@ Once the BOM file is uploaded, the following view will load:
 {% include 'img.html' %}
 {% endwith %}
 
-InvenTree will attempt to automatically match the BOM file columns with InvenTree part fields. `Part_Name` is a **required** field for the upload process and moving on to the next step. Sprcifying the `Part_IPN` field matching is very powerful as it allows to create direct pointers to InvenTree parts.
+InvenTree will attempt to automatically match the BOM file columns with InvenTree part fields. `Part_Name` is a **required** field for the upload process and moving on to the next step. Specifying the `Part_IPN` field matching is very powerful as it allows to create direct pointers to InvenTree parts.
 
 Once you have selected the corresponding InvenTree fields, click on the "Submit Selections" button to move on to the next step.
 
@@ -128,9 +128,6 @@ Once the BOM file columns and InvenTree fields are correctly matched, the follow
 {% endwith %}
 
 InvenTree automatically tries to match parts from the BOM file with parts in its database. For parts that are found in InvenTree's database, the `Select Part` field selection will automatically point to the matching database part.
-
-!!! info "Create New Part"
-	The <span class='fas fa-plus-circle'></span> icon in the `Select Part` column let's you load the `Create New Part` form which allows you to create an InvenTree part during the BOM upload process.
 
 In this view, you can also edit the parts `Reference` and `Quantity` fields.
 
