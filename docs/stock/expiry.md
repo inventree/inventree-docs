@@ -68,18 +68,10 @@ The Part expiry time can be altered using the Part editing form.
 {% include 'img.html' %}
 {% endwith %}
 
-## Sales Orders
+## Sales and Build Orders
 
-By default, expired Stock Items cannot be added to a Sales Order. This behavior can be adjusted using the *Sell Expired Stock* setting.
+By default, expired Stock Items cannot be added to neither a Sales Order nor a Build Order. This behavior can be adjusted using the *Sell Expired Stock* and *Build Expired Stock* settings:
 
-{% with id="sell_expired", url="stock/sell_expired_stock.png", description="Sell expired stock" %}
-{% include 'img.html' %}
-{% endwith %}
-
-## Build Orders
-
-By default, expires Stock Items cannot be added to a Build Order. This behaviour can be adjusted using the *Build Expired Stock* setting.
-
-{% with id="build_expired", url="stock/build_expired_stock.png", description="Build expired stock" %}
+{% with id="sell_build_expired", url="stock/sell_build_expired_stock.png", description="Sell Build Expired Stock" %}
 {% include 'img.html' %}
 {% endwith %}
