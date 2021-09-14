@@ -68,19 +68,3 @@ By default, all parts are *Active*. Marking a part as inactive means it is not a
 ## Part Import
 
 *Parts* can be imported by staff-members on the part-list-view (this feature must be enabled in the part-settings), in the part-settings or on the [admin-page for parts](../admin/import.md) (only accessible if you are also an admin). The first two options provide a multi-stage wizard that enables mapping fields from various spreadsheet or table-data formats while the latter requires a well-formatted file but is much more performant.
-
-## Related Parts
-
-Related Part denotes a relationship between two parts, when users want to show their usage is "related" to another part or simply emphasize a link between two parts.
-
-Related parts can be added and are shown under a table of the same name in the "Part" view:
-
-{% with id="related_parts", url="part/part_related.png", description="Related Parts Example View" %}
-{% include 'img.html' %}
-{% endwith %}
-
-This feature can be enabled or disabled in the global part settings: 
-
-{% with id="related_parts_setting", url="part/part_related_setting.png", description="Related Parts Example View" %}
-{% include 'img.html' %}
-{% endwith %}
