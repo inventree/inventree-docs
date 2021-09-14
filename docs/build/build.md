@@ -4,7 +4,7 @@ title: Build Orders
 
 ## Build Orders
 
-A *Build Order* is used to create new stock by assembling component parts, according to a [Bill of Materials](./bom.md)(BOM).
+A *Build Order* is used to create new stock by assembling component parts, according to a [Bill of Materials](./bom.md) (BOM).
 
 A BOM can be specified for any [Part](../part/part.md) which is designated as an *Assembly*. The BOM consists of other Parts which are designated as *Components*.
 
@@ -21,6 +21,10 @@ To navigate to the Build Order display, select *Build* from the main navigation 
 #### Table View
 
 *Table View* provides a table of Build Orders, which can be filtered to only show the orders you are interested in.
+
+{% with id="build_list", url="build/build_list.png", description="Build List" %}
+{% include "img.html" %}
+{% endwith %}
 
 #### Calendar View
 
@@ -165,19 +169,11 @@ To create a build order for your part, you have two options:
 ### Build Order Page
 
 - Navigate to the Build Order overview page
-- Select *New Build Order*
-
------
-
-Either of these options will launch the *Start new Build* form:
-
-{% with id="build_start_new", url="build/build_start_new.png", description="Start New Build Form" %}
-{% include 'img.html' %}
-{% endwith %}
+- Click on *New Build Order*
 
 Fill-out the form as required, then click the "Submit" button to create the build.
 
-### Complete Build Order
+## Complete Build Order
 
 To complete a build, click on <span class='fas fa-tools'></span> icon on the build detail page, the `Complete Build` form will be displayed.
 
