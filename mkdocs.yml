@@ -117,6 +117,7 @@ nav:
     - Stock: app/stock.md
     - Settings: app/settings.md
     - Privacy: app/privacy.md
+    - Release Note: app/release.md
     - Translation: app/translation.md
     - Suggestions: app/issues.md
 
