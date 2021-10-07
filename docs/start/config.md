@@ -137,6 +137,7 @@ If the selected providers need additional settings they must be added as dicts u
 ### Login Options
 
 The login-experience can be altered with the following settings:
+
 | Environment Variable | Settings File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_LOGIN_CONFIRM_DAYS | login_confirm_days | Duration for which confirmation links are valid | 3 |
