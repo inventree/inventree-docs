@@ -28,12 +28,14 @@ extra_css:
   - stylesheets/regular.css
   - stylesheets/solid.css
   - stylesheets/bootstrap.css
+  - stylesheets/splide.min.css
 extra_javascript:
   - javascripts/extra.js
   - javascripts/fontawesome.js
   - javascripts/brands.js
   - javascripts/regular.js
   - javascripts/solid.js
+  - javascripts/splide.min.js
   - https://code.jquery.com/jquery-3.6.0.js
   - https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js
 
