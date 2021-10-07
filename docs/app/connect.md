@@ -105,7 +105,7 @@ Select the *Stock* icon to open the [stock display](./stock.md). This initially 
 
 ### Purchase Orders
 
-Select the *Purchase Orders* icon to open the purchase orders display. This shows a list of currently outstanding purchase orders, allowing line items to be received into stock.
+Select the *Purchase Orders* icon to open the [purchase orders display](./po.md). This shows a list of currently outstanding purchase orders, allowing line items to be received into stock.
 
 ### Suppliers
 

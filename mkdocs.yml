@@ -115,6 +115,7 @@ nav:
     - Barcodes: app/barcode.md
     - Parts: app/part.md
     - Stock: app/stock.md
+    - Purchase Orders: app/po.md
     - Settings: app/settings.md
     - Privacy: app/privacy.md
     - Release Notes: app/release.md
