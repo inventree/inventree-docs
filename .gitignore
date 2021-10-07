@@ -5,3 +5,5 @@ env/
 # Compiled python files
 *.pyd
 *.pyc
+
+.vscode

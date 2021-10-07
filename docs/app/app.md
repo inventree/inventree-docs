@@ -12,6 +12,14 @@ The InvenTree Mobile App brings stock control to your pocket. Integrating seamle
 
 Native barcode support provides a multitude of context-sensitive stock control actions, allowing streamlined inventory management at your fingertips. The app has been optimized for speed, providing instant access to stock knowledge and handy on-site functionality.
 
+## Features
+
+- View and edit part and stock information with a blazingly fast interface
+- Perform stock control actions on the go
+- Barcode integrations simply stock operations
+- Receive purchase orders and check in stock items
+- And many more!
+
 ## Download
 
 The InvenTree app can be downloaded from either the Android or Apple app stores, or accessed via the links below:
