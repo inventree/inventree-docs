@@ -6,13 +6,18 @@ title: Connect to Server
 
 Use of the InvenTree app assumes that you (the user) have access to an InvenTree server.
 
-When first running the app, no profile has been configured. A message is displayed at the bottom of the screen, indicting that a server profile needs to be configured.
+When first running the app, no profile has been configured. The *server* icon in the top-right corner of the home screen is <span style='color: red'>red</span>, indicating that there is no connection to an InvenTree server:
 
-{% with id="no_server", url="app/initial_home_screen.jpg", maxheight="240px", description="No server configured" %}
+{% with id="no_server", url="app/initial.png", maxheight="240px", description="No server configured" %}
 {% include "img.html" %}
 {% endwith %}
 
-Press on the mesage to navigate to the server selection view:
+Press on the server icon to navigate to the server selection view:
+
+{% with id="no_profiles", url="app/no_profiles.png", maxheight="240px", description="No server configured" %}
+{% include "img.html" %}
+{% endwith %}
+
 
 ### Create Server
 
@@ -21,7 +26,7 @@ Press on the mesage to navigate to the server selection view:
 
 Press the <span class='fas fa-plus-circle blue'></span> button in the bottom-right corner of the screen to create a new server profile.
 
-{% with id="add_profile", url="app/add_server_profile.jpg", maxheight="240px", description="Add server" %}
+{% with id="add_profile", url="app/add_server_profile.png", maxheight="240px", description="Add server" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -29,10 +34,10 @@ Enter the required server details:
 
 | Parameter | Description |
 | --- | --- |
-| Name | Name for the server profile (can be any value, simply for reference) |
-| Server | InvenTree server address (including port, if required). e.g. `http://inventree.myserver.com:8080` |
-| Username | Your account username (case sensitive) |
-| Password | Your account password (case sensitive) |
+| **Name** | Name for the server profile (can be any value, simply for reference) |
+| **Server** | InvenTree server address (including port, if required). e.g. `http://inventree.myserver.com:8080` |
+| **Username** | Your account username (case sensitive) |
+| **Password** | Your account password (case sensitive) |
 
 ### Connect to Server
 
@@ -62,15 +67,76 @@ To edit the server profile details, long press on the server profile, and select
 {% include 'img.html' %}
 {% endwith %}
 
-## Drawer Menu
+## Home Screen
 
-The *Drawer Menu* is accessible from all top-level app views, and provides quick access to important app features. To open the drawer menu, select the <span class='fas fa-bars'></span> icon in the top-left corner of the screen (where available).
+The app *home screen* provides quick-access buttons for stock view and actions:
 
-{% with id="drawer", url="app/drawer.jpg", maxheight="240px", description="Open drawer menu" %}
+{% with id="home", url="app/home.png", maxheight="240px", description="Home screen" %}
 {% include 'img.html' %}
 {% endwith %}
 
-The *Drawer Menu* provides instant access to the following views:
+### Scan Barcode
+
+Select the *Scan Barcode* icon to open the [barcode scanner](./barcode.md). Scan a barcode to navigate to a detail view for the item you have scanned.
+
+### Search
+
+Select the *Search* icon to open the InvenTree search window. Entering a search term will return multiple search results, as shown in the examples below:
+
+{% with id="search_1", url="app/search_1.png", maxheight="240px", description="Search results" %}
+{% include 'img.html' %}
+{% endwith %}
+
+{% with id="search_2", url="app/search_2.png", maxheight="240px", description="Search results" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Parts
+
+Select the *Parts* icon to open the [parts display](./part.md). This initially displays the top-level part category, showing information for parts and sub categories.
+
+### Starred Parts
+
+Selected the *Starred Parts* icon to show a list of parts you have personally marked as your "favorite" parts.
+
+### Stock
+
+Select the *Stock* icon to open the [stock display](./stock.md). This initially displays the top-level stock category, showing information for stock items and sub locations.
+
+### Purchase Orders
+
+Select the *Purchase Orders* icon to open the purchase orders display. This shows a list of currently outstanding purchase orders, allowing line items to be received into stock.
+
+### Suppliers
+
+Select the *Suppliers* icon to display the list of available suppliers
+
+### Manufacturers
+
+Select the *Manufacturers* icon to display the list of available manufacturers
+
+### Customers
+
+Select the *Customers* icon to display the list of available customers
+
+### Settings
+
+Select the *Settings* icon to open the [settings display](./settings.md)
+
+## Drawer Menu
+
+The *Drawer Menu* is a quick-access menu which is accessible from most display screens:
+
+{% with id="drawer", url="app/drawer.png", maxheight="240px", description="Open drawer menu" %}
+{% include 'img.html' %}
+{% endwith %}
+
+The *Drawer Menu* can be accessed in the following ways:
+
+- From the *Home Screen* select the *Drawer* icon in the top-left corner of the screen
+- From any other screen, long-press the *Back* button in the top-left corner of the screen
+
+The *Drawer Menu* provides instant access to the following actions:
 
 ### InvenTree
 
@@ -84,24 +150,7 @@ Select *Scan Barcode* to open the barcode scanner, and scan an InvenTree stock i
 
 Select *Search* to open a global search screen.
 
-### Parts
-
-Select *Parts* to navigate to the [Parts](./part.md) view.
-
-### Stock
-
-Select *Stock* to navigate to the [Stock](./stock.md) view.
-
 ### Settings
 
 Select *Settings* to navigate to the app [settings](./settings.md) menu.
 
-## Home Screen
-
-The app *home screen* provides quick-access buttons for stock view and actions.
-
-Additionally, the connection status of the server is displayed at the bottom of the screen.
-
-{% with id="home", url="app/home.jpg", maxheight="240px", description="Home screen" %}
-{% include 'img.html' %}
-{% endwith %}
