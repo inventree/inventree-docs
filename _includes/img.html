@@ -10,6 +10,10 @@
 {% set doc_url = assets  + '/images/' + url %}
 {% endif %}
 
+<b>SITE_URL: {{ site_url }}</b>
+<b>DOC_URL: {{ doc_url }} </b>
+<br><b>docs_dir: {{ config.docs_dir }}</b>
+
 <figure class='image image-inventree'>
     {% if id %}
     <!-- The link that, when clicked, will display the image in full screen -->
