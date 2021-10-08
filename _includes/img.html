@@ -15,11 +15,7 @@
   <li>site_url: {{ config.site_url }}</li>
   <li>locale: {{ config.locale }}</li>
 
-  {$ if readthedocs %}
   <li>slug: {{ readthedocs.v1.version.slug }}</li>
-  {% else %}
-  <li>slug: "readthedocs" is not defined</li>
-  {% endif %}
 </ul>
 
 <figure class='image image-inventree'>
