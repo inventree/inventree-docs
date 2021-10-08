@@ -10,9 +10,10 @@
 {% set doc_url = assets  + '/images/' + url %}
 {% endif %}
 
-<b>SITE_URL: {{ site_url }}</b>
-<b>DOC_URL: {{ doc_url }} </b>
-<br><b>docs_dir: {{ config.docs_dir }}</b>
+<ul>
+  <li>docs_dir: {{ config.docs_dir }}</li>
+  <li>site_url: {{ config.site_url }}</li>
+</ul>
 
 <figure class='image image-inventree'>
     {% if id %}
