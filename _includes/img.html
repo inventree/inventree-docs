@@ -15,7 +15,9 @@
   <li>site_url: {{ config.site_url }}</li>
   <li>locale: {{ config.locale }}</li>
 
-  <li>slug: {{ readthedocs.v1.version.slug }}</li>
+  {% for key in config.keys() %}
+  <li>{{ key }} - {{ config[key] }}</li>
+  {% endfor %}
 </ul>
 
 <figure class='image image-inventree'>
