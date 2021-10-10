@@ -11,12 +11,15 @@
 {% endif %}
 
 <ul>
-  <li>page.url: {{ page.url }}</li>
   <li>base_url: {{ base_url }}</li>
   <li>docs_dir: {{ config.docs_dir }}</li>
   <li>site_url: {{ config.site_url }}</li>
   <li>locale: {{ config.locale }}</li>
-
+  
+  <li><b>Page</b></li>
+  <li>page.url: {{ page.url }}</li>
+  <li>page.abs_url: {{ page.abs_url }}</li>
+  <li><b>config</b></li>
   {% for key in config.keys() %}
   <li>{{ key }} - {{ config[key] }}</li>
   {% endfor %}
