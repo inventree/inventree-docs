@@ -36,15 +36,9 @@ If you see any sections of the documentation that require work (i.e. denoted wit
 
 ### Donate
 
-{% if 'readthedocs.org' in config.docs_dir %}
-{% set assets = '/en/latest/assets' %}
-{% else %}
-{% set assets = '/assets' %}
-{% endif %}
-
 Finally, if you are unable to provide contributions as listed above, or you find InvenTree to be useful, please consider donating to support its ongoing development.
 
 [ Donate <span class='fas fa-smile'></span> ](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=T4M976M5URSUE&currency_code=AUD){: .md-button .md-button--primary }
-<img src="{{ assets }}/paypal-logo-small-min-300x136.png" border="0" alt="PayPal Logo" style="width: 136px; length:300px; vertical-align:middle; padding-left: 20px">
+<img src="{{ config.assets_dir }}/paypal-logo-small-min-300x136.png" border="0" alt="PayPal Logo" style="width: 136px; length:300px; vertical-align:middle; padding-left: 20px">
 
 Financial donations directly support the ongoing development of the InvenTree project. If you benefit from the InvenTree project, please consider contributing to maintain vibrant development of this software!
