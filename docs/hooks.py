@@ -27,17 +27,30 @@ def on_config(config, *args, **kwargs):
 
     rtd = os.environ.get('READTHEDOCS', False)
 
-    if not rtd:
-        print("'READTHEDOCS' environment variable not found")
-        print("Building for localhost configuration!")
-
-    else:
+    if rtd:
         rtd_version = os.environ['READTHEDOCS_VERSION']
         rtd_language = os.environ['READTHEDOCS_LANGUAGE']
 
-        url = f"https://inventree.readthedocs.io/{rtd_language}/{rtd_version}"
+        site_url = f"https://inventree.readthedocs.io/{rtd_language}/{rtd_version}"
+        assets_dir = f"/{rtd_language}/{rtd_version}"
 
-        config['site_url'] = url
+        print("Building within READTHEDOCS environment!")
+        print(f" - Version: {rtd_version}")
+        print(f" - Language: {rtd_language}")
+        
+    else:
+        print("'READTHEDOCS' environment variable not found")
+        print("Building for localhost configuration!")
+
+        assets_dir = '/assets'
+        site_url = config['site_url']
+
+    config['assets_dir'] = assets_dir
+    config['site_url'] = site_url
+    config['readthedocs'] = rtd
+
+    print(f"config.site_url = '{site_url}'")
+    print(f"config.assets_dir = '{assets_dir}'")
 
     return config
 
