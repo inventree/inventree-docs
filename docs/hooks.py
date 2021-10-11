@@ -47,7 +47,7 @@ def on_config(config, *args, **kwargs):
                 readthedocs[k] = os.environ[key]
 
         # Supply this to the context
-        config.readthedocs = readthedocs
+        config['readthedocs'] = readthedocs
         
     else:
         print("'READTHEDOCS' environment variable not found")
@@ -56,7 +56,7 @@ def on_config(config, *args, **kwargs):
         assets_dir = '/assets'
         site_url = config['site_url']
 
-        config.readthedocs = False
+        config['readthedocs'] = False
 
     config['assets_dir'] = assets_dir
     config['site_url'] = site_url
