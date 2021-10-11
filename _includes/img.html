@@ -1,5 +1,5 @@
 {% if 'http' in url %}
-{% set doc_url = url %}
+{% set img_url = url %}
 {% else %}
 {% set img_url = config.assets_dir  + '/images/' + url %}
 {% endif %}
@@ -8,7 +8,7 @@
     {% if id %}
     <!-- The link that, when clicked, will display the image in full screen -->
     <a href="#{{ id }}">
-    {% elif doc_url %}
+    {% elif img_url %}
     <a href="{{ img_url }}">
     {% endif %}
         <img class='img-inline' src='{{ img_url }}' alt='{{ description }}' title='{{ description }}'
@@ -17,7 +17,7 @@
         {% if maxheight %} max-height: {{ maxheight }};{% endif %}
         '{% endif %}
         >
-    {% if id or doc_url %}
+    {% if id or img_url %}
     </a>
     {% endif %}
 

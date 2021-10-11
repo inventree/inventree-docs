@@ -32,7 +32,7 @@ def on_config(config, *args, **kwargs):
         rtd_language = os.environ['READTHEDOCS_LANGUAGE']
 
         site_url = f"https://inventree.readthedocs.io/{rtd_language}/{rtd_version}"
-        assets_dir = f"/{rtd_language}/{rtd_version}"
+        assets_dir = f"/{rtd_language}/{rtd_version}/assets"
 
         print("Building within READTHEDOCS environment!")
         print(f" - Version: {rtd_version}")
