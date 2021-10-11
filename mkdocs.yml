@@ -96,7 +96,9 @@ nav:
     - Context Variables: report/context_variables.md
   - Admin:
     - Admin Interface: admin/admin.md
+    - Settings: admin/settings.md
     - User Permissions: admin/permissions.md
+    - Single Sign on: admin/SSO.md
     - Export Data: admin/export.md
     - Import Data: admin/import.md
     - Python Shell: admin/shell.md

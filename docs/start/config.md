@@ -122,11 +122,32 @@ By default, uploaded media files are stored in the local directory `/home/invent
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
-## Other Options
+## Authentication
+
+### Single Sign on
+
+SSO backends for all wanted providers need to be added to the config file as a list under the key `social_backends`. The correct backend-name can be found in django-allauths [configuration documentation](https://django-allauth.readthedocs.io/en/latest/installation.html#django).
+
+If the selected providers need additional settings they must be added as dicts under the key `social_providers`. The correct settings can be found in the django-allauths [provider documentation](https://django-allauth.readthedocs.io/en/latest/providers.html).
+
+!!! note "You are not done"
+    SSO still needs credentials for all providers and has to be enabled in the [settings](../admin/settings.md)!
+
+
+### Login Options
+
+The login-experience can be altered with the following settings:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_LOGIN_CONFIRM_DAYS | login_confirm_days | Duration for which confirmation links are valid | 3 |
+| INVENTREE_LOGIN_ATTEMPTS | login_attempts | Count of allowed login attempts before blocking user | 5 |
 
 ### Authentication Backends
 
-Custom authentication backends can be used by specifying them here
+Custom authentication backends can be used by specifying them here. These can for example be used to add [LDAP / AD login](https://django-auth-ldap.readthedocs.io/en/latest/) to InvenTree
+
+## Other Options
 
 ### Middleware
 
