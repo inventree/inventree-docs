@@ -42,7 +42,7 @@ def on_config(config, *args, **kwargs):
         readthedocs = {}
 
         for key in os.environ.keys():
-            if key.lower().startswith('READTHEDOCS_'):
+            if key.startswith('READTHEDOCS_'):
                 k = key.replace('READTHEDOCS_', '').lower()
                 readthedocs[k] = os.environ[key]
 
