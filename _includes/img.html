@@ -1,13 +1,7 @@
-{% if 'readthedocs.org' in config.docs_dir %}
-{% set assets = '/en/latest/assets' %}
-{% else %}
-{% set assets = '/assets' %}
-{% endif %}
-
 {% if 'http' in url %}
 {% set doc_url = url %}
 {% else %}
-{% set doc_url = assets  + '/images/' + url %}
+{% set img_url = config.assets_dir  + '/images/' + url %}
 {% endif %}
 
 <figure class='image image-inventree'>
@@ -15,9 +9,9 @@
     <!-- The link that, when clicked, will display the image in full screen -->
     <a href="#{{ id }}">
     {% elif doc_url %}
-    <a href="{{ doc_url }}">
+    <a href="{{ img_url }}">
     {% endif %}
-        <img class='img-inline' src='{{ doc_url }}' alt='{{ description }}' title='{{ description }}'
+        <img class='img-inline' src='{{ img_url }}' alt='{{ description }}' title='{{ description }}'
         {% if maxwidth or maxheight %}style='
         {% if maxwidth %} max-width:{{ maxwidth }};{% endif %}
         {% if maxheight %} max-height: {{ maxheight }};{% endif %}
@@ -30,7 +24,7 @@
     {% if id %}
     <!-- The full screen image, hidden by default  -->
     <a href="#_" class="overlay" id="{{ id }}">
-      <img src="{{ doc_url }}" alt="{{ description }}" />
+      <img src="{{ img_url }}" alt="{{ description }}" />
     </a>
     {% endif %}
 </figure>
