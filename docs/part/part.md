@@ -4,12 +4,6 @@ title: Parts
 
 ## Part
 
-<ul>
-{% for key in config.keys() %}
-<li><b>{{ key}}</b> - {{ config[key] }}</li>
-{% endfor %}
-</ul>
-
 The *Part* is the core element of the InvenTree ecosystem. A Part object is the archetype of any stock item in your inventory. Parts are arranged in heirarchical categories which are used to organise and filter parts by function.
 
 ## Part Category 

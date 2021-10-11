@@ -1,7 +1,29 @@
-{% extends "main.html" %}
+{% extends "base.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+{% endblock %}
+
+{% block site_nav %}
+{% endblock %}
+
 {% block content %}
-  <h1>
-  	<span class="twemoji">{% include ".icons/fontawesome/regular/sad-tear.svg" %}</span>
-  	Uh oh - Page not found...
-  </h1>
+<style>
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+  }
+</style>
+
+<section class="mdx-container">
+  <div class="md-grid md-typeset">
+    <div class="mdx-hero"></div>
+      <h1>
+        <span class='fas fa-search'></span>
+        Page not found
+      </h1>
+  </div>
+</section>
+
 {% endblock %}
