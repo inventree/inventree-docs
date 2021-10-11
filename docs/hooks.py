@@ -37,6 +37,17 @@ def on_config(config, *args, **kwargs):
         print("Building within READTHEDOCS environment!")
         print(f" - Version: {rtd_version}")
         print(f" - Language: {rtd_language}")
+
+        # Add *all* readthedocs related keys
+        readthedocs = {}
+
+        for key in os.environ.keys():
+            if key.lower().startswith('READTHEDOCS_'):
+                k = key.replace('READTHEDOCS_', '').lower()
+                readthedocs[k] = os.environ[key]
+
+        # Supply this to the context
+        config.readthedocs = readthedocs
         
     else:
         print("'READTHEDOCS' environment variable not found")
