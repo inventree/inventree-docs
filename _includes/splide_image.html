@@ -1,13 +1,8 @@
-{% if 'readthedocs.org' in config.docs_dir %}
-{% set assets = '/en/latest/assets' %}
-{% else %}
-{% set assets = '/assets' %}
-{% endif %}
 
 {% if 'http' in src %}
 {% set img_url = src %}
 {% else %}
-{% set img_url = assets  + '/images/' + src %}
+{% set img_url = config.assets_dir  + '/images/' + src %}
 {% endif %}
 
 <li class='splide__slide'>
