@@ -56,3 +56,21 @@ POST {
 ```
 
 For an example of a very simple action plugin, refer to `/InvenTree/plugin/builtin/action/simpleactionplugin.py`
+
+### Integration Plugins
+
+Integration Plugins provide a wide area of deep integration into the interface of InvenTree.
+
+#### Mixins
+
+Common usecases are covered by pre-supplied modules in the form of Mixins (similar to how (https://docs.djangoproject.com/en/3.2/topics/class-based-views/mixins/)[django] does it).
+
+##### SettingsMixin
+
+##### UrlsMixin
+
+##### NavigationMixin
+
+##### AppMixin
+
+For an example of a pretty much full Integration Plugin, refer to `/InvenTree/plugin/samples/integration/sample.py`
