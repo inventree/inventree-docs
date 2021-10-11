@@ -8,7 +8,10 @@ A demonstration dataset is [available on GitHub](https://github.com/inventree/de
 
 This dataset can be used to populate an empty database for demonstration purposes, to test and evaluate various InvenTree features.
 
-It may also be useful to developers who need a dataset for developing and/or testing new InvenTree features
+It may also be useful to developers who need a dataset for developing and/or testing new InvenTree features.
+
+!!! warning "Empty Database"
+    Loading demo data will cause errors if the database is not empty. Run `invoke delete-data` prior to importing the demo dataset if there are records existing in the database!
 
 ## Login Details
 
