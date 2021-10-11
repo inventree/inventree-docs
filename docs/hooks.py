@@ -56,10 +56,11 @@ def on_config(config, *args, **kwargs):
         assets_dir = '/assets'
         site_url = config['site_url']
 
+        config.readthedocs = False
+
     config['assets_dir'] = assets_dir
     config['site_url'] = site_url
-    config['readthedocs'] = rtd
-
+ 
     print(f"config.site_url = '{site_url}'")
     print(f"config.assets_dir = '{assets_dir}'")
 
