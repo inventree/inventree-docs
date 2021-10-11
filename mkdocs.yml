@@ -128,6 +128,9 @@ nav:
 plugins:
   - search
   - git-revision-date-localized
+  - mkdocs-simple-hooks:
+      hooks:
+        on_config: "docs.hooks:on_config"
   - macros:
       include_dir: _includes
 
