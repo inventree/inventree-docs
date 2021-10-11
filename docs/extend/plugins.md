@@ -6,7 +6,8 @@ title: Plugins
 
 The InvenTree server code supports an extensible plugin architecture, allowing custom plugins to be integrated directly into the database server. This allows development of complex behaviours which are decoupled from core InvenTree code.
 
-InvenTree plugins are located in the directory `./InvenTree/plugins/`.
+InvenTree builtin plugins are located in the directory `./InvenTree/plugin/builtin`.  
+Custom plugins should be placed  in the directory `./InvenTree/plugins`.
 
 Plugins are discovered and loaded when the server is started.
 
@@ -54,4 +55,4 @@ POST {
 }
 ```
 
-For an example of a very simple action plugin, refer to `/InvenTree/plugins/action/action.py`
+For an example of a very simple action plugin, refer to `/InvenTree/plugin/builtin/action/simpleactionplugin.py`
