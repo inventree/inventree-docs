@@ -70,7 +70,7 @@ Tagged released are shown below. Click on the release notes for each version to 
 
 ## Upcoming Features
 
-In-progress and upcoming features can be viewed on [GitHub](https://github.com/inventree/inventree/pulls), where the InvenTree source code is hosted.
+In-progress and upcoming features can be viewed on [GitHub](https://github.com/inventree/inventree/pulls), where the InvenTree source code is hosted. Main roadmap items are highlighted in [In Development](./upcoming.md).
 
 ## Suggest Something New
 
