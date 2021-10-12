@@ -9,7 +9,7 @@ The most convenient method of installing and running InvenTree is to use the off
 The InvenTree docker image contains all the required system packages, python modules, and configuration files for running a containerised InvenTree web server.
 
 !!! warning "Docker Compose Version"
-    Tthe following guide is designed to work with docker-compose v1.x. There are currently known issues with docker-compose v2 support. If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
+    Tthe following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
 
 ### Environment Variables
 
