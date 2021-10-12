@@ -43,6 +43,9 @@ This ensures that the required database tables exist, which must be the case bef
 
 The new database should now be correctly initialized with the correct table structures requried to import the data. Run the following command to load the databased dump file into the new database.
 
+!!! warning "Empty Database"
+    If the database is not *empty* (i.e. it contains data records) then the data import process will fail. If errors occur during the import process, run `invoke delete-data` to clear all existing data from the database.
+
 ```
 inv import-records -f data.json
 ```
