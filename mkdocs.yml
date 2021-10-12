@@ -44,6 +44,7 @@ extra_javascript:
 nav:
   - InvenTree:
     - Features: features.md
+    - Getting started: started.md
     - In Development: upcoming.md
     - Release Notes: releases/release_notes.md
     - FAQ: faq.md
