@@ -38,6 +38,12 @@ InvenTree relies on the following Python libraries:
 | [qrcode](https://pypi.org/project/qrcode/) | BSD | QR code support |
 | [django-q](https://pypi.org/project/django-q/) | MIT | Background task manager |
 | [gunicorn](https://pypi.org/project/gunicorn/) | MIT | Web server |
+| [flake8](https://pypi.org/project/flake8/) | MIT | style checking |
+| [pep8-naming](https://pypi.org/project/pep8-naming/) | Expat | name checking |
+| [coverage](https://pypi.org/project/coverage/) | Apache-2.0 | coverage checking |
+| [coveralls](https://pypi.org/project/coveralls/) | MIT | coverage uploader |
+| [django-formtools](https://pypi.org/project/django-formtools/) | MIT | better forms / wizards |
+| [django-allauth](https://pypi.org/project/django-allauth/) | MIT | SSO for django |
 
 ## Frontend libraries
 
