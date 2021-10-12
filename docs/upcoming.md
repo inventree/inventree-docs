@@ -22,3 +22,7 @@ There are a lot of planned features / improvements for integrated barcode suppor
 ## Third Party Integrations
 
 Work is planned on a plugin system to allow integration with third party applications (such as Xero, Open Cart etc).
+
+References:
+
+- [#2037](https://github.com/inventree/InvenTree/issues/2037)
