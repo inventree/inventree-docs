@@ -12,9 +12,9 @@ The InvenTree docker image contains all the required system packages, python mod
 
 Docker images are available with the following tags:
 
-- **inventree:stable** represents the most recent stable release version of InvenTree
-- **inventree:latest** represents the most up-to-date *development* version of InvenTree. 
-- **inventree:tag** specific tagged images are built for each tagged release of InvenTree
+- **inventree:stable** - represents the most recent stable release version of InvenTree
+- **inventree:latest** - represents the most up-to-date *development* version of InvenTree. 
+- **inventree:tag** - specific tagged images are built for each tagged release of InvenTree
 
 ### Docker Compose
 
