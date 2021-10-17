@@ -227,9 +227,7 @@ docker-compose run inventree-server invoke update
 
 ### Start Containers
 
-Now restart the containers.
-
-As part of the server initialization process, data migrations and static file updates will be performed automatically.
+Now restart the docker containers:
 
 ```
 docker-compose up -d
