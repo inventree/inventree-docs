@@ -9,7 +9,7 @@ A customer is an external client to whom parts are sold.
 To access the customer page, click on the <span class="badge inventree nav main"><span class='fas fa-truck'></span> Sell</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-user-tie'></span> Customers</span> option in the dropdown list.
 
 !!! warning
-	**Viewing**, **adding**, **editing** and **deleting** customers require the corresponding [Sales Orders user permissions](../admin/permissions.md)
+	**Viewing**, **adding**, **editing** and **deleting** customers require the corresponding [Sales Orders user permissions](../settings/permissions.md)
 
 ### Add Customer
 
