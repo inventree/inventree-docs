@@ -35,7 +35,7 @@ Once a database is setup, you need a way of accessing the data. InvenTree provid
 
 ### Background Tasks
 
-A separate application handles management of [background tasks](../admin/tasks.md), separate to user-facing web requests.
+A separate application handles management of [background tasks](../settings/tasks.md), separate to user-facing web requests.
 
 ## OS Requirements
 

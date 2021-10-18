@@ -84,7 +84,7 @@ The following database options can be configured:
 
 ## Email Settings
 
-To enable [email functionality](../admin/email.md), email settings must be configured here, either via environment variables or within the configuration file.
+To enable [email functionality](../settings/email.md), email settings must be configured here, either via environment variables or within the configuration file.
 
 The following email settings are available:
 
@@ -131,7 +131,7 @@ SSO backends for all wanted providers need to be added to the config file as a l
 If the selected providers need additional settings they must be added as dicts under the key `social_providers`. The correct settings can be found in the django-allauths [provider documentation](https://django-allauth.readthedocs.io/en/latest/providers.html).
 
 !!! note "You are not done"
-    SSO still needs credentials for all providers and has to be enabled in the [settings](../admin/settings.md)!
+    SSO still needs credentials for all providers and has to be enabled in the [global settings](../settings/global.md)!
 
 
 ### Login Options

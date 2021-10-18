@@ -66,4 +66,4 @@ The following alternative methods for creating parts are supported:
 
 - [Via the REST API](../../extend/api)
 - [Using the Python library](../../extend/python)
-- [Within the Admin interface](../../admin/admin)
+- [Within the Admin interface](../../settings/admin)
