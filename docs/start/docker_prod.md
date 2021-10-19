@@ -214,11 +214,20 @@ docker-compose pull
 
 This ensures that the InvenTree containers will be running the latest version of the InvenTree source code.
 
+!!! info "Tagged Version"
+    If you are targetting a particular "tagged" version of InvenTree, you may wish to edit your docker-compose file before issuing the `docker-compose pull` command
+
+### Update Database
+
+Run the following command to ensure that the InvenTree database is updated:
+
+```
+docker-compose run inventree-server invoke update
+```
+
 ### Start Containers
 
-Now restart the containers.
-
-As part of the server initialization process, data migrations and static file updates will be performed automatically.
+Now restart the docker containers:
 
 ```
 docker-compose up -d

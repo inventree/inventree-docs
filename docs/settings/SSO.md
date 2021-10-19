@@ -9,9 +9,10 @@ InvenTree provides the possibility to use 3rd party services to authenticate use
 ### Configuration
 
 To use SSO you have to:
-1. Enable the needed providers in the [config file](../start/config.md#Single-Sign-on).
-1. Add the required client configurations in the `SocialApp` app in the [admin interface](../admin/admin.md).
-1. Enable SSO for the users in the [dynamic settings](../admin/settings.md).
+
+1. Enable the required providers in the [config file](../start/config.md#Single-Sign-on).
+1. Add the required client configurations in the `SocialApp` app in the [admin interface](../settings/admin.md).
+1. Enable SSO for the users in the [global settings](../settings/global.md).
 
 ### Security Consideration
 
@@ -21,5 +22,5 @@ Tokens for authenticating the users to the providers they registered with are sa
 So ensure your database is protected and not open to the internet.  
 Make sure all users with admin privileges have sufficient passwords - they can read out your client configurations with providers and all auth-tokens from users.
 
-Never share your installs secret key!
-
+!!! warning "It's a secret!"
+    Never share your installs secret key!

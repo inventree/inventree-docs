@@ -89,7 +89,7 @@ Setting the *Debug Mode* option renders the template as raw HTML instead of PDF,
 
 ## Uploading Templates
 
-Custom report templates can be uploaded using the [Admin Interface(../admin/admin.md). Only users with admin access can upload and/or edit report template files.
+Custom report templates can be uploaded using the [Admin Interface(../settings/admin.md). Only users with admin access can upload and/or edit report template files.
 
 ## Report Assets
 

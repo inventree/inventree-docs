@@ -94,17 +94,18 @@ nav:
       - Order: report/order.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
-  - Admin:
-    - Admin Interface: admin/admin.md
-    - Settings: admin/settings.md
-    - User Permissions: admin/permissions.md
-    - Single Sign on: admin/SSO.md
-    - Export Data: admin/export.md
-    - Import Data: admin/import.md
-    - Python Shell: admin/shell.md
-    - Error Logs: admin/logs.md
-    - Email: admin/email.md
-    - Background Tasks: admin/tasks.md
+  - Settings:
+    - Global Settings: settings/global.md
+    - User Settings: settings/user.md
+    - Admin Interface: settings/admin.md
+    - User Permissions: settings/permissions.md
+    - Single Sign on: settings/SSO.md
+    - Export Data: settings/export.md
+    - Import Data: settings/import.md
+    - Python Shell: settings/shell.md
+    - Error Logs: settings/logs.md
+    - Email: settings/email.md
+    - Background Tasks: settings/tasks.md
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
