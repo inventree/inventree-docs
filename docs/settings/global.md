@@ -68,3 +68,14 @@ Options for purchase orders
 ### Sales orders
 
 Options for sales orders
+
+### Plugin Settings
+
+Change into what parts plugins can integrate into.
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Enable URL integration | Boolean | Enable plugins to add URL routes | False |
+| Enable navigation integration | Boolean | Enable plugins to integrate into navigation | False |
+| Enable setting integration | Boolean | Enable plugins to integrate into inventree settings | False |
+| Enable app integration | Boolean | Enable plugins to add apps | False |
