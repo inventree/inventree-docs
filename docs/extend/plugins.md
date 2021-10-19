@@ -67,8 +67,7 @@ For an example of a pretty much full Integration Plugin, refer to `/InvenTree/pl
 
 Some metadata options can be defined as constants in the plugins class.
 
-python
-```
+``` python
 PLUGIN_SLUG = None  # Used in URLs, setting-names etc. when a unique slug as a reference is needed -> the plugin name is used if not set
 PLUGIN_TITLE = None  # A nice human friendly name for the plugin -> used in titles, as plugin name etc.
 
@@ -93,8 +92,7 @@ The function `plugin.mixin_enabled(key)` returns if a mixin is present in a plug
 
 Each mixin must call `super().__init__()` in it's `__init__` function and register itself with a call to `self.add_mixin()`. Check out the built-in mixins for examples.
 
-python
-```
+``` python
 def __init__(self):
     super().__init__()
     self.add_mixin('settings', 'has_settings', __class__)
@@ -111,7 +109,7 @@ Use the class constant `SETTINGS` for a dict of settings that should be added as
 The dict must be formatted similar to the following sample. Take a look at the settings defined in `InvenTree.common.models.InvenTreeSetting` for all possible parameters.
 
 
-```
+``` python
 SETTINGS = {
     'PO_FUNCTION_ENABLE': {
         'name': _('Enable PO'),
@@ -134,8 +132,7 @@ This mixin defines the helper functions `plugin.get_setting` and `plugin.set_set
 Use the class constant `URLS` for a array of URLs that should be added to InvenTrees URL paths or override the `plugin.setup_urls` function.  
 The array has to contain valid URL patterns as defined in the [https://docs.djangoproject.com/en/3.2/topics/http/urls/](django documentation).
 
-python
-```
+``` python
 URLS = [
     url(r'increase/(?P<location>\d+)/(?P<pk>\d+)/', self.view_increase, name='increase-level'),
 ]
@@ -149,8 +146,7 @@ The URLs get exposed under `/plugin/{plugin.slug}/*` and get exposed to the temp
 Use the class constant `NAVIGATION` for a array of links that should be added to InvenTrees navigation header.  
 The array must contain at least one dict that at least define a name and a link for each element. The link must be formatted for a URL pattern name lookup - links to external sites are not possible directly. The optional icon must be a class reference to an icon (InvenTree ships with fontawesome 4 by default).
 
-python
-```
+``` python
 NAVIGATION = [
     {'name': 'SampleIntegration', 'link': 'plugin:sample:hi', 'icon': 'fas fa-box'},
 ]
