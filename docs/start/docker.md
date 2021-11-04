@@ -12,14 +12,17 @@ The InvenTree docker image contains all the required system packages, python mod
 
 Docker images are available with the following tags:
 
-- **inventree:stable** - represents the most recent stable release version of InvenTree
-- **inventree:latest** - represents the most up-to-date *development* version of InvenTree. 
-- **inventree:tag** - specific tagged images are built for each tagged release of InvenTree
+| Tag | Description |
+| --- | --- |
+| **inventree:stable** | The most recent *stable* release version of InvenTree |
+| **inventree:latest** | The most up-to-date *development* version of InvenTree. |
+| **inventree:tag** | Specific tagged images are built for each tagged release of InvenTree |
 
 ### Docker Compose
 
 InvenTree provides sample docker-compose files to get you up and running.
 
+| Compose File | Target | Description |
 - A *production* compose file is intended to be used in a production environment, running the web server behind a nginx proxy.
 - A *development* compose file provides a simple way to spin up a development environment
 
