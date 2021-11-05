@@ -2,7 +2,7 @@
 title: Part Notifications
 ---
 
-## Notifications
+## Notification Events
 
 Users can select to receive email notifications when certain events occur.
 
@@ -33,7 +33,7 @@ Users can "subscribe" to either a *Part* or *Part Category*, to receive notifica
 When subscribed to a *Part*, a user will receive notifications when events occur which pertain to:
 
 - That particular part
-- Any variant parts
+- Any parts which are variants of that part
 
 If a user is subscribed to a particular part, it will be indicated as shown below:
 
