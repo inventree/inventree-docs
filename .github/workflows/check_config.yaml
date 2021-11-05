@@ -23,5 +23,5 @@ jobs:
           python-version: 3.7
       - name: Run Checks
         run: |
-          pip install yaml
+          pip install pyyaml
           python ci/check_mkdocs_config.py
