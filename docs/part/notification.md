@@ -63,3 +63,11 @@ Subscribing to a part category operates in the same manner as for a part - simpl
 {% with id="cat_sub", url="part/category_notification.png", description="Subscribe to part category" %}
 {% include 'img.html' %}
 {% endwith %}
+
+## Subscription List
+
+Users can view the parts and categories they are subscribed to on the InvenTree home page:
+
+{% with id="cat_subs", url="part/cat_subs.png", description="Category subscription list" %}
+{% include 'img.html' %}
+{% endwith %}
