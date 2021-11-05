@@ -66,6 +66,7 @@ nav:
     - Templates: part/template.md
     - Tests: part/test.md
     - Pricing: part/pricing.md
+    - Notifications: part/notification.md
   - Stock:
     - Stock Items: stock/stock.md
     - Stock Status: stock/status.md
@@ -169,4 +170,4 @@ extra:
       name: InvenTree on Docker
 
 use_directory_urls: true
-strict: false
+strict: true
