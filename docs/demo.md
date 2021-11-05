@@ -47,7 +47,7 @@ git clone git@github.com:inventree/demo-dataset.git ~/inventree-data
 
 You will need to configure an *empty* database before importing the data fixtures.
 
-Follow the [installation instructions](./intro.md) to initialize a database using your backend of choice.
+Follow the [installation instructions](./start/intro.md) to initialize a database using your backend of choice.
 
 ### Configure InvenTree Settings
 
