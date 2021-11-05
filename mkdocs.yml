@@ -44,8 +44,8 @@ extra_javascript:
 nav:
   - InvenTree:
     - Features: features.md
-    - In Development: upcoming.md
     - Release Notes: releases/release_notes.md
+    - Demo: demo.md
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
@@ -56,7 +56,6 @@ nav:
     - Bare Metal Setup: start/install.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
-    - Demo Dataset: start/demo.md
   - Parts:
     - Parts: part/part.md
     - Creating Parts: part/create.md
