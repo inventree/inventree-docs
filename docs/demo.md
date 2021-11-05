@@ -1,19 +1,14 @@
 ---
-title: Demo Dataset
+title: InvenTree Demo
 ---
 
-## Demo Dataset
+## InvenTree Demo
 
-A demonstration dataset is [available on GitHub](https://github.com/inventree/demo-dataset).
+A working demo of InvenTree is available online at:
 
-This dataset can be used to populate an empty database for demonstration purposes, to test and evaluate various InvenTree features.
+<large><b>[https://demo.inventree.org](https://demo.inventree.org)</b></large>
 
-It may also be useful to developers who need a dataset for developing and/or testing new InvenTree features.
-
-!!! warning "Empty Database"
-    Loading demo data will cause errors if the database is not empty. Run `invoke delete-data` prior to importing the demo dataset if there are records existing in the database!
-
-## Login Details
+### Login Details
 
 The default *superuser* login details for the demo dataset are:
 
@@ -21,7 +16,19 @@ The default *superuser* login details for the demo dataset are:
 | --- | --- |
 | admin | inventree |
 
-## Setup
+!!! warning "Database Reset"
+    The demo databaset resets once per day
+
+## Demo Dataset
+
+The dataset used for the demo instance is [available on GitHub](https://github.com/inventree/demo-dataset).
+
+This dataset can be used to populate an empty database for demonstration purposes, to test and evaluate various InvenTree features.
+
+It may also be useful to developers who need a dataset for developing and/or testing new InvenTree features.
+
+!!! warning "Empty Database"
+    Loading demo data will cause errors if the database is not empty. Run `invoke delete-data` prior to importing the demo dataset if there are records existing in the database!
 
 Follow these instructions to setup an InvenTree instance with the demo data:
 
@@ -40,7 +47,7 @@ git clone git@github.com:inventree/demo-dataset.git ~/inventree-data
 
 You will need to configure an *empty* database before importing the data fixtures.
 
-Follow the [installation instructions](./intro.md) to initialize a database using your backend of choice.
+Follow the [installation instructions](./start/intro.md) to initialize a database using your backend of choice.
 
 ### Configure InvenTree Settings
 
