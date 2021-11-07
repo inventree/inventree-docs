@@ -18,8 +18,14 @@ Multiple default accounts are provided, as detailed below. Each account is affor
 | reader | readonly | Can view all pages but cannot create, edit or delete database records |
 | engineer | partsonly | Can manage parts, view stock, but no access to purchase orders or sales orders |
 
-!!! warning "Database Reset"
-    The demo databaset resets once per day
+### Data Persistence
+
+The InvenTree demo database resets to a known state once per day.
+
+- Database records are reset to the latest state of the [demo dataset](https://github.com/inventree/demo-dataset)
+- InvenTree software is kept up to date with the latest `inventree:master` available via docker
+
+During the update period, the demo server may be inaccessible for a few minutes.
 
 ## Demo Dataset
 
