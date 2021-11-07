@@ -10,11 +10,13 @@ A working demo of InvenTree is available online at:
 
 ### Login Details
 
-The default *superuser* login details for the demo dataset are:
+Multiple default accounts are provided, as detailed below. Each account is afforded a different set of permissions, so users can see the InvenTree roles/permission system in action
 
-| Username | Password |
-| --- | --- |
-| admin | inventree |
+| Username | Password | Description |
+| --- | --- | --- |
+| admin | inventree | Admin / superuser account - access to all system components |
+| reader | readonly | Can view all pages but cannot create, edit or delete database records |
+| engineer | partsonly | Can manage parts, view stock, but no access to purchase orders or sales orders |
 
 !!! warning "Database Reset"
     The demo databaset resets once per day
