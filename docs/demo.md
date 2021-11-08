@@ -14,7 +14,7 @@ Multiple default accounts are provided, as detailed below. Each account is affor
 
 | Username | Password | Description |
 | --- | --- | --- |
-| admin | inventree | Admin / superuser account - access to all system components |
+| allacess | nolimits | View / create / edit all pages and items |
 | reader | readonly | Can view all pages but cannot create, edit or delete database records |
 | engineer | partsonly | Can manage parts, view stock, but no access to purchase orders or sales orders |
 
