@@ -45,6 +45,7 @@ nav:
   - InvenTree:
     - Features: features.md
     - Release Notes: releases/release_notes.md
+    - Upcoming: upcoming.md
     - Demo: demo.md
     - FAQ: faq.md
     - Contribute: contribute.md
