@@ -26,12 +26,15 @@ For example, pull down the latest InvenTree sourcecode using Git:
 git pull origin master
 ```
 
+!!! info "Release Versions"
+    If you are using a particular version of InvenTree, you may wish to target a specific code branch or tag, instead of just pulling down latest master
+
 ### Perform Database Migrations
 
 Updating the database is as simple as calling the `update` script:
 
 ```
-inv update
+invoke update
 ```
 
 This command performs the following steps:

@@ -1,10 +1,36 @@
 ---
-title: Demo Dataset
+title: InvenTree Demo
 ---
+
+## InvenTree Demo
+
+A working demo of InvenTree is available online at:
+
+<large><b>[https://demo.inventree.org](https://demo.inventree.org)</b></large>
+
+### Login Details
+
+Multiple default accounts are provided, as detailed below. Each account is afforded a different set of permissions, so users can see the InvenTree roles/permission system in action
+
+| Username | Password | Description |
+| --- | --- | --- |
+| allacess | nolimits | View / create / edit all pages and items |
+| reader | readonly | Can view all pages but cannot create, edit or delete database records |
+| engineer | partsonly | Can manage parts, view stock, but no access to purchase orders or sales orders |
+| admin | inventree | Superuser account, access all areas plus administrator actions |
+
+### Data Persistence
+
+The InvenTree demo database resets to a known state once per day.
+
+- Database records are reset to the latest state of the [demo dataset](https://github.com/inventree/demo-dataset)
+- InvenTree software is kept up to date with the latest `inventree:master` available via docker
+
+During the update period, the demo server may be inaccessible for a few minutes.
 
 ## Demo Dataset
 
-A demonstration dataset is [available on GitHub](https://github.com/inventree/demo-dataset).
+The dataset used for the demo instance is [available on GitHub](https://github.com/inventree/demo-dataset).
 
 This dataset can be used to populate an empty database for demonstration purposes, to test and evaluate various InvenTree features.
 
@@ -12,16 +38,6 @@ It may also be useful to developers who need a dataset for developing and/or tes
 
 !!! warning "Empty Database"
     Loading demo data will cause errors if the database is not empty. Run `invoke delete-data` prior to importing the demo dataset if there are records existing in the database!
-
-## Login Details
-
-The default *superuser* login details for the demo dataset are:
-
-| Username | Password |
-| --- | --- |
-| admin | inventree |
-
-## Setup
 
 Follow these instructions to setup an InvenTree instance with the demo data:
 
@@ -40,7 +56,7 @@ git clone git@github.com:inventree/demo-dataset.git ~/inventree-data
 
 You will need to configure an *empty* database before importing the data fixtures.
 
-Follow the [installation instructions](./intro.md) to initialize a database using your backend of choice.
+Follow the [installation instructions](./start/intro.md) to initialize a database using your backend of choice.
 
 ### Configure InvenTree Settings
 
