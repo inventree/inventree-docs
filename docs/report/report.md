@@ -63,6 +63,11 @@ The django template system allows for conditional rendering, providing condition
 
 A number of global reporting options are available for customizing InvenTree reports:
 
+### Enable Reports
+
+By default, the reporting feature is turned off. It must be enabled in the global settings. 
+
+
 ### Default Page Size
 
 The built-in InvenTree report templates (and any reports which are derived from the built-in templates) use the *Page Size* option to set the page size of the generated reports.
