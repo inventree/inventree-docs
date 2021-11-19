@@ -6,6 +6,12 @@ title: Stock Adjustments
 
 InvenTree provides simple yet powerful management of stock levels. Multiple stock adjustment options are available, and each type of adjustment is automatically tracked to maintain a complete stock history.
 
+Stock adjustements can be accessed in any stock items table using the "Stock Options" dropdown entries:
+
+{% with id="stock_options", url="stock/stock_options.png", description="Stock Options" %}
+{% include 'img.html' %}
+{% endwith %}
+
 ### Move Stock
 
 Multiple stock items can be moved to a new location in a single operation. Each item is moved to the selected location, and a stock tracking entry is added to the stock item history.

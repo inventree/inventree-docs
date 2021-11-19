@@ -19,7 +19,7 @@ The default InvenTree config file is located at `./InvenTree/config.yaml`
 
 However, the config file can be placed elsewhere, and specified with the `INVENTREE_CONFIG_FILE` environment variable.
 
-The default configuration file file is shown below:
+A short snippet from an example configuration file file is shown below. The entire default configuration file can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml) 
 
 ``` yaml
 {% include 'config.yaml' %}
@@ -32,10 +32,10 @@ In addition to specifying InvenTree options via the `config.yaml` file, these op
 - Environment variable settings use the `INVENTREE_` prefix, and are all uppercase.
 - Config file settings do not use this prefix, and are all lowercase
 
-!!! info Priotity
+!!! info "Configuration Priority"
     Configuration options set via environment variables will take priority over the values set in the `config.yaml` file.
 
-!!! warning Available Variables
+!!! warning "Available Variables"
     Some configuration options cannot be set via environment variables. Refer to the documentation below.
 
 ## Basic Options
@@ -84,7 +84,7 @@ The following database options can be configured:
 
 ## Email Settings
 
-To enable [email functionality](../admin/email.md), email settings must be configured here, either via environment variables or within the configuration file.
+To enable [email functionality](../settings/email.md), email settings must be configured here, either via environment variables or within the configuration file.
 
 The following email settings are available:
 
@@ -97,10 +97,17 @@ The following email settings are available:
 | INVENTREE_EMAIL_PASSWORD | email.password | Email account password | *Not set* |
 | INVENTREE_EMAIL_TLS | email.tls | Enable TLS support | False |
 | INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support | False |
+| INVENTREE_EMAIL_SENDER | email.sender | Name of sender | *Not set* |
 
 ## Allowed Hosts / CORS
 
-By default, all hosts are allowed, and CORS requests are enabled from any origin. **This is not secure and should be adjusted for your installation**. These options can be changed in the configuration file.
+By default, all hosts are allowed, and CORS requests are enabled from any origin.
+
+!!! danger "Not Secure"
+    Allowing access from any host is not secure, and should be adjusted for your installation.
+
+!!! info "Configuration File"
+    Allowed hosts and CORS options must be changed in the configuration file, and cannot be set via environment variables
 
 For further information, refer to the following documentation:
 
@@ -121,11 +128,34 @@ By default, uploaded media files are stored in the local directory `/home/invent
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
-## Other Options
+## Authentication
+
+InvenTree provides allowance for additional sign-in options. The following options are not enabled by default, and care must be taken by the system administrator when configuring these settings.
+
+### Single Sign on
+
+SSO backends for all required authentication providers need to be added to the config file as a list under the key `social_backends`. The correct backend-name can be found in django-allauths [configuration documentation](https://django-allauth.readthedocs.io/en/latest/installation.html#django).
+
+If the selected providers need additional settings they must be added as dicts under the key `social_providers`. The correct settings can be found in the django-allauths [provider documentation](https://django-allauth.readthedocs.io/en/latest/providers.html).
+
+!!! warning "You are not done"
+    SSO still needs credentials for all providers and has to be enabled in the [global settings](../settings/global.md)!
+
+
+### Login Options
+
+The login-experience can be altered with the following settings:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_LOGIN_CONFIRM_DAYS | login_confirm_days | Duration for which confirmation links are valid | 3 |
+| INVENTREE_LOGIN_ATTEMPTS | login_attempts | Count of allowed login attempts before blocking user | 5 |
 
 ### Authentication Backends
 
-Custom authentication backends can be used by specifying them here
+Custom authentication backends can be used by specifying them here. These can for example be used to add [LDAP / AD login](https://django-auth-ldap.readthedocs.io/en/latest/) to InvenTree
+
+## Other Options
 
 ### Middleware
 

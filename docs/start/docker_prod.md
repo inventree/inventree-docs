@@ -13,7 +13,12 @@ Using the [InvenTree docker image](./docker.md) streamlines the setup process fo
 
 It is strongly recommended that you use a [docker-compose](https://docs.docker.com/compose/) script to manage your InvenTree docker image.
 
+### Example Script
+
 An example docker compose file can be [found here](https://github.com/inventree/InvenTree/blob/master/docker/docker-compose.yml) - the documentation below will be using this docker compose file.
+
+!!! info "Stable Version"
+    The example docker-compose file targets `inventree:stable` docker image by default
 
 ### Containers
 
@@ -46,9 +51,10 @@ Nginx working as a reverse proxy, separating requests for static and media files
 
 This container uses the official [nginx image](https://hub.docker.com/_/nginx).
 
-An nginx configuration file must be provided to the image. Use the [example configuration file](https://github.com/inventree/InvenTree/blob/master/docker/nginx.conf) as a starting point.
+!!! info "Configuration File"
+    An nginx configuration file must be provided to the image. Use the [example configuration file](https://github.com/inventree/InvenTree/blob/master/docker/nginx.conf) as a starting point.
 
-*__Note__: You must save this conf file in the same directory as your docker-compose.yml file*
+    *__Note__: You must save the `nginx.conf` file in the same directory as your docker-compose.yml file*
 
 !!! info "Proxy Pass"
     If you change the name (or port) of the InvenTree web server container, you will need to also adjust the `proxy_pass` setting in the nginx.conf file!
@@ -214,11 +220,20 @@ docker-compose pull
 
 This ensures that the InvenTree containers will be running the latest version of the InvenTree source code.
 
+!!! info "Tagged Version"
+    If you are targetting a particular "tagged" version of InvenTree, you may wish to edit your docker-compose file before issuing the `docker-compose pull` command
+
+### Update Database
+
+Run the following command to ensure that the InvenTree database is updated:
+
+```
+docker-compose run inventree-server invoke update
+```
+
 ### Start Containers
 
-Now restart the containers.
-
-As part of the server initialization process, data migrations and static file updates will be performed automatically.
+Now restart the docker containers:
 
 ```
 docker-compose up -d

@@ -2,15 +2,37 @@
 title: Release Notes
 ---
 
-## Releases
+## InvenTree Versioning
 
 The InvenTree project follows the formalized release numbering scheme, according to the [semantic versioning specification](https://semver.org/).
+
+### Stable Branch
+
+The head of the *stable* code branch represents the most recent stable tagged release of InvenTree. 
+
+!!! info "<span class='fab fa-docker'></span> Stable Docker"
+    To pull down the latest *stable* release of InvenTree in docker, use `inventree/inventree:stable`
+
+### Development Branch
+
+The head of the *master* code branch represents the "latest and greatest" working codebase. All features and bug fixes are merged into the master branch, in addition to relevent stable release branches.
+
+!!! info "<span class='fab fa-docker'></span> Latest Docker"
+    To pull down the latest *development* version of InvenTree in docker, use `inventree/inventree:latest`
+
+## Stable Releases
+
+Tagged released are shown below. Click on the release notes for each version to learn more.
 
 ### 0.5.x
 
 | <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
-| [0.5.0](./0.5.0.md) | *In development* | - | - |
+| [0.5.4](./0.5.4.md) | 2021-11-3 | [0.5.4](https://github.com/inventree/InvenTree/releases/tag/0.5.4) | [inventree:0.5.4](https://hub.docker.com/layers/inventree/inventree/0.5.4/images/sha256-35512b55ea1f78a802c915d3ea920bb8e1ef0c8f3f1b68ec1941d2a6a1141bd3?context=explore) |
+| [0.5.3](./0.5.3.md) | 2021-10-19 | [0.5.3](https://github.com/inventree/InvenTree/releases/tag/0.5.3) | [inventree:0.5.3](https://hub.docker.com/layers/inventree/inventree/0.5.3/images/sha256-ecdfbd2906241b2495cee3c5acc12bdec5ed66b2d32ab146dbc2b71131a73a7a?context=explore) |
+| [0.5.2](./0.5.2.md) | 2021-10-19 | [0.5.2](https://github.com/inventree/InvenTree/releases/tag/0.5.2) | [inventree:0.5.2](https://hub.docker.com/layers/inventree/inventree/0.5.2/images/sha256-ff4f435df894c5aa5ea18ee7f3637e81a29ed356ed82dba70ecbd28da3e3d965?context=explore) |
+| [0.5.1](./0.5.1.md) | 2021-10-11 | [0.5.1](https://github.com/inventree/InvenTree/releases/tag/0.5.1) | [inventree:0.5.1](https://hub.docker.com/layers/inventree/inventree/0.5.1/images/sha256-3dbfb2e1bc73a0ff2bf537b56f7151c98097923cf77f5313a2a914586ab75973?context=explore) |
+| [0.5.0](./0.5.0.md) | 2021-10-1 | [0.5.0](https://github.com/inventree/InvenTree/releases/tag/0.5.0) | [inventree:0.5.0](https://hub.docker.com/layers/inventree/inventree/0.5.0/images/sha256-eed8b5df1512d4f1f8596d782d894f8e582c0978d0109020da3ee852bb9326ee?context=explore) |
 
 ### 0.4.x
 
@@ -51,7 +73,7 @@ The InvenTree project follows the formalized release numbering scheme, according
 
 ## Upcoming Features
 
-In-progress and upcoming features can be viewed on [GitHub](https://github.com/inventree/inventree/pulls), where the InvenTree source code is hosted.
+In-progress and upcoming features can be viewed on [GitHub](https://github.com/inventree/inventree/pulls), where the InvenTree source code is hosted. Main roadmap items are highlighted in [In Development](../upcoming.md).
 
 ## Suggest Something New
 

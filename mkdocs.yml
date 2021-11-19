@@ -29,23 +29,24 @@ extra_css:
   - stylesheets/regular.css
   - stylesheets/solid.css
   - stylesheets/bootstrap.css
-  - https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css
+  - stylesheets/splide.min.css
 extra_javascript:
   - javascripts/extra.js
   - javascripts/fontawesome.js
   - javascripts/brands.js
   - javascripts/regular.js
   - javascripts/solid.js
+  - javascripts/splide.min.js
   - https://code.jquery.com/jquery-3.6.0.js
   - https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js
-  - https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js
 
 # Navigation
 nav:
   - InvenTree:
     - Features: features.md
-    - In Development: upcoming.md
     - Release Notes: releases/release_notes.md
+    - Upcoming: upcoming.md
+    - Demo: demo.md
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
@@ -56,7 +57,6 @@ nav:
     - Bare Metal Setup: start/install.md
     - Updating: start/update.md
     - Migrating: start/migrate.md
-    - Demo Dataset: start/demo.md
   - Parts:
     - Parts: part/part.md
     - Creating Parts: part/create.md
@@ -66,8 +66,10 @@ nav:
     - Templates: part/template.md
     - Tests: part/test.md
     - Pricing: part/pricing.md
+    - Notifications: part/notification.md
   - Stock:
     - Stock Items: stock/stock.md
+    - Stock Status: stock/status.md
     - Adjusting Stock: stock/adjust.md
     - Stocktake: stock/stocktake.md
     - Stock Expiry: stock/expiry.md
@@ -93,15 +95,18 @@ nav:
       - Order: report/order.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
-  - Admin:
-    - Admin Interface: admin/admin.md
-    - User Permissions: admin/permissions.md
-    - Export Data: admin/export.md
-    - Import Data: admin/import.md
-    - Python Shell: admin/shell.md
-    - Error Logs: admin/logs.md
-    - Email: admin/email.md
-    - Background Tasks: admin/tasks.md
+  - Settings:
+    - Global Settings: settings/global.md
+    - User Settings: settings/user.md
+    - Admin Interface: settings/admin.md
+    - User Permissions: settings/permissions.md
+    - Single Sign on: settings/SSO.md
+    - Export Data: settings/export.md
+    - Import Data: settings/import.md
+    - Python Shell: settings/shell.md
+    - Error Logs: settings/logs.md
+    - Email: settings/email.md
+    - Background Tasks: settings/tasks.md
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
@@ -114,8 +119,10 @@ nav:
     - Barcodes: app/barcode.md
     - Parts: app/part.md
     - Stock: app/stock.md
+    - Purchase Orders: app/po.md
     - Settings: app/settings.md
     - Privacy: app/privacy.md
+    - Release Notes: app/release.md
     - Translation: app/translation.md
     - Suggestions: app/issues.md
 
@@ -123,6 +130,9 @@ nav:
 plugins:
   - search
   - git-revision-date-localized
+  - mkdocs-simple-hooks:
+      hooks:
+        on_config: "docs.hooks:on_config"
   - macros:
       include_dir: _includes
 

@@ -8,6 +8,27 @@ The most convenient method of installing and running InvenTree is to use the off
 
 The InvenTree docker image contains all the required system packages, python modules, and configuration files for running a containerised InvenTree web server.
 
+### Tagged Images
+
+Docker images are available with the following tags:
+
+| Tag | Description |
+| --- | --- |
+| **inventree:stable** | The most recent *stable* release version of InvenTree |
+| **inventree:latest** | The most up-to-date *development* version of InvenTree. |
+| **inventree:tag** | Specific tagged images are built for each tagged release of InvenTree |
+
+### Docker Compose
+
+InvenTree provides sample docker-compose files to get you up and running.
+
+| Compose File | Target | Description |
+- A *production* compose file is intended to be used in a production environment, running the web server behind a nginx proxy.
+- A *development* compose file provides a simple way to spin up a development environment
+
+!!! warning "Docker Compose Version"
+    Tthe following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
+
 ### Environment Variables
 
 InvenTree run-time configuration options described in the [configuration documentation](./config.md) can be passed to the InvenTree container as environment variables.

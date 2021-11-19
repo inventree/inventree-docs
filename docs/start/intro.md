@@ -10,14 +10,14 @@ The InvenTree server ecosystem consists of the following components:
 
 ### Database
 
-A persistent database is required to store stock information. The database backend must be installed and configured separately to the InvenTree application.
+A persistent database is required for data storage. InvenTree can be used with any of the following database backends:
 
-InvenTree can be used with any of the following database backends:
-
-* SQLite
 * PostgreSQL
-* MariaDB
-* MySQL
+* MySQL / MariaDB
+* SQLite
+
+!!! warning "SQLite"
+    While SQLite provides a simpler setup and is useful for a development environment, we strongly recommend against using it for a production environment. Use PostgreSQL or MySQL instead
 
 Database selection should be determined by your particular installation requirements. 
 
@@ -35,7 +35,7 @@ Once a database is setup, you need a way of accessing the data. InvenTree provid
 
 ### Background Tasks
 
-A separate application handles management of [background tasks](../admin/tasks.md), separate to user-facing web requests.
+A separate application handles management of [background tasks](../settings/tasks.md), separate to user-facing web requests.
 
 ## OS Requirements
 
@@ -43,6 +43,9 @@ The InvenTree documentation assumes that the operating system is a debian based 
 
 !!! warning "Installing on Windows"
     Installation on Windows is *not guaranteed* to work (at all). To install on a Windows system, it is highly recommended that you [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps), and then follow installation procedure from within the WSL environment.
+
+!!! success "Docker"
+    Installation on any OS is simplified by following the [docker setup guide](../docker).
 
 ## Python Requirements
 

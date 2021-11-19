@@ -107,6 +107,10 @@ The *actions* tab displays the available actions for the selected stock item:
 
 Select the *Count Stock* action to validate the current number of items in stock. Use this option to perform a quick stocktake!
 
+{% with id="stock-count", url="stock_count.png" %}
+{% include "app_img.html" %}
+{% endwith %}
+
 !!! info "Serialized Stock"
     The *count stock* action is not available for serialized stock items, as they have a fixed quantity of 1
 
@@ -114,13 +118,25 @@ Select the *Count Stock* action to validate the current number of items in stock
 
 Select this action to remove a certain quantity from the selected stock item. For example, if there are 12 items available, and you take 3 items, the listed quantity will be reduced to 9 itemes.
 
+{% with id="stock-remove", url="stock_remove.png" %}
+{% include "app_img.html" %}
+{% endwith %}
+
 #### Add Stock
 
 Select this action to add a certain quantity to the selected stock item. For example, if there are 12 items available, and you add 3 items, the listed quantity will be increased to 15 items.
 
+{% with id="stock-add", url="stock_add.png" %}
+{% include "app_img.html" %}
+{% endwith %}
+
 #### Transfer Stock
 
-Transfer (move) the stock item to a new location
+Transfer (move) the stock item to a new location:
+
+{% with id="stock-transfer", url="stock_transfer.png" %}
+{% include "app_img.html" %}
+{% endwith %}
 
 #### Scan Into Location
 
