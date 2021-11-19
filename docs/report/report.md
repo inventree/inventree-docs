@@ -63,6 +63,10 @@ The django template system allows for conditional rendering, providing condition
 
 A number of global reporting options are available for customizing InvenTree reports:
 
+{% with id="report-options", url="report/report.png", description="Report Options" %}
+{% include 'img.html' %}
+{% endwith %}
+
 ### Enable Reports
 
 By default, the reporting feature is turned off. It must be enabled in the global settings. 
@@ -72,10 +76,6 @@ By default, the reporting feature is turned off. It must be enabled in the globa
 
 The built-in InvenTree report templates (and any reports which are derived from the built-in templates) use the *Page Size* option to set the page size of the generated reports.
 
-{% with id="report_page_size", url="report/report_default_page_size.png", description="Report Page Size" %}
-{% include 'img.html' %}
-{% endwith %}
-
 !!! info "Override Page Size"
     Custom report templates do not have to make use of the *Page Size* option, although it is made available to the template context.
 
@@ -84,10 +84,6 @@ The built-in InvenTree report templates (and any reports which are derived from 
 As templates are rendered directly to a PDF object, it can be difficult to debug problems when the PDF does not render exactly as expected. 
 
 Setting the *Debug Mode* option renders the template as raw HTML instead of PDF, allowing the rendering output to be introspected. This feature allows template designers to understand any issues with the generated HTML (before it is passed to the PDF generation engine).
-
-{% with id="report_debu_mode", url="report/report_debug_mode.png", description="Report Debug Mode" %}
-{% include 'img.html' %}
-{% endwith %}
 
 !!! warning "HTML Rendering Limitations"
     When rendered in debug mode, @page attributes (such as size, etc) will **not** be observed. Additionally, any asset files stored on the InvenTree server will not be rendered. Debug mode is not intended to produce "good looking" documents!
