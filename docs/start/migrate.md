@@ -19,7 +19,7 @@ For example, if you wish to migrate from an SQLite database backend to a MySQL d
 Export the database contents to a JSON file using the following command:
 
 ```
-inv export-records -f data.json
+invoke export-records -f data.json
 ```
 
 This will create JSON file at the specified location which contains all database records.
@@ -34,7 +34,7 @@ Configure the new database using the normal processes (see [Configuration](./con
 Then, ensure that the database schema are correctly initialized in the new database:
 
 ```
-inv migrate
+invoke migrate
 ```
 
 This ensures that the required database tables exist, which must be the case before data can be imported.
@@ -47,7 +47,7 @@ The new database should now be correctly initialized with the correct table stru
     If the database is not *empty* (i.e. it contains data records) then the data import process will fail. If errors occur during the import process, run `invoke delete-data` to clear all existing data from the database.
 
 ```
-inv import-records -f data.json
+invoke import-records -f data.json
 ```
 
 !!! info "Import Filename"

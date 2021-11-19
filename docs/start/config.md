@@ -19,7 +19,7 @@ The default InvenTree config file is located at `./InvenTree/config.yaml`
 
 However, the config file can be placed elsewhere, and specified with the `INVENTREE_CONFIG_FILE` environment variable.
 
-The default configuration file file is shown below:
+A short snippet from an example configuration file file is shown below. The entire default configuration file can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml) 
 
 ``` yaml
 {% include 'config.yaml' %}
@@ -32,10 +32,10 @@ In addition to specifying InvenTree options via the `config.yaml` file, these op
 - Environment variable settings use the `INVENTREE_` prefix, and are all uppercase.
 - Config file settings do not use this prefix, and are all lowercase
 
-!!! info Priotity
+!!! info "Configuration Priority"
     Configuration options set via environment variables will take priority over the values set in the `config.yaml` file.
 
-!!! warning Available Variables
+!!! warning "Available Variables"
     Some configuration options cannot be set via environment variables. Refer to the documentation below.
 
 ## Basic Options
@@ -101,7 +101,13 @@ The following email settings are available:
 
 ## Allowed Hosts / CORS
 
-By default, all hosts are allowed, and CORS requests are enabled from any origin. **This is not secure and should be adjusted for your installation**. These options can be changed in the configuration file.
+By default, all hosts are allowed, and CORS requests are enabled from any origin.
+
+!!! danger "Not Secure"
+    Allowing access from any host is not secure, and should be adjusted for your installation.
+
+!!! info "Configuration File"
+    Allowed hosts and CORS options must be changed in the configuration file, and cannot be set via environment variables
 
 For further information, refer to the following documentation:
 
@@ -124,13 +130,15 @@ Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` env
 
 ## Authentication
 
+InvenTree provides allowance for additional sign-in options. The following options are not enabled by default, and care must be taken by the system administrator when configuring these settings.
+
 ### Single Sign on
 
-SSO backends for all wanted providers need to be added to the config file as a list under the key `social_backends`. The correct backend-name can be found in django-allauths [configuration documentation](https://django-allauth.readthedocs.io/en/latest/installation.html#django).
+SSO backends for all required authentication providers need to be added to the config file as a list under the key `social_backends`. The correct backend-name can be found in django-allauths [configuration documentation](https://django-allauth.readthedocs.io/en/latest/installation.html#django).
 
 If the selected providers need additional settings they must be added as dicts under the key `social_providers`. The correct settings can be found in the django-allauths [provider documentation](https://django-allauth.readthedocs.io/en/latest/providers.html).
 
-!!! note "You are not done"
+!!! warning "You are not done"
     SSO still needs credentials for all providers and has to be enabled in the [global settings](../settings/global.md)!
 
 
