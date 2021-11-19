@@ -63,6 +63,9 @@ Download InvenTree source code, into the `./src` directory:
 git clone https://github.com/inventree/inventree src
 ```
 
+!!! info "Main Branch = Development"
+    The "main" branch of the InvenTree code base represents the "latest" (development) code. If you would like to use most recent "stable" release, target the `stable` branch.
+
 ### Create Virtual Environment
 
 Create a python virtual environment for installing required Python packages and binaries:
@@ -88,24 +91,6 @@ This installs all required Python packages using pip package manager. It also cr
 ## Create Database
 
 As part of the initial setup, an empty database needs to be created. Follow the instructions below particular to your database engine of choice:
-
-### SQLite
-
-SQLite uses a simple portable database file which is easy to use for debug and testing purposes.
-
-Install required packages as follows:
-
-!!! info "Sudo Actions"
-    Perform sudo actions from a separate shell, as 'inventree' user does not have sudo access
-
-```
-sudo apt-get install sqlite3
-```
-
-A `.sqlite3` database file will be automatically created, at the location specified in the configuration options. No further steps necessary.
-
-!!! warning "SQLite Case Sensitivity"
-    SQLite has a known [string matching limitation](https://docs.djangoproject.com/en/dev/ref/databases/#substring-matching-and-case-sensitivity) for non ASCII characters. If you are using non ASCII characters (e.g. Cyrillic text), it is recommended that you do not use SQLite, as search functionality will not work correctly.
 
 ### PostgreSQL
 
@@ -204,6 +189,24 @@ mysql> EXIT;
 
 !!! info "Username / Password"
     You should change the username and password from the values specified above. This username and password will also be for the InvenTree database connection configuration.
+
+### SQLite
+
+SQLite uses a simple portable database file which is easy to use for debug and testing purposes.
+
+Install required packages as follows:
+
+!!! info "Sudo Actions"
+    Perform sudo actions from a separate shell, as 'inventree' user does not have sudo access
+
+```
+sudo apt-get install sqlite3
+```
+
+A `.sqlite3` database file will be automatically created, at the location specified in the configuration options. No further steps necessary.
+
+!!! warning "SQLite Case Sensitivity"
+    SQLite has a known [string matching limitation](https://docs.djangoproject.com/en/dev/ref/databases/#substring-matching-and-case-sensitivity) for non ASCII characters. If you are using non ASCII characters (e.g. Cyrillic text), it is recommended that you do not use SQLite, as search functionality will not work correctly.
 
 ## Configure InvenTree Options
 

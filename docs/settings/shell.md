@@ -4,7 +4,7 @@ title: Admin Shell
 
 ## Python Shell
 
-A Python shell interface is provided at /admin/shell/.
+A Python shell interface is provided at the URL `/admin/shell/`.
 
 This interface allows advanced users direct access to the underlying database objects using Python. 
 

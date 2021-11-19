@@ -9,7 +9,7 @@ A supplier is an external **vendor** of parts and raw materials.
 To access the supplier page, click on the <span class="badge inventree nav main"><span class='fas fa-shopping-cart'></span> Buy</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-building'></span> Suppliers</span> option in the dropdown list.
 
 !!! warning
-	**Viewing**, **adding**, **editing** and **deleting** suppliers require the corresponding [Purchase Orders user permissions](../admin/permissions.md)
+	**Viewing**, **adding**, **editing** and **deleting** suppliers require the corresponding [Purchase Orders user permissions](../settings/permissions.md)
 
 ### Add Supplier
 
@@ -38,7 +38,7 @@ After the supplier details are loaded, click on the <span class='fas fa-trash-al
 Supplier parts are linked to a supplier and defined as purchasable items.
 
 !!! warning
-	**Viewing**, **adding**, **editing** and **deleting** supplier parts require the corresponding [Purchase Orders user permissions](../admin/permissions.md)
+	**Viewing**, **adding**, **editing** and **deleting** supplier parts require the corresponding [Purchase Orders user permissions](../settings/permissions.md)
 
 ### Add Supplier Part
 

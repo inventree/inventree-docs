@@ -23,12 +23,6 @@ There are a lot of planned features / improvements for integrated barcode suppor
 
 Work is planned on a plugin system to allow integration with third party applications (such as Xero, Open Cart etc).
 
-### SSO Login
-
-Allow SSO integration and login support
-
 References:
 
-- [#625](https://github.com/inventree/InvenTree/issues/625)
-- [#634](https://github.com/inventree/InvenTree/issues/634)
-- [#1693](https://github.com/inventree/InvenTree/issues/1693)
+- [#2037](https://github.com/inventree/InvenTree/issues/2037)
