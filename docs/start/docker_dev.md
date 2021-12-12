@@ -101,7 +101,7 @@ Once initial setup is complete, stopping and restarting the services is much sim
 To stop the InvenTree development server, simply run the following command:
 
 ```
-docker-compose -f docker-compose-dev.yml down
+docker-compose -f docker-compose.dev.yml down
 ```
 
 ### Start InvenTree Services
