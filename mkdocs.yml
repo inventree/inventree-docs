@@ -101,6 +101,7 @@ nav:
     - Admin Interface: settings/admin.md
     - User Permissions: settings/permissions.md
     - Single Sign on: settings/SSO.md
+    - Multi Factor Authentication: settings/MFA.md
     - Export Data: settings/export.md
     - Import Data: settings/import.md
     - Python Shell: settings/shell.md
