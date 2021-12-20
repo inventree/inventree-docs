@@ -6,7 +6,6 @@ title: Migrating Data
 
 In the case that data needs to be migrated from one database installation to another, the following procedure can be used to export data, initialize the new database, and re-import the data.
 
-For example, if you wish to migrate from an SQLite database backend to a MySQL database backend, you will need to export the data into a standardized format, and then read it back in to the new database.
 
 !!! warning "Backup Database"
 	Ensure that the original database is securely backed up first!
