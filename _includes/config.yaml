@@ -14,7 +14,6 @@ database:
 
   # --- Available options: ---
   # ENGINE: Database engine. Selection from:
-  #         - sqlite3
   #         - mysql
   #         - postgresql
   # NAME: Database name
@@ -22,10 +21,6 @@ database:
   # PASSWORD: Database password (if required)
   # HOST: Database host address (if required)
   # PORT: Database host port (if required)
-
-  # --- Example Configuration - sqlite3 ---
-  # ENGINE: sqlite3
-  # NAME: '/home/inventree/database.sqlite3'
 
   # --- Example Configuration - MySQL ---
   #ENGINE: mysql
