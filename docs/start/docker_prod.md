@@ -33,7 +33,7 @@ The example docker-compose file launches the following containers:
 
 #### PostgreSQL Database
 
-A postgresql database container which creates a postgres user:password combination (which can be changed). This uses the official [PostgreSQL image](https://hub.docker.com/_/postgres).
+A PostgreSQL database container which requires a username:password combination (which can be changed). This uses the official [PostgreSQL image](https://hub.docker.com/_/postgres).
 
 *__Note__: An empty database must be manually created as part of the setup (below)*.
 
@@ -116,7 +116,7 @@ This starts the database container (in this example, a PostgreSQL server).
 
 ### Create Database
 
-If this is the first time we are interacting with the docker containers, the InvenTree database has not yet been created.
+If this is the first time you are interacting with the docker containers, the InvenTree database has not yet been created.
 
 !!! success "First Run Only"
     If you have already created the InvenTree database you can progress to the next step
