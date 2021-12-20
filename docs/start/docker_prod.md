@@ -128,7 +128,7 @@ docker-compose run inventree-server pgcli -h inventree-db -p 5432 -u pguser
 ```
 
 !!! info "User"
-    If you have changed the `POSTGRES_USER` variable in the compose file, replace `pguser` with the different user.
+    If you have changed the `POSTGRES_USER` variable in the compose file, replace `pguser` with the different username.
 
 You will be prompted to enter the database user password (default="pgpassword", unless altered in the compose file).
 
