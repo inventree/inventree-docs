@@ -22,7 +22,7 @@ For faster input there are several ways to define the wanted serial numbers(SN):
 |  | `1` | `[1]` | single SN |
 | , | `1,3,5` | `[1, 3, 5]` | list of SNs |
 | - | `1-5` | `[1, 2, 3, 4, 5]` | strech of SN |
-| `&lt;start&gt;`+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from `&lt;start&gt;` |
+| `<start>`+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from `&lt;start&gt;` |
 | `&lt;start&gt;`+&lt;length&gt; | `2+2` | `[2, 3, 4]` | `&lt;length&gt;` SNs added to `&lt;start&gt;` |
 
 These rules can be mix-and-matched with whitespaces or commas separating them.  
