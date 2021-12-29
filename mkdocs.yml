@@ -110,7 +110,12 @@ nav:
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
-    - Plugins: extend/plugins.md
+    - Plugins:
+      - Overview: extend/plugins.md
+      - Reporting: extend/plugins/report.md
+      - Barcode: extend/plugins/barcode.md
+      - Action: extend/plugins/action.md
+      - Integration: extend/plugins/integration.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
   - App:
