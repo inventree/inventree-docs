@@ -23,8 +23,8 @@ For faster input there are several ways to define the wanted serial numbers(SN):
 | , | `1,3,5` | `[1, 3, 5]` | list of SNs |
 | - | `1-5` | `[1, 2, 3, 4, 5]` | strech of SN |
 | ~ | `~` (next SN is 8) | `[8]` | represents the next SN |
-| `<start>`+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from `&lt;start&gt;` |
-| `&lt;start&gt;`+&lt;length&gt; | `2+2` | `[2, 3, 4]` | `&lt;length&gt;` SNs added to `&lt;start&gt;` |
+| `<start>`+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from `<start>` |
+| `<start>`+`<length>` | `2+2` | `[2, 3, 4]` | `<length>` SNs added to `<start>` |
 
 These rules can be mix-and-matched with whitespaces or commas separating them.  
 For example:  
