@@ -32,7 +32,7 @@ For development new plugins can be placed ina a subdirectroy in `src/InvenTree/p
 
 #### Mixins
 
-Common use cases are covered by pre-supplied modules in the form of mixins (similar to how [django](https://docs.djangoproject.com/en/3.2/topics/class-based-views/mixins/) does it). Each mixin enables the integration into a specific area of InvenTree. Sometimes it also enhances the plugin with helper functions to supply often used functions out-of-the-box.
+Common use cases are covered by pre-supplied modules in the form of mixins (similar to how [django](https://docs.djangoproject.com/en/stable/topics/class-based-views/mixins/) does it). Each mixin enables the integration into a specific area of InvenTree. Sometimes it also enhances the plugin with helper functions to supply often used functions out-of-the-box.
 
 ##### Basic Mixin Functions
 
@@ -82,7 +82,7 @@ This mixin defines the helper functions `plugin.get_setting` and `plugin.set_set
 #### UrlsMixin
 
 Use the class constant `URLS` for a array of URLs that should be added to InvenTrees URL paths or override the `plugin.setup_urls` function.  
-The array has to contain valid URL patterns as defined in the [django documentation](https://docs.djangoproject.com/en/3.2/topics/http/urls/).
+The array has to contain valid URL patterns as defined in the [django documentation](https://docs.djangoproject.com/en/stable/topics/http/urls/).
 
 ``` python
 URLS = [
@@ -90,7 +90,7 @@ URLS = [
 ]
 ```
 
-The URLs get exposed under `/plugin/{plugin.slug}/*` and get exposed to the template engine with the prefix `plugin:{plugin.slug}:` (for usage with the [url tag](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#url)).
+The URLs get exposed under `/plugin/{plugin.slug}/*` and get exposed to the template engine with the prefix `plugin:{plugin.slug}:` (for usage with the [url tag](https://docs.djangoproject.com/en/stable/ref/templates/builtins/#url)).
 
 
 #### NavigationMixin
@@ -112,4 +112,4 @@ The optional class constants `NAVIGATION_TAB_NAME` and `NAVIGATION_TAB_ICON` can
 If this mixin is added to a plugin the directory the plugin class is defined in is added to InvenTrees `INSTALLED_APPS`.
 
 !!! warning "Danger Zone"
-    Only use this plugin if you have an understanding of djangos [app system](https://docs.djangoproject.com/en/3.2/ref/applications). Plugins with this mixin are deeply integrated into InvenTree and can cause difficult to reproduce or long-running errors. Use the built-in testing functions of django to make sure your code does not cause unwanted behaviour in InvenTree.
+    Only use this plugin if you have an understanding of djangos [app system](https://docs.djangoproject.com/en/stable/ref/applications). Plugins with this mixin are deeply integrated into InvenTree and can cause difficult to reproduce or long-running errors. Use the built-in testing functions of django to make sure your code does not cause unwanted behaviour in InvenTree.
