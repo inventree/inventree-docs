@@ -13,7 +13,7 @@ Plugins are discovered and loaded when the server is started.
 
 Multiple plugins are supported:
 
-* [Reporting plugins](./plugins/report.md)
-* [Barcode plugins](./plugins/barcode.md)
-* [Action plugins](./plugins/action.md)
-* [Integration plugins](./plugins/integration.md)
+- [Reporting plugins](./plugins/report.md)
+- [Barcode plugins](./plugins/barcode.md)
+- [Action plugins](./plugins/action.md)
+- [Integration plugins](./plugins/integration.md)
