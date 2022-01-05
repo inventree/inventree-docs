@@ -83,7 +83,7 @@ If this is the first time you are interacting with the docker containers, the In
 Run the following command to open a shell session for the database
 
 ```
-docker-compose -f docker-compose.dev.yml run inventree-dev-server pgcli -h inventree-db -p 5432 -u pguser
+docker-compose -f docker-compose.dev.yml run inventree-dev-server pgcli -h inventree-dev-db -p 5432 -u pguser
 ```
 
 !!! info "User"
