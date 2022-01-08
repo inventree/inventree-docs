@@ -8,7 +8,8 @@ You can customize the look of InvenTree via the color themes feature.
 
 ### Select Color Theme
 
-Navigate to the "Settings" page and click on the "Theme" tab, you should see the following:
+Navigate to the "Settings" page and click on the "Display" tab, you should see the following:
+
 {% with id="theme_default", url="settings/theme_default.png", description="Default InvenTree color theme" %}
 {% include 'img.html' %}
 {% endwith %}
@@ -19,6 +20,7 @@ The drop-down list let's you select any other color theme found in your static f
 	Color themes are "user specific" which means that changing the color theme in your own settings won't affect other users.
 
 Here is an example what the "Dark Reader" theme looks like:
+
 {% with id="theme_dark", url="settings/theme_dark.png", description="Dark Reader InvenTree color theme" %}
 {% include 'img.html' %}
 {% endwith %}

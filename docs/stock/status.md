@@ -28,22 +28,6 @@ The stock status is displayed as a label in the header of each stock item detail
 
 ## Update Status
 
-### Single Item
-
-To change the status of an individual stock item, click on the status label displayed in the stock item view, then select the new status:
-
-{% with id="stock_status_change", url="stock/stock_status_change.png", description="Stock Status Change" %}
-{% include 'img.html' %}
-{% endwith %}
-
-Submit the form then the label will be updated:
-
-{% with id="stock_status_label_updated", url="stock/stock_status_label_updated.png", description="Stock Status Label Updated" %}
-{% include 'img.html' %}
-{% endwith %}
-
-### Multiple Items
-
 In the "Stock" tab of the part view, select all stock items which stock status needs to be updated:
 
 {% with id="stock_status_change_multiple", url="stock/stock_status_change_multiple.png", description="Stock Status Status Multiple" %}

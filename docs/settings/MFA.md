@@ -10,7 +10,8 @@ As TOTP is an [open standard](https://datatracker.ietf.org/doc/html/rfc6238) the
 
 ### Configuration
 
-To make MFA mandatory for all users
+To make MFA mandatory for all users:
+
 1. Enable it in the [global settings](../settings/global.md).
 
 ### Security Consideration
