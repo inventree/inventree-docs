@@ -10,24 +10,41 @@ User settings are arranged in the following categories:
 
 ### Account
 
-User account configuration
+User account configuration, including:
+
+- Account management
+- Session management
+- Authentication options
+- Theme selection
+- Language selection
 
 ### Home Page
 
 Customize display of items on the InvenTree home page
 
+
 ### Search
 
 Customize settings for search results
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Search Preview Results | Integer | Number of results to show in search preview window | 10 |
+| Search Show Stock | Boolean | Display stock levels in part search results | True |
+| Hide Inactive Parts | Boolean | Hide inactive parts in search preview | False |
 
 ### Labels
 
 Settings for label printing
 
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Inline Label Display | Boolean | Display PDF labels in the browser | True |
+
 ### Reports
 
 Settings for report generation
 
-### Forms
-
-Customize behavior of modal forms
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Inline Report Display | Boolean | Display PDF reports in the browser | False |

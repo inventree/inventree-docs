@@ -22,12 +22,15 @@ For faster input there are several ways to define the wanted serial numbers(SN):
 |  | `1` | `[1]` | single SN |
 | , | `1,3,5` | `[1, 3, 5]` | list of SNs |
 | - | `1-5` | `[1, 2, 3, 4, 5]` | strech of SN |
-| \<start>+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from \<start> |
-| \<start>+\<lenght> | `2+2` | `[2, 3, 4]` | \<length> SNs add. to \<start> |
+| ~ | `~` (next SN is 8) | `[8]` | represents the next SN |
+| `<start>`+ | `4+` (with 3 numbers needed) | `[4, 5, 6]` | all needed SNs from `<start>` |
+| `<start>`+`<length>` | `2+2` | `[2, 3, 4]` | `<length>` SNs added to `<start>` |
 
 These rules can be mix-and-matched with whitespaces or commas separating them.  
 For example:  
-`1 3-5 9+2` or `1,3-5,9+2` result in `[1, 3, 4, 5, 9, 10, 11]`
+`1 3-5 9+2` or `1,3-5,9+2` result in `[1, 3, 4, 5, 9, 10, 11]`  
+`~+2`(with next SN beeing 14) results in `[14, 15, 16]`  
+`~+`(with next SN beeing 14 and 2 numbers needed) results in `[14, 15]`  
 
 
 ## Build Orders
