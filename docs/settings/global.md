@@ -106,7 +106,6 @@ Options for purchase orders
 | --- | --- | --- | --- |
 | Reference Prefix | String | Prefix for purchase order reference | PO |
 
-
 ### Sales orders
 
 Options for sales orders
@@ -114,3 +113,14 @@ Options for sales orders
 | Setting | Type | Description | Default |
 | --- | --- | --- | --- |
 | Reference Prefix | String | Prefix for sales order reference | SO |
+
+### Plugin Settings
+
+Change into what parts plugins can integrate into.
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Enable URL integration | Boolean | Enable plugins to add URL routes | False |
+| Enable navigation integration | Boolean | Enable plugins to integrate into navigation | False |
+| Enable setting integration | Boolean | Enable plugins to integrate into inventree settings | False |
+| Enable app integration | Boolean | Enable plugins to add apps | False |
