@@ -95,20 +95,18 @@ The *Unallocate Stock* button can be used to remove all allocations of untracked
 
 Allocation of tracked stock items is slightly more complex. Instead of being allocated against the *Build Order*, tracked stock items must be allocated against an individual *Build Output*.
 
-Allocating tracked stock items to particular build outputs is performed in the *Build Outputs* tab:
+Allocating tracked stock items to particular build outputs is performed in the *Pending Items* tab:
 
-Let us consider the case where the BOM for the assembled part has a single *trackable* part, which we will call simply "Tracked Part".
-
-In the *Build Outputs* tab, we can see that each build output has a stock allocation requirement which must be met before that build output can be completed:
+In the *Pending Items* tab, we can see that each build output has a stock allocation requirement which must be met before that build output can be completed:
 
 {% with id="build_allocate_tracked_parts", url="build/build_allocate_tracked_parts.png", description="Allocate tracked parts" %}
 {% include "img.html" %}
 {% endwith %}
 
-Here we can see that the incomplete build outputs (serial numbers 5 and 6) now have a progress bar indicating the status of tracked stock item allocation:
+Here we can see that the incomplete build outputs (serial numbers 15 and 14) now have a progress bar indicating the status of tracked stock item allocation:
 
-- Serial number 5 has been fully allocated, and can be completed
-- Serial number 6 has not been fully allocated, and cannot yet be completed
+- Serial number 15 has been fully allocated, and can be completed
+- Serial number 14 has not been fully allocated, and cannot yet be completed
 
 ## Completing a Build Output
 
