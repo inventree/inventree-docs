@@ -19,9 +19,9 @@ A sales order is linked to a specific customer, select one in the list of existi
 
 Fill out the rest of the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> 
 
-### Add Line Items
+#### Add Line Items
 
-On the sales order detail page, user can link parts to the sales order selecting the <span class="badge inventree nav side"><span class='fas fa-list'></span> Order Items</span> tab then clicking on the <span class="badge inventree add"><span class='fas fa-plus-circle'></span> Add Line Item</span> button.
+On the sales order detail page, user can link parts to the sales order selecting the <span class="badge inventree nav side"><span class='fas fa-list-ol'></span> Line Items</span> tab then clicking on the <span class="badge inventree add"><span class='fas fa-plus-circle'></span> Add Line Item</span> button.
 
 Once the "Add Line Item" form opens, select a part in the list.
 
@@ -30,20 +30,38 @@ Once the "Add Line Item" form opens, select a part in the list.
 
 Fill out the rest of the form then click on <span class="badge inventree confirm">Submit</span> 
 
-### Allocate Stock Items
+#### Shipments
 
-After adding line item and connecting a part to the sales order, user can either:
+After all line items were added to the sales order, user needs to create one or more shipments in order to allocate stock for those parts.
+
+In order to create a new shipment:
+
+1. Click on the <span class="badge inventree nav side"><span class='fas fa-truck-loading'></span> Pending Shipments</span> tab
+2. Click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Shipment</span> button, fill out the form with the shipment number (tracking number can be added but is optional) then click on <span class="badge inventree confirm">Submit</span>
+
+Repeat the two steps above to create more shipments.
+
+#### Allocate Stock Items
+
+After shipments were created, user can either:
 
 * allocate stock items for that part to the sales order (click on <span class='fas fa-sign-in-alt'></span> button)
 * or create a build order for that part to cover the quantity of the sales order (click on <span class='fas fa-tools'></span> button)
 
-### Ship Order
+During the allocation process, user is required to select the desired shipment that will contain the stock items.
 
-After all parts and stock items have been allocated, click on the <span class='fas fa-paper-plane'></span> button on the main sales order detail panel and confirm the order has been sent.
+#### Complete Shipment
 
-The sales order will be marked as __shipped__ and can __not__ be edited anymore.
+To complete a shipment, click on the <span class="badge inventree nav side"><span class='fas fa-truck-loading'></span> Pending Shipments</span> tab then click click on <span class='fas fa-truck'></span> button shown in the shipment table.
+
+Fill out the "Complete Shipment" form then click on <span class="badge inventree confirm">Submit</span>.
+
+To view all the completed shipment, click on the <span class="badge inventree nav side"><span class='fas fa-truck'></span> Completed Shipments</span> tab. In the completed shipments table, click on the <span class='fas fa-plus'></span> icon next to each shipment reference to see the items and quantities which were shipped.
+
+### Complete Order
+
+Once all items in the sales order have been shipped, click on <span class="badge inventree add"><span class='fas fa-check-circle'></span> Complete Order</span> to mark the sales order as complete.
 
 ### Cancel Order
 
-In the event that the order won't be shipped out, user has the option of cancelling the order instead.
-To do so, simply click on the <span class='fas fa-times-circle'></span> button on the main sales order detail panel and confirm the sales order has been cancelled.
+To cancel the order, click on the <span class='fas fa-tools'></span> menu button next to the <span class="badge inventree add"><span class='fas fa-check-circle'></span> Complete Order</span> button, then click on the "<span class='fas fa-tools'></span> Cancel Order" menu option. Confirm then click on the <span class="badge inventree confirm">Submit</span> to cancel the order.
