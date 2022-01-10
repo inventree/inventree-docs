@@ -5,6 +5,35 @@ title: App Release Notes
 ## InvenTree App Release Notes
 ---
 
+### 0.5.6 - January 2022
+---
+
+- Fixes bug related to transferring stock via barcode scanning
+- Updated UI for settings
+- Adds ability to disable "upload error report" functionality
+
+### 0.5.5 - January 2022
+---
+
+- Fixes bug in stock item creation form
+
+### 0.5.4 - January 2022
+---
+
+- Enable usage of camera flash when scanning barcodes
+- Enable camera toggle when scanning barcodes
+- Configurable home screen actions
+- Updated icon set
+- Removed "upload error report" functionality (instead link to GitHub issues)
+- Updated multiple language translations
+
+### 0.5.3 - November 2021
+---
+
+- Check for null value when reading user permissions
+- Updated Italian language translations
+- Updated French language translations
+
 ### 0.5.2 - October 2021
 ---
 
