@@ -52,7 +52,7 @@ During the allocation process, user is required to select the desired shipment t
 
 #### Complete Shipment
 
-To complete a shipment, click on the <span class="badge inventree nav side"><span class='fas fa-truck-loading'></span> Pending Shipments</span> tab then click click on <span class='fas fa-truck'></span> button shown in the shipment table.
+To complete a shipment, click on the <span class="badge inventree nav side"><span class='fas fa-truck-loading'></span> Pending Shipments</span> tab then click on <span class='fas fa-truck'></span> button shown in the shipment table.
 
 Fill out the "Complete Shipment" form then click on <span class="badge inventree confirm">Submit</span>.
 
