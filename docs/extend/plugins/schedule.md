@@ -49,3 +49,4 @@ class ScheduledTaskPlugin(ScheduleMixin, SettingsMixin, IntegrationPluginBase):
         """
         secret_value = self.get_setting('SECRET')
         print(f"foo - SECRET = {secret_value})
+```
