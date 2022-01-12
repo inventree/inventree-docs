@@ -24,12 +24,7 @@ WEBSITE = None  # Website for the plugin, developer etc. -> is shown in plugin o
 
 
 
-#### Installing a Plugin
-
-Plugins can either be loaded from paths in the InvenTree install directory or as a plugin installed via pip. We recommend installation via pip as this enables hassle-free upgrades.
-
-For development new plugins can be placed ina a subdirectroy in `src/InvenTree/plugins`. Built-In plugins ship in `src/InvenTree/plugin/builtin`. To achive full unit-testing for all mixins there are some sample implementations in `src/InvenTree/plugin/samples`. These are not loaded in production mode.
-
+##
 #### Mixins
 
 Common use cases are covered by pre-supplied modules in the form of mixins (similar to how [django](https://docs.djangoproject.com/en/stable/topics/class-based-views/mixins/) does it). Each mixin enables the integration into a specific area of InvenTree. Sometimes it also enhances the plugin with helper functions to supply often used functions out-of-the-box.
