@@ -1,5 +1,5 @@
 ---
-title: Barcode Plugins
+title: Barcode Mixin
 ---
 
 ### Barcode Plugins

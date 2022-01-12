@@ -111,10 +111,15 @@ nav:
     - Python Interface: extend/python.md
     - Plugins:
       - Overview: extend/plugins.md
-      - Reporting: extend/plugins/report.md
-      - Barcode: extend/plugins/barcode.md
-      - Action: extend/plugins/action.md
-      - Integration: extend/plugins/integration.md
+      - Action Mixin: extend/plugins/action.md
+      - API Mixin: extend/plugins/api.md
+      - App Mixin: extend/plugins/app.md
+      - Barcode Mixin: extend/plugins/barcode.md
+      - Event Mixin: extend/plugins/event.md
+      - Navigation Mixin: extend/plugins/navigation.md
+      - Schedule Mixin: extend/plugins/schedule.md
+      - Settings Mixin: extend/plugins/settings.md
+      - URL Mixin: extend/plugins/urls.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
   - App:
