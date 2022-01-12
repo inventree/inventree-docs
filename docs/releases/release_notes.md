@@ -4,7 +4,7 @@ title: Release Notes
 
 ## InvenTree Versioning
 
-The InvenTree project follows the formalized release numbering scheme, according to the [semantic versioning specification](https://semver.org/).
+The InvenTree project follows a formalized release numbering scheme, according to the [semantic versioning specification](https://semver.org/).
 
 ### Stable Branch
 
@@ -22,7 +22,7 @@ The head of the *master* code branch represents the "latest and greatest" workin
 
 ## Stable Releases
 
-Tagged released are shown below. Click on the release notes for each version to learn more.
+Specific tagged released are shown below. Click on the release notes for each version to learn more.
 
 ### 0.5.x
 
