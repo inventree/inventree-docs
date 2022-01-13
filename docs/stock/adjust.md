@@ -43,3 +43,37 @@ Count stock items (stocktake) to record the number of items in stock at a given 
 {% with id="stock_count", url="stock/stock_count.png", description="Stock count" %}
 {% include 'img.html' %}
 {% endwith %}
+
+### Merge Stock
+
+Users can merge two or more stock items together. 
+
+The conditions for merging stock items are the following:
+
+- a stock item cannot be merged with itself
+- only stock items referring to the same part can be merged
+- supplier parts between all items have to match, unless user explicitely allows supplier parts to be different (see below)
+- stock status between all items have to match, unless user explicitely allows stock status to be different (see below).
+
+Moreover, if one of the item:
+
+- is assigned to a sale order
+- or is installed in another item
+- or contains other items
+- or is assigned to a customer
+- or is currenty in production
+- or is serialized
+
+then the merge would not be possible.
+
+If the conditions are met, the process of merging will add up the stock quantity for all items involved in the merge and create a new stock item with the final calculated quantity.
+
+To merge stock items, check two or more items in a stock table and click on the <span class='fas fa-boxes'></span> icon above the table, then click on "<span class='fas fa-object-group'></span> Merge Stock" menu option.
+
+In the Merge Stock Items form, user can decide to allow mismatched suppliers or status to be merged together (disabled by default).
+
+{% with id="stock_item_merge", url="stock/stock_item_merge.png", description="Stock Item Merge" %}
+{% include 'img.html' %}
+{% endwith %}
+
+Select the location for the new stock item and confirm the merge, then click on <span class="badge inventree confirm">Submit</span> to process the merge.
