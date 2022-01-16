@@ -13,9 +13,10 @@ If you want to remove parts of the user interface -> remove the permissions for 
 
 If you add a lot of code (over ~1000 LOC) maybe split it into multiple plugins to make upgrading and testing simpler.
 
-### It will be a plugin! Pick your building blocks
+### It will be a plugin!
 Great. Now please read the [plugin documentation](./plugins.md) to get an overview of the architecture. It is rather short as a the (builtin) mixins come with extensive docstrings.
 
+### Pick your building blocks
 Consider the usecase for your plugin and define the exact function of the plugin, maybe wrtie it down in a short readme. Then pick the mixins you need (they help reduce custom code and keep the system reliable if internal calls change).
 
 - Is it just a simple REST-endpoint that runs a function ([ActionMixin](./plugins/action.md)) or a parser for a custom barcode format ([BarcodeMixin](./plugins/barcode.md))?
