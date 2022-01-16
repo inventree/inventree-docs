@@ -6,17 +6,17 @@ title: How to plugin
 A short introductory guide for plugin beginners.
 
 ### Should it be a plugin?
-First of all figure out what you function / code should do.
-If you want to change how InvenTree base mechanics and business logic work a plugin will not be sufficient. Maybe fork the project or better start a discussion on GitHub.
+First of all figure out what your plugin / code should do.
+If you want to change how InvenTree base mechanics and business logic work, a plugin will not be sufficient. Maybe fork the project or better start a discussion on GitHub. There might be an easier / established way to do what you want.
 
-If you want to remove parts of the user interface -> remove the permissions for that part and the users will not see them.
+If you want to remove parts of the user interface -> remove the permissions for those objects / actions and the users will not see them.
 
-If you add a lot of code (over ~1000 LOC) maybe spilt it into multiple plugins to make upgrading specific parts and testing simpler.
+If you add a lot of code (over ~1000 LOC) maybe split it into multiple plugins to make upgrading and testing simpler.
 
-### It will be a plugin! Now pick your mixins
-Great. Now please read the plugin documentation to figure out the basic way it works. It is rather short as a the (builtin) mixins come with extensive docstrings.
+### It will be a plugin! Pick your building blocks
+Great. Now please read the plugin documentation to get an overview of the architecture. It is rather short as a the (builtin) mixins come with extensive docstrings.
 
-Consider the usecase for your plugin and define the exact function of the plugin, maybe even in a short readme. The pick the mixins you need. They help reduce custom code and keep the system reliable if internal calls change.
+Consider the usecase for your plugin and define the exact function of the plugin, maybe wrtie it down in a short readme. Then pick the mixins you need (they help reduce custom code and keep the system reliable if internal calls change).
 
 - Is it just a simple REST-endpoint that runs a function (ActionMixin) or a parser for a custom barcode format (BarcodeMixin)?
 - How does the user interact with the plugin? Is it a UI separate from the main InvenTree UI (UrlsMixin), does it need multiple pages with navigation-links (NavigationMixin).
