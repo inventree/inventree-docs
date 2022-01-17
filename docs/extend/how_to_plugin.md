@@ -26,3 +26,19 @@ Consider the usecase for your plugin and define the exact function of the plugin
 - Does the plugin need configuration that should be user changeable ([SettingsMixin](./plugins/settings.md)) or static (just use a yaml in the config dir)?
 - You want to receive webhooks? Do not code your own untested function, use the WebhookEndpoint model as a base and override the perform_action method.
 - Do you need the full power of Django with custom models and all the complexity that comes with that – welcome to the danger zone and [AppMixin](./plugins/app.md). The plugin will be treated as a app by django and can maybe rack the whole instance.
+
+### Development guidelines
+If you want to make your life easier, try to follow these guidelines; break where it makes sense for your use case.
+- keep it simple - more that 1000 LOC are normally to much for a plugin
+- use mixins where possible - we try to keep coverage high for them so they are not likely to break
+- do not use internal functions - if a functions name starts with `_` it is internal and might change at any time
+- keep you imports clean - the APIs for plugins and mixins are young and evolving. Use
+```
+from plugin import IntegrationPluginBase, registry
+from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMixin
+
+```
+- deliver as a package - pip is great for dependency management and pypi can serve as a transparent and reliable delivery infrastructure
+- tag your GitHub repo with 'inventree' and 'inventreeplugins' to make discovery easier
+- use GitHub actions to test your plugin regularly (you can [schedule actions](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule)) against the 'latest' [docker-build]https://hub.docker.com/r/inventree/inventree of InvenTree
+- if you use the AppMixin pin your plugin against the stable branch of InvenTree, your migrations might get messed up otherwise
