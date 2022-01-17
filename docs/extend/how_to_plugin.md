@@ -42,5 +42,5 @@ from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMix
 - deliver as a package - pip is great for dependency management and pypi can serve as a transparent and reliable delivery infrastructure
 - if you need to use a private infrastructure, use the 'Releases' functions in GitHub or Gitlab. Point to the 'latest' release endpoint when installing to make sure the update function works
 - tag your GitHub repo with 'inventree' and 'inventreeplugins' to make discovery easier
-- use GitHub actions to test your plugin regularly (you can [schedule actions](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule)) against the 'latest' [docker-build]https://hub.docker.com/r/inventree/inventree of InvenTree
+- use GitHub actions to test your plugin regularly (you can [schedule actions](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule)) against the 'latest' [docker-build](https://hub.docker.com/r/inventree/inventree) of InvenTree
 - if you use the AppMixin pin your plugin against the stable branch of InvenTree, your migrations might get messed up otherwise
