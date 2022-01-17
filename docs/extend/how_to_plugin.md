@@ -29,6 +29,7 @@ Consider the usecase for your plugin and define the exact function of the plugin
 
 ### Development guidelines
 If you want to make your life easier, try to follow these guidelines; break where it makes sense for your use case.
+
 - keep it simple - more that 1000 LOC are normally to much for a plugin
 - use mixins where possible - we try to keep coverage high for them so they are not likely to break
 - do not use internal functions - if a functions name starts with `_` it is internal and might change at any time
