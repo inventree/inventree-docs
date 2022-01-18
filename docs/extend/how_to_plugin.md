@@ -40,7 +40,6 @@ If you want to make your life easier, try to follow these guidelines; break wher
 ```
 from plugin import IntegrationPluginBase, registry
 from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMixin
-
 ```
 - deliver as a package - pip is great for dependency management and pypi can serve as a transparent and reliable delivery infrastructure
 - if you need to use a private infrastructure, use the 'Releases' functions in GitHub or Gitlab. Point to the 'latest' release endpoint when installing to make sure the update function works
