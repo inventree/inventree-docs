@@ -50,15 +50,15 @@ from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMix
 ### A simple example
 This example adds a new action under `/api/action/sample` using the ActionMixin.
 ``` python
-# -*- coding: utf-8 -*-
-"""sample implementation for ActionPlugin"""
+# -*- coding: utf-8 -*-  # (1)
+"""sample implementation for ActionPlugin"""  # (2)
 from plugin import IntegrationPluginBase
 from plugin.mixins import ActionMixin
 
 
 class SampleActionPlugin(ActionMixin, IntegrationPluginBase):
     """
-    Use docstrings for everything... pls
+    Use docstrings for everything... pls  # (2)
     """
 
     PLUGIN_NAME = "SampleActionPlugin"
@@ -85,3 +85,7 @@ class SampleActionPlugin(ActionMixin, IntegrationPluginBase):
     def get_result(self):
         return True  # This is returned to the client
 ```
+
+
+1.  It is recommended to put each plugin into it's own file, this is not required
+2.  Please document you functions and classes - following PEP8 or black is recommended
