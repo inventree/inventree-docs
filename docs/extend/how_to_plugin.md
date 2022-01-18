@@ -46,3 +46,42 @@ from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMix
 - tag your GitHub repo with 'inventree' and 'inventreeplugins' to make discovery easier
 - use GitHub actions to test your plugin regularly (you can [schedule actions](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule)) against the 'latest' [docker-build](https://hub.docker.com/r/inventree/inventree) of InvenTree
 - if you use the AppMixin pin your plugin against the stable branch of InvenTree, your migrations might get messed up otherwise
+
+### A simple example
+This example adds a new action under `/api/action/sample` using the ActionMixin.
+``` python
+# -*- coding: utf-8 -*-
+"""sample implementation for ActionPlugin"""
+from plugin import IntegrationPluginBase
+from plugin.mixins import ActionMixin
+
+
+class SampleActionPlugin(ActionMixin, IntegrationPluginBase):
+    """
+    Use docstrings for everything... pls
+    """
+
+    PLUGIN_NAME = "SampleActionPlugin"
+    ACTION_NAME = "sample"
+
+    # metadata
+    AUTHOR = "Sample Author"
+    DESCRIPTION = "A very basic plugin with one mixin"
+    PUBLISH_DATE = "22.02.2222"
+    VERSION = "1.2.3"  # We recommend semver and increase the major version with each new major release of InvenTree
+    WEBSITE = "https://example.com/"
+    LICENSE = "MIT"  # use what you want - OSI approved is &hearts;
+
+    # Everything form here is for the ActionMixin
+    def perform_action(self):
+        print("Action plugin in action!")
+
+    def get_info(self):
+        return {
+            "user": self.user.username,
+            "hello": "world",
+        }
+
+    def get_result(self):
+        return True  # This is returned to the client
+```
