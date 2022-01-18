@@ -27,6 +27,9 @@ Consider the usecase for your plugin and define the exact function of the plugin
 - You want to receive webhooks? Do not code your own untested function, use the WebhookEndpoint model as a base and override the perform_action method.
 - Do you need the full power of Django with custom models and all the complexity that comes with that – welcome to the danger zone and [AppMixin](./plugins/app.md). The plugin will be treated as a app by django and can maybe rack the whole instance.
 
+### Define the metadata
+Do not forget to declare the metadata for your plugin, it will be used in the setttings.
+
 ### Development guidelines
 If you want to make your life easier, try to follow these guidelines; break where it makes sense for your use case.
 
