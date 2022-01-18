@@ -49,7 +49,7 @@ from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMix
 
 ### A simple example
 This example adds a new action under `/api/action/sample` using the ActionMixin.
-``` python
+``` python title="sampleactionplugin.py"
 # -*- coding: utf-8 -*-  # (1)
 """sample implementation for ActionPlugin"""  # (2)
 from plugin import IntegrationPluginBase
