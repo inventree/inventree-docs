@@ -49,6 +49,7 @@ nav:
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
+    - Privacy: privacy.md
   - Install:
     - Introduction: start/intro.md
     - Configuration: start/config.md
