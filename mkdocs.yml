@@ -111,6 +111,7 @@ nav:
     - Python Interface: extend/python.md
     - Plugins:
       - Overview: extend/plugins.md
+      - How to plugin: extend/how_to_plugin.md
       - Action Mixin: extend/plugins/action.md
       - API Mixin: extend/plugins/api.md
       - App Mixin: extend/plugins/app.md
