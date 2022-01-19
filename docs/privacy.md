@@ -35,6 +35,4 @@ Any third party plugins which integrate with the InvenTree server should provide
 
 The InvenTree documentation is hosted by [readthedocs](https://readthedocs.org/). You can read their privacy policy [here](https://docs.readthedocs.io/en/stable/privacy-policy.html).
 
-The documentation server uses a [GA (Google Analytics)](https://docs.readthedocs.io/en/stable/privacy-policy.html#google-analytics) tracking cookie to measure user engagement with the InvenTree documentation.
-
-The information collected by GA is non-personally identifying data such as which pages were visited, web browser information, etc.
+Third party tracking cookies (e.g. Google Analytics) are *explicitly disabled* for the InvenTree documentation server.
