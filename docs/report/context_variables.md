@@ -22,7 +22,7 @@ Each report has access to a number of context variables by default. The followin
 | request | Django request object |
 | user | User who made the request to render the template |
 
-#### Build
+#### Build Order
 
 In addition to the default report context variables, the following context variables are made available to the build order report template for rendering:
 
@@ -32,6 +32,28 @@ In addition to the default report context variables, the following context varia
 | part | The [Part](./context_variables.md#part) object that the build references |
 | reference | The build order reference string |
 | quantity | Build order quantity |
+
+##### Build 
+
+| Variable | Description |
+| --- | --- |
+| part | The [Part](./context_variables.md#part) to be built (from component BOM items) |
+| reference | Build order reference (required, must be unique) |
+| title | Brief title describing the build (required) |
+| quantity | Number of units to be built |
+| parent | Reference to a [Build](./context_variables.md#build) object for which this Build is required | 
+| sales_order | References to a [Sales Order](./context_variables.md#salesorder) object for which this [Build](./context_variables.md#build) is required (e.g. the output of this build will be used to fulfil a sales order) |
+| take_from | [StockLocation](./context_variables.md#stocklocation) to take stock from to make this build (if blank, can take from anywhere) |
+| status | Build status code |
+| batch | Batch code transferred to build parts (optional) |
+| creation_date | Date the build was created (auto) |
+| target_date | Date the build will be overdue |
+| completion_date | Date the build was completed (or, if incomplete, the expected date of completion) |
+| link | External URL for extra information | 
+| notes | Text notes |
+| completed_by | User that completed the build |
+| issued_by | User that issued the build |
+| responsible | User (or group) responsible for completing the build |
 
 #### Label
 
