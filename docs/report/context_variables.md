@@ -218,9 +218,26 @@ Each part object has access to a lot of context variables about the part. The fo
 #### PurchaseOrder
 | Variable | Description |
 |----------|-------------|
+| description | The order description |
+| lines | The lines in the Purchase Order |
+| order | The order object itself |
+| reference | The reference number |
+| supplier | The supplier for this Purchase Order |
+| prefix | Purchase Order reference prefix |
+| title | The title of the order |
+
 
 #### SalesOrder
 
+!!! incomplete "TODO"
+    This section requires further work
+
 | Variable | Description |
 |----------|-------------|
-
+| customer | An object with information about the customer |
+| description | The order description |
+| lines | The lines in the Sales Order |
+| order | The order object itself |
+| prefix | Purchase Order reference prefix |
+| reference | The reference number |
+| title | The title of the order |
