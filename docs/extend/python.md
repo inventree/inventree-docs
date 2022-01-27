@@ -92,7 +92,7 @@ from inventree.base import Parameter
 from inventree.base import ParameterTemplate
 
 ## Create a new PartCategory object,
-## underneath the existing category with pk 7
+## underneath the existing category with pk 7. Leave the parent empty fpr a top level category
 furniture = PartCategory.create(api, {
     'name': 'Furniture',
     'description': 'Chairs, tables, etc',
@@ -109,19 +109,26 @@ couch = Part.create(api, {
     'virtual': False,
     ## Note - You do not have to fill out *all* fields
 })
+```
+#### Adding parameters to the sofa
+Each can have multiple parameters like added like resistance, voltage or capacitance. For the sofa length and weight make sense. Each parameter has a parameter template that combines the parameter name with a unit. So we first have to create the parameters:
 
-## Before we can add parameters to the couch, we neeed to create the parameter templates
-## These parameter templates need to be defined only once and can be used for all other parts. 
+```python
 LengthTemplate = ParameterTemplate.create(api, { 'name' : 'Length', 'units' : 'Meters' })
 WeightTemplate = ParameterTemplate.create(api, { 'name' : 'Weight', 'units' : 'kg' })
+```
+These parameter templates need to be defined only once and can be used for all other parts. Now add parameter values to the sofa
 
-## Now we create the parameters
+```python
 ParameterLength = Parameter.create(api, { 'part': couch.pk, 'template': LengthTemplate.pk, 'data' : 2 })
 ParameterWeight = Parameter.create(api, { 'part': couch.pk, 'template': WeightTemplate.pk, 'data' : 60 })
+```
+Lets finally add a picture
 
-## Add a picture to the part
+```python
 couch.upload_image('my_nice_couch.jpg')
 ```
+
 
 #### Adding a location to the sofa
 
