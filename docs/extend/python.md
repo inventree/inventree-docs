@@ -198,3 +198,12 @@ SupplierPart.create(api,{
 ```
 
 Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.
+
+#### Add the user manual or other documents
+We have the possibility to add documents to the part. We can use pdf for documents but also other files like 3D drawings or pictures. To do so we add the following commands:
+
+```python
+blabla
+
+```
+Thats it.
