@@ -204,11 +204,13 @@ SupplierPart.create(api,{
 
 Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.
 
-#### Add the user manual or other documents
+#### Add a datasheet or other documents
 We have the possibility to add documents to the part. We can use pdf for documents but also other files like 3D drawings or pictures. To do so we add the following commands:
 
 ```python
-blabla
+from inventree.part import PartAttachment
 
+PartAttachment.upload_attachment(api, pk, **{'comment':'Datasheet', 'attachment':'manual.pdf'} )
+PartAttachment.upload_attachment(api, pk, **{'comment':'Drawing', 'attachment':'sofa.dxf'} )
 ```
-Thats it.
+Here pk is the primary key of the part where the attachment will be added, comment is a name of the attachment that can be freely chosen and attachment is a file that must exist. 
