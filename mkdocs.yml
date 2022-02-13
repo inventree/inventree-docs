@@ -168,14 +168,17 @@ extra:
 
   # Site Analytics
   # See https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
-  analytics:
-    provider: google
-    property: UA-143467500-1
+  # analytics:
+  #  provider: google
+  #  property: UA-143467500-1
 
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/inventree/inventree
       name: InvenTree on GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/inventreedb
+      name: InvenTree on Twitter
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/inventree/inventree
       name: InvenTree on Docker
