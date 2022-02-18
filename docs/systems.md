@@ -2,9 +2,9 @@
 title: Management Systems
 ---
 
-## Systems for managing things
+## Systems for managing parts
 
-There are different systems in the industry for the management of getting, storing and making things. But what are they for and what do their acronyms mean?
+There are different systems in the industry for the management of getting, storing and making parts. An overview what they are for and what the acronyms mean.
 
 
 ### Inventory management *(IMS)*
