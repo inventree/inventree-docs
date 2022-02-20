@@ -69,4 +69,4 @@ The InvenTree project relies on the expertise and generosity of its [source code
 
 ## Translation Contributions
 
-Translation efforts are supported by the InvenTree community. We appreciate the efforts of our [translation team](https://crowdin.com/project/inventree/members).
+Translation efforts are supported by the InvenTree community. We appreciate the efforts of our [translation team](https://crowdin.com/project/inventree).
