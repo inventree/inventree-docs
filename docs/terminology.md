@@ -1,8 +1,8 @@
 ---
-title: Management Systems
+title: Terminology
 ---
 
-## Systems for managing parts
+## Terminology
 
 There are different systems in the industry for the management of getting, storing and making parts. An overview what they are for and what the acronyms mean.
 
