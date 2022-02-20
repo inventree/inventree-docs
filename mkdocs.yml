@@ -50,6 +50,7 @@ nav:
     - Contribute: contribute.md
     - Credits: credits.md
     - Privacy: privacy.md
+    - Terminology: terminology.md
   - Install:
     - Introduction: start/intro.md
     - Configuration: start/config.md
