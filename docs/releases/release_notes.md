@@ -24,6 +24,11 @@ The head of the *master* code branch represents the "latest and greatest" workin
 
 Specific tagged released are shown below. Click on the release notes for each version to learn more.
 
+### 0.6.x
+| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
+| --- | --- | --- | --- |
+| [0.6.0](./0.6.0.md) | 2022-02-21 | [0.6.0](https://github.com/inventree/InvenTree/releases/tag/0.6.0) | [inventree:0.6.0](https://hub.docker.com/layers/inventree/inventree/0.6.0/images/sha256-7f4d936d8647ee107a04752f13265687c580c89d5afdd4565e7073f2c32b357a?context=explore) |
+
 ### 0.5.x
 
 | <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
