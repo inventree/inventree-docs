@@ -27,6 +27,7 @@ Specific tagged released are shown below. Click on the release notes for each ve
 ### 0.6.x
 | <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
 | --- | --- | --- | --- |
+| [0.6.2](./0.6.2.md) | 2022-03-10 | [0.6.2](https://github.com/inventree/InvenTree/releases/tag/0.6.2) | [inventree:0.6.2](https://hub.docker.com/layers/inventree/inventree/0.6.2/images/sha256-09e8a4a95285906b4d1d5dbd2274f56595f0b402c296d59eca2c8534c0242257?context=explore) |
 | [0.6.1](./0.6.1.md) | 2022-03-04 | [0.6.1](https://github.com/inventree/InvenTree/releases/tag/0.6.1) | [inventree:0.6.1](https://hub.docker.com/layers/inventree/inventree/0.6.1/images/sha256-7586a9feaa50e2928742ea4b0a6441505984b196105a7f84b70b845d42e4af75?context=explore) |
 | [0.6.0](./0.6.0.md) | 2022-02-21 | [0.6.0](https://github.com/inventree/InvenTree/releases/tag/0.6.0) | [inventree:0.6.0](https://hub.docker.com/layers/inventree/inventree/0.6.0/images/sha256-7f4d936d8647ee107a04752f13265687c580c89d5afdd4565e7073f2c32b357a?context=explore) |
 
