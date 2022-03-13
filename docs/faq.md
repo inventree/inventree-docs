@@ -4,6 +4,22 @@ title: FAQ
 
 ## Frequently Asked Questions
 
+### Errors during InvenTree update
+
+Sometimes, users may encounter unexpected error messages when updating their InvenTree installation to a newer version.
+
+The most common problem here is that the correct sequenct of steps is followed:
+
+1. Ensure that the InvenTree web server and background worker processes are *halted*
+1. Update the InvenTree software (e.g. using git or docker, depending on installation method)
+1. Run the `invoke update` command
+1. Restart the web server and background worker processes
+
+For more information, refer to the installation guides:
+
+- [Docker Installation](./start/docker_prod.md#updating-inventree)
+- [Bare Metal Installation](./start/update.md)
+
 ### Feature *x* is not visible after update
 
 If a particular menu / item is not visible after updating InvenTree, it may be due to your internet browser caching old versions of CSS and JavaScript files.
@@ -47,5 +63,4 @@ invoke worker
 ```
 
 !!! info "Supervisor"
-
-A better option is to manage the background worker process using a process manager such as supervisor. Refer to the [production server guide](./start/production.md).
+    A better option is to manage the background worker process using a process manager such as supervisor. Refer to the [production server guide](./start/production.md).

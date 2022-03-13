@@ -46,6 +46,7 @@ The following basic options are available:
 | --- | --- | --- | --- |
 | INVENTREE_DEBUG | debug | Enable debug mode | True |
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
+| INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
 
 ## Secret Key
 

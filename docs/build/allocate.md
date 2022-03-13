@@ -61,25 +61,20 @@ In each row, pressing the <span class='fas fa-plus'></span> icon expands the row
 {% include "img.html" %}
 {% endwith %}
 
-### Auto Allocation
-
-To speed up the allocation process, the *Auto Allocate* button can be used to allocate untracked stock items to the build. Automatic allocation of stock items does not work in every situation, as a number of criteria must be met.
+## Manual Stock Allocation
 
 For each line in the BOM, stock will be automatically allocated if one (and only one) stock item (for the referenced part) is found (within the specified *source location* for the build):
 
-!!! warning "Multiple Stock Items"
-    If multiple stock items are available, the InvenTree auto allocation system cannot make a determination about which stock item to allocate.
-
-Selecting *Auto Allocate* opens a dialog window which displays the stock items which will be allocated to the build during the auto allocation process:
+Selecting *Allocate Stock* opens a dialog window which displays the stock items which will be allocated to the build during the auto allocation process:
 
 {% with id="build_auto", url="build/build_auto_allocate.png", description="Auto allocate" %}
 {% include "img.html" %}
 {% endwith %}
 
-!!! info "Note"
-    Note here that the *SAM-M8Q-0-10* part can be automatically allocated as it only exists in a single stock location. However the other BOM line item exists in multiple locations, and thus cannot be automatically allocated
+Note here that there are two parts in the BOM which can be automatically allocated, as they only have a single corresponding StockItem available.
+However the other BOM line item exists in multiple locations, and thus cannot be automatically allocated. These will need to be manually selected by the user.
 
-### Manual Allocation
+### Row Allocation
 
 Stock can be manually allocated to the build as required, using the *Allocate stock* button available in each row of the allocation table
 
@@ -91,24 +86,50 @@ Stock allocations can be manually adjusted or deleted using the action buttons a
 
 The *Unallocate Stock* button can be used to remove all allocations of untracked stock items against the build order.
 
+## Automatic Stock Allocation
+
+To speed up the allocation process, the *Auto Allocate* button can be used to allocate untracked stock items to the build. Automatic allocation of stock items does not work in every situation, as a number of criteria must be met.
+
+The *Automatic Allocation* dialog is presented as shown below:
+
+{% with id="auto_allocate_dialog", url="build/auto_allocate_dialog.png", description="Automatic allocation dialog" %}
+{% include "img.html" %}
+{% endwith %}
+
+**Source Location**
+
+Select the master location where stock items are to be allocated from. Leave this input blank to allocate stock items from any available location.
+
+**Interchangeable Stock**
+
+Set this option to *True* to signal that stock items can be used interchangeably. This means that in the case where multiple stock items are available, the auto-allocation routine does not care which stock item it uses.
+
+!!! warning "Take Care"
+    If the *Interchangeable Stock* option is enabled, and there are multiple stock items available, the results of the automatic allocation algorithm may somewhat unexpected.
+
+!!! info "Example"
+    Let's say that we have 5 reels of our *C_100nF_0603* capacitor, each with 4,000 parts available. If we do not mind which of these reels the stock should be taken from, we enable the *Interchangeable Stock* option in the dialog above. In this case, the stock will be allocated from one of these reels, and eventually subtracted from stock when the build is completed. 
+
+**Substitute Stock**
+
+Set this option to *True* to allow substitute parts (as specifed by the BOM) to be allocated, if the primary parts are not available.
+
 ## Allocating Tracked Stock
 
 Allocation of tracked stock items is slightly more complex. Instead of being allocated against the *Build Order*, tracked stock items must be allocated against an individual *Build Output*.
 
-Allocating tracked stock items to particular build outputs is performed in the *Build Outputs* tab:
+Allocating tracked stock items to particular build outputs is performed in the *Pending Items* tab:
 
-Let us consider the case where the BOM for the assembled part has a single *trackable* part, which we will call simply "Tracked Part".
-
-In the *Build Outputs* tab, we can see that each build output has a stock allocation requirement which must be met before that build output can be completed:
+In the *Pending Items* tab, we can see that each build output has a stock allocation requirement which must be met before that build output can be completed:
 
 {% with id="build_allocate_tracked_parts", url="build/build_allocate_tracked_parts.png", description="Allocate tracked parts" %}
 {% include "img.html" %}
 {% endwith %}
 
-Here we can see that the incomplete build outputs (serial numbers 5 and 6) now have a progress bar indicating the status of tracked stock item allocation:
+Here we can see that the incomplete build outputs (serial numbers 15 and 14) now have a progress bar indicating the status of tracked stock item allocation:
 
-- Serial number 5 has been fully allocated, and can be completed
-- Serial number 6 has not been fully allocated, and cannot yet be completed
+- Serial number 15 has been fully allocated, and can be completed
+- Serial number 14 has not been fully allocated, and cannot yet be completed
 
 ## Completing a Build Output
 

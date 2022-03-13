@@ -62,3 +62,11 @@ InvenTree relies on the following frontend libraries and components:
 | [Moment JS](https://github.com/moment/momentjs.com/) | MIT | Time and date rendering |
 | [jquery-treegrid](https://github.com/maxazan/jquery-treegrid/) | MIT | Treegrid rendering |
 | [clipboard.js](https://github.com/zenorocha/clipboard.js) | MIT | text copying |
+
+## Source Code Contributions
+
+The InvenTree project relies on the expertise and generosity of its [source code contributors](https://github.com/inventree/InvenTree/graphs/contributors).
+
+## Translation Contributions
+
+Translation efforts are supported by the InvenTree community. We appreciate the efforts of our [translation team](https://crowdin.com/project/inventree).

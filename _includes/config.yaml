@@ -14,18 +14,15 @@ database:
 
   # --- Available options: ---
   # ENGINE: Database engine. Selection from:
-  #         - sqlite3
   #         - mysql
   #         - postgresql
+  #         - sqlite3
   # NAME: Database name
   # USER: Database username (if required)
   # PASSWORD: Database password (if required)
   # HOST: Database host address (if required)
   # PORT: Database host port (if required)
 
-  # --- Example Configuration - sqlite3 ---
-  # ENGINE: sqlite3
-  # NAME: '/home/inventree/database.sqlite3'
 
   # --- Example Configuration - MySQL ---
   #ENGINE: mysql
@@ -42,6 +39,10 @@ database:
   #PASSWORD: inventree_password
   #HOST: 'localhost'
   #PORT: '5432'
+  
+  # --- Example Configuration - sqlite3 ---
+  # ENGINE: sqlite3
+  # NAME: '/home/inventree/database.sqlite3'
 
 # Select default system language (default is 'en-us')
 language: en-us
@@ -68,6 +69,19 @@ currencies:
 
 # Email backend configuration
 # Ref: https://docs.djangoproject.com/en/dev/topics/email/
+# Available options:
+# host: Email server host address
+# port: Email port
+# username: Account username
+# password: Account password
+# prefix: Email subject prefix
+# tls: Enable TLS support
+# ssl: Enable SSL support
+
+# Alternatively, these options can all be set using environment variables,
+# with the INVENTREE_EMAIL_ prefix:
+# e.g. INVENTREE_EMAIL_HOST / INVENTREE_EMAIL_PORT / INVENTREE_EMAIL_USERNAME
+# Refer to the InvenTree documentation for more information
 
 email:
   # backend: 'django.core.mail.backends.smtp.EmailBackend'
@@ -83,10 +97,36 @@ email:
 # Use the environment variable INVENTREE_DEBUG
 debug: True
 
+# Set debug_toolbar to True to enable a debugging toolbar for InvenTree
+# Note: This will only be displayed if DEBUG mode is enabled, 
+#       and only if InvenTree is accessed from a local IP (127.0.0.1)
+debug_toolbar: False
+
+# Set this variable to True to enable InvenTree Plugins
+# Alternatively, use the environment variable INVENTREE_PLUGINS_ENABLED
+plugins_enabled: False
+
 # Configure the system logging level
 # Use environment variable INVENTREE_LOG_LEVEL
 # Options: DEBUG / INFO / WARNING / ERROR / CRITICAL
 log_level: WARNING
+
+# Allowed hosts (see ALLOWED_HOSTS in Django settings documentation)
+# A list of strings representing the host/domain names that this Django site can serve.
+# Default behaviour is to allow all hosts (THIS IS NOT SECURE!)
+allowed_hosts:
+  - '*'
+
+# Cross Origin Resource Sharing (CORS) settings (see https://github.com/ottoyiu/django-cors-headers)
+# Following parameters are 
+cors:
+  # CORS_ORIGIN_ALLOW_ALL - If True, the whitelist will not be used and all origins will be accepted.
+  allow_all: True
+
+  # CORS_ORIGIN_WHITELIST - A list of origins that are authorized to make cross-site HTTP requests. Defaults to []
+  # whitelist:
+  # - https://example.com
+  # - https://sub.example.com
 
 # MEDIA_ROOT is the local filesystem location for storing uploaded files
 # By default, it is stored under /home/inventree/data/media
@@ -97,3 +137,52 @@ media_root: '/home/inventree/data/media'
 # By default, it is stored under /home/inventree/data/static
 # Use environment variable INVENTREE_STATIC_ROOT
 static_root: '/home/inventree/data/static'
+
+# Optional URL schemes to allow in URL fields
+# By default, only the following schemes are allowed: ['http', 'https', 'ftp', 'ftps']
+# Uncomment the lines below to allow extra schemes
+#extra_url_schemes:
+#  - mailto
+#  - git
+#  - ssh
+
+# Login configuration
+# How long do confirmation mail last?
+# Use environment variable INVENTREE_LOGIN_CONFIRM_DAYS
+#login_confirm_days: 3
+# How many wrong login attempts are permitted?
+# Use environment variable INVENTREE_LOGIN_ATTEMPTS
+#login_attempts: 5
+
+# Add new user on first startup
+#admin_user: admin
+#admin_email: info@example.com
+#admin_password: inventree
+
+# Permit custom authentication backends
+#authentication_backends:
+#  - 'django.contrib.auth.backends.ModelBackend'
+
+#  Custom middleware, sometimes needed alongside an authentication backend change.
+#middleware:
+#  - 'django.middleware.security.SecurityMiddleware'
+#  - 'django.contrib.sessions.middleware.SessionMiddleware'
+#  - 'django.middleware.locale.LocaleMiddleware'
+#  - 'django.middleware.common.CommonMiddleware'
+#  - 'django.middleware.csrf.CsrfViewMiddleware'
+#  - 'corsheaders.middleware.CorsMiddleware'
+#  - 'django.contrib.auth.middleware.AuthenticationMiddleware'
+#  - 'django.contrib.messages.middleware.MessageMiddleware'
+#  - 'django.middleware.clickjacking.XFrameOptionsMiddleware'
+#  - 'InvenTree.middleware.AuthRequiredMiddleware'
+
+# Add SSO login-backends
+# social_backends:
+#  - 'allauth.socialaccount.providers.keycloak'
+
+# Add specific settings
+# social_providers:
+#   keycloak:
+#     KEYCLOAK_URL: 'https://keycloak.custom/auth'
+#     KEYCLOAK_REALM: 'master'
+

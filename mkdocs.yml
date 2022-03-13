@@ -46,11 +46,12 @@ nav:
     - Features: features.md
     - Getting started: started.md
     - Release Notes: releases/release_notes.md
-    - Upcoming: upcoming.md
     - Demo: demo.md
     - FAQ: faq.md
     - Contribute: contribute.md
     - Credits: credits.md
+    - Privacy: privacy.md
+    - Terminology: terminology.md
   - Install:
     - Introduction: start/intro.md
     - Configuration: start/config.md
@@ -72,7 +73,6 @@ nav:
     - Stock Items: stock/stock.md
     - Stock Status: stock/status.md
     - Adjusting Stock: stock/adjust.md
-    - Stocktake: stock/stocktake.md
     - Stock Expiry: stock/expiry.md
     - Stock Ownership: stock/owner.md
     - Test Results: stock/test.md
@@ -96,12 +96,13 @@ nav:
       - Order: report/order.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
-  - Settings:
+  - Admin:
     - Global Settings: settings/global.md
     - User Settings: settings/user.md
     - Admin Interface: settings/admin.md
     - User Permissions: settings/permissions.md
     - Single Sign on: settings/SSO.md
+    - Multi Factor Authentication: settings/MFA.md
     - Export Data: settings/export.md
     - Import Data: settings/import.md
     - Python Shell: settings/shell.md
@@ -111,7 +112,18 @@ nav:
   - Extend:
     - API: extend/api.md
     - Python Interface: extend/python.md
-    - Plugins: extend/plugins.md
+    - Plugins:
+      - Overview: extend/plugins.md
+      - How to plugin: extend/how_to_plugin.md
+      - Action Mixin: extend/plugins/action.md
+      - API Mixin: extend/plugins/api.md
+      - App Mixin: extend/plugins/app.md
+      - Barcode Mixin: extend/plugins/barcode.md
+      - Event Mixin: extend/plugins/event.md
+      - Navigation Mixin: extend/plugins/navigation.md
+      - Schedule Mixin: extend/plugins/schedule.md
+      - Settings Mixin: extend/plugins/settings.md
+      - URL Mixin: extend/plugins/urls.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
   - App:
@@ -158,14 +170,17 @@ extra:
 
   # Site Analytics
   # See https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/
-  analytics:
-    provider: google
-    property: UA-143467500-1
+  # analytics:
+  #  provider: google
+  #  property: UA-143467500-1
 
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/inventree/inventree
       name: InvenTree on GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/inventreedb
+      name: InvenTree on Twitter
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/inventree/inventree
       name: InvenTree on Docker

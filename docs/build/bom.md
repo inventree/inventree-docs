@@ -87,6 +87,17 @@ The `Create BOM Item` form will be displayed:
 
 Fill-out the `Quantity` (required), `Reference`, `Overage` and `Note` (optional) fields then click on <span class="badge inventree confirm">Submit</span> to add the BOM item to this part's BOM.
 
+### Add Substitute for BOM Item
+
+To manually add a substitute for a BOM item, click on the <span class='fas fa-exchange-alt'></span> icon in the *Actions* columns.
+
+The `Edit BOM Item Substitutes` form will be displayed:
+{% with id="bom_substitute_item", url="build/bom_substitute_item.png", description="Edit BOM Item Substitutes" %}
+{% include 'img.html' %}
+{% endwith %}
+
+Select a part in the list and click on "Add Substitute" button to confirm.
+
 ### Upload BOM
 
 Uploading a BOM to InvenTree is a three steps process:
