@@ -39,8 +39,7 @@ Multiple results can be uploaded against the same test name. In cases where mult
 
 ### Reporting
 
-!!! missing "TODO"
-	Include information on the reporting plugin architecture
+For any information regarding the reporting architecture, please refer to the [Report Generation](../report/report.md) page.
 
 ### Automated Test Intgration
 
