@@ -193,7 +193,11 @@ InvenTree supports the following reporting functionality:
 [Purchase Order report](./order.md): Order line items 
 
 ### Sales Order
-Sales Order: TODO
+
+!!! missing "TODO"
+	This section requires further work
 
 ### Stocktake
-Stocktake Report: TODO
+
+!!! missing "TODO"
+	This section requires further work
