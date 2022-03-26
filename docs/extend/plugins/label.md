@@ -38,15 +38,18 @@ class MyLabelPrinter(LabelPrintingMixin, IntegrationPluginBase):
     PLUGIN_SLUG = "mylabel"
     PLUGIN_TITLE = "A dummy printer"
 
-    def print_label(self, label):
+    def print_label(self, label, **kwargs):
         """
         Send the label to the printer
         
         Arguments:
             label: A PIL (pillow) Image file
         """
+        
+        width = kwargs['width']
+        height = kwargs['height']
 
-        printer_backend.print(label)
+        printer_backend.print(label, w=width, h=height)
 ```
 
 
