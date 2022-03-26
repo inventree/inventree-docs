@@ -109,8 +109,6 @@ nav:
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
   - Extend:
-    - API: extend/api.md
-    - Python Interface: extend/python.md
     - Plugins:
       - Overview: extend/plugins.md
       - How to plugin: extend/how_to_plugin.md
@@ -123,6 +121,8 @@ nav:
       - Schedule Mixin: extend/plugins/schedule.md
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
+    - API: extend/api.md
+    - Python Interface: extend/python.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
   - App:
