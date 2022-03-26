@@ -60,7 +60,7 @@ Supported mixin classes are:
 - [AppMixin](./plugins/app.md)
 - [BarcodeMixin](./plugins/barcode.md)
 - [EventMixin](./plugins/event.md)
-- [LabelPrintingMixin](./plugins.label.md)
+- [LabelPrintingMixin](./plugins/label.md)
 - [NavigationMixin](./plugins/navigation.md)
 - [ScheduleMixin](./plugins/schedule.md)
 - [SettingsMixin](./plugins/settings.md)

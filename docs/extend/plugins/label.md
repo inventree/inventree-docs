@@ -10,3 +10,6 @@ An example of this is the [inventree-brother-plugin](https://github.com/inventre
 
 If label printing plugins are enabled, they are able to be used directly from the InvenTree web interface:
 
+{% with id="label_print", url="plugin/print_label_select_plugin.png", description="Print label via plugin" %}
+{% include 'img.html' %}
+{% endwith %}

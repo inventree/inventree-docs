@@ -111,12 +111,13 @@ nav:
   - Extend:
     - Plugins:
       - Overview: extend/plugins.md
-      - How to plugin: extend/how_to_plugin.md
+      - How To: extend/how_to_plugin.md
       - Action Mixin: extend/plugins/action.md
       - API Mixin: extend/plugins/api.md
       - App Mixin: extend/plugins/app.md
       - Barcode Mixin: extend/plugins/barcode.md
       - Event Mixin: extend/plugins/event.md
+      - Label Printing Mixin: extend/plugins/label.md
       - Navigation Mixin: extend/plugins/navigation.md
       - Schedule Mixin: extend/plugins/schedule.md
       - Settings Mixin: extend/plugins/settings.md
