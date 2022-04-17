@@ -162,7 +162,7 @@ Please recognize the different status flags. 10 means OK, 55 means damaged. We h
 
 #### Adding manufacturers and supplier
 
-We can add manufacturers and suppliers to parts. If we add a manufacturer, a supplier is also mandatory. So we first need to create two companies, ACME (manufacturer) and X-Store (supplier).
+We can add manufacturers and suppliers to parts. We first need to create two companies, ACME (manufacturer) and X-Store (supplier).
 
 ```python
 from inventree.company import Company
@@ -198,7 +198,7 @@ SupplierPart.create(api,{
     'part':couch.pk,
     'supplier':xstore.pk,
     'SKU':'some_code',
-    'link':'https://www.xstore.com...'
+    'link':'https://www.xst.bla/products/stock?...'
 })
 SupplierPart.create(api,{
     'part':couch.pk,
