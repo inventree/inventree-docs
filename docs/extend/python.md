@@ -198,11 +198,15 @@ SupplierPart.create(api,{
     'part':couch.pk,
     'supplier':xstore.pk,
     'SKU':'some_code',
-    'manufacturer':acme.pk
+    'link':'https://www.xstore.com...'
 })
-```
+SupplierPart.create(api,{
+    'part':couch.pk,
+    'manufacturer':acme.pk,
+    'MPN':'Part code of the manufacturer'
+})
 
-Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.
+```
 
 #### Add a datasheet or other documents
 We have the possibility to add documents to the part. We can use pdf for documents but also other files like 3D drawings or pictures. To do so we add the following commands:
