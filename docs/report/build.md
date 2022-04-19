@@ -19,8 +19,19 @@ In addition to the default report context variables, the following context varia
 | --- | --- |
 | build | The [Build](./context_variables.md#build) object the report is being generated against |
 | part | The [Part](./context_variables.md#part) object that the build references |
-| reference | The build order reference string |
+| reference | The build order reference string. This is just the string that follors BO... |
+| title | The full name of the build including the BO |
 | quantity | Build order quantity |
+| build.title | The description of the build |
+| build.status | The status of the build. 20 meand 'Production' |
+| build.bom_items | A query set with all bom items fo the build |
 
+bom_items that cen be looped using {%for line in build.bom_items %} Each bom_item line has further context variables.
 
+| Variable | Description |
+| --- | --- |
+| line.reference | The reference designator of the component |
+| line.sub_part | The part as this position |
+| line.quantity | The number of components |
+| line.sub_part.build_order_allocations | ... |
 
