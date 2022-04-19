@@ -35,3 +35,69 @@ bom_items that can be looped using {%for line in build.bom_items %} Each bom_ite
 | line.quantity | The number of components |
 | line.sub_part.build_order_allocations | ... |
 
+A very simple example wihtout any html formatting:
+
+'''HTML
+reference: {{reference }} 
+<br>
+quantity: {{ quantity }} 
+<br>
+title: {{ title }} 
+<br>
+part: {{ part }} 
+<br>
+build: {{ build }} 
+<br>
+<br>
+build.reference: {{ build.reference }} 
+<br>
+build.title: {{ build.title }} 
+<br>
+build.status: {{ build.status }} 
+<br>
+-------
+<br>
+{% for line in build.bom_items %}
+reference:: {{ line.reference }} 
+<br>
+quantity:: {{ line.quantity }} 
+<br>
+sub_part: {{ line.sub_part }} 
+<br>
+sub_part.IPN: {{ line.sub_part.IPN }} 
+<br>
+sub_part.name: {{ line.sub_part.name }} 
+<br>
+sub_part.build_order_allocations: {{ line.sub_part.build_order_allocations}} 
+<br>
+........
+<br>
+{% endfor %}
+'''
+
+This will result in:
+
+reference: 0001
+quantity: 10
+title: BO0001
+part: POP-000001-001 | Converter - A to B
+build: BO0001
+
+build.reference: 0001
+build.title: Description of the build
+build.status: 20
+-------
+reference:: U002
+quantity:: 1.00000
+sub_part: ANA-000001-001 | op701 - operation amplifier
+sub_part.IPN: ANA-000001-001
+sub_part.name: op701
+sub_part.build_order_allocations: <QuerySet [<BuildItem: BuildItem object (9)>]>
+........
+reference:: U001
+quantity:: 2.00000
+sub_part: ANA-000002-001 | L7805 - LDO
+sub_part.IPN: ANA-000002-001
+sub_part.name: L7805
+sub_part.build_order_allocations: <QuerySet [<BuildItem: BuildItem object (5)>]>
+........ 
