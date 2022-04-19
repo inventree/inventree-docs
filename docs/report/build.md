@@ -77,6 +77,7 @@ sub_part.build_order_allocations: {{ line.sub_part.build_order_allocations}}
 
 This will result in:
 
+```text
 reference: 0001
 quantity: 10
 title: BO0001
@@ -101,3 +102,4 @@ sub_part.IPN: ANA-000002-001
 sub_part.name: L7805
 sub_part.build_order_allocations: <QuerySet [<BuildItem: BuildItem object (5)>]>
 ........ 
+```
