@@ -37,7 +37,7 @@ bom_items that can be looped using {%for line in build.bom_items %} Each bom_ite
 
 A very simple example wihtout any html formatting:
 
-'''HTML
+```html
 reference: {{reference }} 
 <br>
 quantity: {{ quantity }} 
@@ -73,7 +73,7 @@ sub_part.build_order_allocations: {{ line.sub_part.build_order_allocations}}
 ........
 <br>
 {% endfor %}
-'''
+```
 
 This will result in:
 
