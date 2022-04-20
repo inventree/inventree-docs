@@ -59,10 +59,10 @@ By default, the InvenTree container expects the `INVENTREE_SECRET_KEY_FILE` to e
 
 With these basics in mind, refer to the following installation guides:
 
-### Development Server
-
-Refer to the [docker development server setup guide](./docker_dev.md) for instructions on configuring a development server using docker.
-
 ### Production Server
 
 Refer to the [docker production server setup guide](./docker_prod.md) for instructions on configuring a production server using docker.
+
+### Development Server
+
+Refer to the [docker development server setup guide](./docker_dev.md) for instructions on configuring a development server using docker.

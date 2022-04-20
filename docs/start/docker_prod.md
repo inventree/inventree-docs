@@ -68,7 +68,10 @@ InvenTree stores data which is meant to be persistent (e.g. uploaded media files
 !!! info "Data Directory"
     Make sure you change the path to the local directory where you want persistent data to be stored.
 
-## Production Setup
+## Production Setup Guide
+
+!!! info "Starting Point"
+    This setup guide assumes you are starting in the `./docker/production/` directory.
 
 ### Edit Environment Variables
 
