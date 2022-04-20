@@ -16,121 +16,76 @@ There are some key differences compared to the [docker production setup](./docke
 !!! info "Static and Media Files"
     The development server runs in DEBUG mode, and serves static and media files natively.
 
-The [InvenTree docker image](https://github.com/inventree/InvenTree/blob/master/docker/Dockerfile) uses a [multi-stage build](https://docs.docker.com/develop/develop-images/multistage-build/) process to allow both production and development setups from the same image. The key difference is that the production image is pre-built using InvenTree source code from GitHub, while the development image uses the source code from your local machine (allowing live code updates).
+The InvenTree dockerfile (`./docker/Dockerfile`) uses a [multi-stage build](https://docs.docker.com/develop/develop-images/multistage-build/) process to allow both production and development setups from the same image. The key difference is that the production image is pre-built using InvenTree source code from GitHub, while the development image uses the source code from your local machine (allowing live code updates).
 
-### Docker Compose
+!!! info "Hacker Mode"
+    The following setup guide starts a development server which will reload "on the fly" as changes are made to the source code. This is designed for programmers and developers who wish to add and test new InvenTree features.
 
-A docker compose script for running a development server is provided in the source repository at [./docker/docker-compose.dev.yml](https://github.com/inventree/InvenTree/blob/master/docker/docker-compose.dev.yml).
+## Development Setup Guide
 
-This script specifies the following containers:
+!!! info "Starting Point"
+    This setup guide assumes you are starting in the `./docker/` directory.
 
-| Container | Description |
-| --- | --- |
-| inventree-dev-db | Database image (PostgreSQL) |
-| inventree-dev-server | Web server using the django development server |
-| inventree-dev-worker | Background task manager |
+### Edit Environment Variables 
 
-!!! success "Works out of the box"
-    You should not need to make any changes to the `docker-compose.dev.yml` file to run the development docker container
+If required, the user may edit the environment variables, located in the `.env` file.
 
-#### PostgreSQL Database
+!!! success "This step is optional"
+    This step can be skipped, as the default variables will work just fine!
 
-A PostgreSQL database container requires a username:password combination (which can be changed). This uses the official [PostgreSQL image](https://hub.docker.com/_/postgres).
-
-*__Note__: An empty database must be manually created as part of the setup (below)*.
-
-#### Web Server
-
-Runs an InvenTree web server instance, powered by Django's built-in webserver.
-
-#### Background Worker
-
-Runs the InvenTree background worker process.
-
-### Environment Variables
-
-Environment variables for the docker containers can be found in the file `dev-config.env` in the `docker` directory.
-
-!!! success "Works out of the box"
-    You should not normally need to change these variables from their default values.
-
-## Setup
-
-### Download Source Code
-
-First download the source code from GitHub:
-
-```
-git clone git@github.com:inventree/InvenTree.git inventree
-```
-
-### Build Docker Containers
-
-Build the docker containers with the following commands:
-
-```
-cd inventree/docker
-docker-compose -f docker-compose.dev.yml build
-```
+!!! info "Database Credentials"
+    You may also wish to change the database username (`INVENTREE_DB_USER`) and password (`INVENTREE_DB_PASSWORD`) from their default values
 
 ### Create Database
 
-If this is the first time you are interacting with the docker containers, the InvenTree database has not yet been created.
+Launch the postgresql database container, and create an empty database, with the following command:
 
-!!! success "First Run Only"
-    This command only needs to be executed on the first run, if the development database has not already been initialized
-
-Run the following command to open a shell session for the database
-
-```
-docker-compose -f docker-compose.dev.yml run inventree-dev-server pgcli -h inventree-dev-db -p 5432 -u pguser
+```bash
+docker-compose run -d inventree-dev-db
 ```
 
-!!! info "User"
-    If you have changed the `POSTGRES_USER` variable in the compose file, replace `pguser` with the different username.
+This will start the `inventree-dev-db` container (in the background) and create an empty database.
 
-You will be prompted to enter the database user password (default="pgpassword", unless altered in the compose file).
-
-Once logged in, run the following command in the database shell:
-
-```
-create database inventree;
-```
-
-Then exit the shell with <kbd>Ctrl</kbd>+<kbd>d</kbd>
-
-### Database Setup
+### Perform Initial Setup
 
 The database has now been created, but it is empty! Perform the initial database setup by running the following command:
 
-```
-docker-compose -f docker-compose.dev.yml run inventree-dev-server invoke update
+```bash
+docker-compose run inventree-dev-server invoke update
 ```
 
-This command performs the following steps:
+If this is the first time you are configuring the development server, this command will build a development version of the inventree docker image.
+
+This command also performs the following steps:
 
 - Ensure required python packages are installed
 - Perform the required schema updates to create the required database tables
 - Update translation files
+- Collect all required static files into a directory where they can be served by nginx
+
+!!! info "Grab a coffee"
+    This initial build process may take a few minutes!
 
 ### Create Admin Account
 
-!!! info "First Run Only"
-    This command only needs to be executed on the first run, if you have not already created a superuser account for the database
+If you are creating the initial database, you need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
 
 ```
-docker-compose -f docker-compose.dev.yml run inventree-dev-server invoke superuser
+docker-compose run inventree-dev-server invoke superuser
 ```
 
-This will prompt you to create a superuser account for the InvenTree instance.
+### Start Docker Containers
 
-### Run Containers
-
-Launch the server and worker containers with the following command:
+Now that the database has been created, migrations applied, and you have created an admin account, we are ready to launch the InvenTree containers:
 
 ```
-docker-compose -f docker-compose.dev.yml up -d
+docker-compose up -d
 ```
+
+This command launches the remaining containers:
+
+- `inventree-dev-server` - InvenTree web server
+- `inventree-dev-worker` - Background worker
 
 !!! success "Check Connection"
     Check that the server is running at [http://localhost:8000](http://localhost:8000). The server may take a few minutes to be ready.
@@ -144,15 +99,23 @@ Once initial setup is complete, stopping and restarting the services is much sim
 To stop the InvenTree development server, simply run the following command:
 
 ```
-docker-compose -f docker-compose.dev.yml down
+docker-compose down
 ```
 
 ### Start InvenTree Services
 
-To restart the InvenTree development server, simply run the following command:
+To start the InvenTree development server, simply run the following command:
 
 ```
-docker-compose -f docker-compose.dev.yml up -d
+docker-compose up -d
+```
+
+### Restart InvenTree Services
+
+A restart cycle is as simple as:
+
+```
+docker-compose restart
 ```
 
 ## Editing InvenTree Source
@@ -168,5 +131,5 @@ Any updates which require a database schema change must be reflected in the data
 To run database migrations inside the docker container, run the following command:
 
 ```
-docker-compose -f docker-compose.dev.yml run inventree-dev-server invoke update
+docker-compose run inventree-dev-server invoke update
 ```
