@@ -30,6 +30,8 @@ bom_items that can be looped using
 
 ```html 
 {%for line in build.bom_items %}
+some code
+{% endfor %}
 ```
 
 Each bom_item line has further context variables.
