@@ -37,6 +37,7 @@ bom_items that can be looped. Each bom_item line has further context variables.
 
 A very simple example wihtout any html formatting:
 
+{% raw %}
 ```html
 reference: {{reference }} 
 <br>
@@ -103,3 +104,4 @@ sub_part.name: L7805
 sub_part.build_order_allocations: <QuerySet [<BuildItem: BuildItem object (5)>]>
 ........ 
 ```
+{% endraw %}
