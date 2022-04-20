@@ -26,15 +26,7 @@ In addition to the default report context variables, the following context varia
 | build.status | The status of the build. 20 means 'Production' |
 | build.bom_items | A query set with all bom items for the build |
 
-bom_items that can be looped using 
-
-```html 
-{%for line in build.bom_items %}
-some code
-{% endfor %}
-```
-
-Each bom_item line has further context variables.
+bom_items that can be looped. Each bom_item line has further context variables.
 
 | Variable | Description |
 | --- | --- |
