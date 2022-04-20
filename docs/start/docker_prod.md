@@ -78,10 +78,10 @@ InvenTree stores data which is meant to be persistent (e.g. uploaded media files
 The first step is to edit the environment variables, located in the `.env` file.
 
 !!! warning "External Volume"
-    The only *mandatory* change is to define the `INVENTREE_EXT_VOLUME` variable - this must point to a directory *on your local machine* where persistent data is to be stored.
+    You must define the `INVENTREE_EXT_VOLUME` variable - this must point to a directory *on your local machine* where persistent data is to be stored.
 
-!!! info "Database Credentials"
-    You may also wish to change the database username (`INVENTREE_DB_USER`) and password (`INVENTREE_DB_PASSWORD`) from their default values
+!!! warning "Database Credentials"
+    You must also define the database username (`INVENTREE_DB_USER`) and password (`INVENTREE_DB_PASSWORD`). You should ensure they are changed from the default values for added security
 
 ### Create Database
 
