@@ -59,21 +59,11 @@ table td {
 
 {% block page_content %}
 <table>
-    <tr>
-	<td>Board</td><td>{{ part.IPN }}</td>
-    </tr>
-    <tr>
-	<td>Description</td><td>{{ part.description }}</td>
-    </tr>
-    <tr>
-	<td>User</td><td>{{ user }}</td>
-    </tr>
-    <tr>
-	<td>Date</td><td>{{ date }}</td>
-    </tr>
-    <tr>
-	<td>Number of different components (codes)</td><td>{{ bom_items.count }}</td>
-    </tr>
+  <tr> <td>Board</td><td>{{ part.IPN }}</td>  </tr>
+  <tr> <td>Description</td><td>{{ part.description }}</td> </tr>
+  <tr> <td>User</td><td>{{ user }}</td> </tr>
+  <tr> <td>Date</td><td>{{ date }}</td> </tr>
+  <tr> <td>Number of different components (codes)</td><td>{{ bom_items.count }}</td> </tr>
 </table>
 <br>
 <table class='table table-striped table-condensed'>
