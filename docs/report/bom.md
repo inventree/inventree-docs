@@ -91,7 +91,7 @@ table td {
           <td>{{ line.reference }}</td>
 	        <td>
 	          {% for sub in line.substitutes.all %}
-		          {{ sub.part.IPN }}<br>
+		    {{ sub.part.IPN }}<br>
             {% endfor %}
           </td>
           </tr>
@@ -107,4 +107,7 @@ table td {
 | Variable | Description |
 | --- | --- |
 | bom_items | Query set that contains all BOM items |
-| bom_items.sub_part | One part of the BOM |
+| bom_items...sub_part | One component of the BOM |
+| bom_items...qualtity | Numeber of parts |
+| bom_items...reference | Reference designators of the part |
+| bom_items...substitutes | Query set that contains sunstitutes of the part if any exist in the BOM |
