@@ -8,7 +8,7 @@ The bill of materials is an essential part of the documentation that needs to be
 ### A simple example
 The following picture shows a simple example for a PCB with just three components from two different parts. 
 
-{% with id="report-options", url="report/bom_example.png", description="Report Options" %} {% include 'img.html' %} {% endwith %}
+{% with id="report-options", url="report/bom_example.png", description="BOM example" %} {% include 'img.html' %} {% endwith %}
 
 This example has been created using the following html template:
 
