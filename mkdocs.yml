@@ -13,8 +13,18 @@ theme:
   name: material
   custom_dir: _includes/overrides
   palette:
-    scheme: default
-    accent: light blue
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate 
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
   logo: assets/logo.png
   favicon: assets/favicon.ico
   icon:
