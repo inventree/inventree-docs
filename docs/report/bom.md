@@ -3,7 +3,7 @@ title: BOM Generation
 ---
 
 ## BOM Generation
-The bill of materials is an essential part of the documentation that needs to be send to the facctory. A sinple csv export is OK to be importet into SMT machines. But for human redable documentation it might not be suficcient. Additional information ist needed. The Inventree report system allows to generate BOM well formatted BOM reports. 
+The bill of materials is an essential part of the documentation that needs to be sent to the factory. A simple csv export is OK to be important into SMT machines. But for human readable documentation it might not be sufficient. Additional information is needed. The Inventree report system allows to generate BOM well formatted BOM reports. 
 
 ### A simple example
 The following picture shows a simple example for a PCB with just three components from two different parts. 
@@ -108,6 +108,6 @@ table td {
 | --- | --- |
 | bom_items | Query set that contains all BOM items |
 | bom_items...sub_part | One component of the BOM |
-| bom_items...qualtity | Numeber of parts |
+| bom_items...quantity | Number of parts |
 | bom_items...reference | Reference designators of the part |
-| bom_items...substitutes | Query set that contains sunstitutes of the part if any exist in the BOM |
+| bom_items...substitutes | Query set that contains substitutes of the part if any exist in the BOM |
