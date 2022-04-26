@@ -103,6 +103,7 @@ nav:
       - Packing List: report/pack.md
       - Build Order: report/build.md
       - Order: report/order.md
+      - BOM: report/bom.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
   - Admin:
