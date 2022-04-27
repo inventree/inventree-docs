@@ -23,6 +23,7 @@ Configuration of basic server settings.
 | --- | --- | --- | --- |
 | InvenTree Instance Name | String | String descriptor for the InvenTree server instance | InvenTree Server |
 | Use Instance Name | Boolean | Use instance name in title bars | False |
+| Restrict showing `about` | Boolean | Show the `about` modal only to superusers | False |
 | Base URL | String | Base URL for server instance | *blank* |
 | Company Name | String | Company name | My compant name |
 | Download from URL | Boolean | Allow downloading of images from remote URLs | False |
