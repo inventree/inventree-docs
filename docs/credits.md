@@ -62,6 +62,7 @@ InvenTree relies on the following frontend libraries and components:
 | [Moment JS](https://github.com/moment/momentjs.com/) | MIT | Time and date rendering |
 | [jquery-treegrid](https://github.com/maxazan/jquery-treegrid/) | MIT | Treegrid rendering |
 | [clipboard.js](https://github.com/zenorocha/clipboard.js) | MIT | text copying |
+| [qr-scanner](https://github.com/nimiq/qr-scanner) | MIT | Javascript QR Code Scanner |
 
 ## Source Code Contributions
 
