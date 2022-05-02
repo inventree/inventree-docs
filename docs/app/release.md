@@ -5,6 +5,11 @@ title: App Release Notes
 ## InvenTree App Release Notes
 ---
 
+### 0.6.2 - April 2022
+---
+
+- Fixes issues related to locale support (for specific locales)
+
 ### 0.6.1 - April 2022
 ---
 
