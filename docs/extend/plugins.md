@@ -65,6 +65,7 @@ Supported mixin classes are:
 - [ScheduleMixin](./plugins/schedule.md)
 - [SettingsMixin](./plugins/settings.md)
 - [UrlsMixin](./plugins/urls.md)
+- [PanelMixin](./plugins/panel.md)
 
 ## Installing a Plugin
 
