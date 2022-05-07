@@ -130,6 +130,7 @@ nav:
       - Event Mixin: extend/plugins/event.md
       - Label Printing Mixin: extend/plugins/label.md
       - Navigation Mixin: extend/plugins/navigation.md
+      - Panel Mixin: extend/plugins/panel.md
       - Schedule Mixin: extend/plugins/schedule.md
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
