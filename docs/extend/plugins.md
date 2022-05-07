@@ -62,10 +62,10 @@ Supported mixin classes are:
 - [EventMixin](./plugins/event.md)
 - [LabelPrintingMixin](./plugins/label.md)
 - [NavigationMixin](./plugins/navigation.md)
+- [PanelMixin](./plugins/panel.md)
 - [ScheduleMixin](./plugins/schedule.md)
 - [SettingsMixin](./plugins/settings.md)
 - [UrlsMixin](./plugins/urls.md)
-- [PanelMixin](./plugins/panel.md)
 
 ## Installing a Plugin
 
