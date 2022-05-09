@@ -29,8 +29,8 @@ For faster input there are several ways to define the wanted serial numbers(SN):
 These rules can be mix-and-matched with whitespaces or commas separating them.  
 For example:  
 `1 3-5 9+2` or `1,3-5,9+2` result in `[1, 3, 4, 5, 9, 10, 11]`  
-`~+2`(with next SN beeing 14) results in `[14, 15, 16]`  
-`~+`(with next SN beeing 14 and 2 numbers needed) results in `[14, 15]`  
+`~+2`(with next SN being 14) results in `[14, 15, 16]`  
+`~+`(with next SN being 14 and 2 numbers needed) results in `[14, 15]`  
 
 
 ## Build Orders
