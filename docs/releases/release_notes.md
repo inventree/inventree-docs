@@ -15,14 +15,14 @@ The head of the *stable* code branch represents the most recent stable tagged re
 
 ### Development Branch
 
-The head of the *master* code branch represents the "latest and greatest" working codebase. All features and bug fixes are merged into the master branch, in addition to relevent stable release branches.
+The head of the *master* code branch represents the "latest and greatest" working codebase. All features and bug fixes are merged into the master branch, in addition to relevant stable release branches.
 
 !!! info "<span class='fab fa-docker'></span> Latest Docker"
     To pull down the latest *development* version of InvenTree in docker, use `inventree/inventree:latest`
 
 ## Stable Releases
 
-Specific tagged released are shown below. Click on the release notes for each version to learn more.
+Specific tagged releases are shown below. Click on the release notes for each version to learn more.
 
 ### 0.6.x
 | <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |

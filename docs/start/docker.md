@@ -26,7 +26,7 @@ InvenTree provides sample docker-compose files to get you up and running.
 - A *development* compose file provides a simple way to spin up a development environment
 
 !!! warning "Docker Compose Version"
-    Tthe following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
+    The following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
 
 ### Environment Variables
 

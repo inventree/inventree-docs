@@ -11,7 +11,7 @@ InvenTree provides access control to various features and data, by assigning eac
 
 ### User
 
-A *user* is a single unique account with login credentials. By default, a user is not afforded *any* permissions, and the user must be assigned to the relevent group for the permissions to be assigned.
+A *user* is a single unique account with login credentials. By default, a user is not afforded *any* permissions, and the user must be assigned to the relevant group for the permissions to be assigned.
 
 ### Group
 

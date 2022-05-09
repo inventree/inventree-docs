@@ -144,7 +144,7 @@ Select *InvenTree* to navigate to the [home screen](#home-screen).
 
 ### Scan Barcode
 
-Select *Scan Barcode* to open the barcode scanner, and scan an InvenTree stock item or location to instantly jump to the relevent view. Refer to the [barcode documentation](./barcode.md) for more information.
+Select *Scan Barcode* to open the barcode scanner, and scan an InvenTree stock item or location to instantly jump to the relevant view. Refer to the [barcode documentation](./barcode.md) for more information.
 
 ### Search
 
