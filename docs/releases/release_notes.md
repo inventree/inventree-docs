@@ -22,7 +22,7 @@ The head of the *master* code branch represents the "latest and greatest" workin
 
 ## Stable Releases
 
-Specific tagged released are shown below. Click on the release notes for each version to learn more.
+Specific tagged releases are shown below. Click on the release notes for each version to learn more.
 
 ### 0.6.x
 | <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
