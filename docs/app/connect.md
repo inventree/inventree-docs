@@ -47,7 +47,7 @@ Alternatively, long press on the server profile to activate the context menu, th
 
 When the app successfully connects to the server, a success message is briefly displayed at the bottom of the screen. A green <span class='fas fa-check-circle green'></span> icon next to the server profile indicate that the profile is currently *selected* and also the connection was successful.
 
-{% with id="connected", url="app/connected.jpg", maxheight="240px", description="Connected to server" %}
+{% with id="connected", url="app/connected.png", maxheight="240px", description="Connected to server" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -55,7 +55,7 @@ When the app successfully connects to the server, a success message is briefly d
 
 If (for whatever reason) the app does not successfully connect to the InvenTree server, a failure message is displayed, and a red <span class='fas fa-times-circle red'></span> icon is displayed next to the server profile.
 
-{% with id="failed", url="app/unauthorized.jpg", maxheight="240px", description="Connection failure" %}
+{% with id="failed", url="app/unauthorized.png", maxheight="240px", description="Connection failure" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -63,7 +63,7 @@ In this case, the error message displayed at the bottom of the screen provides c
 
 To edit the server profile details, long press on the server profile, and select *Edit Server Profile*:
 
-{% with id="edit", url="app/edit_server.jpg", maxheight="240px", description="Edit server profile" %}
+{% with id="edit", url="app/edit_server.png", maxheight="240px", description="Edit server profile" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -106,18 +106,6 @@ Select the *Stock* icon to open the [stock display](./stock.md). This initially 
 ### Purchase Orders
 
 Select the *Purchase Orders* icon to open the [purchase orders display](./po.md). This shows a list of currently outstanding purchase orders, allowing line items to be received into stock.
-
-### Suppliers
-
-Select the *Suppliers* icon to display the list of available suppliers
-
-### Manufacturers
-
-Select the *Manufacturers* icon to display the list of available manufacturers
-
-### Customers
-
-Select the *Customers* icon to display the list of available customers
 
 ### Settings
 
