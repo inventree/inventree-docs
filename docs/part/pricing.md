@@ -54,9 +54,9 @@ If a part is an assembly this panel will show the cost (possibly as range) for a
 
 ### Sale cost / prices
 
-Sale prices are always to customers (through [sale orders](../companies/so.md)) and support [price ranges](#price-ranges).
+Sale prices are always to customers (through [sale orders](../sell/so.md)) and support [price ranges](#price-ranges).
 
-The panel also shows historical sale price information collected from past [purchase orders](../companies/po.md).
+The panel also shows historical sale price information collected from past [purchase orders](../buy/po.md).
 
 ## Currency conversion
 

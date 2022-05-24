@@ -89,12 +89,13 @@ nav:
     - Build Orders: build/build.md
     - Bill of Materials: build/bom.md
     - Allocating Stock: build/allocate.md
-  - Companies:
-    - Suppliers: companies/supplier.md
-    - Manufacturers: companies/manufacturer.md
-    - Customers: companies/customer.md
-    - Purchase Orders: companies/po.md
-    - Sales Orders: companies/so.md
+  - Buy:
+    - Suppliers: buy/supplier.md
+    - Manufacturers: buy/manufacturer.md
+    - Purchase Orders: buy/po.md
+  - Sell:
+    - Customers: sell/customer.md
+    - Sales Orders: sell/so.md
   - Report:
     - Templates: report/report.md
     - Labels: report/labels.md
