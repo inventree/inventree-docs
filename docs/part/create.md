@@ -30,7 +30,7 @@ Once the form is completed, the browser window is redirected to the new part det
 
 If the *Create Initial Stock* setting is enabled, then an extra section is available in the part creation form to create an initial quantity of stock for the newly created part:
 
-{% with id="setting", url="part/create_initial_stock_option.png", descript="Create stock option" %}
+{% with id="setting", url="part/create_initial_stock_option.png", description="Create stock option" %}
 {% include "img.html" %}
 {% endwith %}
 
