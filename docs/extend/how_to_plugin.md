@@ -36,7 +36,7 @@ If you want to make your life easier, try to follow these guidelines; break wher
 - keep it simple - more that 1000 LOC are normally to much for a plugin
 - use mixins where possible - we try to keep coverage high for them so they are not likely to break
 - do not use internal functions - if a functions name starts with `_` it is internal and might change at any time
-- keep you imports clean - the APIs for plugins and mixins are young and evolving. Use
+- keep you imports clean - the APIs for plugins and mixins are young and evolving (see [here](plugins.md#imports)). Use
 ```
 from plugin import InvenTreePlugin, registry
 from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMixin
