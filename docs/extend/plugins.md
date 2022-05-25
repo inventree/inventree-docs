@@ -22,7 +22,7 @@ Note: Plugins are discovered and loaded only when the server is started.
 
 ### Plugin Base Class
 
-Custom plugins must inherit from the [IntegrationPluginBase class](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/integration.py). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
+Custom plugins must inherit from the [IntegrationPluginBase class](https://github.com/inventree/InvenTree/blob/2d1776a151721d65d0ae007049d358085b2fcfd5/InvenTree/plugin/plugin.py#L204). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
 
 ### Plugin Options
 
