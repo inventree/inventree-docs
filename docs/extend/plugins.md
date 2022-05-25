@@ -22,15 +22,52 @@ Note: Plugins are discovered and loaded only when the server is started.
 
 ### Plugin Base Class
 
-Custom plugins must inherit from the [IntegrationPluginBase class](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/integration.py). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
+Custom plugins must inherit from the [InvenTreePlugin class](https://github.com/inventree/InvenTree/blob/2d1776a151721d65d0ae007049d358085b2fcfd5/InvenTree/plugin/plugin.py#L204). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
+
+!!! warning "Namechange"
+    The name of the base class was changed with `0.7.0` from `IntegrationPluginBase` to `InvenTreePlugin`. While the old name is still available till `0.8.0` we strongly suggest upgrading your plugins. Deprecation warnings are raised if the old name is used.
+
+### Imports
+
+As the code base is evolving import paths might change. Therefore we provide stable import targets for important python APIs.  
+Please read all release notes and watch out for warnings - we generally provide backports for depreciated interfaces for at least one minor release.
+
+#### Plugins
+
+Generall classes an mechanisms are provided under the `plugin` [namespaces](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/__init__.py). These include:
+
+```python
+# Management objects
+registry                    # Object that manages all plugin states and integrations
+
+# Base classes
+InvenTreePlugin             # Base class for all plugins
+
+# Errors
+MixinImplementationError    # Is raised if a mixin is implemented wrong (default not overwritten for example)
+MixinNotImplementedError    # Is raised if a mixin was not implemented (core mechanisms are missing from the plugin)
+```
+
+#### Mixins
+
+Mixins are split up internally to keep the source tree clean and enable better testing seperation. All public APIs that should be used are exposed under `plugin.mixins`. These include all built-in mixins and notification methods. An up-to-date reference can be found in the source code (current master can be [found here](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/mixins/__init__.py)).
+
+#### Models and other internal InvenTree APIs
+
+!!! warning "Danger Zone"
+    The APIs outside of the `plugin` namespace are not structured for public usage and require a more in-depth knowledge of the Django framework. Please ask in GitHub discussions of the `ÌnvenTree` org if you are not sure you are using something the intended way.
+
+We do not provide stable interfaces to models or any other internal python APIs. If you need to integrate into these parts please make yourself familiar with the codebase. We follow general Django patterns and only stray from them in limited, special cases.  
+If you need to react to state changes please use the [EventMixin](./plugins/event.md).
 
 ### Plugin Options
 
-Some metadata options can be defined as constants in the plugins class
+Some metadata options can be defined as constants in the plugins class.
 
 ``` python
-PLUGIN_SLUG = None  # Used in URLs, setting-names etc. when a unique slug as a reference is needed -> the plugin name is used if not set
-PLUGIN_TITLE = None  # A nice human friendly name for the plugin -> used in titles, as plugin name etc.
+NAME = '' # Used as a general reference to the plugin
+SLUG = None  # Used in URLs, setting-names etc. when a unique slug as a reference is needed -> the plugin name is used if not set
+TITLE = None  # A nice human friendly name for the plugin -> used in titles, as plugin name etc.
 
 AUTHOR = None  # Author of the plugin, git commit information is used if not present
 PUBLISH_DATE = None  # Publishing date of the plugin, git commit information is used if not present

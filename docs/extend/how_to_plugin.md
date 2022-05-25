@@ -36,32 +36,61 @@ If you want to make your life easier, try to follow these guidelines; break wher
 - keep it simple - more that 1000 LOC are normally to much for a plugin
 - use mixins where possible - we try to keep coverage high for them so they are not likely to break
 - do not use internal functions - if a functions name starts with `_` it is internal and might change at any time
-- keep you imports clean - the APIs for plugins and mixins are young and evolving. Use
+- keep you imports clean - the APIs for plugins and mixins are young and evolving (see [here](plugins.md#imports)). Use
 ```
-from plugin import IntegrationPluginBase, registry
+from plugin import InvenTreePlugin, registry
 from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMixin
 ```
-- deliver as a package - pip is great for dependency management and pypi can serve as a transparent and reliable delivery infrastructure
+- deliver as a package (see [below](#packaging))
 - if you need to use a private infrastructure, use the 'Releases' functions in GitHub or Gitlab. Point to the 'latest' release endpoint when installing to make sure the update function works
-- tag your GitHub repo with 'inventree' and 'inventreeplugins' to make discovery easier
+- tag your GitHub repo with `inventree` and `inventreeplugins` to make discovery easier. A discovery mechanism using these tags is on the roadmap.
 - use GitHub actions to test your plugin regularly (you can [schedule actions](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule)) against the 'latest' [docker-build](https://hub.docker.com/r/inventree/inventree) of InvenTree
 - if you use the AppMixin pin your plugin against the stable branch of InvenTree, your migrations might get messed up otherwise
+
+### Packaging
+
+The recommended way of distribution is as a [PEP 561](https://peps.python.org/pep-0561/) compliant package. If you can use the official Package Index (PyPi - [official website](https://pypi.org/)) as a registry.  
+Please follow PyPAs official [packaging guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/) to ensure your package installs correctly suing InvenTrees install mechanisms.
+
+Your package must expose you plugin class as an [entrypoint](https://setuptools.pypa.io/en/latest/userguide/entry_point.html) with the name `inventree_plugins` to work with InvenTree.
+
+```setup.cfg
+# Example setup.cfg
+[options.entry_points]
+inventree_plugins =
+        ShopifyIntegrationPlugin = path.to.source:ShopifyIntegrationPluginClass
+```
+
+```setup.py
+# Example setup.py
+
+import setuptools
+
+# ...
+
+setuptools.setup(
+    name='ShopifyIntegrationPlugin'
+    .# ..
+
+    entry_points={"inventree_plugins": ["ShopifyIntegrationPlugin = path.to.source:ShopifyIntegrationPluginClass"]}
+```
+
 
 ### A simple example
 This example adds a new action under `/api/action/sample` using the ActionMixin.
 ``` py
 # -*- coding: utf-8 -*-
 """sample implementation for ActionPlugin"""
-from plugin import IntegrationPluginBase
+from plugin import InvenTreePlugin
 from plugin.mixins import ActionMixin
 
 
-class SampleActionPlugin(ActionMixin, IntegrationPluginBase):
+class SampleActionPlugin(ActionMixin, InvenTreePlugin):
     """
     Use docstrings for everything... pls
     """
 
-    PLUGIN_NAME = "SampleActionPlugin"
+    NAME = "SampleActionPlugin"
     ACTION_NAME = "sample"
 
     # metadata

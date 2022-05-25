@@ -27,16 +27,16 @@ Plugins which implement the `LabelPrintingMixin` mixin class must provide a `pri
 ```python
 from dummy_printer import printer_backend
 
-class MyLabelPrinter(LabelPrintingMixin, IntegrationPluginBase):
+class MyLabelPrinter(LabelPrintingMixin, InvenTreePlugin):
     """
     A simple example plugin which provides support for a dummy printer.
 
     A more complex plugin would communicate with an actual printer!
     """
 
-    PLUGIN_NAME = "MyLabelPrinter"
-    PLUGIN_SLUG = "mylabel"
-    PLUGIN_TITLE = "A dummy printer"
+    NAME = "MyLabelPrinter"
+    SLUG = "mylabel"
+    TITLE = "A dummy printer"
 
     def print_label(self, label, **kwargs):
         """

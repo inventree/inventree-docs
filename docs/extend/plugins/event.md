@@ -11,7 +11,7 @@ When a certain (server-side) event occurs, the background worker passes the even
 Implementing classes must provide a `process_event` function:
 
 ```python
-class EventPlugin(EventMixin, IntegrationPluginBase):
+class EventPlugin(EventMixin, InvenTreePlugin):
     """
     A simple example plugin which responds to events on the InvenTree server.
     
@@ -19,9 +19,9 @@ class EventPlugin(EventMixin, IntegrationPluginBase):
     A more complex plugin could respond to specific events however it wanted.
     """    
 
-    PLUGIN_NAME = "EventPlugin"
-    PLUGIN_SLUG = "event"
-    PLUGIN_TITLE = "Triggered Events"
+    NAME = "EventPlugin"
+    SLUG = "event"
+    TITLE = "Triggered Events"
 
     def process_event(self, event, *args, **kwargs):
         print(f"Processing triggered event: '{event}'")
