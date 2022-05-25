@@ -32,7 +32,7 @@ Fill out the rest of the form then click on <span class="badge inventree confirm
 
 #### Shipments
 
-After all line items were added to the sales order, user needs to create one or more shipments in order to allocate stock for those parts.
+After all line items were added to the sales order, user needs to create one or more [shipments](./shipment.md) in order to allocate stock for those parts.
 
 In order to create a new shipment:
 
