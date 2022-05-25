@@ -24,6 +24,9 @@ Note: Plugins are discovered and loaded only when the server is started.
 
 Custom plugins must inherit from the [InvenTreePlugin class](https://github.com/inventree/InvenTree/blob/2d1776a151721d65d0ae007049d358085b2fcfd5/InvenTree/plugin/plugin.py#L204). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
 
+!!! warning "Namechange"
+    The name of the base class was changed with `0.7.0` from `IntegrationPluginBase` to `InvenTreePlugin`. While the old name is still available till `0.8.0` we strongly suggest upgrading your plugins. Deprecation warnings are raised if the old name is used.
+
 ### Plugin Options
 
 Some metadata options can be defined as constants in the plugins class
