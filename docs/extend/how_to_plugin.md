@@ -38,7 +38,7 @@ If you want to make your life easier, try to follow these guidelines; break wher
 - do not use internal functions - if a functions name starts with `_` it is internal and might change at any time
 - keep you imports clean - the APIs for plugins and mixins are young and evolving. Use
 ```
-from plugin import IntegrationPluginBase, registry
+from plugin import InvenTreePlugin, registry
 from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMixin
 ```
 - deliver as a package - pip is great for dependency management and pypi can serve as a transparent and reliable delivery infrastructure
@@ -52,16 +52,16 @@ This example adds a new action under `/api/action/sample` using the ActionMixin.
 ``` py
 # -*- coding: utf-8 -*-
 """sample implementation for ActionPlugin"""
-from plugin import IntegrationPluginBase
+from plugin import InvenTreePlugin
 from plugin.mixins import ActionMixin
 
 
-class SampleActionPlugin(ActionMixin, IntegrationPluginBase):
+class SampleActionPlugin(ActionMixin, InvenTreePlugin):
     """
     Use docstrings for everything... pls
     """
 
-    PLUGIN_NAME = "SampleActionPlugin"
+    NAME = "SampleActionPlugin"
     ACTION_NAME = "sample"
 
     # metadata

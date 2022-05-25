@@ -9,9 +9,9 @@ Use the class constant `URLS` for a array of URLs that should be added to InvenT
 The array has to contain valid URL patterns as defined in the [django documentation](https://docs.djangoproject.com/en/stable/topics/http/urls/).
 
 ``` python
-class MyUrlsPlugin(URLsMixin, IntegrationPluginBase):
+class MyUrlsPlugin(URLsMixin, InvenTreePlugin):
 
-    PLUGIN_NAME = "UrlsMixin"
+    NAME = "UrlsMixin"
 
     URLS = [
         url(r'increase/(?P<location>\d+)/(?P<pk>\d+)/', self.view_increase, name='increase-level'),

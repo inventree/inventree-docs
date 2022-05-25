@@ -22,15 +22,16 @@ Note: Plugins are discovered and loaded only when the server is started.
 
 ### Plugin Base Class
 
-Custom plugins must inherit from the [IntegrationPluginBase class](https://github.com/inventree/InvenTree/blob/2d1776a151721d65d0ae007049d358085b2fcfd5/InvenTree/plugin/plugin.py#L204). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
+Custom plugins must inherit from the [InvenTreePlugin class](https://github.com/inventree/InvenTree/blob/2d1776a151721d65d0ae007049d358085b2fcfd5/InvenTree/plugin/plugin.py#L204). Any plugins installed via the methods outlined above will be "discovered" when the InvenTree server launches.
 
 ### Plugin Options
 
 Some metadata options can be defined as constants in the plugins class
 
 ``` python
-PLUGIN_SLUG = None  # Used in URLs, setting-names etc. when a unique slug as a reference is needed -> the plugin name is used if not set
-PLUGIN_TITLE = None  # A nice human friendly name for the plugin -> used in titles, as plugin name etc.
+NAME = '' # Used as a general reference to the plugin
+SLUG = None  # Used in URLs, setting-names etc. when a unique slug as a reference is needed -> the plugin name is used if not set
+TITLE = None  # A nice human friendly name for the plugin -> used in titles, as plugin name etc.
 
 AUTHOR = None  # Author of the plugin, git commit information is used if not present
 PUBLISH_DATE = None  # Publishing date of the plugin, git commit information is used if not present
