@@ -117,6 +117,9 @@ Alternatively, admin account details can be specifed in the `.env` file, removin
 | INVENTREE_ADMIN_PASSWORD | Admin account password |
 | INVENTREE_ADMIN_EMAIL | Admin account email address |
 
+!!! warning "Scrub Account Data"
+    Ensure that the admin account credentials are removed from the `.env` file after the first run, for security.
+
 ### Start Docker Containers
 
 Now that the database has been created, migrations applied, and you have created an admin account, we are ready to launch the InvenTree containers:
