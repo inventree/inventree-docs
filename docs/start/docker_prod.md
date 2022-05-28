@@ -4,15 +4,17 @@ title: Docker Production Server
 
 ## Docker Production Server
 
-Using the [InvenTree docker image](./docker.md) streamlines the setup process for an InvenTree production server.
+Using the [InvenTree docker image](./docker.md) simplifies the setup process for an InvenTree production server.
 
 The following guide provides a streamlined production InvenTree installation, with minimal configuration required.
 
+!!! info "Starting Point"
+    This setup guide should be considered a *starting point*. It is likely that your particular production requirements will vary from the example shown here.
+
 ### Before You Start
 
-#### Docker Compose
-
-This guide assumes that you are comfortable with the basic concepts of docker and docker-compose.
+!!! warning "Docker Skills Required"
+    This guide assumes that you are reasonably comfortable with the basic concepts of docker and docker-compose.
 
 #### Docker Image
 
@@ -20,15 +22,17 @@ This production setup guide uses the official InvenTree docker image, available 
 
 #### Static and Media Files
 
-The sample docker-compose configuration shown on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly. When running with `debug=False`, django *will not serve these files* - see the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
+The sample docker-compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly. When running with `debug=False`, django *will not serve these files* - see the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
 
 #### Required Files
 
 The files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory:
 
-- **docker-compose.yml** : The docker compose script
-- **.env** : Environment variables
-- **nginx.prod.conf** : nginx proxy configuration file
+| Filename | Description |
+| --- | --- |
+| docker-compose.yml | The docker compose script |
+| .env | Environment variables |
+| nginx.prod.conf | nginx proxy configuration file |
 
 This tutorial assumes you are working from the `./docker/production` directory. If this is not the case, ensure that these files are provided in your working directory.
 
@@ -63,15 +67,12 @@ This container uses the official [nginx image](https://hub.docker.com/_/nginx).
 
 ### Data Volume
 
-InvenTree stores data which is meant to be persistent (e.g. uploaded media files, database data, etc) in a volume which is mapped to a local system directory. The location of this directory must be configured in the `.env` file.
+InvenTree stores any persistent data (e.g. uploaded media files, database data, etc) in a [volume](https://docs.docker.com/storage/volumes/) which is mapped to a local system directory. The location of this directory must be configured in the `.env` file, specified using the `INVENTREE_EXT_VOLUME` variable.
 
 !!! info "Data Directory"
     Make sure you change the path to the local directory where you want persistent data to be stored.
 
 ## Production Setup Guide
-
-!!! info "Starting Point"
-    This setup guide assumes you are starting in the `./docker/production/` directory.
 
 ### Edit Environment Variables
 
@@ -83,19 +84,10 @@ The first step is to edit the environment variables, located in the `.env` file.
 !!! warning "Database Credentials"
     You must also define the database username (`INVENTREE_DB_USER`) and password (`INVENTREE_DB_PASSWORD`). You should ensure they are changed from the default values for added security
 
-### Create Database
 
-Launch the postgresql database container, and create an empty database, with the following command:
+### Initial Database Setup
 
-```bash
-docker-compose run -d inventree-db
-```
-
-This will start the `inventree_db` container (in the background) and create an empty database.
-
-### Perform Database Setup
-
-The database has now been created, but it is empty! Perform the initial database setup by running the following command:
+Perform the initial database setup by running the following command:
 
 ```bash
 docker-compose run inventree-server invoke update
@@ -104,17 +96,26 @@ docker-compose run inventree-server invoke update
 This command performs the following steps:
 
 - Ensure required python packages are installed
+- Create a new (empty) database
 - Perform the required schema updates to create the required database tables
 - Update translation files
 - Collect all required static files into a directory where they can be served by nginx
 
-### Create Admin Account
+### Create Administrator Account
 
 If you are creating the initial database, you need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
 
 ```
 docker-compose run inventree-server invoke superuser
 ```
+
+Alternatively, admin account details can be specifed in the `.env` file, removing the need for this manual step:
+
+| Variable | Description |
+| --- | --- |
+| INVENTREE_ADMIN_USER | Admin account username |
+| INVENTREE_ADMIN_PASSWORD | Admin account password |
+| INVENTREE_ADMIN_EMAIL | Admin account email address |
 
 ### Start Docker Containers
 
@@ -124,8 +125,9 @@ Now that the database has been created, migrations applied, and you have created
 docker-compose up -d
 ```
 
-This command launches the remaining containers:
+This command launches the following containers:
 
+- `inventree-db` - PostgreSQL database
 - `inventree-server` - InvenTree web server
 - `inventree-worker` - Background worker
 - `inventree-nginx` - Nginx reverse proxy

@@ -48,6 +48,16 @@ The following basic options are available:
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
 | INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
 
+## Administrator Account
+
+An administrator account can be specified using the following environment variables:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_ADMIN_USER | admin_user | Admin account username | *Not set* |
+| INVENTREE_ADMIN_PASSWORD | admin_password | Admin account password | *Not set* |
+| INVENTREE_ADMIN_EMAIL | admin_email |Admin account email address | *Not set* |
+
 ## Secret Key
 
 InvenTree requires a secret key for providing cryptographic signing - this should be a secret (and unpredictable) value.
