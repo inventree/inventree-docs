@@ -13,10 +13,16 @@ Install required system packages (as superuser):
 !!! warning "OS Specific Requirements"
     The following packages are required on a debian system. A different distribution may require a slightly different set of packages
 
+!!! info "Python Version"
+    InvenTree requires Python version 3.8 or newer
+
 ```
 sudo apt-get update
-sudo apt-get install python3 python3-dev
-sudo apt-get install python3-pip python3-invoke python3-venv
+sudo apt-get install \
+    python3 python3-dev python3-pip python3-invoke python3-venv \
+    git gcc g++ gettext gnupg \
+    poppler-utils libpango-1.0-0 libpangoft2-1.0-0 \
+    libjpeg-dev webp
 ```
 
 !!! warning "Weasyprint"
