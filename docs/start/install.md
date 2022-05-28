@@ -13,6 +13,9 @@ Install required system packages (as superuser):
 !!! warning "OS Specific Requirements"
     The following packages are required on a debian system. A different distribution may require a slightly different set of packages
 
+!!! info "Python Version"
+    InvenTree requires Python version 3.8 or newer
+
 ```
 sudo apt-get update
 sudo apt-get install \
