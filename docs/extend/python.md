@@ -112,8 +112,8 @@ couch = Part.create(api, {
 Each part can have multiple parameters like resistance, voltage or capacitance. For the sofa length and weight make sense. Each parameter has a parameter template that combines the parameter name with a unit. So we first have to create the parameter templates and afterwards add the parameter values to the sofa.
 
 ```python
-from inventree.base import Parameter
-from inventree.base import ParameterTemplate
+from inventree.part import Parameter
+from inventree.part import ParameterTemplate
 
 LengthTemplate = ParameterTemplate.create(api, { 'name' : 'Length', 'units' : 'Meters' })
 WeightTemplate = ParameterTemplate.create(api, { 'name' : 'Weight', 'units' : 'kg' })
