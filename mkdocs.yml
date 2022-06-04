@@ -150,7 +150,6 @@ nav:
     - Purchase Orders: app/po.md
     - Settings: app/settings.md
     - Privacy: app/privacy.md
-    - Release Notes: app/release.md
     - Translation: app/translation.md
     - Suggestions: app/issues.md
 
