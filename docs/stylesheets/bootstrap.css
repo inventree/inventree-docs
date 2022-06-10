@@ -2589,6 +2589,9 @@ html {
     margin-bottom: 5px;
     font-weight: 700;
   }
+  label:is(.md-header__button) {
+    display: none;
+  }
   input[type="search"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

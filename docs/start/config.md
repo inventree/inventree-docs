@@ -48,6 +48,16 @@ The following basic options are available:
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
 | INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
 
+## Administrator Account
+
+An administrator account can be specified using the following environment variables:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_ADMIN_USER | admin_user | Admin account username | *Not set* |
+| INVENTREE_ADMIN_PASSWORD | admin_password | Admin account password | *Not set* |
+| INVENTREE_ADMIN_EMAIL | admin_email |Admin account email address | *Not set* |
+
 ## Secret Key
 
 InvenTree requires a secret key for providing cryptographic signing - this should be a secret (and unpredictable) value.
@@ -155,6 +165,18 @@ The login-experience can be altered with the following settings:
 ### Authentication Backends
 
 Custom authentication backends can be used by specifying them here. These can for example be used to add [LDAP / AD login](https://django-auth-ldap.readthedocs.io/en/latest/) to InvenTree
+
+### Customisation Options
+
+The logo and custom messages can be changed/set:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_CUSTOM_LOGO | customize.logo | Path to logo in the media storage |  |
+| INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page |  |
+| INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar |  |
+
+If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings). 
 
 ## Other Options
 

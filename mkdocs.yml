@@ -13,8 +13,18 @@ theme:
   name: material
   custom_dir: _includes/overrides
   palette:
-    scheme: default
-    accent: light blue
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate 
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
   logo: assets/logo.png
   favicon: assets/favicon.ico
   icon:
@@ -79,12 +89,14 @@ nav:
     - Build Orders: build/build.md
     - Bill of Materials: build/bom.md
     - Allocating Stock: build/allocate.md
-  - Companies:
-    - Suppliers: companies/supplier.md
-    - Manufacturers: companies/manufacturer.md
-    - Customers: companies/customer.md
-    - Purchase Orders: companies/po.md
-    - Sales Orders: companies/so.md
+  - Buy:
+    - Suppliers: buy/supplier.md
+    - Manufacturers: buy/manufacturer.md
+    - Purchase Orders: buy/po.md
+  - Sell:
+    - Customers: sell/customer.md
+    - Sales Orders: sell/so.md
+    - Shipments: sell/shipment.md
   - Report:
     - Templates: report/report.md
     - Labels: report/labels.md
@@ -93,6 +105,7 @@ nav:
       - Packing List: report/pack.md
       - Build Order: report/build.md
       - Order: report/order.md
+      - BOM: report/bom.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
   - Admin:
@@ -109,20 +122,23 @@ nav:
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
   - Extend:
-    - API: extend/api.md
-    - Python Interface: extend/python.md
     - Plugins:
       - Overview: extend/plugins.md
-      - How to plugin: extend/how_to_plugin.md
+      - How To: extend/how_to_plugin.md
       - Action Mixin: extend/plugins/action.md
       - API Mixin: extend/plugins/api.md
       - App Mixin: extend/plugins/app.md
       - Barcode Mixin: extend/plugins/barcode.md
       - Event Mixin: extend/plugins/event.md
+      - Label Printing Mixin: extend/plugins/label.md
+      - Locate Mixin: extend/plugins/locate.md
       - Navigation Mixin: extend/plugins/navigation.md
+      - Panel Mixin: extend/plugins/panel.md
       - Schedule Mixin: extend/plugins/schedule.md
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
+    - API: extend/api.md
+    - Python Interface: extend/python.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
   - App:
@@ -134,7 +150,6 @@ nav:
     - Purchase Orders: app/po.md
     - Settings: app/settings.md
     - Privacy: app/privacy.md
-    - Release Notes: app/release.md
     - Translation: app/translation.md
     - Suggestions: app/issues.md
 

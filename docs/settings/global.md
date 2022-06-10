@@ -23,6 +23,7 @@ Configuration of basic server settings.
 | --- | --- | --- | --- |
 | InvenTree Instance Name | String | String descriptor for the InvenTree server instance | InvenTree Server |
 | Use Instance Name | Boolean | Use instance name in title bars | False |
+| Restrict showing `about` | Boolean | Show the `about` modal only to superusers | False |
 | Base URL | String | Base URL for server instance | *blank* |
 | Company Name | String | Company name | My compant name |
 | Download from URL | Boolean | Allow downloading of images from remote URLs | False |
@@ -71,15 +72,79 @@ Configuration of report generation
 
 ### Parts
 
-Configuration of Part options
+#### Main Settings
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| IPN Regex | String | Regular expression pattern for matching Part IPN | *blank* |
+| Allow Duplicate IPN | Boolean | Allow multiple parts to share the same IPN | True |
+| Allow Editing IPN | Boolean | Allow changing the IPN value while editing a part | True |
+| Part Name Display Format | String | Format to display the part name | {% raw %}`{{ part.id if part.id }}{{ ' | ' if part.id }}{{ part.name }}{{ ' | ' if part.revision }}{{ part.revision if part.revision }}`{% endraw %} |
+| Show Price History | Boolean | Display historical pricing for Part | False |
+| Show Price in Forms | Boolean | Display part price in some forms | True |
+| Show Price in BOM | Boolean | Include pricing information in BOM tables | True |
+| Show related parts | Boolean | Display related parts for a part | True |
+| Create initial stock | Boolean | Create initial stock on part creation | True |
+
+#### Creation Settings
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Template | Boolean | Parts are templates by default | False |
+| Assembly | Boolean | Parts can be assembled from other components by default | False |
+| Component | Boolean | Parts can be used as sub-components by default | True |
+| Trackable | Boolean | Parts are trackable by default | False |
+| Purchaseable | Boolean | Parts are purchaseable by default | True |
+| Salable | Boolean | Parts are salable by default | False |
+| Virtual | Boolean | Parts are virtual by default | False |
+
+#### Copy Settings
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Copy Part BOM Data | Boolean | Copy BOM data by default when duplicating a part | True |
+| Copy Part Parameter Data | Boolean | Copy parameter data by default when duplicating a part | True |
+| Copy Part Test Data | Boolean | Copy test data by default when duplicating a part | True |
+| Copy Category Parameter Templates | Boolean | Copy category parameter templates when creating a part | True |
+
+#### Internal Price Settings
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Internal Prices | Boolean | Enable internal prices for parts | False |
+| Internal Price as BOM-Price | Boolean | Use the internal price (if set) in BOM-price calculations | False |
+
+#### Part Import Setting
+
+This section of the part settings allows staff users to:
+
+- import parts to InvenTree clicking the <span class="badge inventree add"><span class='fas fa-plus-circle'></span> Import Part</span> button
+- enable the ["Import Parts" tab in the part category view](../part/part.md#part-import).
+
+| Setting | Type | Description | Default |
+| --- | --- | --- | --- |
+| Show Import in Views | Boolean | Display the import wizard in some part views | True |
+
+#### Part Parameter Templates
+
+Refer to the section describing [how to create part parameter templates](../part/parameter.md#create-template).
 
 ### Categories
 
-Configuration of Part Category options
+In this section of the settings, staff users can set a list of parameters associated to a part category.
+
+To add a parameter to a part category:
+
+1. select the category in the dropdown list
+2. click the <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Parameter</span> button on the top right
+3. fill out the "Create Category Parameter Template" form
+4. click the <span class="badge inventree confirm">Submit</span> button.
+
+After a list of parameters is added to a part category and upon creation of a new part in this category, this list of parameters will be added by default to the new part.
 
 ### Stock
 
-Configuration of Stock Item options
+Configuration of stock item options
 
 | Setting | Type | Description | Default |
 | --- | --- | --- | --- |

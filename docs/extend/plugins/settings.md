@@ -15,9 +15,9 @@ The dict must be formatted similar to the following sample. Take a look at the s
 
 
 ``` python
-class PluginWithSettings(SettingsMixin, IntegrationPluginBase):
+class PluginWithSettings(SettingsMixin, InvenTreePlugin):
     
-    PLUGIN_NAME = "PluginWithSettings"
+    NAME = "PluginWithSettings"
     
     SETTINGS = {
         'API_ENABLE': {

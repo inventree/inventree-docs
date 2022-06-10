@@ -19,7 +19,7 @@ A TestReport template may define a set of filters against which parts are sorted
 
 This allows each TestReport to easily be assigned to a particular Part, or even multiple parts.
 
-In the example below, a test report template is uploaded and assigned to the part with the name *"My Widget"*. Any combination of fields relevent to the Part model can be used here.
+In the example below, a test report template is uploaded and assigned to the part with the name *"My Widget"*. Any combination of fields relevant to the Part model can be used here.
 
 {% with id="test_report_add", url="admin/test_report_add.png", description="Upload test report template" %}
 {% include 'img.html' %}

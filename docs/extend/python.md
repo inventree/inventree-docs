@@ -112,8 +112,8 @@ couch = Part.create(api, {
 Each part can have multiple parameters like resistance, voltage or capacitance. For the sofa length and weight make sense. Each parameter has a parameter template that combines the parameter name with a unit. So we first have to create the parameter templates and afterwards add the parameter values to the sofa.
 
 ```python
-from inventree.base import Parameter
-from inventree.base import ParameterTemplate
+from inventree.part import Parameter
+from inventree.part import ParameterTemplate
 
 LengthTemplate = ParameterTemplate.create(api, { 'name' : 'Length', 'units' : 'Meters' })
 WeightTemplate = ParameterTemplate.create(api, { 'name' : 'Weight', 'units' : 'kg' })
@@ -162,7 +162,7 @@ Please recognize the different status flags. 10 means OK, 55 means damaged. We h
 
 #### Adding manufacturers and supplier
 
-We can add manufacturers and suppliers to parts. If we add a manufacturer, a supplier is also mandatory. So we first need to create two companies, ACME (manufacturer) and X-Store (supplier).
+We can add manufacturers and suppliers to parts. We first need to create two companies, ACME (manufacturer) and X-Store (supplier).
 
 ```python
 from inventree.company import Company
@@ -198,11 +198,15 @@ SupplierPart.create(api,{
     'part':couch.pk,
     'supplier':xstore.pk,
     'SKU':'some_code',
-    'manufacturer':acme.pk
+    'link':'https://www.xst.bla/products/stock?...'
 })
-```
+SupplierPart.create(api,{
+    'part':couch.pk,
+    'manufacturer':acme.pk,
+    'MPN':'Part code of the manufacturer'
+})
 
-Supplier and manufacturer are added with just one command. The SKU is the code under which the couch is listed in the store.
+```
 
 #### Add a datasheet or other documents
 We have the possibility to add documents to the part. We can use pdf for documents but also other files like 3D drawings or pictures. To do so we add the following commands:

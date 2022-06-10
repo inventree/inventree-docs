@@ -18,3 +18,8 @@ A list of known third-party InvenTree extensions is provided below. If you have 
 
 [F360-InvenTree](https://github.com/matmair/F360-InvenTree/) is a tool for creating links between Autodesk Fusion 360 components and InvenTree parts.  
 Still under heavy development.
+
+### DigitalOcean droplet
+
+[InvenTree droplet](https://marketplace.digitalocean.com/apps/inventree?refcode=d6172576d014) is a 1-click solution to deploy InvenTree in the cloud with DigitalOcean. You still have to administer and update your instance.  
+The source code for this droplet can be found in [inventree_droplet](https://github.com/invenhost/inventree_droplet).

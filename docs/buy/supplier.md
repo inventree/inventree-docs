@@ -65,3 +65,21 @@ After the supplier part details are loaded, click on the <span class='fas fa-edi
 To delete a supplier part, first access the supplier part detail page like in the [Edit Supplier Part](#edit-supplier-part) section.
 
 After the supplier part details are loaded, click on the <span class='fas fa-trash-alt'></span> icon next to the supplier part image. Review the the information for the supplier part to be deleted, confirm the deletion using the checkbox then click on <span class="badge inventree confirm">Submit</span>
+
+### Supplier Part Availability
+
+InvenTree supports tracking 'availability' information for supplier parts. While this information can be updated manually, it is more useful when used in conjunction with the InvenTree plugin system.
+
+A custom can periodically request availability information (via a supplier API), and update this availability information for each supplier part.
+
+If provided, availability information is displayed on the Supplier Part detail page.
+
+{% with id="supplier_part_availability", url="buy/supplier_part_availability.png", maxheight="240px", description="Supplier part availability" %}
+{% include "img.html" %}
+{% endwith %}
+
+Availability information can be manually updated via the user interface:
+
+{% with id="update_availability", url="buy/update_availability.png", maxheight="240px", description="Update availability" %}
+{% include "img.html" %}
+{% endwith %}

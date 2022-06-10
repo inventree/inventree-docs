@@ -26,39 +26,15 @@ InvenTree provides sample docker-compose files to get you up and running.
 - A *development* compose file provides a simple way to spin up a development environment
 
 !!! warning "Docker Compose Version"
-    Tthe following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
+    The following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
 
 ### Environment Variables
 
-InvenTree run-time configuration options described in the [configuration documentation](./config.md) can be passed to the InvenTree container as environment variables.
+InvenTree run-time configuration options described in the [configuration documentation](./config.md) can be passed to the InvenTree container as environment variables. Using environment variables simplifies setup and improves portability.
 
-The following environment variables for InvenTree server configuration are specified as part of the docker image, and can be overridden if required:
+### Persistent Data
 
-| Variable | Description | Default Value |
-| --- | --- | --- |
-| INVENTREE_LOG_LEVEL | InvenTree logging verbosity level |INFO |
-| INVENTREE_CONFIG_FILE | Location (within the docker image) of the InvenTree configuration file | /home/inventree/data/config.yaml |
-| INVENTREE_SECRET_KEY_FILE | Location (within the docker image) of the InvenTree sercret key file | /home/inventree/data/secret_key.txt |
-| INVENTREE_WEB_PORT | Internal container port on which the InvenTree web server is hosted | 8000 |
-
-The following environment variables are explicitly **not configured** and *must* be passed to the container instance:
-
-| Variable | Description |
-| --- | --- |
-| INVENTREE_DB_ENGINE | Database engine (e.g. 'postgresql') |
-| INVENTREE_DB_NAME | Database name (e.g. 'inventree') |
-| INVENTREE_DB_HOST | Database server host (e.g. 'inventree-server' if using default docker-compose script) |
-| INVENTREE_DB_PORT | Database server port (e.g. '5432') |
-| INVENTREE_DB_USER | Database user name (e.g. 'pguser') |
-| INVENTREE_DB_PASSWORD | Database user password (e.g. 'pgpassword') |
-
-### Data Directory
-
-Persistent data (e.g. uploaded media files) should be stored outside the container instance.
-
-InvenTree data are stored inside the container at `/home/inventree/data`.
-
-This directory should be mounted as a volume which points to a directory on your local machine.
+Persistent data (e.g. uploaded media files) is stored outside the container instance. This directory should be mounted as a volume which the InvenTree docker container can access.
 
 ### Configuration File
 
@@ -79,15 +55,14 @@ By default, the InvenTree container expects the `INVENTREE_SECRET_KEY_FILE` to e
 !!! warning "Same Key"
     Each InvenTree container instance must use the same secret key value, otherwise unexpected behavior will occur.
 
-
 ## Docker Setup Guides
 
 With these basics in mind, refer to the following installation guides:
 
-### Development Server
-
-Refer to the [docker development server setup guide](./docker_dev.md) for instructions on configuring a development server using docker.
-
 ### Production Server
 
 Refer to the [docker production server setup guide](./docker_prod.md) for instructions on configuring a production server using docker.
+
+### Development Server
+
+Refer to the [docker development server setup guide](./docker_dev.md) for instructions on configuring a development server using docker.

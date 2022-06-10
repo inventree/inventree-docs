@@ -8,9 +8,9 @@ Use the class constant `NAVIGATION` for a array of links that should be added to
 The array must contain at least one dict that at least define a name and a link for each element. The link must be formatted for a URL pattern name lookup - links to external sites are not possible directly. The optional icon must be a class reference to an icon (InvenTree ships with fontawesome 4 by default).
 
 ``` python
-class MyNavigationPlugin(NavigationMixin, IntegrationPluginBase):
+class MyNavigationPlugin(NavigationMixin, InvenTreePlugin):
 
-    PLUGIN_NAME = "NavigationPlugin"
+    NAME = "NavigationPlugin"
 
     NAVIGATION = [
         {'name': 'SampleIntegration', 'link': 'plugin:sample:hi', 'icon': 'fas fa-box'},

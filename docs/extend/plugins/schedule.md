@@ -16,13 +16,13 @@ The ScheduleMixin class provides a plugin with the ability to call functions at 
 An example of a plugin which supports scheduled tasks:
 
 ```python
-class ScheduledTaskPlugin(ScheduleMixin, SettingsMixin, IntegrationPluginBase):
+class ScheduledTaskPlugin(ScheduleMixin, SettingsMixin, InvenTreePlugin):
     """
     Sample plugin which runs a scheduled task, and provides user configuration.
     """
 
-    PLUGIN_NAME = "Scheduled Tasks"
-    PLUGIN_SLUG = 'schedule'
+    NAME = "Scheduled Tasks"
+    SLUG = 'schedule'
 
     SCHEDULED_TASKS = {
         'global': {

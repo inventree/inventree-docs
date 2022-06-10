@@ -9,11 +9,18 @@ The *Settings* view provides access to user configurable settings, in addition t
 The main settings view is shown below, and provides the following options:
 
 - **Server** - Configure and select server profile 
+- **Home Screen** - Configure home screen settings
 - **App Settings** - Configure app settings
-- **About** - Information about the InvenTree app
-- **Documentation** - Opens the InvenTree documentation in an external browser
 
-{% with id="settings_view", url="app/settings.jpg", maxheight="240px", description="Settings view" %}
+{% with id="settings_view", url="app/settings.png", maxheight="240px", description="Settings view" %}
+{% include 'img.html' %}
+{% endwith %}
+
+## Home Screen
+
+The *Home Screen* view allows you to configure display options for the app 'home screen':
+
+{% with id="home_settings", url="app/home_settings.png", maxheight="240px", description="Home Screen Settings" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -21,9 +28,22 @@ The main settings view is shown below, and provides the following options:
 
 The *App Settings* view provides configuration options for the InvenTree app:
 
-{% with id="app_settings", url="app/app_settings.jpg", maxheight="240px", description="App Settings" %}
+{% with id="app_settings", url="app/app_settings.png", maxheight="240px", description="App Settings" %}
 {% include 'img.html' %}
 {% endwith %}
+
+### Parts
+
+Configure options for "parts" display:
+
+- **Include Subcategories** - When viewing a list of parts in a category, include parts from subcategories
+
+### Stock
+
+Configure options for "stock" display:
+
+- **Include Sublocations** - When viewing a list of stock items in a location, include items from sublocations
+- **Stock History** - Display stock item history in the stock detail view
 
 ### Sounds
 
@@ -32,23 +52,7 @@ Configure audible app notifications:
 - **Server Error** - Play an audible tone when a server error occurs
 - **Barcode Tones** - Play audible tones when scanning barcodes
 
-## About
+### App Settings
 
-The *About* view provides details about the app itself:
-
-{% with id="about_app", url="app/about.jpg", maxheight="240px", description="About the InvenTree app" %}
-{% include 'img.html' %}
-{% endwith %}
-
-### Server Details
-
-- **Address** - URL of the currently connected server
-- **Version** - Version of InvenTree software running on the server
-- **Server Instance** - Instance name of the server
-
-### App Details
-
-- **Package Name** - Package identifier for the compiled app
-- **Version** - App software version
-- **Release Notes** - Select to view app release notes
-- **Credits** - Select to view additional app credits
+- **Use Strict HTTPS** - Enforce strict checking of HTTPs certificates. Enabling this option may prevent you from connecting to the server if there are certificate issues
+- **Upload Error Reports** - Enable uploading of anonymous error / crash reports. These reports are used to improve the quality of the app.

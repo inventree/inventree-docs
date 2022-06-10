@@ -13,6 +13,7 @@ To use SSO you have to:
 1. Enable the required providers in the [config file](../start/config.md#Single-Sign-on).
 1. Add the required client configurations in the `SocialApp` app in the [admin interface](../settings/admin.md).
 1. Enable SSO for the users in the [global settings](../settings/global.md).
+1. Configure [e-mail](../settings/email.md).
 
 ### Security Consideration
 
