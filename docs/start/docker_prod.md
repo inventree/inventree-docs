@@ -75,6 +75,10 @@ Redis is used as cache storage for the InvenTree server.
 
 This container uses the official [redis image](https://hub.docker.com/_/redis).
 
+!!! info "Redis on Docker"
+    Docker adds an additional network layer - that might lead to lower performance than bare metal.  
+    To optimise and configure your redis deployment follow the [official docker guide](https://redis.io/docs/stack/get-started/install/docker/#configuration).
+
 ### Data Volume
 
 InvenTree stores any persistent data (e.g. uploaded media files, database data, etc) in a [volume](https://docs.docker.com/storage/volumes/) which is mapped to a local system directory. The location of this directory must be configured in the `.env` file, specified using the `INVENTREE_EXT_VOLUME` variable.
