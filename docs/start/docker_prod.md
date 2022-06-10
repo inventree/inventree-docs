@@ -22,11 +22,14 @@ This production setup guide uses the official InvenTree docker image, available 
 
 #### Static and Media Files
 
-The sample docker-compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly. When running with `debug=False`, django *will not serve these files* - see the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
+The sample docker-compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly.
+
+!!! warning "Debug Warning"
+    When running with `debug=False`, django *will not serve static and media files* - refer to the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
 
 #### Required Files
 
-The files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory:
+The following files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory:
 
 | Filename | Description |
 | --- | --- |
@@ -34,7 +37,7 @@ The files required for this setup are provided with the InvenTree source, locate
 | .env | Environment variables |
 | nginx.prod.conf | nginx proxy configuration file |
 
-This tutorial assumes you are working from the `./docker/production` directory. If this is not the case, ensure that these files are provided in your working directory.
+This tutorial assumes you are working from the `./docker/production` directory. If this is not the case, ensure that these required files are all located in your working directory.
 
 ### Containers
 
@@ -45,7 +48,8 @@ The example docker-compose file launches the following containers:
 | inventree-db | PostgreSQL database |
 | inventree-server | Gunicorn web server |
 | invenrtee-worker | django-q background worker |
-| inventree-proxy | nginx proxy |
+| inventree-proxy | nginx proxy server |
+| inventree-cache | redis cache 
 
 #### PostgreSQL Database
 
@@ -59,11 +63,17 @@ Runs an InvenTree web server instance, powered by a Gunicorn web server.
 
 Runs the InvenTree background worker process. This spins up a second instance of the *inventree* container, with a different entrypoint command.
 
-#### Nginx
+#### Nginx Proxy
 
 Nginx working as a reverse proxy, separating requests for static and media files, and directing everything else to Gunicorn.
 
 This container uses the official [nginx image](https://hub.docker.com/_/nginx).
+
+#### Redis Cache
+
+Redis is used as cache storage for the InvenTree server.
+
+This container uses the official [redis image](https://hub.docker.com/_/redis).
 
 ### Data Volume
 
