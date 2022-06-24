@@ -183,7 +183,7 @@ Create a new user with complete access to the database:
 
 ```
 mysql> CREATE USER 'myuser'@'%' IDENTIFIED WITH mysql_native_password BY 'mypass';
-mysql> GRANT ALL ON inventree.* TO 'djangouser'@'%';
+mysql> GRANT ALL ON inventree.* TO 'myuser'@'%';
 mysql> FLUSH PRIVILEGES;
 ```
 
