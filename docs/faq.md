@@ -8,7 +8,7 @@ title: FAQ
 
 Sometimes, users may encounter unexpected error messages when updating their InvenTree installation to a newer version.
 
-The most common problem here is that the correct sequenct of steps is followed:
+The most common problem here is that the correct sequenct of steps has not been followed:
 
 1. Ensure that the InvenTree web server and background worker processes are *halted*
 1. Update the InvenTree software (e.g. using git or docker, depending on installation method)
@@ -19,6 +19,9 @@ For more information, refer to the installation guides:
 
 - [Docker Installation](./start/docker_prod.md#updating-inventree)
 - [Bare Metal Installation](./start/update.md)
+
+!!! warning "Invoke Update"
+    You must ensure that the `invoke update` command is perfomed every time you update InvenTree
 
 ### Feature *x* is not visible after update
 
