@@ -24,7 +24,7 @@ Still under heavy development.
 [InvenTree droplet](https://marketplace.digitalocean.com/apps/inventree?refcode=d6172576d014) is a 1-click solution to deploy InvenTree in the cloud with DigitalOcean. You still have to administer and update your instance.  
 The source code for this droplet can be found in [inventree_droplet](https://github.com/invenhost/inventree_droplet).
 
-### InvenTree brother plugin
+### InvenTree zebra plugin
 
 [InvenTree zebra plugin](https://github.com/SergeoLacruz/inventree-zebra-plugin) is a plugin to print labels with zebra printers.  
 Currently only the GK420T printer is supported.
