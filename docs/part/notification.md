@@ -7,7 +7,7 @@ title: Part Notifications
 Users can select to receive email notifications when certain events occur.
 
 !!! warning "Email Configuration Required"
-    Notifications require correct [email configuration](../../start/config/#email-settings)
+    External notifications require correct [email configuration](../../start/config/#email-settings). They also need to be enabled in the settings under notifications`.
 
 !!! warning "Valid Email Address"
     Each user must have a valid email address associated with their account to receive email notifications
