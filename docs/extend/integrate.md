@@ -29,3 +29,9 @@ The source code for this droplet can be found in [inventree_droplet](https://git
 [InvenTree zebra plugin](https://github.com/SergeoLacruz/inventree-zebra-plugin) is a plugin to print labels with zebra printers.  
 Currently only the GK420T printer is supported.
 
+
+## First party plugins
+
+### InvenTree brother plugin
+
+[InvenTree brother plugin](https://github.com/inventree/inventree-brother-plugin) is a plugin to print labels with brother Q series printers.
