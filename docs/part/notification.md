@@ -2,7 +2,7 @@
 title: Part Notifications
 ---
 
-## Notification Events
+## General Notification Details
 
 Users can select to receive email notifications when certain events occur.
 
@@ -11,6 +11,16 @@ Users can select to receive email notifications when certain events occur.
 
 !!! warning "Valid Email Address"
     Each user must have a valid email address associated with their account to receive email notifications
+
+## Subscription List
+
+Users can view the parts and categories they are subscribed to on the InvenTree home page:
+
+{% with id="cat_subs", url="part/cat_subs.png", description="Category subscription list" %}
+{% include 'img.html' %}
+{% endwith %}
+
+## Part Notification Events
 
 ### Low Stock Notification
 
@@ -61,13 +71,5 @@ When subscribed to a *Part Category*, a user will receive notifications when par
 Subscribing to a part category operates in the same manner as for a part - simply click on the notification icon:
 
 {% with id="cat_sub", url="part/category_notification.png", description="Subscribe to part category" %}
-{% include 'img.html' %}
-{% endwith %}
-
-## Subscription List
-
-Users can view the parts and categories they are subscribed to on the InvenTree home page:
-
-{% with id="cat_subs", url="part/cat_subs.png", description="Category subscription list" %}
 {% include 'img.html' %}
 {% endwith %}
