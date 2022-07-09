@@ -8,6 +8,17 @@ Sales orders allow to track which stock items are sold to customers, therefore c
 
 To access the sales order page, click on the <span class="badge inventree nav main"><span class='fas fa-truck'></span> Sell</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-list'></span> Sales Orders</span> option in the dropdown list.
 
+{% with id="sales_order_list", url="sell/so_list.png", description="Sales Order List" %}
+{% include "img.html" %}
+{% endwith %}
+
+### Sales Order Reference
+
+{% with prefix="SO-", label="Sales Order" %}
+{% include "reference.html" %}
+{% endwith %}
+
+
 ### Create Sales Order
 
 Once the sales order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Sales Order</span> which opens the "Create Sales Order" form.
