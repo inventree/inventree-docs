@@ -8,6 +8,16 @@ Purchase orders allow to track which parts are bought from suppliers and manufac
 
 To access the purchase order page, click on the <span class="badge inventree nav main"><span class='fas fa-shopping-cart'></span> Buy</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-list'></span> Purchase Orders</span> option in the dropdown list.
 
+{% with id="purchase_order_list", url="buy/po_list.png", description="Purchase Order List" %}
+{% include "img.html" %}
+{% endwith %}
+
+### Purchase Order Reference
+
+{% with prefix="PO-", label="Purchase Order" %}
+{% include "reference.html" %}
+{% endwith %}
+
 ### Create Purchase Order
 
 Once the purchase order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Purchase Order</span> which opens the "Create Purchase Order" form.

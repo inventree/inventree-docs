@@ -8,7 +8,11 @@ A manufacturer is an external **producer** of parts and raw materials.
 
 To access the manufacturer page, click on the <span class="badge inventree nav main"><span class='fas fa-shopping-cart'></span> Buy</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-industry'></span> Manufacturers</span> option in the dropdown list.
 
-!!! warning
+{% with id="manufacturer_list", url="buy/manufacturer_list.png", description="Manufacturer List" %}
+{% include "img.html" %}
+{% endwith %}
+
+!!! info
 	**Viewing**, **adding**, **editing** and **deleting** manufacturers require the corresponding [Purchase Orders user permissions](../settings/permissions.md)
 
 ### Add Manufacturer

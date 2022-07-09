@@ -35,4 +35,4 @@ For example:
 
 ## Build Orders
 
-Build orders have some extra requirements when either building a trackable part, or using parts in the Bill of Materials which are themselves trackable.
+[Build orders](../build/build.md) have some extra requirements when either building a trackable part, or using parts in the Bill of Materials which are themselves trackable.
