@@ -118,7 +118,7 @@ To process with BOM validation, click on the <span class='fas fa-clipboard-check
 
 Multi-level (hierarchical) BOMs are natively supported by InvenTree. A Bill of Materials (BOM) can contain sub-assemblies which themselves have a defined BOM. This can continue for an unlimted number of levels.
 
-When viewing a BOM table, sub-assemblies are not loaded by default, but can be loaded "on demand" by 
+When viewing a BOM table, sub-assemblies are not loaded by default, but can be loaded "on demand" by pressing the <span class='fas fa-sync-alt'></span> icon associated with the particular subassembly:
 
 {% with id="bom_flat", url="build/bom_flat.png", description="Flat BOM Table" %}
 {% include 'img.html' %}
@@ -127,3 +127,43 @@ When viewing a BOM table, sub-assemblies are not loaded by default, but can be l
 {% with id="bom_expanded", url="build/bom_expanded.png", description="Expanded BOM Table" %}
 {% include 'img.html' %}
 {% endwith %}
+
+## Exporting BOM Data
+
+BOM data can be exported for any given assembly by selecting the *Export BOM* action from the BOM actions menu.
+
+You will be presented with the *Export BOM* options dialog, shown below:
+
+{% with id="bom_export", url="build/bom_export.png", description="Export BOM Data" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### BOM Export Options
+
+**Format**
+
+Select the file format for the exported BOM data
+
+**Multi Level BOM**
+
+If selected, BOM data will be included for any subassemblies. If not selected, only top level (flat) BOM data will be exported.
+
+**Levels**
+
+Define the maximum level of data to export for subassemblies. If set to zero, all levels of subassembly data will be exported.
+
+**Include Parameter Data**
+
+Include part parameter data in the exported dataset.
+
+**Include Stock Data**
+
+Include part stock level information in the exported dataset.
+
+**Include Manufacturer Data**
+
+Include part manufacturer information in the exported dataset.
+
+**Include Supplier Data**
+
+Include part supplier information in the exported dataset.
