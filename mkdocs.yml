@@ -88,6 +88,7 @@ nav:
   - Build:
     - Build Orders: build/build.md
     - Bill of Materials: build/bom.md
+    - BOM Import: build/bom_import.md
     - Allocating Stock: build/allocate.md
   - Buy:
     - Suppliers: buy/supplier.md
