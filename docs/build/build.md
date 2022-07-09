@@ -34,8 +34,6 @@ To navigate to the Build Order display, select *Build* from the main navigation 
 
 ### Build Order Reference
 
-Each Build Order is identified by a unique *Reference* field.
-
 {% with prefix="BO-", label="Build Order" %}
 {% include "reference.html" %}
 {% endwith %}
