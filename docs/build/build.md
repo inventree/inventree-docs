@@ -26,6 +26,14 @@ To navigate to the Build Order display, select *Build* from the main navigation 
 {% include "img.html" %}
 {% endwith %}
 
+#### Tree Vieww
+
+*Tree View* also provides a tabulated view of Build Orders. Orders are displayed in a hierarchical manner, showing any parent / child relationships between different build orders. 
+
+{% with id="build_tree", url="build/build_tree.png", description="Build Tree" %}
+{% include "img.html" %}
+{% endwith %}
+
 #### Calendar View
 
 *Calendar View* shows a calendar display with upcoming build orders, based on the various dates specified for each build.
