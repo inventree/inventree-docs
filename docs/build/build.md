@@ -32,6 +32,14 @@ To navigate to the Build Order display, select *Build* from the main navigation 
 
 ## Build Order Details
 
+### Build Order Reference
+
+Each Build Order is identified by a unique *Reference* field.
+
+{% with prefix="BO-", label="Build Order" %}
+{% include "reference.html" %}
+{% endwith %}
+
 ### Build Parameters
 
 The following parameters are available for each Build Order, and can be edited by the user:
