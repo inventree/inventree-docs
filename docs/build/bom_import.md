@@ -6,9 +6,9 @@ title: BOM Import
 
 Uploading a BOM to InvenTree is a three steps process:
 
-1. upload BOM file
-0. select matching InvenTree fields
-0. select matching InvenTree parts.
+1. Upload BOM file
+0. Select matching InvenTree fields
+0. Select matching InvenTree parts.
 
 To upload a BOM file, navigate to the part/assembly detail page then click on the "BOM" tab. On top of the tab view, click on the <span class='fas fa-edit'></span> icon then, after the page reloads, click on the <span class='fas fa-file-upload'></span> icon.
 
