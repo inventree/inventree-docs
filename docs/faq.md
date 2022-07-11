@@ -18,10 +18,10 @@ The most common problem here is that the correct sequenct of steps has not been 
 For more information, refer to the installation guides:
 
 - [Docker Installation](./start/docker_prod.md#updating-inventree)
-- [Bare Metal Installation](./start/update.md)
+- [Bare Metal Installation](./start/install.md#updating-inventree)
 
 !!! warning "Invoke Update"
-    You must ensure that the `invoke update` command is perfomed every time you update InvenTree
+    You must ensure that the `invoke update` command is perfomed *every time* you update InvenTree
 
 ### Feature *x* is not visible after update
 
