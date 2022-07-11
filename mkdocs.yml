@@ -66,8 +66,7 @@ nav:
     - Configuration: start/config.md
     - Docker Setup: start/docker.md
     - Bare Metal Setup: start/install.md
-    - Updating: start/update.md
-    - Migrating: start/migrate.md
+    - Migrating Data: start/migrate.md
   - Parts:
     - Parts: part/part.md
     - Creating Parts: part/create.md

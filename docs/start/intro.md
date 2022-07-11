@@ -64,7 +64,7 @@ InvenTree makes use of the [invoke](https://www.pyinvoke.org/) python toolkit fo
 To display a list of the available InvenTree administration actions, run the following commands from the top level source directory:
 
 ```
-inv --list
+invoke --list
 ```
 
 ### Virtual Environment

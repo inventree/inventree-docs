@@ -2,9 +2,12 @@
 title: Install InvenTree
 ---
 
-## Initial Setup
+## Bare Metal Setup
 
-Follow the instructions below to install the requried system packages, python modules, and InvenTree source code.
+!!! tip "Docker Guide"
+    This guide is for a *bare metal* InvenTree installation. If you want to install using Docker (the recommended approach) refer to the [Docker Guide](./docker.md)
+
+Follow the instructions below to install the required system packages, python modules, and InvenTree source code.
 
 ### Install System Packages
 
@@ -249,3 +252,49 @@ Refer to the [development server instructions](./development.md) for further inf
 In a production environment, a more robust server setup is required.
 
 Refer to the [production server instructions](./production.md) for further information.
+
+## Updating InvenTree
+
+Administrators wishing to update InvenTree to the latest version should follow the instructions below. The commands listed below should be run from the InvenTree root directory.
+
+!!! info "Update Database"
+	It is advisable to backup the InvenTree database before performing these steps. The particular backup procedure may depend on your installation details.
+
+### Stop InvenTree Server
+
+Ensure the InvenTree server is stopped. This will depend on the particulars of your database installation.
+
+!!! info "Stop Server"
+    The method by which the InvenTree server is stopped depends on your particular installation!
+
+### Update Source Code
+
+Update the InvenTree source code to the latest version (or a particular commit if required).
+
+For example, pull down the latest InvenTree sourcecode using Git:
+
+```
+git pull origin master
+```
+
+!!! info "Release Versions"
+    If you are using a particular version of InvenTree, you may wish to target a specific code branch or tag, instead of just pulling down latest master
+
+### Perform Database Migrations
+
+Updating the database is as simple as calling the `update` script:
+
+```
+invoke update
+```
+
+This command performs the following steps:
+
+* Ensure all rquired packages are installed and up to date
+* Perform required database schema changes
+* Run the user through any steps which require interaction
+* Collect any new or updated static files
+
+### Restart Server
+
+Ensure the InvenTree server is restarted. This will depend on the particulars of your database installation.
