@@ -21,6 +21,13 @@ There are some key differences compared to the [docker production setup](./docke
 !!! info "Hacker Mode"
     The following setup guide starts a development server which will reload "on the fly" as changes are made to the source code. This is designed for programmers and developers who wish to add and test new InvenTree features.
 
+### Data Directory
+
+Persistent data (such as the stored database, media files, configuration files, etc) will be stored in the `./data` directory (relative to the InvenTree source code directory).
+
+- This directory is automatically created when you launch InvenTree via docker
+- This directory is excluded from git version tracking
+
 ## Development Setup Guide
 
 To get started with an InvenTree development setup, follow the simple steps outlined below. Before continuing, ensure that you have completed the following steps:
