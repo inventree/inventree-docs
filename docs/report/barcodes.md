@@ -36,7 +36,7 @@ To render a 1D barcode, use the `barcode` template tag, as shown in the example 
 {% endraw %}
 ```
 
-The default barcode renderer will generate a barcode using [Code128](https://en.wikipedia.org/wiki/Code_128) rendering. However [other barcode formats](https://python-barcode.readthedocs.io/en/stable/codes.html) are also supported:
+The default barcode renderer will generate a barcode using [Code128](https://en.wikipedia.org/wiki/Code_128) rendering. However [other barcode formats](https://python-barcode.readthedocs.io/en/stable/supported-formats.html) are also supported:
 
 ```html
 {% raw %}
