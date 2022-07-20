@@ -47,6 +47,17 @@ The default barcode renderer will generate a barcode using [Code128](https://en.
 {% endraw %}
 ```
 
+You can also pass further [python-barcode](https://python-barcode.readthedocs.io/en/stable/writers.html#common-writer-options) supported parameters as well:
+
+```html
+{% raw %}
+
+{% load barcode %}
+
+<img class='barcode' src='{% barcode part.IPN barcode_class="Code128" write_text=0 background="red" %}'>
+{% endraw %}
+```
+
 ### QR-Code
 
 !!! info "qrcode"
