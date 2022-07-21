@@ -104,6 +104,10 @@ Refer to the [context variables documentation](./context_variables.md).
 
 Refer to the [barcode documentation](./barcodes.md).
 
+### Using media files 
+
+Refer to the [media files documentation](./media.md).
+
 ### Conditional Formatting
 
 Conditional formatting of label data is also supported. Below is an example excerpt from a label which determines the content based on the supplied context variables:
