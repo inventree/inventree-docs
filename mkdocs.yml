@@ -106,7 +106,8 @@ nav:
       - Test Reports: report/test.md
       - Packing List: report/pack.md
       - Build Order: report/build.md
-      - Order: report/order.md
+      - Purchase Order: report/purchase_order.md
+      - Sales Order: report/sales_order.md
       - BOM: report/bom.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
