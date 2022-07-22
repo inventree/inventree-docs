@@ -1,8 +1,8 @@
 ---
-title: Order Report
+title: Sales Order Reports
 ---
 
-## Order Report
+## Sales Order Reports
 
 !!! missing "TODO"
 	This section requires further work

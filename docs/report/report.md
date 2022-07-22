@@ -31,7 +31,7 @@ Uploaded report template files are passed through the [django template rendering
 
 Each report template is provided a set of *context variables* which can be used when rendering the template.
 
-For example, rendering the name of a part (which is available in the particular template context as *part*) is as follows:
+For example, rendering the name of a part (which is available in the particular template context as `part`) is as follows:
 
 ```html
 {% raw %}
@@ -45,19 +45,46 @@ For example, rendering the name of a part (which is available in the particular 
 {% endraw %}
 ```
 
-!!! info "Variables"
-  	Templates will have different variables available to them depending on the report type. Read the detail information on each report type for further information.
+### Context Variables
 
-### Context Data
+!!! info "Context Variables"
+  	Templates will have different variables available to them depending on the report type. Read the detailed information on each available report type for further information.
 
 Please refer to the [Context variables](./context_variables.md) page.
 
 ### Conditional Rendering
 
-The django template system allows for conditional rendering, providing conditional flow statements such as `{% raw %}{% if <condition> %}{% endraw %}`, `{% raw %}{% for <item> in <list> %}{% endraw %}`, etc.
+The django template system allows for conditional rendering, providing conditional flow statements such as:
+
+```
+{% raw %}
+{% if <condition> %}
+{% do_something %}
+{% endif %}
+{% endraw %}
+```
+
+```
+{% raw %}
+{% for <item> in <list> %}
+Item: {{ item }}
+{% endfor %}
+{% endraw %}
+```
 
 !!! info "Conditionals"
-    Refer to the django documentation for more information.
+    Refer to the [django template language documentation](https://docs.djangoproject.com/en/dev/ref/templates/language/) for more information.
+
+## Report Types
+
+InvenTree supports the following reporting functionality:
+
+| Report Type | Description |
+| --- | --- |
+| [Test Report](./test.md) | Format results of a test report against for a particular StockItem |
+| [Build Order Report](./build.md) | Format a build order report |
+| [Purchase Order Report](./purchase_order.md) | Format a purchase order report |
+| [Sales Order Report](./sales_order.md) | Format a sales order report |
 
 ## Report Options
 
@@ -69,7 +96,7 @@ A number of global reporting options are available for customizing InvenTree rep
 
 ### Enable Reports
 
-By default, the reporting feature is turned off. It must be enabled in the global settings. 
+By default, the reporting feature is disabled. It must be enabled in the global settings. 
 
 
 ### Default Page Size
@@ -127,6 +154,10 @@ Asset files can be rendered directly into the template as follows
 !!! warning "Asset Naming"
     If the requested asset name does not match the name of an uploaded asset, the template will continue without loading the image.
 
+!!! info "Assets location"
+    You need to ensure your asset images to the report/assets directory in the [data directory](../start/docker_dev.md/#data-directory). Upload new assets via the [admin interface](../settings/admin.md) to ensure they are uploaded to the correct location on the server.
+
+
 ## Report Snippets
 
 A powerful feature provided by the django / WeasyPrint templating framework is the ability to include external template files. This allows commonly used template features to be broken out into separate files and re-used across multiple templates.
@@ -162,7 +193,7 @@ For example, consider a stocktake report for a particular stock location, where 
 !!! info "Snippet Arguments"
     Note above that named argument variables can be passed through to the snippet!
 
-And the snippet file `stock_row.html` is as follows:
+And the snippet file `stock_row.html` may be written as follows:
 
 ```html
 {% raw %}
@@ -173,31 +204,3 @@ And the snippet file `stock_row.html` is as follows:
 </tr>
 {% endraw %}
 ```
-
-## Report Types
-
-InvenTree supports the following reporting functionality:
-
-### Test Report
-
-[Test Report](./test.md): Format results of a test report against for a particular StockItem
-
-### Packing List
-[Packing List](./pack.md): Format a list of items for shipping or transfer
-
-### Build Report
-
-[Build Order](./build.md): Format a build order report
-
-### Purchase Order
-[Purchase Order report](./order.md): Order line items 
-
-### Sales Order
-
-!!! missing "TODO"
-	This section requires further work
-
-### Stocktake
-
-!!! missing "TODO"
-	This section requires further work
