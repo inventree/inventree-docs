@@ -154,6 +154,10 @@ Asset files can be rendered directly into the template as follows
 !!! warning "Asset Naming"
     If the requested asset name does not match the name of an uploaded asset, the template will continue without loading the image.
 
+!!! info "Assets location"
+    You need to ensure your asset images to the report/assets directory in the [data directory](../start/docker_dev.md/#data-directory). Upload new assets via the [admin interface](../settings/admin.md) to ensure they are uploaded to the correct location on the server.
+
+
 ## Report Snippets
 
 A powerful feature provided by the django / WeasyPrint templating framework is the ability to include external template files. This allows commonly used template features to be broken out into separate files and re-used across multiple templates.

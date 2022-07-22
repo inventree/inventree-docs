@@ -178,6 +178,9 @@ The logo and custom messages can be changed/set:
 
 If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings). 
 
+!!! info "Custom Logo Path"
+    The provided *custom logo* path must be specified *relative* to the location of thr `/media/` directory.
+
 ## Other Options
 
 ### Middleware
