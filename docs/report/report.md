@@ -75,6 +75,17 @@ Item: {{ item }}
 !!! info "Conditionals"
     Refer to the [django template language documentation](https://docs.djangoproject.com/en/dev/ref/templates/language/) for more information.
 
+## Report Types
+
+InvenTree supports the following reporting functionality:
+
+| Report Type | Description |
+| --- | --- |
+| [Test Report](./test.md) | Format results of a test report against for a particular StockItem |
+| [Build Order Report](./build.md) | Format a build order report |
+| [Purchase Order Report](./purchase_order.md) | Format a purchase order report |
+| [Sales Order Report](./sales_order.md) | Format a sales order report |
+
 ## Report Options
 
 A number of global reporting options are available for customizing InvenTree reports:
@@ -189,14 +200,3 @@ And the snippet file `stock_row.html` may be written as follows:
 </tr>
 {% endraw %}
 ```
-
-## Report Types
-
-InvenTree supports the following reporting functionality:
-
-| Report Type | Description |
-| --- | --- |
-| [Test Report](./test.md) | Format results of a test report against for a particular StockItem |
-| [Build Order Report](./build.md) | Format a build order report |
-| [Purchase Order Report](./purchase_order.md) | Format a purchase order report |
-| [Sales Order Report](./sales_order.md) | Format a sales order report |
