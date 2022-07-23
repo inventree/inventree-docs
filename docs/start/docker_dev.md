@@ -48,7 +48,7 @@ If desired, the user may edit the environment variables, located in the `.env` f
 
 ### Perform Initial Setup
 
-The database has now been created, but it is empty! Perform the initial database setup by running the following command:
+Perform the initial database setup by running the following command:
 
 ```bash
 docker-compose run inventree-dev-server invoke update
