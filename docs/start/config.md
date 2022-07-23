@@ -46,7 +46,6 @@ The following basic options are available:
 | --- | --- | --- | --- |
 | INVENTREE_DEBUG | debug | Enable debug mode | True |
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
-| INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
 
 ## Administrator Account
 
@@ -180,6 +179,16 @@ If you want to remove the InvenTree branding as far as possible from your end-us
 
 !!! info "Custom Logo Path"
     The provided *custom logo* path must be specified *relative* to the location of thr `/media/` directory.
+
+## Plugin Options
+
+The following [plugin](../extend/plugins.md) configuration options are available:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
+| INVENTREE_PLUGIN_FILE | *N/A* | Location of plugin installation file | `./InvenTree/plugins.txt` |
+| INVENTREE_PLUGIN_DIR | *N/A* | Location of external plugin directory | *Not set* |
 
 ## Other Options
 
