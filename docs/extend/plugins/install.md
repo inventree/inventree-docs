@@ -45,7 +45,7 @@ Custom plugins can be placed in the `src/InvenTree/plugins/` directory, where th
 
 If you wish to install plugins from local source, rather than PIP, it is better to place your plugins in a directory outside the InvenTree source directory.
 
-To achieve this, set the `INVENTREE_PLUGIN_DIR` environment variable to the directory where locally sourced plugins are located. Refer to the [configuration options](../start/config.md#plugin-options) for further information.
+To achieve this, set the `INVENTREE_PLUGIN_DIR` environment variable to the directory where locally sourced plugins are located. Refer to the [configuration options](../../start/config.md#plugin-options) for further information.
 
 !!! info "Docker"
     When running InvenTree in docker, a *plugins* directory is automatically created in the mounted data volume. Any plugins can be placed there, and will be automatically loaded when the server is started.

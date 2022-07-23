@@ -127,7 +127,9 @@ nav:
   - Extend:
     - Plugins:
       - Overview: extend/plugins.md
-      - How To: extend/how_to_plugin.md
+      - Installation: extend/plugins/install.md
+      - Developing a Plugin: extend/how_to_plugin.md
+    - Plugin Mixins:
       - Action Mixin: extend/plugins/action.md
       - API Mixin: extend/plugins/api.md
       - App Mixin: extend/plugins/app.md
