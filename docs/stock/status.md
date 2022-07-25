@@ -10,13 +10,14 @@ Below is the current list of stock status and their proposed meaning:
 
 | Status      | Description |
 | ----------- | ----------- |
-| OK      | Stock item is healthy, nothing wrong to report       |
-| Attention needed   | Stock item hasn't been checked or tested yet       |
-| Damaged   | Stock item is not functional in its present state        |
-| Destroyed   | Stock item has been destroyed        |
-| Lost   | Stock item has been lost        |
-| Rejected   | Stock item did not pass the quality control standards        |
-| Returned   | Stock item was returned to seller (if bought) or is a customer return (if sold)        |
+| OK | Stock item is healthy, nothing wrong to report |
+| Attention needed | Stock item hasn't been checked or tested yet |
+| Damaged | Stock item is not functional in its present state |
+| Destroyed | Stock item has been destroyed |
+| Lost | Stock item has been lost |
+| Rejected | Stock item did not pass the quality control standards |
+| Returned | Stock item was returned to seller (if bought) or is a customer return (if sold) |
+| Quarantined | Stock item has been intentionally isolated and it unavailable |
 
 Stock status code will remove the stock from certain operations. For instance, users can't add "destroyed" or "lost" stock to a sales order.
  
