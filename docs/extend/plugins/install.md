@@ -39,7 +39,7 @@ Custom plugins can be placed in the `src/InvenTree/plugins/` directory, where th
     The `src/InvenTree/plugins/` directory is excluded from Git version tracking - any plugin files here will be hidden from Git
 
 !!! warning "Not Recommended For Production"
-    Loading plugins via the local *plugins* directory is not recommended for production. If you cannot use PIP installation (above), specify a custom plugin directory (below).
+    Loading plugins via the local *plugins* directory is not recommended for production. If you cannot use PIP installation (above), specify a custom plugin directory (below) or use a [VCS](https://pip.pypa.io/en/stable/topics/vcs-support/) as a plugin install source.
 
 ### Custom Directory
 
