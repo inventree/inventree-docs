@@ -64,8 +64,14 @@ nav:
   - Install:
     - Introduction: start/intro.md
     - Configuration: start/config.md
-    - Docker Setup: start/docker.md
-    - Bare Metal Setup: start/install.md
+    - Docker:
+        - Introduction: start/docker.md
+        - Development: start/docker_dev.md
+        - Production: start/docker_prod.md
+    - Bare Metal:
+        - Introduction: start/install.md
+        - Development: start/development.md
+        - Production: start/production.md
     - Migrating Data: start/migrate.md
   - Parts:
     - Parts: part/part.md
