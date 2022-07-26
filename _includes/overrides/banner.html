@@ -1,0 +1,8 @@
+{% if config.extra.version %}
+<div class='md-banner'>
+    <div class='md-banner__inner md-grid md-typeset'>
+        Version: {{ config.extra.version }}<br>
+        Outdated: {{ self.outdated() }}
+    </div>
+</div>
+{% endif %}
