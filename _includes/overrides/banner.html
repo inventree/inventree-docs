@@ -1,12 +1,15 @@
-{% if config.extra.version %}
+{% if 1 or config.extra.version %}
 <div class='md-banner md-banner--warning'>
     <div class='md-grid md-typeset'>
-        {% if config.extra.version == "latest" %}
+        {% if config.readthedocs %}
+        RTD: {{ config.readthedocs.version }}
+        {% if config.readthedocs.version == "latest" %}
         This documentation is for the <em>development</em> version of InvenTree, which may be significantly different from previous stable releases.
         For stable release documentation, use the version selector located in the bottom right corner of this page.
-        {% elif self.outdated() %}
+        {% elif 0 %}
         This documentation is for an outdated version of InvenTree.
         For updated release documentation, use the version selector located in the bottom right corner of this page.
+        {% endif %}
         {% endif %}
     </div>
 </div>
