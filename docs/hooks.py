@@ -49,6 +49,10 @@ def on_config(config, *args, **kwargs):
         # Supply this to the context
         config['readthedocs'] = readthedocs
         
+        # Determine if we want to display a 'version' banner
+        # Basically we do, *unless* we are displaying the "stable" version
+        config['version_banner'] = rtd_version != 'stable'
+
     else:
         print("'READTHEDOCS' environment variable not found")
         print("Building for localhost configuration!")
