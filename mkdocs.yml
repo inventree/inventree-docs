@@ -34,12 +34,12 @@ theme:
     - toc.autohide
 edit_uri: "" # Disable "Edit" button
 extra_css:
-  - stylesheets/extra.css
   - stylesheets/brands.css
   - stylesheets/regular.css
   - stylesheets/solid.css
   - stylesheets/bootstrap.css
   - stylesheets/splide.min.css
+  - stylesheets/extra.css
 extra_javascript:
   - javascripts/extra.js
   - javascripts/fontawesome.js
