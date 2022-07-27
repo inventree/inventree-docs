@@ -4,8 +4,6 @@ title: Docker Production Server
 
 ## Docker Production Server
 
-Using the [InvenTree docker image](./docker.md) simplifies the setup process for an InvenTree production server.
-
 The following guide provides a streamlined production InvenTree installation, with minimal configuration required.
 
 !!! info "Starting Point"
@@ -20,6 +18,12 @@ The following guide provides a streamlined production InvenTree installation, wi
 
 This production setup guide uses the official InvenTree docker image, available from dockerhub. The provided docker-compose file targets `inventree:stable` by default.
 
+#### Docker Compose
+
+A sample [docker compose file](https://github.com/inventree/InvenTree/blob/master/docker/production/docker-compose.yml) is provided to sequence all the required processes.
+
+*If you require a different configuration, use this file as a starting point*.
+
 #### Static and Media Files
 
 The sample docker-compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly.
@@ -29,15 +33,18 @@ The sample docker-compose configuration outlined on this page uses nginx to serv
 
 #### Required Files
 
-The following files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory:
+The following files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory of the InvenTree source code:
 
 | Filename | Description |
 | --- | --- |
-| docker-compose.yml | The docker compose script |
-| .env | Environment variables |
-| nginx.prod.conf | nginx proxy configuration file |
+| [docker-compose.yml](https://github.com/inventree/InvenTree/blob/master/docker/production/docker-compose.yml) | The docker compose script |
+| [.env](https://github.com/inventree/InvenTree/blob/master/docker/production/.env) | Environment variables |
+| [nginx.prod.conf](https://github.com/inventree/InvenTree/blob/master/docker/production/nginx.prod.conf) | nginx proxy configuration file |
 
 This tutorial assumes you are working from the `./docker/production` directory. If this is not the case, ensure that these required files are all located in your working directory.
+
+!!! tip "No Source Required"
+    For a production setup you do not need the InvenTree source code. Simply download the three required files from the links above!
 
 ### Containers
 
@@ -49,7 +56,7 @@ The example docker-compose file launches the following containers:
 | inventree-server | Gunicorn web server |
 | invenrtee-worker | django-q background worker |
 | inventree-proxy | nginx proxy server |
-| inventree-cache | redis cache 
+| *inventree-cache* | *redis cache (optional)* |
 
 #### PostgreSQL Database
 
@@ -71,13 +78,18 @@ This container uses the official [nginx image](https://hub.docker.com/_/nginx).
 
 #### Redis Cache
 
-Redis is used as cache storage for the InvenTree server.
+Redis is used as cache storage for the InvenTree server. This provides a more performant caching system which can useful in larger installations.
 
 This container uses the official [redis image](https://hub.docker.com/_/redis).
 
 !!! info "Redis on Docker"
     Docker adds an additional network layer - that might lead to lower performance than bare metal.  
     To optimise and configure your redis deployment follow the [official docker guide](https://redis.io/docs/stack/get-started/install/docker/#configuration).
+
+!!! warning "Disabled by default"
+    The *redis* container is not enabled in the default configuration. This is provided as an example for users wishing to use redis.
+    To enable the *redis* container, run any `docker compose` commands with the `--profile redis` flag.
+    You will also need to un-comment the `INVENTREE_CACHE_<...>` variables in the `.env` file.
 
 ### Data Volume
 
