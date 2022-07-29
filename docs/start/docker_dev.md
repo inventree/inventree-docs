@@ -28,6 +28,22 @@ Persistent data (such as the stored database, media files, configuration files, 
 - This directory is automatically created when you launch InvenTree via docker
 - This directory is excluded from git version tracking
 
+## Quickstart Guide
+
+To get "up and running" with a development environment, complete with a set of [demo data](../demo.md) to work with, run the following commands:
+
+```bash
+git clone https://github.com/inventree/InvenTree.git && cd InvenTree
+docker compose run inventree-dev-server invoke setup-test
+docker compose up -d
+```
+
+!!! tip "Development Server"
+    You can then view the development server at [http://localhost:8000](http://localhost:8000)
+
+!!! info "Details, details"
+    For a more in-depth setup guide, continue reading below!
+
 ## Development Setup Guide
 
 To get started with an InvenTree development setup, follow the simple steps outlined below. Before continuing, ensure that you have completed the following steps:
@@ -72,6 +88,14 @@ If you are creating the initial database, you need to create an admin (superuser
 
 ```
 docker-compose run inventree-dev-server invoke superuser
+```
+
+### Import Demo Data
+
+To fill the database with a demo dataset, run the following command:
+
+```
+docker-compose run inventree-dev-server invoke setup-test
 ```
 
 ### Start Docker Containers
