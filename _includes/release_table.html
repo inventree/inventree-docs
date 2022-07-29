@@ -27,9 +27,9 @@
                     </td>
                     <td>
                         {% if release.docker %}
-                        <a href="https://hub.docker.com/r/inventree/inventree/tags">inventree:{{ release.tag_name }}</a>
+                        <a href="https://hub.docker.com/r/inventree/inventree/tags">inventree/inventree:{{ release.tag_name }}</a>
                         {% else %}
-                        ---
+                        <em>Not available for this release</em>
                         {% endif %}
                     </td>
                 </tr>
