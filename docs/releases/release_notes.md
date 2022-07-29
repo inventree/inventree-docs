@@ -28,73 +28,25 @@ Specific tagged releases are shown below. Click on the release notes for each ve
     Starting from v0.7.2, release notes have been migrated to GitHub. Release notes for older versions are available at the links below.
 
 ### 0.7.x
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| 0.7.7 | 2022-07-26 | [0.7.7](https://github.com/inventree/InvenTree/releases/tag/0.7.7) | inventree:0.7.7 |
-| 0.7.6 | 2022-07-22 | [0.7.6](https://github.com/inventree/InvenTree/releases/tag/0.7.6) | inventree:0.7.6 |
-| 0.7.5 | 2022-07-15 | [0.7.5](https://github.com/inventree/InvenTree/releases/tag/0.7.5) | inventree:0.7.5 |
-| 0.7.4 | 2022-06-23 | [0.7.4](https://github.com/inventree/InvenTree/releases/tag/0.7.4) | inventree:0.7.4 |
-| 0.7.3 | 2022-06-16 | [0.7.3](https://github.com/inventree/InvenTree/releases/tag/0.7.3) | inventree:0.7.3 |
-| 0.7.2 | 2022-06-15 | [0.7.2](https://github.com/inventree/InvenTree/releases/tag/0.7.2) | inventree:0.7.2 |
-| [0.7.1](./0.7.1.md) | 2022-06-02 | [0.7.1](https://github.com/inventree/InvenTree/releases/tag/0.7.1) | [inventree:0.7.1](https://hub.docker.com/layers/inventree/inventree/inventree/0.7.1/images/sha256-5da112efd1aa43d2e22df7053e6344e884d094aaddcf6401f0ccbaac245e61da?context=explore) |
-| [0.7.0](./0.7.0.md) | 2022-05-24 | [0.7.0](https://github.com/inventree/InvenTree/releases/tag/0.7.0) | [inventree:0.7.0](https://hub.docker.com/layers/inventree/inventree/inventree/0.7.0/images/sha256-b15d2970e1577cc8e2429487636f07576912cec8d3c7ee0227c3e51711f0042a?context=explore) |
-
+{% with prefix="0.7" %}{% include "release_table.html" %}{% endwith %}
 
 ### 0.6.x
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| [0.6.4](./0.6.4.md) | 2022-05-10 | [0.6.4](https://github.com/inventree/InvenTree/releases/tag/0.6.4) | [inventree:0.6.4](https://hub.docker.com/layers/inventree/inventree/inventree/0.6.4/images/sha256-9b89052490e6b43edc541f2a0856397db85742749fa8f2a262a0654b0532f7a9?context=explore) |
-| [0.6.3](./0.6.3.md) | 2022-03-30 | [0.6.3](https://github.com/inventree/InvenTree/releases/tag/0.6.3) | [inventree:0.6.3](https://hub.docker.com/layers/inventree/inventree/inventree/0.6.3/images/sha256-dc583301371686a30c919a25dd68e5101ea9ecb8cb63dde617fa8b2c44c27ff6?context=explore) |
-| [0.6.2](./0.6.2.md) | 2022-03-10 | [0.6.2](https://github.com/inventree/InvenTree/releases/tag/0.6.2) | [inventree:0.6.2](https://hub.docker.com/layers/inventree/inventree/0.6.2/images/sha256-09e8a4a95285906b4d1d5dbd2274f56595f0b402c296d59eca2c8534c0242257?context=explore) |
-| [0.6.1](./0.6.1.md) | 2022-03-04 | [0.6.1](https://github.com/inventree/InvenTree/releases/tag/0.6.1) | [inventree:0.6.1](https://hub.docker.com/layers/inventree/inventree/0.6.1/images/sha256-7586a9feaa50e2928742ea4b0a6441505984b196105a7f84b70b845d42e4af75?context=explore) |
-| [0.6.0](./0.6.0.md) | 2022-02-21 | [0.6.0](https://github.com/inventree/InvenTree/releases/tag/0.6.0) | [inventree:0.6.0](https://hub.docker.com/layers/inventree/inventree/0.6.0/images/sha256-7f4d936d8647ee107a04752f13265687c580c89d5afdd4565e7073f2c32b357a?context=explore) |
+{% with prefix="0.6" %}{% include "release_table.html" %}{% endwith %}
 
 ### 0.5.x
-
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| [0.5.4](./0.5.4.md) | 2021-11-3 | [0.5.4](https://github.com/inventree/InvenTree/releases/tag/0.5.4) | [inventree:0.5.4](https://hub.docker.com/layers/inventree/inventree/0.5.4/images/sha256-35512b55ea1f78a802c915d3ea920bb8e1ef0c8f3f1b68ec1941d2a6a1141bd3?context=explore) |
-| [0.5.3](./0.5.3.md) | 2021-10-19 | [0.5.3](https://github.com/inventree/InvenTree/releases/tag/0.5.3) | [inventree:0.5.3](https://hub.docker.com/layers/inventree/inventree/0.5.3/images/sha256-ecdfbd2906241b2495cee3c5acc12bdec5ed66b2d32ab146dbc2b71131a73a7a?context=explore) |
-| [0.5.2](./0.5.2.md) | 2021-10-19 | [0.5.2](https://github.com/inventree/InvenTree/releases/tag/0.5.2) | [inventree:0.5.2](https://hub.docker.com/layers/inventree/inventree/0.5.2/images/sha256-ff4f435df894c5aa5ea18ee7f3637e81a29ed356ed82dba70ecbd28da3e3d965?context=explore) |
-| [0.5.1](./0.5.1.md) | 2021-10-11 | [0.5.1](https://github.com/inventree/InvenTree/releases/tag/0.5.1) | [inventree:0.5.1](https://hub.docker.com/layers/inventree/inventree/0.5.1/images/sha256-3dbfb2e1bc73a0ff2bf537b56f7151c98097923cf77f5313a2a914586ab75973?context=explore) |
-| [0.5.0](./0.5.0.md) | 2021-10-1 | [0.5.0](https://github.com/inventree/InvenTree/releases/tag/0.5.0) | [inventree:0.5.0](https://hub.docker.com/layers/inventree/inventree/0.5.0/images/sha256-eed8b5df1512d4f1f8596d782d894f8e582c0978d0109020da3ee852bb9326ee?context=explore) |
+{% with prefix="0.5" %}{% include "release_table.html" %}{% endwith %}
 
 ### 0.4.x
-
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| [0.4.5](./0.4.5.md) | 2021-08-10 | [0.4.5](https://github.com/inventree/InvenTree/releases/tag/0.4.5) | [inventree:0.4.5](https://hub.docker.com/layers/inventree/inventree/0.4.5/images/sha256-87c84512b31b9a5a0810c79fcb9a9f4515395d0c610619017e41d28b52946eaa?context=explore) |
-| [0.4.4](./0.4.4.md) | 2021-08-09 | [0.4.4](https://github.com/inventree/InvenTree/releases/tag/0.4.4) | [inventree:0.4.4](https://hub.docker.com/layers/inventree/inventree/0.4.4/images/sha256-adf5f8515a1a1f8b35404e1bb634ef31572baf9472fd5e6920327953c822e477?context=explore) |
-| [0.4.3](./0.4.3.md) | 2021-08-05 | [0.4.3](https://github.com/inventree/InvenTree/releases/tag/0.4.3) | [inventree:0.4.3](https://hub.docker.com/layers/inventree/inventree/0.4.3/images/sha256-441af7821e59c1f96e012fe3060497aa8da9d085701513d1eab3a45c42297fc8?context=explore) |
-| [0.4.2](./0.4.2.md) | 2021-08-02 | [0.4.2](https://github.com/inventree/InvenTree/releases/tag/0.4.2) | [inventree:0.4.2](https://hub.docker.com/layers/inventree/inventree/0.4.2/images/sha256-987c656ec21cc8f8dc1c1d74d5443368161b6ef27cb823edcbcddd5aa28ccf6c?context=explore) |
-| [0.4.1](./0.4.1.md) | 2021-07-31 | [0.4.1](https://github.com/inventree/InvenTree/releases/tag/0.4.1) | [inventree:0.4.1](https://hub.docker.com/layers/inventree/inventree/0.4.1/images/sha256-fa0560d4b1fa99c5e49f8d1b1f78893ef0361db7a05f92aed08d1a405fe715c4?context=explore) |
-| [0.4.0](./0.4.0.md) | 2021-07-28 | [0.4.0](https://github.com/inventree/InvenTree/releases/tag/0.4.0) | [inventree:0.4.0](https://hub.docker.com/layers/inventree/inventree/0.4.0/images/sha256-475cbd226b4a2ac2a23106e33d84497642b1e373a9d7521e6773c1ea4d0b32c9?context=explore) |
+{% with prefix="0.4" %}{% include "release_table.html" %}{% endwith %}
 
 ### 0.3.x
-
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| [0.3.0](./0.3.0.md) | 2021-07-15 | [0.3.0](https://github.com/inventree/InvenTree/releases/tag/0.3.0) | [inventree:0.3.0](https://hub.docker.com/layers/inventree/inventree/0.3.0/images/sha256-b442a236fbc4b91e1e5fdbba2a080655e30447422aaa2e32cd6053571900b2c3?context=explore) |
+{% with prefix="0.3" %}{% include "release_table.html" %}{% endwith %}
 
 ### 0.2.x
-
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| [0.2.4](./0.2.4.md) | 2021-06-27 | [0.2.4](https://github.com/inventree/InvenTree/releases/tag/0.2.4) | [inventree:0.2.4](https://hub.docker.com/layers/inventree/inventree/0.2.4/images/sha256-a7a9f860d4ef47cda83ca79edc147a6b7d4c86860cd92d37e5e4fc5bec95da82?context=explore) |
-| [0.2.3](./0.2.3.md) | 2021-06-16 | [0.2.3](https://github.com/inventree/InvenTree/releases/tag/0.2.3) | [inventree:0.2.3](https://hub.docker.com/layers/inventree/inventree/0.2.3/images/sha256-527c78eb7e32cbf67f82ba5226f9a9486c1de58c03057c7c9edc7626f6127f02?context=explore) |
-| [0.2.2](./0.2.2.md) | 2021-05-29 | [0.2.2](https://github.com/inventree/InvenTree/releases/tag/0.2.2) | [inventree:0.2.2](https://hub.docker.com/layers/inventree/inventree/0.2.2/images/sha256-cd6f13de516ceae53dbe9e4d1ff014a040f71f5651e7099e9299f2e678a51209?context=explore) |
-| [0.2.1](./0.2.1.md) | 2021-04-18 | [0.2.1](https://github.com/inventree/InvenTree/releases/tag/0.2.1) | [inventree:0.2.1](https://hub.docker.com/layers/inventree/inventree/0.2.1/images/sha256-ea6932dd19864df2a7918f244ec5e5b3eeb06d2c9e4892bdcc7d4b491721b4e6?context=explore) |
-| [0.2.0](./0.2.0.md) | 2021-04-11 | [0.2.0](https://github.com/inventree/InvenTree/releases/tag/0.2.0) | - |
+{% with prefix="0.2" %}{% include "release_table.html" %}{% endwith %}
 
 ### 0.1.x
-
-| <span class='fas fa-clipboard-list'></span> Release | <span class='fas fa-calendar-alt'></span> Date | <span class='fab fa-github'></span> GitHub | <span class='fab fa-docker'></span> Docker |
-| --- | --- | --- | --- |
-| [0.1.8](./0.1.8.md) | 2021-04-10 | [0.1.8](https://github.com/inventree/InvenTree/releases/tag/0.1.8) | - |
-| [0.1.7](./0.1.7.md) | 2021-03-04 | [0.1.7](https://github.com/inventree/InvenTree/releases/tag/0.1.7) | - |
-| [0.1.6](./0.1.6.md) | 2021-02-21 | [0.1.6](https://github.com/inventree/InvenTree/releases/tag/0.1.6) | - |
-| [0.1.5](./0.1.5.md) | 2021-01-19 | [0.1.5](https://github.com/inventree/InvenTree/releases/tag/0.1.5) | - |
-| [0.1.4](./0.1.4.md) | 2020-11-15 | [0.1.4](https://github.com/inventree/InvenTree/releases/tag/0.1.4) | - |
+{% with prefix="0.1" %}{% include "release_table.html" %}{% endwith %}
 
 ## Upcoming Features
 
