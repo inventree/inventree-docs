@@ -2,7 +2,11 @@
 Custom mkdocs hooks, using the mkdocs-simple-hooks plugin
 """
 
+import json
 import os
+import re
+
+from urllib import request
 
 
 def on_config(config, *args, **kwargs):
@@ -68,17 +72,63 @@ def on_config(config, *args, **kwargs):
     print(f"config.site_url = '{site_url}'")
     print(f"config.assets_dir = '{assets_dir}'")
 
-    return config
+    # Download release information via the GitHub API
+    print("Fetching InvenTree release information from api.github.com:")
+    releases = []
 
+    # Keep making API requests until we run out of results
+    page = 1
 
-def my_cfg(config, *args, **kwargs):
+    while 1:
+        url = f"https://api.github.com/repos/inventree/inventree/releases?page={page}&per_page=50"
 
-    # print(config.keys())
+        print(f" - {url}")
 
-    for k in config.keys():
-        print(f"- {k}")
+        response = request.urlopen(url, timeout=30)
+        assert(response.status == 200)
 
-    print(config['site_url'])
+        data = json.loads(response.read().decode())
+        
+        # No more results
+        if len(data) == 0:
+            break
+
+        # Request the next page of results
+        page += 1
+
+        for item in data:
+            # Ignore draft releases
+            if item['draft']:
+                continue
+                
+            tag = item['tag_name']
+
+            # Check that the tag is formatted correctly
+            re.match('^\d+\.\d+\.\d+$', tag)
+
+            if not re.match:
+                print(f"Found badly formatted release: {tag}")
+                continue
+
+            # Check if there is a local file with release information
+            local_path = os.path.join(
+                os.path.dirname(__file__),
+                'releases',
+                f'{tag}.md',
+            )
+
+            if os.path.exists(local_path):
+                item['local_path'] = local_path
+
+            # Extract the date
+            item['date'] = item['published_at'].split('T')[0]
+
+            releases.append(item)
+    
+    print(f"- found {len(releases)} releases.")
+
+    # Sort releases by descending date
+    config['releases'] = sorted(releases, key=lambda it: it['date'], reverse=True)
 
     return config
 
