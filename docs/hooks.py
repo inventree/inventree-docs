@@ -2,8 +2,64 @@
 Custom mkdocs hooks, using the mkdocs-simple-hooks plugin
 """
 
+import json
 import os
+import re
 
+from datetime import datetime
+from urllib import request
+
+
+def get_release_data():
+    """Return InvenTree release information.
+    
+    - First look to see if 'releases.json' file exists
+    - If data does not exist in this file, request via the github API
+    """
+
+    json_file = os.path.join(os.path.dirname(__file__), 'releases.json')
+
+    releases = []
+
+    if os.path.exists(json_file):
+        # Release information has been cached to file
+
+        print("Loading release information from 'releases.json'")
+        with open(json_file) as f:
+            releases = json.loads(f.read())
+    else:
+        
+        # Download release information via the GitHub API
+        print("Fetching InvenTree release information from api.github.com:")
+        releases = []
+
+        # Keep making API requests until we run out of results
+        page = 1
+
+        while 1:
+            url = f"https://api.github.com/repos/inventree/inventree/releases?page={page}&per_page=150"
+
+            print(f" - {url}")
+
+            response = request.urlopen(url, timeout=30)
+            assert(response.status == 200)
+
+            data = json.loads(response.read().decode())
+
+            if len(data) == 0:
+                break
+            
+            for item in data:
+                releases.append(item)
+
+            page += 1
+
+        # Cache these results to file
+        with open(json_file, 'w') as f:
+            print("Saving release information to 'releases.json'")
+            f.write(json.dumps(releases))
+    
+    return releases
 
 def on_config(config, *args, **kwargs):
     """
@@ -68,17 +124,53 @@ def on_config(config, *args, **kwargs):
     print(f"config.site_url = '{site_url}'")
     print(f"config.assets_dir = '{assets_dir}'")
 
-    return config
+    release_data = get_release_data()
+   
+    releases = []
 
+    for item in release_data:
 
-def my_cfg(config, *args, **kwargs):
+        # Ignore draft releases
+        if item['draft']:
+            continue
+            
+        tag = item['tag_name']
 
-    # print(config.keys())
+        # Check that the tag is formatted correctly
+        re.match('^\d+\.\d+\.\d+$', tag)
 
-    for k in config.keys():
-        print(f"- {k}")
+        if not re.match:
+            print(f"Found badly formatted release: {tag}")
+            continue
 
-    print(config['site_url'])
+        # Check if there is a local file with release information
+        local_path = os.path.join(
+            os.path.dirname(__file__),
+            'releases',
+            f'{tag}.md',
+        )
+
+        if os.path.exists(local_path):
+            item['local_path'] = local_path
+
+        # Extract the date
+        item['date'] = item['published_at'].split('T')[0]
+
+        date = datetime.fromisoformat(item['date'])
+
+        # First tagged docker release was 2021-04-18
+        if date > datetime(year=2021, month=4, day=17):
+            item['docker'] = True
+        
+        # Add a "prefix" so we can split by sub version
+        item['prefix'] = '.'.join(tag.split('.')[:-1])
+
+        releases.append(item)
+    
+    print(f"- found {len(releases)} releases.")
+
+    # Sort releases by descending date
+    config['releases'] = sorted(releases, key=lambda it: it['date'], reverse=True)
 
     return config
 
