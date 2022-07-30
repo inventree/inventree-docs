@@ -114,6 +114,8 @@ stock_item.uploadTestResult("Firmware", True, value="0x12345678", attachment="de
 
 ### Examples
 
+Following is a *non-exhaustive* list of examples of the capabilities provided by the python library. For a complete look at what it can do, [read the source code](https://github.com/inventree/inventree-python)!
+
 #### Creating New Items
 
 Use the `create` method to add new items to the database:
@@ -239,7 +241,30 @@ SupplierPart.create(api,{
     'manufacturer':acme.pk,
     'MPN':'Part code of the manufacturer'
 })
+```
 
+#### Stock Adjustments
+
+Various stock adjustment actions can be performed as follows:
+
+```python
+from inventree.stock import StockItem, StockLocation
+
+# Fetch item from the server
+item = StockItem(api, pk=99)
+
+# Count stock
+item.countStock(500)
+
+# Add stock to the item
+item.addStock(15)
+
+# Remove stock from the item
+item.removeStock(25)
+
+# Transfer partial quantity to another location
+loc = StockLocation(api, pk=12)
+item.transferStock(loc, quantity=50)
 ```
 
 #### Upload Attachments
