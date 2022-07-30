@@ -267,6 +267,17 @@ loc = StockLocation(api, pk=12)
 item.transferStock(loc, quantity=50)
 ```
 
+#### Bulk Delete
+
+Some database models support bulk delete operations, where multiple database entries can be deleted in a single API query.
+
+```python
+from inventree.stock import StockItem
+
+# Delete all items in a particular category
+StockItem.bulkDelete(api, filters={'category': 3})
+```
+
 #### Upload Attachments
 
 We have the possibility to upload attachments against a particular Part. We can use pdf for documents but also other files like 3D drawings or pictures. To do so we add the following commands:
