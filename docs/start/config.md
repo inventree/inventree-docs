@@ -44,7 +44,7 @@ The following basic options are available:
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_DEBUG | debug | Enable debug mode | True |
+| INVENTREE_DEBUG | debug | Enable [debug mode](./intro.md#debug-mode) | True |
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
 | INVENTREE_TIMZONE | timezome | Server timezone | UTC |
 | ADMIN_URL | admin_url | URL for accessing [admin interface](../settings/admin.md) | admin |
@@ -80,6 +80,11 @@ A file containing the secret key can be passed via the environment variable `INV
 **Fallback to Default Secret Key File**
 
 If not specified via environment variables, the fallback secret_key file (automatically generated as part of InvenTree installation) will be used.
+
+| Environment Variable | Configuration File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_SECRET_KEY | secret_key | Raw secret key value | *Not set* |
+| INVENTREE_SECRET_KEY_FILE | secret_key_file | File containing secret key value | *Not set* |
 
 ## Database Options
 
