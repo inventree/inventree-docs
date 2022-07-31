@@ -137,6 +137,12 @@ The following email settings are available:
 | INVENTREE_EMAIL_SENDER | email.sender | Name of sender | *Not set* |
 | INVENTREE_EMAIL_PREFIX | email.prefix | Prefix for subject text | [InvenTree] |
 
+## Supported Currencies
+
+The currencies supported by InvenTree must be specified in the [configuration file](#configuration-file).
+
+A list of currency codes (e.g. *AUD*, *CAD*, *JPY*, *USD*) can be specified using the `currencies` variable.
+
 ## Allowed Hosts / CORS
 
 By default, all hosts are allowed, and CORS requests are enabled from any origin.
