@@ -6,21 +6,6 @@ from urllib import request
 
 def define_env(env):
 
-    # Ensure that the config template is always up to date
-    CFG_URL = "https://raw.githubusercontent.com/inventree/InvenTree/master/InvenTree/config_template.yaml"
-
-    # Only perform this step if we are building on RTD server
-    if os.environ.get('READTHEDOCS', False):
-        response = request.urlopen(CFG_URL)
-        print(f"Reading config template from GitHub: Response {response.status}")
-        
-        if response.status == 200:
-            data = response.read()
-
-            if len(data) > 0:
-                with open("_includes/config.yaml", "w") as f:
-                    f.write(str(data.decode()))
-
     @env.macro
     def listimages(subdir):
         """
