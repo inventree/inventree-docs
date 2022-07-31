@@ -46,6 +46,8 @@ The following basic options are available:
 | --- | --- | --- | --- |
 | INVENTREE_DEBUG | debug | Enable debug mode | True |
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
+| INVENTREE_TIMZONE | timezome | Server timezone | UTC |
+
 
 ## Administrator Account
 
@@ -56,6 +58,9 @@ An administrator account can be specified using the following environment variab
 | INVENTREE_ADMIN_USER | admin_user | Admin account username | *Not set* |
 | INVENTREE_ADMIN_PASSWORD | admin_password | Admin account password | *Not set* |
 | INVENTREE_ADMIN_EMAIL | admin_email |Admin account email address | *Not set* |
+
+!!! info "Administrator Account"
+    Providing `INVENTREE_ADMIN` credentials will result in the provided account being created with *superuser* permissions when InvenTree is started.
 
 ## Secret Key
 
@@ -92,6 +97,27 @@ The following database options can be configured:
 | INVENTREE_DB_HOST | database.HOST | Database host address (if required) | *Not set* |
 | INVENTREE_DB_PORT | database.PORT | Database host port (if required) | *Not set* |
 
+### PostgreSQL Settings
+
+If running with a PostgreSQL database backend, the following additional options are available:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_DB_TIMEOUT | database.timeout | Database connection timeout (s) | 2 |
+| INVENTREE_DB_TCP_KEEPALIVES | database.tcp_keepalives | TCP keepalive | 1 |
+| INVENTREE_DB_TCP_KEEPALIVES_IDLE | database.tcp_keepalives_idle | Idle TCP keepalive | 1 |
+| INVENTREE_DB_TCP_KEEPALIVES_INTERNAL | database.tcp_keepalives_internal | Internal TCP keepalive | 1|
+| INVENTREE_DB_TCP_KEEPALIVES_COUNT | database.tcp_keepalives_count | TCP keepalive count | 5 |
+| INVENTREE_DB_ISOLATION_SERIALIZABLE | database.serializable | Database isolation level configured to "serializable" | False |
+
+### MySQL Settings
+
+If running with a MySQL database backend, the following additional options are available:
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_DB_ISOLATION_SERIALIZABLE | database.serializable | Database isolation level configured to "serializable" | False |
+
 ## Email Settings
 
 To enable [email functionality](../settings/email.md), email settings must be configured here, either via environment variables or within the configuration file.
@@ -108,6 +134,7 @@ The following email settings are available:
 | INVENTREE_EMAIL_TLS | email.tls | Enable TLS support | False |
 | INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support | False |
 | INVENTREE_EMAIL_SENDER | email.sender | Name of sender | *Not set* |
+| INVENTREE_EMAIL_PREFIX | email.prefix | Prefix for subject text | [InvenTree] |
 
 ## Allowed Hosts / CORS
 
@@ -164,6 +191,19 @@ The login-experience can be altered with the following settings:
 ### Authentication Backends
 
 Custom authentication backends can be used by specifying them here. These can for example be used to add [LDAP / AD login](https://django-auth-ldap.readthedocs.io/en/latest/) to InvenTree
+
+### Sentry Integration
+
+The InvenTree server can be integrated with the [sentry.io](https://sentry.io) monitoring service, for error logging and performance tracking.
+
+| Environment Variable | Settings File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_SENTRY_ENABLED | sentry.enabled | Enable sentry.io integration | False |
+| INVENTREE_SENTRY_DSN | sentry.dsn | Sentry DSN (data source name) key | *Defaults to InvenTree developer key* |
+| INVENTREE_SENTRY_SAMPLE_RATE | sentry.sample_rate | How often to send data samples | 0.1 |
+
+!!! info "Default DSN"
+    If enabled with the default DSN, server errors will be logged to a sentry.io account monitored by the InvenTree developers.
 
 ### Customisation Options
 
