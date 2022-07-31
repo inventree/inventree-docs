@@ -42,18 +42,19 @@ A configuration file *template* can be found on [GitHub](https://github.com/inve
 
 The following basic options are available:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_DEBUG | debug | Enable debug mode | True |
 | INVENTREE_LOG_LEVEL | log_level | Set level of logging to terminal | WARNING |
 | INVENTREE_TIMZONE | timezome | Server timezone | UTC |
-
+| ADMIN_URL | admin_url | URL for accessing [admin interface](../settings/admin.md) | admin |
+| INVENTREE_LANGUAGE | language | Default language | en-us |
 
 ## Administrator Account
 
 An administrator account can be specified using the following environment variables:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_ADMIN_USER | admin_user | Admin account username | *Not set* |
 | INVENTREE_ADMIN_PASSWORD | admin_password | Admin account password | *Not set* |
@@ -88,7 +89,7 @@ Database options are specified under the *database* heading in the configuration
 
 The following database options can be configured:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_DB_ENGINE | database.ENGINE | Database backend | *Not set* |
 | INVENTREE_DB_NAME | database.NAME | Database name | *Not set* |
@@ -101,7 +102,7 @@ The following database options can be configured:
 
 If running with a PostgreSQL database backend, the following additional options are available:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_DB_TIMEOUT | database.timeout | Database connection timeout (s) | 2 |
 | INVENTREE_DB_TCP_KEEPALIVES | database.tcp_keepalives | TCP keepalive | 1 |
@@ -114,7 +115,7 @@ If running with a PostgreSQL database backend, the following additional options 
 
 If running with a MySQL database backend, the following additional options are available:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_DB_ISOLATION_SERIALIZABLE | database.serializable | Database isolation level configured to "serializable" | False |
 
@@ -124,7 +125,7 @@ To enable [email functionality](../settings/email.md), email settings must be co
 
 The following email settings are available:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_EMAIL_BACKEND | email.backend | Email backend module | django.core.mail.backends.smtp.EmailBackend |
 | INVENTREE_EMAIL_HOST | email.host | Email server host | *Not set* |
@@ -142,6 +143,12 @@ By default, all hosts are allowed, and CORS requests are enabled from any origin
 
 !!! danger "Not Secure"
     Allowing access from any host is not secure, and should be adjusted for your installation.
+
+| Environment Variable | Configuration File | Description | Default |
+| --- | --- | --- | --- |
+| *N/A* | allowed_hosts | List of allowed hosts | `*` |
+| *N/A* | cors.allow_all | Allow all remote URLS for CORS checks | False |
+| *N/A* | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
 
 !!! info "Configuration File"
     Allowed hosts and CORS options must be changed in the configuration file, and cannot be set via environment variables
@@ -183,10 +190,10 @@ If the selected providers need additional settings they must be added as dicts u
 
 The login-experience can be altered with the following settings:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_LOGIN_CONFIRM_DAYS | login_confirm_days | Duration for which confirmation links are valid | 3 |
-| INVENTREE_LOGIN_ATTEMPTS | login_attempts | Count of allowed login attempts before blocking user | 5 |
+| INVENTREE_LOGIN_CONFIRM_DAYS | login.confirm_days | Duration for which confirmation links are valid | 3 |
+| INVENTREE_LOGIN_ATTEMPTS | login.attempts | Count of allowed login attempts before blocking user | 5 |
 
 ### Authentication Backends
 
@@ -196,7 +203,7 @@ Custom authentication backends can be used by specifying them here. These can fo
 
 The InvenTree server can be integrated with the [sentry.io](https://sentry.io) monitoring service, for error logging and performance tracking.
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_SENTRY_ENABLED | sentry.enabled | Enable sentry.io integration | False |
 | INVENTREE_SENTRY_DSN | sentry.dsn | Sentry DSN (data source name) key | *Defaults to InvenTree developer key* |
@@ -209,7 +216,7 @@ The InvenTree server can be integrated with the [sentry.io](https://sentry.io) m
 
 The logo and custom messages can be changed/set:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_CUSTOM_LOGO | customize.logo | Path to logo in the media storage |  |
 | INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page |  |
@@ -224,7 +231,7 @@ If you want to remove the InvenTree branding as far as possible from your end-us
 
 The following [plugin](../extend/plugins.md) configuration options are available:
 
-| Environment Variable | Settings File | Description | Default |
+| Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
 | INVENTREE_PLUGIN_FILE | *N/A* | Location of plugin installation file | `./InvenTree/plugins.txt` |
