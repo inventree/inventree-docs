@@ -216,9 +216,9 @@ The InvenTree server can be integrated with the [sentry.io](https://sentry.io) m
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_SENTRY_ENABLED | sentry.enabled | Enable sentry.io integration | False |
-| INVENTREE_SENTRY_DSN | sentry.dsn | Sentry DSN (data source name) key | *Defaults to InvenTree developer key* |
-| INVENTREE_SENTRY_SAMPLE_RATE | sentry.sample_rate | How often to send data samples | 0.1 |
+| INVENTREE_SENTRY_ENABLED | sentry_enabled | Enable sentry.io integration | False |
+| INVENTREE_SENTRY_DSN | sentry_dsn | Sentry DSN (data source name) key | *Defaults to InvenTree developer key* |
+| INVENTREE_SENTRY_SAMPLE_RATE | sentry_sample_rate | How often to send data samples | 0.1 |
 
 !!! info "Default DSN"
     If enabled with the default DSN, server errors will be logged to a sentry.io account monitored by the InvenTree developers.
@@ -244,9 +244,9 @@ The following [plugin](../extend/plugins.md) configuration options are available
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_PLUGINS_ENABLED | plugins.enabled | Enable plugin support | False |
-| INVENTREE_PLUGIN_FILE | plugins.plugin_file | Location of plugin installation file | *Not set* |
-| INVENTREE_PLUGIN_DIR | plugins.plugin_dir | Location of external plugin directory | *Not set* |
+| INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
+| INVENTREE_PLUGIN_FILE | plugins_plugin_file | Location of plugin installation file | *Not set* |
+| INVENTREE_PLUGIN_DIR | plugins_plugin_dir | Location of external plugin directory | *Not set* |
 
 ## Other Options
 
