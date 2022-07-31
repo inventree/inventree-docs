@@ -16,13 +16,17 @@ The following guide provides a streamlined production InvenTree installation, wi
 
 #### Docker Image
 
-This production setup guide uses the official InvenTree docker image, available from dockerhub. The provided docker-compose file targets `inventree:stable` by default.
+This production setup guide uses the official InvenTree docker image, available from dockerhub.
+
+!!! info "Stable Version"
+    The provided docker-compose file targets `inventree:stable` by default.
 
 #### Docker Compose
 
 A sample [docker compose file](https://github.com/inventree/InvenTree/blob/master/docker/production/docker-compose.yml) is provided to sequence all the required processes.
 
-*If you require a different configuration, use this file as a starting point*.
+!!! tip "Starting Point"
+    If you require a different configuration, use this docker-compose file as a starting point.
 
 #### Static and Media Files
 
@@ -33,7 +37,7 @@ The sample docker-compose configuration outlined on this page uses nginx to serv
 
 #### Required Files
 
-The following files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory of the InvenTree source code:
+The following files required for this setup are provided with the InvenTree source, located in the `./docker/production` directory of the [InvenTree source code](https://github.com/inventree/InvenTree/tree/master/docker/production):
 
 | Filename | Description |
 | --- | --- |
@@ -187,7 +191,7 @@ docker-compose pull
 This ensures that the InvenTree containers will be running the latest version of the InvenTree source code.
 
 !!! info "Tagged Version"
-    If you are targetting a particular "tagged" version of InvenTree, you may wish to edit your docker-compose file before issuing the `docker-compose pull` command
+    If you are targetting a particular "tagged" version of InvenTree, you may wish to edit the `INVENTREE_TAG` variable in the `.env` file before issuing the `docker-compose pull` command
 
 ### Update Database
 
