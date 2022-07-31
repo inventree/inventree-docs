@@ -233,9 +233,9 @@ The following [plugin](../extend/plugins.md) configuration options are available
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
-| INVENTREE_PLUGIN_FILE | *N/A* | Location of plugin installation file | `./InvenTree/plugins.txt` |
-| INVENTREE_PLUGIN_DIR | *N/A* | Location of external plugin directory | *Not set* |
+| INVENTREE_PLUGINS_ENABLED | plugins.enabled | Enable plugin support | False |
+| INVENTREE_PLUGIN_FILE | plugins.plugin_file | Location of plugin installation file | *Not set* |
+| INVENTREE_PLUGIN_DIR | plugins.plugin_dir | Location of external plugin directory | *Not set* |
 
 ## Other Options
 
