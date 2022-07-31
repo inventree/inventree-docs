@@ -34,6 +34,7 @@ To get "up and running" with a development environment, complete with a set of [
 
 ```bash
 git clone https://github.com/inventree/InvenTree.git && cd InvenTree
+docker compose run inventree-dev-server invoke install
 docker compose run inventree-dev-server invoke setup-test
 docker compose up -d
 ```

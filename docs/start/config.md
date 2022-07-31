@@ -35,7 +35,7 @@ The default InvenTree config file is located at `./InvenTree/config.yaml`
 
 A configuration file *template* can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml) 
 
-!!! success "Template File"
+!!! info "Template File"
     The default configuration file (as defined by the template linked above) will be copied to the specifed configuration file location on first run, if a configuration file is not found in that location.
 
 ## Basic Options
