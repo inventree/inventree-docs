@@ -1,0 +1,11 @@
+name: Issue template
+about: A general template for documentation errors or enhancments
+title: ''
+labels: ''
+assignees: ''
+body:
+  - type: markdown
+    attributes:
+      label: Body of the issue
+      description: Please provide one distinct thing to fix or a clearly defined enhancment
+      Tip: This repo is only inteded for issues regarding the documentation. If you need help setting up the software use the main repo https://github.com/inventree/InvenTree
