@@ -4,10 +4,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        This repo is *only* inteded for issues regarding the documentation.
-        If you need help *setting up* the software read the [install info](https://inventree.readthedocs.io/en/latest/start/intro/).
-        If you have have issues with getting *docker* up and running read the [docker section](https://inventree.readthedocs.io/en/latest/start/docker/) in the docs. Do not post your setup issues here.
-        If you need *general help* with the software use the [main repo](https://github.com/inventree/InvenTree).
+        This repo is *only* inteded for issues regarding the documentation.  
+        If you need help **setting up** the software read the [install info](https://inventree.readthedocs.io/en/latest/start/intro/).
+        If you have have issues with getting **docker** up and running read the [docker section](https://inventree.readthedocs.io/en/latest/start/docker/) in the docs. Do not post your setup issues here.
+        If you need **general help** with the software use the [main repo](https://github.com/inventree/InvenTree).
   - type: textarea
     id: repro
     attributes:
