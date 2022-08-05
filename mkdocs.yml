@@ -53,9 +53,9 @@ extra_javascript:
 # Navigation
 nav:
   - InvenTree:
+    - InvenTree: index.md
     - Features: features.md
     - Release Notes: releases/release_notes.md
-    - Demo: demo.md
     - FAQ: faq.md
     - Credits: credits.md
     - Privacy: privacy.md

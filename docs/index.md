@@ -3,7 +3,6 @@ title: InvenTree
 template: home.html
 hide:
     - toc
-    - navigation
 ---
 
 ## Intuitive Inventory Management
