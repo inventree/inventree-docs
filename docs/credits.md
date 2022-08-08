@@ -64,6 +64,12 @@ InvenTree relies on the following frontend libraries and components:
 | [clipboard.js](https://github.com/zenorocha/clipboard.js) | MIT | text copying |
 | [qr-scanner](https://github.com/nimiq/qr-scanner) | MIT | Javascript QR Code Scanner |
 
+## Assets
+
+### Splash Screen
+
+The InvenTree splash screen graphic is sourced from [unsplash.com](https://unsplash.com/photos/Ixvv3YZkd7w) and used under the [unsplash license](https://unsplash.com/license).
+
 ## Source Code Contributions
 
 The InvenTree project relies on the expertise and generosity of its [source code contributors](https://github.com/inventree/InvenTree/graphs/contributors).
