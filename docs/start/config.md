@@ -229,11 +229,15 @@ The logo and custom messages can be changed/set:
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_CUSTOM_LOGO | customize.logo | Path to logo in the static files directory | *Not set* |
+| INVENTREE_CUSTOM_LOGO | customize.logo | Path to custom logo in the static files directory | *Not set* |
+| INVENTREE_CUSTOM_SPLASH | customize.splash | Path to custom splash screen in the static files directory | *Not set* |
 | INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page | *Not set* |
 | INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar | *Not set* |
 
 If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings). 
+
+!!! info "Custom Splash Screen Path"
+    The provided *custom splash screen* path must be specified *relative* to the location of the `/static/` directory.
 
 !!! info "Custom Logo Path"
     The provided *custom logo* path must be specified *relative* to the location of the `/static/` directory.
