@@ -144,6 +144,37 @@ couch = Part.create(api, {
 })
 ```
 
+#### Updating Attributes
+
+Most model fields which are exposed via the API can be directly edited using the python interface, by simply calling the `save()` method as shown below:
+
+```python
+from inventree.api import InvenTreeAPI
+from inventree.part import Part
+
+api = InvenTreeAPI(host='http://localhost:8000', username='admin', password='inventree')
+
+# Retrieve part instance with primary-key of 1
+part = Part(api, pk=1)
+
+# Update specified part parameters
+part.save(data={
+    "description": "New part description",
+    "minimum_stock": 250,
+})
+
+# Reload data from remote server
+part.reload()
+
+# Display updated data
+print("Part Name:", part.name)
+print("Description:", part.description)
+print("Minimum stock:", part.minimum_stock)
+```
+
+!!! info "Read Only Fields"
+    Note that some fields are read-only and cannot be edited via the API
+
 #### Adding Parameters
 
 Each [part](../part/part.md) can have multiple [parameters](../part/parameter.md). For the example of the sofa (above) *length* and *weight* make sense. Each parameter has a parameter template that combines the parameter name with a unit. So we first have to create the parameter templates and afterwards add the parameter values to the sofa.
