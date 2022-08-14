@@ -71,8 +71,11 @@ TITLE = None  # A nice human friendly name for the plugin -> used in titles, as 
 
 AUTHOR = None  # Author of the plugin, git commit information is used if not present
 PUBLISH_DATE = None  # Publishing date of the plugin, git commit information is used if not present
-VERSION = None  # Version of the plugin
 WEBSITE = None  # Website for the plugin, developer etc. -> is shown in plugin overview if set
+
+VERSION = None  # Version of the plugin
+MIN_VERSION = None  # Lowest InvenTree version number that is supported by the plugin
+MAX_VERSION = None  # Highest InvenTree version number that is supported by the plugin
 ```
 
 Refer to the [sample plugins](https://github.com/inventree/InvenTree/tree/master/InvenTree/plugin/samples) for further examples.
