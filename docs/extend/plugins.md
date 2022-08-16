@@ -50,7 +50,7 @@ MixinNotImplementedError    # Is raised if a mixin was not implemented (core mec
 
 #### Mixins
 
-Mixins are split up internally to keep the source tree clean and enable better testing seperation. All public APIs that should be used are exposed under `plugin.mixins`. These include all built-in mixins and notification methods. An up-to-date reference can be found in the source code (current master can be [found here](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/mixins/__init__.py)).
+Mixins are split up internally to keep the source tree clean and enable better testing separation. All public APIs that should be used are exposed under `plugin.mixins`. These include all built-in mixins and notification methods. An up-to-date reference can be found in the source code (current master can be [found here](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/mixins/__init__.py)).
 
 #### Models and other internal InvenTree APIs
 
