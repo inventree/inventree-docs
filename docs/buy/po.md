@@ -60,6 +60,9 @@ There are two options to mark items as "received":
 * either individually: click on <span class='fas fa-clipboard-check'></span> button on each line item
 * or globally: click on the <span class='fas fa-clipboard-check'></span> button on the main purchase order detail panel and confirm all items in the order have been received.
 
+!!! note "Permissions"
+	Marking line items as received requires the "Purchase order" ADD permission.
+
 ### Received Items
 
 Each item marked as "received" is automatically converted into a stock item.
