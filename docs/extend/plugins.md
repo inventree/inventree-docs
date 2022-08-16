@@ -34,7 +34,7 @@ Please read all release notes and watch out for warnings - we generally provide 
 
 #### Plugins
 
-Generall classes an mechanisms are provided under the `plugin` [namespaces](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/__init__.py). These include:
+General classes and mechanisms are provided under the `plugin` [namespaces](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/__init__.py). These include:
 
 ```python
 # Management objects
