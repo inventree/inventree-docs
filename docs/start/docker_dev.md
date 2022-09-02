@@ -158,3 +158,11 @@ To run database migrations inside the docker container, run the following comman
 ```
 docker-compose run inventree-dev-server invoke update
 ```
+
+### Docker Image Updates
+
+Occassionally, the docker image itself may receive some updates. In these cases, it may be required that the image is rebuilt. To perform a complete rebuild of the InvenTree development image from local source, run the following command:
+
+```
+docker-compose build --no-cache
+```
