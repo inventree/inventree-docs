@@ -8,25 +8,30 @@ The most convenient method of installing and running InvenTree is to use the off
 
 The InvenTree docker image contains all the required system packages, python modules, and configuration files for running a containerised InvenTree web server.
 
+!!! tip "Compose Yourself"
+    The InvenTree container requires linking with other docker containers (such as a database backend) for complete operation. Sample [docker compose](#docker-compose) scripts are provided to get you up and running
+
+!!! warning "Assumed Knowledge"
+    A very basic understanding of [Docker](https://www.docker.com/) and [docker compose](https://docs.docker.com/compose/) is assumed, for the following setup guides.
+
 ### Tagged Images
 
-Docker images are available with the following tags:
+Pre-built Docker images are available from [dockerhub](https://hub.docker.com/r/inventree/inventree) with the following tags:
 
 | Tag | Description |
 | --- | --- |
 | **inventree:stable** | The most recent *stable* release version of InvenTree |
 | **inventree:latest** | The most up-to-date *development* version of InvenTree. |
-| **inventree:_tag_** | Specific tagged images are built for each tagged release of InvenTree |
+| **inventree:_tag_** | Specific tagged images are built for each tagged release of InvenTree, e.g. `inventree:0.7.3`|
 
 ### Docker Compose
 
-InvenTree provides sample docker-compose files to get you up and running.
+The InvenTree docker image provides a containerized webserver, however it *must* be connected with other containers (at the very least, a database backend).
 
-- A *production* compose file is intended to be used in a production environment, running the web server behind a nginx proxy.
-- A *development* compose file provides a simple way to spin up a development environment
+InvenTree provides sample docker-compose files to get you up and running:
 
-!!! warning "Docker Compose Version"
-    The following guide is designed to work with docker-compose v1.x. There are currently known issues with [docker-compose v2 support](https://github.com/docker/compose/releases/tag/v2.0.0). If you are having issues with the docker installation guide, check the version of docker-compose you are running with the command `docker-compose --version`. 
+- A [development](#development-server) compose file provides a simple way to spin up a development environment
+- A [production](#production-server) compose file is intended to be used in a production environment, running the web server behind a nginx proxy.
 
 ### Environment Variables
 
@@ -34,26 +39,39 @@ InvenTree run-time configuration options described in the [configuration documen
 
 ### Persistent Data
 
-Persistent data (e.g. uploaded media files) is stored outside the container instance. This directory should be mounted as a volume which the InvenTree docker container can access.
+As docker containers are ephemeral, any *persistent* data must be stored in an external [volume](https://docs.docker.com/storage/volumes/). To simplify installation / implementation, all external data are stored in a single volume, arranged as follows:
 
-### Configuration File
+#### Media FIles
+
+Uploaded media files are stored in the `media/` subdirectory of the external data volume.
+
+#### Static Files
+
+Static files required by the webserver are stored in the `static/` subdirectory of the external data volume.
+
+#### Configuration File
 
 As discussed in the [configuration documentation](./config.md), InvenTree run-time settings can be provided in a configuration file.
 
-By default, the docker container expects this configuration file in the location `/home/inventree/data/config.yaml`. If this file does not exist, it will be automatically created from a default template file.
+By default, this file will be created as `config.yaml` in the external data volume.
 
-As this config file is inside the "data" directory (which should be mounted as a volume) it can be edited outside the context of the container, if necessary.
-
-### Secret Key
+#### Secret Key
 
 InvenTree uses a secret key to provide cryptographic signing for the application.
 
 As specified in the [configuration documentation](./config.md#secret-key) this can be passed to the InvenTree application directly as an environment variable, or provided via a file.
 
-By default, the InvenTree container expects the `INVENTREE_SECRET_KEY_FILE` to exist at `/home/inventree/data/secret_key.txt`. If this file does not exist, it will be created and a new key will be randomly generated.
+By default, the InvenTree container expects the secret key file to exist as `secret_key.txt` (within the external data volume). If this file does not exist, it will be created and a new key will be randomly generated.
 
 !!! warning "Same Key"
     Each InvenTree container instance must use the same secret key value, otherwise unexpected behavior will occur.
+
+#### Plugins
+
+Plugins are supported natively when running under docker. There are two ways to [install plugins](../extend/plugins/install.md) when using docker:
+
+- Install via the `plugins.txt` file provided in the external data directory
+- Install into the `plugins/` subdirectory in the external data directory
 
 ## Docker Setup Guides
 

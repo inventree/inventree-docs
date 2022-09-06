@@ -160,8 +160,7 @@ Options for build orders
 
 | Setting | Type | Description | Default |
 | --- | --- | --- | --- |
-| Reference Prefix | String | Prefix for build order reference | BO |
-| Reference Regex | String | Regular expression pattern for build order reference | *blank* |
+| Reference Pattern | String | Pattern for defining Build Order reference values | {% raw %}BO-{ref:04d}{% endraw %} |
 
 ### Purchase Orders
 
@@ -169,7 +168,7 @@ Options for purchase orders
 
 | Setting | Type | Description | Default |
 | --- | --- | --- | --- |
-| Reference Prefix | String | Prefix for purchase order reference | PO |
+| Reference Pattern | String | Pattern for defining Purchase Order reference values | {% raw %}PO-{ref:04d}{% endraw %} |
 
 ### Sales orders
 
@@ -177,7 +176,7 @@ Options for sales orders
 
 | Setting | Type | Description | Default |
 | --- | --- | --- | --- |
-| Reference Prefix | String | Prefix for sales order reference | SO |
+| Reference Pattern | String | Pattern for defining Sales Order reference values | {% raw %}SO-{ref:04d}{% endraw %} |
 
 ### Plugin Settings
 

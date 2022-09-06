@@ -38,18 +38,29 @@ class MyLabelPrinter(LabelPrintingMixin, InvenTreePlugin):
     SLUG = "mylabel"
     TITLE = "A dummy printer"
 
-    def print_label(self, label, **kwargs):
+    def print_label(self, **kwargs):
         """
         Send the label to the printer
         
-        Arguments:
-            label: A PIL (pillow) Image file
+        kwargs:
+            pdf_data: An in-memory PDF file of the label
+            png_file: An in-memory PIL (pillow) Image file of the label
+            filename: The filename of the printed label (if applicable)
+            label_instance: The Label model instance
+            width: width of the label (in mm)
+            height: height of the label (in mm)
+            user: The user who printed this label
         """
         
         width = kwargs['width']
         height = kwargs['height']
 
-        printer_backend.print(label, w=width, h=height)
+        # This dummy printer supports printing of raw image files
+        printer_backend.print(png_file, w=width, h=height)
 ```
 
+### Available Data
 
+The *label* data are supplied to the plugin in both `PDF` and `PNG` formats. This provides compatibility with a great range of label printers "out of the box". Conversion to other formats, if required, is left as an exercise for the plugin developer.
+
+Other arguments provided to the `print_label` function are documented in the code sample above.

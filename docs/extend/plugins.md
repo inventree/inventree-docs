@@ -34,7 +34,7 @@ Please read all release notes and watch out for warnings - we generally provide 
 
 #### Plugins
 
-Generall classes an mechanisms are provided under the `plugin` [namespaces](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/__init__.py). These include:
+General classes and mechanisms are provided under the `plugin` [namespaces](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/__init__.py). These include:
 
 ```python
 # Management objects
@@ -50,7 +50,7 @@ MixinNotImplementedError    # Is raised if a mixin was not implemented (core mec
 
 #### Mixins
 
-Mixins are split up internally to keep the source tree clean and enable better testing seperation. All public APIs that should be used are exposed under `plugin.mixins`. These include all built-in mixins and notification methods. An up-to-date reference can be found in the source code (current master can be [found here](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/mixins/__init__.py)).
+Mixins are split up internally to keep the source tree clean and enable better testing separation. All public APIs that should be used are exposed under `plugin.mixins`. These include all built-in mixins and notification methods. An up-to-date reference can be found in the source code (current master can be [found here](https://github.com/inventree/InvenTree/blob/master/InvenTree/plugin/mixins/__init__.py)).
 
 #### Models and other internal InvenTree APIs
 
@@ -71,8 +71,11 @@ TITLE = None  # A nice human friendly name for the plugin -> used in titles, as 
 
 AUTHOR = None  # Author of the plugin, git commit information is used if not present
 PUBLISH_DATE = None  # Publishing date of the plugin, git commit information is used if not present
-VERSION = None  # Version of the plugin
 WEBSITE = None  # Website for the plugin, developer etc. -> is shown in plugin overview if set
+
+VERSION = None  # Version of the plugin
+MIN_VERSION = None  # Lowest InvenTree version number that is supported by the plugin
+MAX_VERSION = None  # Highest InvenTree version number that is supported by the plugin
 ```
 
 Refer to the [sample plugins](https://github.com/inventree/InvenTree/tree/master/InvenTree/plugin/samples) for further examples.
@@ -104,25 +107,3 @@ Supported mixin classes are:
 - [ScheduleMixin](./plugins/schedule.md)
 - [SettingsMixin](./plugins/settings.md)
 - [UrlsMixin](./plugins/urls.md)
-
-## Installing a Plugin
-
-Plugins can either be loaded from paths in the InvenTree install directory or as a plugin installed via pip. We recommend installation via pip as this enables hassle-free upgrades.
-
-### Builtin Plugins
-
-Built-In plugins ship in `src/InvenTree/plugin/builtin`. To achive full unit-testing for all mixins there are some sample implementations in `src/InvenTree/plugin/samples`. These are not loaded in production mode.
-
-### Local Directory
-
-Custom plugins can be placed in the `src/InvenTree/plugins/` directory, where they will be automatically discovered. This can be useful for developing and testing plugins, but can prove more difficult in production (e.g. when using Docker). 
-
-### Plugin Installation File (PIP)
-
-Plugins installation can be simplified by providing a list of plugins in a plugin configuration file. This file (by default, 'plugins.txt' in the same directory as the server configuration file) contains a list of required plugin packages.
-
-Plugins can be then installed from this file by simply running the command `invoke plugins`.
-
-!!! success "Auto Update"
-    When the server installation is updated via the `invoke update` command, the plugins (as specified in *plugins.txt*) will also be updated automatically.
-

@@ -1,0 +1,42 @@
+Each {{ label }} is uniquely identified by a <strong>Reference</strong> field.
+
+<h4>Reference Pattern</h4>
+<div class='admonition info'>
+    <!-- TODO: Delete this admonition block after 0.9.0 release -->
+    <p class='admonition-title'>New in v0.8.0</p>
+    <p>
+        Reference patterns were introduced in version 0.8.0. Users upgrading from an older version may find that the reference fields behave slightly differently than previous versions.
+    </p>
+</div>
+<p>
+    The {{ label }} <em>reference</em> field must conform to a (configurable) pattern, allowing users to define a standard for identifying individual orders.<br>
+    In addition to being used ensure the reference fields conform to a standard format, the reference pattern is also used to automatically generate sequential reference values.
+</p>
+<p>
+    The default pattern for the {{ label }} reference pattern is <code>{{ prefix }}{ref:04d}</code>.<br>
+    This will generate a sequence of reference values like:
+    
+    <ul>
+        <li>{{ prefix }}0001</li>
+        <li>{{ prefix }}0002</li>
+        <li>{{ prefix }}0003</li>
+    </ul>
+    
+    The {{ label }} reference pattern can be configured to generate a different reference sequence as required.
+</p>
+<p>
+    The {{ label }} pattern is implemented as follows:
+    <ul>
+        <li>The pattern must specify a single <code>{ref}</code> block - this is the <em>required</em> sequential portion of the pattern.</li>
+        <li>A <code>?</code> character is treated as a wildcard which will match any character.</li>
+        <li>A <code>#</code> character is treated as a wildcard which will match any number.</li>
+        <li>Any other characters will be matched literally.</li>
+    </ul>
+</p>
+
+<div class='admonition info'>
+    <p class='admonition-title'>Reference Formatting</p>
+    <p>
+        The reference field pattern uses <a href="https://www.w3schools.com/python/ref_string_format.asp">Python string formatting</a> for value substitution.
+    </p>
+</div>

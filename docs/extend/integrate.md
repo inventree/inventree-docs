@@ -14,6 +14,9 @@ A list of known third-party InvenTree extensions is provided below. If you have 
 
 [PK2InvenTree](https://github.com/rgilham/PK2InvenTree) is an open-source tool for migrating an existing [PartKeepr](https://github.com/partkeepr/PartKeepr) database to InvenTree.
 
+### Digikey-Inventree-Integration
+[Digikey-Inventree-Integration](https://github.com/EUdds/Digikey-Inventree-Integration) is a simple project that takes a digikey part number to creates a part in InvenTree.
+
 ### F360-InvenTree
 
 [F360-InvenTree](https://github.com/matmair/F360-InvenTree/) is a tool for creating links between Autodesk Fusion 360 components and InvenTree parts.  
@@ -23,3 +26,15 @@ Still under heavy development.
 
 [InvenTree droplet](https://marketplace.digitalocean.com/apps/inventree?refcode=d6172576d014) is a 1-click solution to deploy InvenTree in the cloud with DigitalOcean. You still have to administer and update your instance.  
 The source code for this droplet can be found in [inventree_droplet](https://github.com/invenhost/inventree_droplet).
+
+### InvenTree zebra plugin
+
+[InvenTree zebra plugin](https://github.com/SergeoLacruz/inventree-zebra-plugin) is a plugin to print labels with zebra printers.  
+Currently only the GK420T printer is supported.
+
+
+## First party plugins
+
+### InvenTree brother plugin
+
+[InvenTree brother plugin](https://github.com/inventree/inventree-brother-plugin) is a plugin to print labels with brother Q series printers.
