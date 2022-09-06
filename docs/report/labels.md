@@ -6,14 +6,14 @@ title: Custom Labels
 
 InvenTree supports printing of custom template-based labels, using the [WeasyPrint](https://weasyprint.org/) PDF generation engine. 
 
-Custom labels can be generated using simple HTML templates, with support for QR-codes, and conditional formatting using the Jinja template engine.
+Custom labels can be generated using simple HTML templates, with support for QR-codes, and conditional formatting using the Django template engine.
 
 
 Simple (generic) label templates are supplied 'out of the box' with InvenTree - however support is provided for generation of extremely specific custom labels, to meet any particular requirement.
 
 ## Label Templates
 
-Label templates are written using a mixture of [HTML](https://www.w3schools.com/html/) and [CSS](https://www.w3schools.com/css). [Weasyprint](https://weasyprint.org/) templates support a *subset* of HTML and CSS features. In addition to supporting HTML and CSS formatting, the label templates support the Jinja templating engine, allowing conditional formatting of the label data.
+Label templates are written using a mixture of [HTML](https://www.w3schools.com/html/) and [CSS](https://www.w3schools.com/css). [Weasyprint](https://weasyprint.org/) templates support a *subset* of HTML and CSS features. In addition to supporting HTML and CSS formatting, the label templates support the Django templating engine, allowing conditional formatting of the label data.
 
 A label template is a single `.html` file which is uploaded to the InvenTree server by the user.
 
@@ -86,7 +86,7 @@ Some points of note:
 
 ### Context Data
 
-Each label template is supplied with *context data* (variables) which can be used to display information based on the context in which the label is printed. Variables supplied as context objects can be easily rendered to the label using jinja templating syntax.
+Each label template is supplied with *context data* (variables) which can be used to display information based on the context in which the label is printed. Variables supplied as context objects can be easily rendered to the label using Django templating syntax.
 
 For example, if a StockLocation object is supplied to the label as the variable `location`, it is trivially simple to render the data to the label:
 
