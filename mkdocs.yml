@@ -70,6 +70,7 @@ nav:
         - Production: start/docker_prod.md
     - Bare Metal:
         - Introduction: start/install.md
+        - Installer: start/installer.md
         - Development: start/development.md
         - Production: start/production.md
     - Migrating Data: start/migrate.md

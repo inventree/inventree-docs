@@ -1,0 +1,79 @@
+---
+title: InvenTree Installer
+---
+
+## Install
+The package installer places the app files in `/opt/inventree`, the configs in `/etc/inventree` and data(static, media and database) in `/opt/inventree/data` (see [Moving Data](Moving Data) for details).
+
+Supported OSs are Debian 11 and Ubuntu 20.04 LTS.
+
+### Quick Script
+
+```bash
+curl https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh | sudo sh
+```
+
+This script does all manual steps without any input. The install might take 5-10 minutes to finish.
+
+### Manual Install
+
+Steps below are for Ubuntu 20.04 LTS, the current instructions for ubuntu and debian can be found [here](https://packager.io/gh/inventree/InvenTree).
+
+Add the key needed for validating the packages.
+```bash
+wget -qO- https://dl.packager.io/srv/inventree/InvenTree/key | sudo apt-key add -
+```
+
+Add the package list to the package managers source list.
+```bash
+sudo wget -O /etc/apt/sources.list.d/inventree.list https://dl.packager.io/srv/inventree/InvenTree/stable/installer/ubuntu/20.04.repo
+```
+
+Update the local package index.
+```bash
+sudo apt-get update
+```
+
+Install the inventree package itself. This step might take multiple minutes.
+```bash
+sudo apt-get install inventree
+```
+
+### Options
+
+#### External Calls
+By default a public AWS service is used to resolve the public IP adress of the server. To prevent this the envirmoment variable `SETUP_NO_CALLS` must be set to `true`.
+
+#### Admin User
+By default an admin user is automatically generated with username `admin`, mail `admin@example.com` and a dynamic password that is saved to `/etc/inventree/admin_password`.  
+These values can be customised with the enviroment variables `INVENTREE_ADMIN_USER`, `INVENTREE_ADMIN_EMAIL` and `INVENTREE_ADMIN_PASSWORD`.  
+To stop automatic generation of an admin user generate an empty file needs to be placed at `/etc/inventree/admin_password`.
+
+#### Webconfig
+By default InvenTree is served internally on port 6000 and then proxied via nginx. The config is placed in `/etc/nginx/sites-enabled/inventree.conf` and overwritten on each update. The location can be set with the enviroment variable `SETUP_NGINX_FILE`.
+This only serves an HTTP version of InvenTree, to use HTTPS (recommended for production) or customise any further an additional config file should be used.
+
+## Moving Data
+To change the data storage location link the new location to `/opt/inventree/data`.  
+A rough outline of steps to achive this could be:
+- shut down the app service(s) `inventree` and webserver `nginx`
+- copy data to new location
+- check everything was transfered successfully
+- delete the old location
+- create a symlink from the old location to the new one
+- start up the services again
+
+## Updating InvenTree
+
+To update InvenTree run `apt update inventree` - this might need to be run as a sudo user.
+
+## Controlling InvenTree
+
+InvenTree installs multiple service that can be controlled with your local system runner (`service` or `systemctl`).  
+The service `inventree` controlls everything, `inventree-web` the (internal) webserver and `inventree-worker` the background worker(s).
+
+More instances of the worker can be instanciated from the command line. This is only meant for advanced users.
+This sample script launches 3 services. By default 1 is launched.
+```bash
+inventree scale worker=3
+```
