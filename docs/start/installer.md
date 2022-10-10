@@ -3,7 +3,7 @@ title: InvenTree Installer
 ---
 
 ## Install
-The package installer places the app files in `/opt/inventree`, the configs in `/etc/inventree` and data (static, media and database) in `/opt/inventree/data` (see [Moving Data](Moving Data) for details).
+The package installer places the app files in `/opt/inventree`, the configs in `/etc/inventree` and data (static, media and database) in `/opt/inventree/data` (see [Moving Data](#moving-data) for details).
 
 Supported OSs are Debian 11 and Ubuntu 20.04 LTS.
 
