@@ -9,4 +9,4 @@ env/
 # Temp files
 releases.json
 
-.vscode
+.vscode/
