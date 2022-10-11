@@ -41,6 +41,9 @@ sudo apt-get install inventree
 
 ### Options
 
+#### Debug Outputs
+Extra debug messages are printed if the environment variable `SETUP_DEBUG` is set. This exposes passwords.
+
 #### External Calls
 By default, a public AWS service is used to resolve the public IP address of the server. To prevent this the environment variable `SETUP_NO_CALLS` must be set to `true`.
 
