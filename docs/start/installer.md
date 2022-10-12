@@ -106,3 +106,10 @@ inventree config
     All CLI settings are lost when the package is uninstalled.  
     Use the config file where possible as it is kept on uninstall and can easily be synced acros instances. Enviroment variables are a good place for passwords (but not the secret_key).
 
+## Architecture
+
+The packages are provided by [packager.io](https://packager.io/). They are built each time updates are pushed to Github and release about 10 minutes later.
+
+The package sets up [services](#controlling-inventree) that run the needed processes as the unprivileged user `inventree`. This keeps the privileges of InvenTree as low as possible.
+
+A CLI is provided to interface with low level managment functions like [variable managment](#enviroment-variables), log access, commands, process scaling, etc.
