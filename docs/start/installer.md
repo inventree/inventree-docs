@@ -78,6 +78,7 @@ To update InvenTree run `apt update inventree` - this might need to be run as a 
 
 ## Controlling InvenTree
 
+### Services
 InvenTree installs multiple services that can be controlled with your local system runner (`service` or `systemctl`).  
 The service `inventree` controls everything, `inventree-web` the (internal) webserver and `inventree-worker` the background worker(s).
 
@@ -86,3 +87,22 @@ This sample script launches 3 services. By default, 1 is launched.
 ```bash
 inventree scale worker=3
 ```
+
+### Enviroment Variables
+
+To permanently modify the enviroment variables used while executing the app server or workers the CLI can be used.
+
+To set variables use
+```bash
+inventree config:set ENV_VAR=123
+```
+
+To read out all variables use
+```bash
+inventree config
+```
+
+!!! warning "Keep things repeatable"
+    All CLI settings are lost when the package is uninstalled.  
+    Use the config file where possible as it is kept on uninstall and can easily be synced acros instances. Enviroment variables are a good place for passwords (but not the secret_key).
+
