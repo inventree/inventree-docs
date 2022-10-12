@@ -108,7 +108,7 @@ inventree config
 
 ## Architecture
 
-The packages are provided by [packager.io](https://packager.io/). They are built each time updates are pushed to GitHub and released about 10 minutes later.
+The packages are provided by [packager.io](https://packager.io/). They are built each time updates are pushed to GitHub and released about 10 minutes later. The local package index must be updated to see the new release in the package manager.
 
 The package sets up [services](#controlling-inventree) that run the needed processes as the unprivileged user `inventree`. This keeps the privileges of InvenTree as low as possible.
 
