@@ -88,9 +88,9 @@ This sample script launches 3 services. By default, 1 is launched.
 inventree scale worker=3
 ```
 
-### Enviroment Variables
+### Environment Variables
 
-To permanently modify the enviroment variables used while executing the app server or workers the CLI can be used.
+The CLI can be used to permanently modify the environment variables used while executing the app server or workers.
 
 To set variables use
 ```bash
@@ -104,12 +104,12 @@ inventree config
 
 !!! warning "Keep things repeatable"
     All CLI settings are lost when the package is uninstalled.  
-    Use the config file where possible as it is kept on uninstall and can easily be synced acros instances. Enviroment variables are a good place for passwords (but not the secret_key).
+    Use the config file where possible as it is kept on uninstall and can easily be synced across instances. Environment variables are a good place for passwords (but not the secret_key).
 
 ## Architecture
 
-The packages are provided by [packager.io](https://packager.io/). They are built each time updates are pushed to Github and release about 10 minutes later.
+The packages are provided by [packager.io](https://packager.io/). They are built each time updates are pushed to GitHub and released about 10 minutes later.
 
 The package sets up [services](#controlling-inventree) that run the needed processes as the unprivileged user `inventree`. This keeps the privileges of InvenTree as low as possible.
 
-A CLI is provided to interface with low level managment functions like [variable managment](#enviroment-variables), log access, commands, process scaling, etc.
+A CLI is provided to interface with low-level management functions like [variable management](#enviroment-variables), log access, commands, process scaling, etc.
