@@ -7,6 +7,9 @@ title: Install InvenTree
 !!! tip "Docker Guide"
     This guide is for a *bare metal* InvenTree installation. If you want to install using Docker (the recommended approach) refer to the [Docker Guide](./docker.md)
 
+!!! tip "Installer"
+    There is an [installer](./installer.md) available - we recommend using that method.
+
 Follow the instructions below to install the required system packages, python modules, and InvenTree source code.
 
 ### Install System Packages

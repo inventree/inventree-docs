@@ -2,6 +2,13 @@
 title: Setup Introduction
 ---
 
+!!! info "Fast install"
+    A quick-and-easy install can be done done with the following one-liner.
+	```bash
+	curl https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh | sh
+	```
+	Read more about the [installer](./installer.md).
+
 ## Introduction
 
 InvenTree can be self-hosted with minimal system requirements. Multiple database back-ends are supported, allowing for flexibility where required.
