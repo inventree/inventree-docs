@@ -183,6 +183,12 @@ By default, uploaded media files are stored in the local directory `/home/invent
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
+### Backup File Storage
+
+By default, database and media backups are stored in the local directory `/home/inventree/backup`. This directory should be changed by specifying the `backup_dir` option in the config file based on the particular installation requirements.
+
+Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
+
 ## Authentication
 
 InvenTree provides allowance for additional sign-in options. The following options are not enabled by default, and care must be taken by the system administrator when configuring these settings.
