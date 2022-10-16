@@ -26,7 +26,7 @@ Validation of the Part IPN (Internal Part Number) field is exposed to custom plu
 
 ### Batch Codes
 
-Batch codes can be generated and/or validated by custom plugins.
+[Batch codes](../../stock/tracking.md#batch-codes) can be generated and/or validated by custom plugins.
 
 The `validate_batch_code` method allows plugins to raise an error if a batch code input by the user does not meet a particular pattern.
 
