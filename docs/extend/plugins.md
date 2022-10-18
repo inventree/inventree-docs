@@ -107,3 +107,4 @@ Supported mixin classes are:
 - [ScheduleMixin](./plugins/schedule.md)
 - [SettingsMixin](./plugins/settings.md)
 - [UrlsMixin](./plugins/urls.md)
+- [ValidationMixin](./plugins/validation.md)

@@ -88,6 +88,7 @@ nav:
   - Stock:
     - Stock Items: stock/stock.md
     - Stock Status: stock/status.md
+    - Stock Tracking: stock/tracking.md
     - Adjusting Stock: stock/adjust.md
     - Stock Expiry: stock/expiry.md
     - Stock Ownership: stock/owner.md
@@ -149,6 +150,7 @@ nav:
       - Schedule Mixin: extend/plugins/schedule.md
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
+      - Validation Mixin: extend/plugins/validation.md
     - API: extend/api.md
     - Python Interface: extend/python.md
     - Themes: extend/themes.md
