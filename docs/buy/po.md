@@ -80,3 +80,25 @@ To do so, click on the <span class='fas fa-check-circle'></span> button on the m
 
 In the event that the order won't be processed, user has the option of cancelling the order instead.
 To do so, simply click on the <span class='fas fa-times-circle'></span> button on the main purchase order detail panel and confirm the purchase order has been cancelled.
+
+### Duplicate Purchase Order
+
+Duplicating a Purchase Order allows the user to quickly create a new *copy* of an existing order, using the same supplier and line item information.
+
+To duplicate an existing order, select the *Duplicate Order* action from the menu in the top-right of the screen (as shown below):
+
+{% with id="purchase_order_duplicate", url="buy/po_duplicate.png", description="Duplicate Purchase Order" %}
+{% include "img.html" %}
+{% endwith %}
+
+This opens the following dialog, where you can adjust the parameters of the new order before proceeding to actually create the new order. You can see in the screenshot below that some extra options are provided in this form, to control duplication of individual line items.
+
+{% with id="purchase_order_duplicate_2", url="buy/po_duplicate_2.png", description="Duplicate Purchase Order" %}
+{% include "img.html" %}
+{% endwith %}
+
+A new purchase order is then created based on the currently selected order:
+
+{% with id="purchase_order_duplicate_3", url="buy/po_duplicate_3.png", description="Duplicate Purchase Order" %}
+{% include "img.html" %}
+{% endwith %}
