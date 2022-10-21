@@ -75,6 +75,61 @@ Item: {{ item }}
 !!! info "Conditionals"
     Refer to the [django template language documentation](https://docs.djangoproject.com/en/dev/ref/templates/language/) for more information.
 
+### Localization Issues
+
+Depending on your localization scheme, inputting raw numbers into the formatting section template can cause some unintended issues. Consider the block below which specifies the page size for a rendered template:
+
+```html
+{% raw %}
+<head>
+    <style>
+        @page {
+            size: {{ width }}mm {{ height }}mm;
+            margin: 0mm;
+        }
+    </style>
+</head>
+{% endraw %}
+```
+
+If localization settings on the InvenTree server use a comma (`,`) character as a decimal separator, this may produce an output like:
+
+```html
+{% raw %}
+{% endraw %}
+<head>
+    <style>
+        @page {
+            size: 57,3mm 99,0mm;
+            margin: 0mm;
+        }
+    </style>
+</head>
+```
+
+The resulting `{% raw %}<style>{% endraw %}` CSS block will be *invalid*!
+
+So, if you are writing a template which has custom formatting, (or any other sections which cannot handle comma decimal separators) you must wrap that section in a `{% raw %}{% localize off %}{% endraw %}` block:
+
+```html
+{% raw %}
+<head>
+    <style>
+        @page {
+            {% localize off %}
+            size: {{ width }}mm {{ height }}mm;
+            {% endlocalize %}
+            margin: 0mm;
+        }
+    </style>
+</head>
+{% endraw %}
+```
+
+!!! tip "Close it out"
+    Don't forget to end with a `{% raw %}{% endlocalize %}{% endraw %}` tag!
+
+
 ## Report Types
 
 InvenTree supports the following reporting functionality:
