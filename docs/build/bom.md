@@ -18,6 +18,7 @@ A BOM for a particular assembly is comprised of a number (zero or more) of BOM "
 | Quantity | The quantity of *Part* required for the assembly |
 | Reference | Optional reference field to describe the BOM Line Item, e.g. part designator |
 | Overage | Estimated losses for a build. Can be expressed as absolute values (e.g. 1, 7, etc) or as a percentage (e.g. 2%) |
+| Consumable | A boolean field which indicates whether this BOM Line Item is *consumable* |
 | Inherited | A boolean field which indicates whether this BOM Line Item will be "inherited" by BOMs for parts which are a variant (or sub-variant) of the part for which this BOM is defined. |
 | Optional | A boolean field which indicates if this BOM Line Item is "optional" |
 | Note | Optional note field for additional information
@@ -27,6 +28,22 @@ A BOM for a particular assembly is comprised of a number (zero or more) of BOM "
 
 !!! missing "Optional"
     The Optional field is currently for indication only - it does not serve a functional purpose (yet)
+
+### Consumable BOM Line Items
+
+If a BOM line item is marked as *consumable*, this means that while the part and quantity information is tracked in the BOM, this line item does not get allocated to a [Build Order](./build.md). This may be useful for certain items that the user does not wish to track through the build process, as they may be low value, in abundant stock, or otherwise complicated to track.
+
+In the example below, see that the *Wood Screw* line item is marked as consumable. It is clear that 12 screws are required for each assembled *Table*, but the screws will not be tracked through the build process, as this line item is marked as *consumable*
+
+{% with id="bom_item_consumable", url="build/bom_consumable_item.png", description="Consumable BOM Item" %}
+{% include 'img.html' %}
+{% endwith %}
+
+Further, in the [Build Order](./build.md) stock allocation table, we see that this line item cannot be allocated, as it is *consumable*:
+
+{% with id="build_item_consumable", url="build/build_consumable_item.png", description="Consumable Build Item" %}
+{% include 'img.html' %}
+{% endwith %}
 
 ### Substitute BOM Line Items
 
