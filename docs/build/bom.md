@@ -28,6 +28,13 @@ A BOM for a particular assembly is comprised of a number (zero or more) of BOM "
 !!! missing "Optional"
     The Optional field is currently for indication only - it does not serve a functional purpose (yet)
 
+### Substitute BOM Line Items
+
+Where alternative parts can be used when building an assembly, these parts are assigned as *Substitute* parts in the Bill of Materials. A particular line item may have multiple substitute parts assigned to it. When allocating stock to a [Build Order](./build.md), stock items associated with any of the substitute parts may be allocated against the particular line item.
+
+!!! tip "Available Quantity"
+    When calculating the *available quantity* of a particular line item in a BOM, stock quantities associated with substitute parts are included in the calculation.
+
 ### Inherited BOM Line Items
 
 When using the InvenTree [template / variant](../part/template.md) feature, it may be useful to make use of the *inheritance* capability of BOM Line Items.
