@@ -135,6 +135,9 @@ nav:
   - Extend:
     - InvenTree API:
       - Overview: api/api.md
+      - Model Metadata: api/metadata.md
+      - Download Data: api/download.md
+      - Bulk Delete: api/bulk_delete.md
       - Browse API: api/browse.md
     - Python Interface: 
       - Overview: api/python/python.md
