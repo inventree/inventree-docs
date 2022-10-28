@@ -143,6 +143,7 @@ nav:
       - Overview: barcodes/barcodes.md
       - Internal Barcodes: barcodes/internal.md
       - External Barcodes: barcodes/external.md
+      - Custom Barcodes: barcodes/custom.md
     - App:
       - InvenTree App: app/app.md
       - Connect: app/connect.md
