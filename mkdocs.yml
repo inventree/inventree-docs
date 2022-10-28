@@ -133,7 +133,9 @@ nav:
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
   - API:
-    - InvenTree API: api/api.md
+    - InvenTree API:
+      - Overview: api/api.md
+      - Browse API: api/browse.md
     - Python Interface: 
       - Overview: api/python/python.md
       - Examples: api/python/examples.md

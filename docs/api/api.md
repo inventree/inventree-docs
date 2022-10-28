@@ -52,7 +52,7 @@ HTTP_200_OK
 
 After reception of a valid authentication token, it can be subsequently used to perform token-based authentication.
 
-The token value sent to the server must be of the format `Token <TOKEN-VALUE>` (without the < and > characters).
+The token value sent to the server must be of the format `Token <TOKEN-VALUE>` (without the `<` and `>` characters).
 
 **Example: Javascript**
 ```javascript
