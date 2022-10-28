@@ -84,7 +84,7 @@ category = PartCatgory(api, 10)
 
 #### Multiple Items
 
-Database items can be queried by using the `list` method for the given class. Note that arbitrary filter parameters can be applied (as specified by the [InvenTree API](./api.md)) to filter the returned results.
+Database items can be queried by using the `list` method for the given class. Note that arbitrary filter parameters can be applied (as specified by the [InvenTree API](../api.md)) to filter the returned results.
 
 ```python
 from inventree.part import Part
