@@ -151,10 +151,11 @@ nav:
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
       - Validation Mixin: extend/plugins/validation.md
-    - API: extend/api.md
-    - Python Interface: extend/python.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
+  - API:
+    - InvenTree API: api/api.md
+    - Python Interface: api/python.md
   - App:
     - InvenTree App: app/app.md
     - Connect: app/connect.md
