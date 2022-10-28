@@ -134,7 +134,9 @@ nav:
     - Background Tasks: settings/tasks.md
   - API:
     - InvenTree API: api/api.md
-    - Python Interface: api/python.md
+    - Python Interface: 
+      - Overview: api/python/python.md
+      - Examples: api/python/examples.md
   - App:
     - InvenTree App: app/app.md
     - Connect: app/connect.md
