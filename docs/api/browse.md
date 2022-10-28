@@ -24,7 +24,7 @@ Various list endpoints can be displayed as shown below:
 
 List views can be filtered interactively:
 
-{% with id="api_filter", url="api/api_filter.png", description="Filter API" %}
+{% with id="api_filter", url="api/api_filters.png", description="Filter API" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -32,6 +32,6 @@ List views can be filtered interactively:
 
 Detail view endpoints can also be displayed:
 
-{% with id="api_detail", url="api/api_deatil.png", description="Detail API" %}
+{% with id="api_detail", url="api/api_detail.png", description="Detail API" %}
 {% include 'img.html' %}
 {% endwith %}
