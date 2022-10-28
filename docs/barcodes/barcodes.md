@@ -1,0 +1,5 @@
+---
+title: Barcodes
+---
+
+## Barcode Support

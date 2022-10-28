@@ -132,13 +132,15 @@ nav:
     - Error Logs: settings/logs.md
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
-  - API:
+  - Interface:
     - InvenTree API:
       - Overview: api/api.md
       - Browse API: api/browse.md
     - Python Interface: 
       - Overview: api/python/python.md
       - Examples: api/python/examples.md
+    - Barcodes:
+      - Overview: barcodes/barcodes.md
   - App:
     - InvenTree App: app/app.md
     - Connect: app/connect.md
