@@ -13,6 +13,15 @@ InvenTree has native support for barcodes, which provides powerful functionality
 - Barcodes can be embedded in [labels or reports](../report/barcodes.md)
 - Barcode functionality can be [extended via plugins](../extend/plugins/barcode.md)
 
+### Barcode Data Types
+
+Barcodes can be linked with the following data model types:
+
+- [Part](../part/part.md#part)
+- [Stock Item](../stock/stock.md#stock-item)
+- [Stock Location](../stock/stock.md#stock-location)
+- [Supplier Part](../buy/supplier.md#supplier-parts)
+
 ## Web Integration
 
 Barcode scanning can be enabled within the web interface. Barcode scanning in the web interface supports scanning via:
