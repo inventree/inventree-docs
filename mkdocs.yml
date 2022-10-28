@@ -132,6 +132,20 @@ nav:
     - Error Logs: settings/logs.md
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
+  - API:
+    - InvenTree API: api/api.md
+    - Python Interface: api/python.md
+  - App:
+    - InvenTree App: app/app.md
+    - Connect: app/connect.md
+    - Barcodes: app/barcode.md
+    - Parts: app/part.md
+    - Stock: app/stock.md
+    - Purchase Orders: app/po.md
+    - Settings: app/settings.md
+    - Privacy: app/privacy.md
+    - Translation: app/translation.md
+    - Suggestions: app/issues.md
   - Extend:
     - Plugins:
       - Overview: extend/plugins.md
@@ -153,20 +167,6 @@ nav:
       - Validation Mixin: extend/plugins/validation.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
-  - API:
-    - InvenTree API: api/api.md
-    - Python Interface: api/python.md
-  - App:
-    - InvenTree App: app/app.md
-    - Connect: app/connect.md
-    - Barcodes: app/barcode.md
-    - Parts: app/part.md
-    - Stock: app/stock.md
-    - Purchase Orders: app/po.md
-    - Settings: app/settings.md
-    - Privacy: app/privacy.md
-    - Translation: app/translation.md
-    - Suggestions: app/issues.md
 
 # Plugins
 plugins:
