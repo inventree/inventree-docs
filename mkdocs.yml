@@ -132,7 +132,7 @@ nav:
     - Error Logs: settings/logs.md
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
-  - Interface:
+  - Extend:
     - InvenTree API:
       - Overview: api/api.md
       - Browse API: api/browse.md
@@ -141,18 +141,19 @@ nav:
       - Examples: api/python/examples.md
     - Barcodes:
       - Overview: barcodes/barcodes.md
-  - App:
-    - InvenTree App: app/app.md
-    - Connect: app/connect.md
-    - Barcodes: app/barcode.md
-    - Parts: app/part.md
-    - Stock: app/stock.md
-    - Purchase Orders: app/po.md
-    - Settings: app/settings.md
-    - Privacy: app/privacy.md
-    - Translation: app/translation.md
-    - Suggestions: app/issues.md
-  - Extend:
+      - Internal Barcodes: barcodes/internal.md
+      - External Barcodes: barcodes/external.md
+    - App:
+      - InvenTree App: app/app.md
+      - Connect: app/connect.md
+      - Barcodes: app/barcode.md
+      - Parts: app/part.md
+      - Stock: app/stock.md
+      - Purchase Orders: app/po.md
+      - Settings: app/settings.md
+      - Privacy: app/privacy.md
+      - Translation: app/translation.md
+      - Suggestions: app/issues.md
     - Plugins:
       - Overview: extend/plugins.md
       - Installation: extend/plugins/install.md
