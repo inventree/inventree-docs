@@ -67,7 +67,6 @@ And simply connect as follows:
 api = InvenTreeAPI()
 ```
 
-
 ### Retrieving Data
 
 Once a connection is established to the InvenTree server, querying individual items is simple.
@@ -96,6 +95,35 @@ items = StockItem.list(api, location=4, part=24)
 
 The `items` variable above provides a list of `StockItem` objects.
 
+### Item Attributes
+
+The available model attributes are determined by introspecting [API metadata](../metadata.md). To view the fields (attributes) availabel for a given database model type within the python interface, use the `fieldNames` and `fieldInfo` methods, as below:
+
+```python
+from inventree.api import InvenTreeAPI
+from inventree.part import Part
+
+api = InvenTreeAPI("http://localhost:8000", username="admin", password="inventree")
+
+fields = Part.fieldNames(api)
+
+for field in Part.fieldNames(api):
+    print(field, '->', Part.fieldInfo(field, api))
+```
+
+```
+active -> {'type': 'boolean', 'required': True, 'read_only': False, 'label': 'Active', 'help_text': 'Is this part active?', 'default': True, 'max_length': None}
+allocated_to_build_orders -> {'type': 'float', 'required': True, 'read_only': True, 'label': 'Allocated to build orders'}
+allocated_to_sales_orders -> {'type': 'float', 'required': True, 'read_only': True, 'label': 'Allocated to sales orders'}
+assembly -> {'type': 'boolean', 'required': True, 'read_only': False, 'label': 'Assembly', 'help_text': 'Can this part be built from other parts?', 'default': False, 'max_length': None}
+category -> {'type': 'related field', 'required': True, 'read_only': False, 'label': 'Category', 'model': 'partcategory', 'api_url': '/api/part/category/', 'filters': {}, 'help_text': 'Part category', 'max_length': None}
+component -> {'type': 'boolean', 'required': True, 'read_only': False, 'label': 'Component', 'help_text': 'Can this part be used to build other parts?', 'default': True, 'max_length': None}
+default_expiry -> {'type': 'integer', 'required': True, 'read_only': False, 'label': 'Default Expiry', 'help_text': 'Expiry time (in days) for stock items of this part', 'min_value': 0, 'max_value': 2147483647, 'default': 0, 'max_length': None}
+...
+variant_stock -> {'type': 'float', 'required': True, 'read_only': True, 'label': 'Variant stock'}
+```
+
+
 ### Item Methods
 
 Once an object has been retrieved from the database, its related objects can be returned with the provided helper methods:
@@ -111,6 +139,10 @@ Some classes also have helper functions for performing certain actions, such as 
 stock_item = StockItem(api, 1001)
 stock_item.uploadTestResult("Firmware", True, value="0x12345678", attachment="device_firmware.bin")
 ```
+
+#### Discovering Methods
+
+You can determine the available methods by either [reading the source code](https://github.com/inventree/inventree-python) or using the `dir()` function in an interactive terminal.
 
 ### Further Reading
 
