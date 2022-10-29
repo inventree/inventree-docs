@@ -4,7 +4,10 @@ title: InvenTree API
 
 ## InvenTree API
 
-InvenTree provides a powerful REST API for interacting with inventory data on the server. Low-level data access and manipulation is available, with integrated user authentication and data validation
+InvenTree provides a powerful REST API for interacting with inventory data on the server. Low-level data access and manipulation is available, with integrated user authentication and data validation.
+
+!!! info "Django REST Framework"
+    The InvenTree API is based on the powerful and flexible [Django REST Framework](https://www.django-rest-framework.org/).
 
 ## Documentation
 
@@ -20,6 +23,10 @@ Users must be authenticated to gain access to the InvenTree API. The API accepts
 
 !!! warning "Permissions"
     API access is restricted based on the permissions assigned to the user.
+
+### Basic Auth
+
+Users can authenticate against the API using basic authentication - specifically a valid combination of `username` and `password` credentials.
 
 ### Tokens
 

@@ -56,5 +56,3 @@ If no match is found for the scanned barcode, the following error message is dis
 ## App Integration
 
 Barcode scanning is a key feature of the [companion mobile app](../app/barcode.md).
-
-### Native Barcodes
