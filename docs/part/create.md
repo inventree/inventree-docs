@@ -64,6 +64,6 @@ If the *Add Supplier Data* option is checked, then supplier part and manufacture
 
 The following alternative methods for creating parts are supported:
 
-- [Via the REST API](../../extend/api)
-- [Using the Python library](../../extend/python)
+- [Via the REST API](../../api/api)
+- [Using the Python library](../../api/python)
 - [Within the Admin interface](../../settings/admin)

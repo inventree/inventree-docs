@@ -133,6 +133,31 @@ nav:
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
   - Extend:
+    - InvenTree API:
+      - Overview: api/api.md
+      - Model Metadata: api/metadata.md
+      - Download Data: api/download.md
+      - Bulk Delete: api/bulk_delete.md
+      - Interactive API: api/browse.md
+    - Python Interface: 
+      - Overview: api/python/python.md
+      - Examples: api/python/examples.md
+    - Barcodes:
+      - Overview: barcodes/barcodes.md
+      - Internal Barcodes: barcodes/internal.md
+      - External Barcodes: barcodes/external.md
+      - Custom Barcodes: barcodes/custom.md
+    - App:
+      - InvenTree App: app/app.md
+      - Connect: app/connect.md
+      - Barcodes: app/barcode.md
+      - Parts: app/part.md
+      - Stock: app/stock.md
+      - Purchase Orders: app/po.md
+      - Settings: app/settings.md
+      - Privacy: app/privacy.md
+      - Translation: app/translation.md
+      - Suggestions: app/issues.md
     - Plugins:
       - Overview: extend/plugins.md
       - Installation: extend/plugins/install.md
@@ -151,21 +176,8 @@ nav:
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
       - Validation Mixin: extend/plugins/validation.md
-    - API: extend/api.md
-    - Python Interface: extend/python.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
-  - App:
-    - InvenTree App: app/app.md
-    - Connect: app/connect.md
-    - Barcodes: app/barcode.md
-    - Parts: app/part.md
-    - Stock: app/stock.md
-    - Purchase Orders: app/po.md
-    - Settings: app/settings.md
-    - Privacy: app/privacy.md
-    - Translation: app/translation.md
-    - Suggestions: app/issues.md
 
 # Plugins
 plugins:

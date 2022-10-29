@@ -48,8 +48,15 @@ Builds consume stock items to make new parts, you can decide to automatically or
 
 Generate a wide range of reports using custom templates. [Read more...](./report/report.md)
 
+## API
+
+The core InvenTree software is implemented on top of a RESTful API, which can be used by external applications. Additionally, a native Python binding library is provided, for rapid development of programs to integrate with InvenTree.
+
+[Read more...](./api/api.md)
+
 ## Extend and Customize
 
-InvenTree is designed to be highly extensible. If the core InvenTree functionality does not meet your particular need, InvenTree provides a RESTful API, a native Python library, and a powerful plugin system.
+InvenTree is designed to be highly extensible. If the core InvenTree functionality does not meet your particular need, InvenTree provides a powerful plugin system which can be used to extend on base functions as required.
 
-[Read more...](./extend/api.md)
+[Read more...](./extend/plugins.md)
+
