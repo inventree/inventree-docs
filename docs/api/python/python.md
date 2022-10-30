@@ -95,6 +95,24 @@ items = StockItem.list(api, location=4, part=24)
 
 The `items` variable above provides a list of `StockItem` objects.
 
+#### Filtering by parent
+
+In tree based models the child items could be filtered by using the parent keyword:
+
+```python
+from inventree.part import PartCategory
+
+child_categories = PartCategory.list(api, parent=10)
+```
+
+The top level items can can be queried by passing empty string as a parent filter:
+
+```python
+from inventree.part import PartCategory
+
+parent_categories = PartCategory.list(api, parent='')
+```
+
 ### Item Attributes
 
 The available model attributes are determined by introspecting [API metadata](../metadata.md). To view the fields (attributes) availabel for a given database model type within the python interface, use the `fieldNames` and `fieldInfo` methods, as below:
