@@ -49,6 +49,10 @@ from plugin.mixins import APICallMixin, SettingsMixin, ScheduleMixin, BarcodeMix
 
 ### Packaging
 
+
+!!! tip "Package-Discovery can be tricky"
+    Most problems with packaging stem from problems with dicovery. [This guide](https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#automatic-discovery) by the PyPA contains a lot of information about discovery during packaging. Theses mechanisms generally apply to most discovery processes in InvenTree and the wider Django ecosystem.
+
 The recommended way of distribution is as a [PEP 561](https://peps.python.org/pep-0561/) compliant package. If you can use the official Package Index (PyPi - [official website](https://pypi.org/)) as a registry.  
 Please follow PyPAs official [packaging guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/) to ensure your package installs correctly suing InvenTrees install mechanisms.
 
