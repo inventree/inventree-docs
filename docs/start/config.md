@@ -173,19 +173,19 @@ For further information, refer to the following documentation:
 
 ### Static File Storage
 
-By default, static files are stored in the local directory `/home/inventree/static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
+Static files **require** a local directory for storage. This directory should be specified with the `static_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_STATIC_ROOT` environment variable.
 
 ### Uploaded File Storage
 
-By default, uploaded media files are stored in the local directory `/home/inventree/media`. This directory should be changed by specifying the `media_root` option in the config file based on the particular installation requirements.
+Uploaded media files **require** a local directory for storage. This directory should be specified with the `media_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
 
 ### Backup File Storage
 
-By default, database and media backups are stored in the local directory `/home/inventree/backup`. This directory should be changed by specifying the `backup_dir` option in the config file based on the particular installation requirements.
+Database and media backups **require** a local directory for storage. This directory should be specified with the `backup_dir` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
 
