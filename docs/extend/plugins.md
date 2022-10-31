@@ -8,7 +8,7 @@ The InvenTree server code supports an extensible plugin architecture, allowing c
 
 Plugins can be added from multiple sources:
 
-- Plugins can be installed via PIP (python package manager)
+- Plugins can be installed in InvenTrees venv via PIP (python package manager)
 - Custom plugins should be placed in the directory `./InvenTree/plugins`.
 - InvenTree built-in plugins are located in the directory `./InvenTree/plugin/builtin`.  
 
@@ -91,7 +91,7 @@ The configuration entries must be enabled via the [InvenTree admin interface](..
 
 ### Plugin Mixins
 
-Common use cases are covered by pre-supplied modules in the form of *mixins* (similar to how [django](https://docs.djangoproject.com/en/stable/topics/class-based-views/mixins/) does it). Each mixin enables the integration into a specific area of InvenTree. Sometimes it also enhances the plugin with helper functions to supply often used functions out-of-the-box.
+Common use cases are covered by pre-supplied modules in the form of *mixins* (similar to how [Django](https://docs.djangoproject.com/en/stable/topics/class-based-views/mixins/) does it). Each mixin enables the integration into a specific area of InvenTree. Sometimes it also enhances the plugin with helper functions to supply often used functions out-of-the-box.
 
 Supported mixin classes are:
 
