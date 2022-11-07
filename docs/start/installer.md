@@ -10,10 +10,10 @@ Supported OSs are Debian 11 and Ubuntu 20.04 LTS.
 ### Quick Script
 
 ```bash
-curl https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh | sudo sh
+wget -Nq https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh && bash install.sh
 ```
 
-This script does all manual steps without any input. The installation might take 5-10 minutes to finish.
+This script does all manual steps without any input. The installation might take up to 5-10 minutes to finish.
 
 ### Manual Install
 
