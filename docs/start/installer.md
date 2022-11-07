@@ -10,10 +10,30 @@ Supported OSs are Debian 11 and Ubuntu 20.04 LTS.
 ### Quick Script
 
 ```bash
-curl https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh | sudo sh
+wget -Nq https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh && bash install.sh
 ```
 
-This script does all manual steps without any input. The installation might take 5-10 minutes to finish.
+This script does all manual steps without any input. The installation might take up to 5-10 minutes to finish.
+
+#### Performed steps
+The install script:
+- checks if the current OS is supported
+- installs packages needed for getting the packages keys
+- executes the manual steps listed below
+
+#### Script Options
+The install script supports pulling packages from different branches and publishers.  
+Defaults are to use branch `stable` and publisher `inventree`.
+
+To install from branch master and publisher matmair the install command would be.
+```bash
+install master matmair
+```
+
+Furthermore there are several command flags for advanced usage:  
+`--help` to show all options  
+`--version` to print the version of the install script  
+`--dry-run` to print but not execute the commands that would change system files  
 
 ### Manual Install
 
