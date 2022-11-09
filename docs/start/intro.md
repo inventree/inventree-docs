@@ -2,6 +2,13 @@
 title: Setup Introduction
 ---
 
+!!! info "Fast install"
+    A quick-and-easy install can be done done with the following one-liner.
+	```bash
+	wget -Nq https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh && bash install.sh
+	```
+	Read more about the [installer](./installer.md).
+
 ## Introduction
 
 InvenTree can be self-hosted with minimal system requirements. Multiple database back-ends are supported, allowing for flexibility where required.
@@ -52,7 +59,7 @@ The InvenTree documentation assumes that the operating system is a debian based 
 InvenTree runs on [Python](https://python.org).
 
 !!! warning "Python Version"
-    InvenTree requrires Python 3.8 (or newer). If your system has an older version of Python installed, you will need to follow the update instructions for your OS.
+    InvenTree requrires Python 3.9 (or newer). If your system has an older version of Python installed, you will need to follow the update instructions for your OS.
 
 ### Invoke
 

@@ -191,12 +191,23 @@ Fill-out the form as required, then click the "Submit" button to create the buil
 
 To complete a build, click on <span class='fas fa-tools'></span> icon on the build detail page, the `Complete Build` form will be displayed.
 
-#### Build Outputs
+The form will validate the build order is ready to be completed, and will prevent you from continuing if any of the below conditions are present unless you select one of the presented options to override the validation and accept completion of the build anyway.
 
-If incomplete build outputs remain, the build order will not be able to be completed. All build outputs *must* be completed first.
+!!! info "Incomplete Build"
+	If the warning message `Required build quantity has not been completed` is shown, you have build ouputs that have not yet been completed.
+
+	In the unlikely event that you wish to proceed despite this, you can toggle the `Accept Incomplete` option to true to override the error and allow completion without the required number of build outputs.
 
 !!! info "Incomplete Allocation"
-	If the warning message `Warning: Build order allocation is not complete` is shown, make sure to allocate stock for the build before proceeding with build completion.
+	If the warning message `Require stock has not been fully allocated` is shown, make sure to allocate stock matching all BOM items to the build before proceeding with build completion.
+
+	If you wish to complete the build despite the missing parts, toggle the `Accept Unallocated` option to true to override the warning and allow completion with unallocated parts.
+
+!!! info "Overallocated Stock Items"
+	If the warning message `Some stock items have been overallocated` is shown, you have more stock than required by the BOM for the part being built allocated to the build order. By default the `Not permissted` option is selected and you will need to return to the allocation screen and remove the extra items before the build can be completed.
+
+	Alternatively, you can select `Accept as consumed by this build order` to continue with the allocation and remove the extra items from stock (e.g. if they were destroyed during build), or select `Deallocate before completing this build order` if you would like the extra items to be returned to stock for use in future builds.
+
 
 Select a `Location` to store the resulting parts from the build then click on the confirmation switch.
 Finally, click on the "Complete Build" button to process the build completion.

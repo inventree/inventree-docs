@@ -1,122 +1,12 @@
 ---
-title: Python Interface
+title: Python Interface Examples
 ---
 
-## Python Module
-
-A [Python module](https://github.com/inventree/inventree-python) is provided for rapid development of third party scripts or applications using the REST API. The python module handles authentication and API transactions, providing an extremely clean interface for interacting with and manipulating database data.
-
-### Features
-
-- Automatic authentication management using token-based authentication
-- Pythonic data access
-- Native file uploads
-- Powerful functions for accessing related model data
-
-### Installation
-
-The inventree python interface can be easily installed via the [PIP package manager](https://pypi.org/project/inventree/):
-
-```
-pip3 install inventree
-```
-
-!!! tip "Upgrading"
-    To upgrade to the latest version, run `pip install --upgrade inventree`
-
-Alternatively, it can downloaded and installed from source, from [GitHub](https://github.com/inventree/inventree-python).
-
-### Authentication
-
-Authentication against an InvenTree server is simple:
-
-#### Basic Auth
-
-Connect using your username/password as follows:
-
-```python
-from inventree.api import InvenTreeAPI
-
-SERVER_ADDRESS = 'http://127.0.0.1:8000'
-MY_USERNAME = 'not_my_real_username'
-MY_PASSWORD = 'not_my_real_password'
-
-api = InvenTreeAPI(SERVER_ADDRESS, username=MY_USERNAME, password=MY_PASSWORD)
-```
-
-#### Token Auth
-
-Alternatively, if you already have an access token:
-
-```python
-api = InvenTreeAPI(SERVER_ADDRESS, token=MY_TOKEN)
-```
-
-#### Environment Variables
-
-Authentication variables can also be set using environment variables:
-
-- `INVENTREE_API_HOST`
-- `INVENTREE_API_USERNAME`
-- `INVENTREE_API_PASSWORD`
-- `INVENTREE_API_TOKEN`
-
-And simply connect as follows:
-
-```python
-api = InvenTreeAPI()
-```
-
-
-### Retrieving Data
-
-Once a connection is established to the InvenTree server, querying individual items is simple.
-
-#### Single Item
-
-If the primary-key of an object is already known, retrieving it from the database is performed as follows:
-
-```python
-from inventree.part import PartCategory
-
-category = PartCatgory(api, 10)
-```
-
-#### Multiple Items
-
-Database items can be queried by using the `list` method for the given class. Note that arbitrary filter parameters can be applied (as specified by the [InvenTree API](./api.md)) to filter the returned results.
-
-```python
-from inventree.part import Part
-from inventree.stock import StockItem
-
-parts = Part.list(api, category=10, assembly=True)
-items = StockItem.list(api, location=4, part=24)
-```
-
-The `items` variable above provides a list of `StockItem` objects.
-
-### Item Methods
-
-Once an object has been retrieved from the database, its related objects can be returned with the provided helper methods:
-
-```python
-part = Part(api, 25)
-stock_items = part.getStockItems()
-```
-
-Some classes also have helper functions for performing certain actions, such as uploading file attachments or test results:
-
-```python
-stock_item = StockItem(api, 1001)
-stock_item.uploadTestResult("Firmware", True, value="0x12345678", attachment="device_firmware.bin")
-```
-
-### Examples
+## Examples
 
 Following is a *non-exhaustive* list of examples of the capabilities provided by the python library. For a complete look at what it can do, [read the source code](https://github.com/inventree/inventree-python)!
 
-#### Creating New Items
+### Creating New Items
 
 Use the `create` method to add new items to the database:
 
@@ -144,9 +34,40 @@ couch = Part.create(api, {
 })
 ```
 
-#### Adding Parameters
+### Updating Attributes
 
-Each [part](../part/part.md) can have multiple [parameters](../part/parameter.md). For the example of the sofa (above) *length* and *weight* make sense. Each parameter has a parameter template that combines the parameter name with a unit. So we first have to create the parameter templates and afterwards add the parameter values to the sofa.
+Most model fields which are exposed via the API can be directly edited using the python interface, by simply calling the `save()` method as shown below:
+
+```python
+from inventree.api import InvenTreeAPI
+from inventree.part import Part
+
+api = InvenTreeAPI(host='http://localhost:8000', username='admin', password='inventree')
+
+# Retrieve part instance with primary-key of 1
+part = Part(api, pk=1)
+
+# Update specified part parameters
+part.save(data={
+    "description": "New part description",
+    "minimum_stock": 250,
+})
+
+# Reload data from remote server
+part.reload()
+
+# Display updated data
+print("Part Name:", part.name)
+print("Description:", part.description)
+print("Minimum stock:", part.minimum_stock)
+```
+
+!!! info "Read Only Fields"
+    Note that some fields are read-only and cannot be edited via the API
+
+### Adding Parameters
+
+Each [part](../../part/part.md) can have multiple [parameters](../../part/parameter.md). For the example of the sofa (above) *length* and *weight* make sense. Each parameter has a parameter template that combines the parameter name with a unit. So we first have to create the parameter templates and afterwards add the parameter values to the sofa.
 
 ```python
 from inventree.part import Parameter
@@ -164,7 +85,7 @@ These parameter templates need to be defined only once and can be used for all o
 couch.upload_image('my_nice_couch.jpg')
 ```
 
-#### Adding Location Data
+### Adding Location Data
 
 If we have several sofas on stock we need to know there we have stored them. So let’s add stock locations to the part. Stock locations can be organized in a hierarchical manner e.g. boxes in shelves in aisles in rooms. So each location can have a parent. Let’s assume we have 10 sofas in box 12 and 3 sofas in box 13 located in shelve 43 aisle 3. First we have to create the locations, afterwards we can put the sofas inside.
 
@@ -196,7 +117,7 @@ Please recognize the different status flags. 10 means OK, 55 means damaged. We h
 * 70: Lost
 * 85: Returned
 
-#### Adding Manufacturers and Supplier
+### Adding Manufacturers and Supplier
 
 We can add manufacturers and suppliers to parts. We first need to create two companies, ACME (manufacturer) and X-Store (supplier).
 
@@ -243,7 +164,7 @@ SupplierPart.create(api,{
 })
 ```
 
-#### Stock Adjustments
+### Stock Adjustments
 
 Various stock adjustment actions can be performed as follows:
 
@@ -267,7 +188,7 @@ loc = StockLocation(api, pk=12)
 item.transferStock(loc, quantity=50)
 ```
 
-#### Bulk Delete
+### Bulk Delete
 
 Some database models support bulk delete operations, where multiple database entries can be deleted in a single API query.
 
@@ -278,7 +199,7 @@ from inventree.stock import StockItem
 StockItem.bulkDelete(api, filters={'category': 3})
 ```
 
-#### Upload Attachments
+### Upload Attachments
 
 We have the possibility to upload attachments against a particular Part. We can use pdf for documents but also other files like 3D drawings or pictures. To do so we add the following commands:
 
@@ -301,7 +222,3 @@ part = Part(api, pk=47)
 
 part.uploadAttachment('data.txt', comment='A data file')
 ```
-
-### Further Reading
-
-The [InvenTree Python Interface](https://github.com/inventree/inventree-python) is open source, and well documented. The best way to learn is to read through the source code and try for yourself!

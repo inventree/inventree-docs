@@ -7,6 +7,9 @@ title: Install InvenTree
 !!! tip "Docker Guide"
     This guide is for a *bare metal* InvenTree installation. If you want to install using Docker (the recommended approach) refer to the [Docker Guide](./docker.md)
 
+!!! tip "Installer"
+    There is an [installer](./installer.md) available - we recommend using that method.
+
 Follow the instructions below to install the required system packages, python modules, and InvenTree source code.
 
 ### Install System Packages
@@ -17,7 +20,7 @@ Install required system packages (as superuser):
     The following packages are required on a debian system. A different distribution may require a slightly different set of packages
 
 !!! info "Python Version"
-    InvenTree requires Python version 3.8 or newer
+    InvenTree requires a modern Python version check [here](https://github.com/inventree/InvenTree/blob/master/CONTRIBUTING.md#target-version) for the current minimums.
 
 ```
 sudo apt-get update

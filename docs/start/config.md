@@ -173,15 +173,21 @@ For further information, refer to the following documentation:
 
 ### Static File Storage
 
-By default, static files are stored in the local directory `/home/inventree/static`. This directory should be changed by specifying the `static_root` option in the config file based on the particular installation requirements.
+Static files **require** a local directory for storage. This directory should be specified with the `static_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_STATIC_ROOT` environment variable.
 
 ### Uploaded File Storage
 
-By default, uploaded media files are stored in the local directory `/home/inventree/media`. This directory should be changed by specifying the `media_root` option in the config file based on the particular installation requirements.
+Uploaded media files **require** a local directory for storage. This directory should be specified with the `media_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
+
+### Backup File Storage
+
+Database and media backups **require** a local directory for storage. This directory should be specified with the `backup_dir` option in the config file based on the particular installation requirements.
+
+Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` environment variable.
 
 ## Authentication
 
@@ -229,14 +235,18 @@ The logo and custom messages can be changed/set:
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_CUSTOM_LOGO | customize.logo | Path to logo in the media storage |  |
-| INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page |  |
-| INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar |  |
+| INVENTREE_CUSTOM_LOGO | customize.logo | Path to custom logo in the static files directory | *Not set* |
+| INVENTREE_CUSTOM_SPLASH | customize.splash | Path to custom splash screen in the static files directory | *Not set* |
+| INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page | *Not set* |
+| INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar | *Not set* |
 
 If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings). 
 
+!!! info "Custom Splash Screen Path"
+    The provided *custom splash screen* path must be specified *relative* to the location of the `/static/` directory.
+
 !!! info "Custom Logo Path"
-    The provided *custom logo* path must be specified *relative* to the location of thr `/media/` directory.
+    The provided *custom logo* path must be specified *relative* to the location of the `/static/` directory.
 
 ## Plugin Options
 

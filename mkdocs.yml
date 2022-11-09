@@ -69,6 +69,7 @@ nav:
         - Production: start/docker_prod.md
     - Bare Metal:
         - Introduction: start/install.md
+        - Installer: start/installer.md
         - Development: start/development.md
         - Production: start/production.md
     - Migrating Data: start/migrate.md
@@ -86,6 +87,7 @@ nav:
   - Stock:
     - Stock Items: stock/stock.md
     - Stock Status: stock/status.md
+    - Stock Tracking: stock/tracking.md
     - Adjusting Stock: stock/adjust.md
     - Stock Expiry: stock/expiry.md
     - Stock Ownership: stock/owner.md
@@ -133,6 +135,31 @@ nav:
     - API: extend/api.md
     - Python Interface: extend/python.md
   - Extend:
+    - InvenTree API:
+      - Overview: api/api.md
+      - Model Metadata: api/metadata.md
+      - Download Data: api/download.md
+      - Bulk Delete: api/bulk_delete.md
+      - Interactive API: api/browse.md
+    - Python Interface: 
+      - Overview: api/python/python.md
+      - Examples: api/python/examples.md
+    - Barcodes:
+      - Overview: barcodes/barcodes.md
+      - Internal Barcodes: barcodes/internal.md
+      - External Barcodes: barcodes/external.md
+      - Custom Barcodes: barcodes/custom.md
+    - App:
+      - InvenTree App: app/app.md
+      - Connect: app/connect.md
+      - Barcodes: app/barcode.md
+      - Parts: app/part.md
+      - Stock: app/stock.md
+      - Purchase Orders: app/po.md
+      - Settings: app/settings.md
+      - Privacy: app/privacy.md
+      - Translation: app/translation.md
+      - Suggestions: app/issues.md
     - Plugins:
       - Overview: extend/plugins.md
       - Installation: extend/plugins/install.md
@@ -150,19 +177,9 @@ nav:
       - Schedule Mixin: extend/plugins/schedule.md
       - Settings Mixin: extend/plugins/settings.md
       - URL Mixin: extend/plugins/urls.md
+      - Validation Mixin: extend/plugins/validation.md
     - Themes: extend/themes.md
     - Third-Party: extend/integrate.md
-  - App:
-    - InvenTree App: app/app.md
-    - Connect: app/connect.md
-    - Barcodes: app/barcode.md
-    - Parts: app/part.md
-    - Stock: app/stock.md
-    - Purchase Orders: app/po.md
-    - Settings: app/settings.md
-    - Privacy: app/privacy.md
-    - Translation: app/translation.md
-    - Suggestions: app/issues.md
 
 # Plugins
 plugins:
