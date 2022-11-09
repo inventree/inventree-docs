@@ -53,11 +53,10 @@ extra_javascript:
 # Navigation
 nav:
   - InvenTree:
+    - InvenTree: index.md
     - Features: features.md
     - Release Notes: releases/release_notes.md
-    - Demo: demo.md
     - FAQ: faq.md
-    - Contribute: contribute.md
     - Credits: credits.md
     - Privacy: privacy.md
     - Terminology: terminology.md
@@ -224,6 +223,9 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/inventree/inventree
       name: InvenTree on Docker
+    - icon: fontawesome/brands/reddit
+      name: InvenTree on Reddit
+      link: https://reddit.com/r/inventree
 
 use_directory_urls: true
 strict: true

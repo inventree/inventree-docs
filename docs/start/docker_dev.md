@@ -30,7 +30,7 @@ Persistent data (such as the stored database, media files, configuration files, 
 
 ## Quickstart Guide
 
-To get "up and running" with a development environment, complete with a set of [demo data](../demo.md) to work with, run the following commands:
+To get "up and running" with a development environment, complete with a set of [demo data](https://github.com/inventree/demo-dataset) to work with, run the following commands:
 
 ```bash
 git clone https://github.com/inventree/InvenTree.git && cd InvenTree

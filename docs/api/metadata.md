@@ -78,7 +78,7 @@ Each named field provides information on available attributes:
 
 ## Translation
 
-Field *label* and *help text* values are localized using the [community contributed translations](../contribute.md#translation). The required locale information is determined from the API request itself, meaning that the translated values are provided automatically.
+Field *label* and *help text* values are localized using the [community contributed translations](https://crowdin.com/project/inventree). The required locale information is determined from the API request itself, meaning that the translated values are provided automatically.
 
 For example, the same forms (in the web interface) are served via identical API requests, with the locale information determined "on the fly":
 
