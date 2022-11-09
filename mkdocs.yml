@@ -131,9 +131,6 @@ nav:
     - Error Logs: settings/logs.md
     - Email: settings/email.md
     - Background Tasks: settings/tasks.md
-  - Integrate:
-    - API: extend/api.md
-    - Python Interface: extend/python.md
   - Extend:
     - InvenTree API:
       - Overview: api/api.md
