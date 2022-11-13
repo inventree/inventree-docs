@@ -28,7 +28,7 @@ Pricing information can be determined from multiple sources:
 | Sale Price | How much a salable item is sold for (with price-breaks) | Part |
 | Sale Cost | How much an item was sold for | Sales Order |
 
-### Supporting Multiple Currencies
+### Currency Support
 
 InvenTree supports pricing data in multiple currencies, allowing integration with suppliers and customers using different currency systems.
 
@@ -145,4 +145,16 @@ If the Part is designated as *Salable* then historical sale cost information is 
 
 ### Price Data Caching
 
+Pricing calculations (and conversions) can be expensive to perform. This can make pricing data for complex Bills of Material time consuming to retrieve from the server, if not handled correctly.
+
+For this reason, all information displayed in the [pricing overview](#pricing-overview) section is pre-calculated and *cached* in the database. This ensures that when it needs to be retrieved (e.g. viewing pricing for an entire BOM) it can be accessed immediately.
+
+Pricing data is cached in the [default currency](#default-currency), which ensures that pricing can be compared across multiple parts in a consistent format.
+
 #### Data Updates
+
+The pricing data caching is intented to occur *automatically*, and generally be up-to-date without user interaction. Pricing data is re-calculated and cached by the [background worker](../settings/tasks.md) in the following ways:
+
+- **Automatically** - If the underlying pricing data changes, part pricing is scheduled to be updated
+- **Periodically** - A daily task ensures that any outdated or missing pricing is kept updated
+- **Manually** - The user can manually recalculate pricing for a given part in the [pricing overview](#pricing-overview) display
