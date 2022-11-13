@@ -4,63 +4,145 @@ title: Pricing
 
 ## Pricing
 
-InvenTree provides multi-currency pricing support via the [django-money](https://django-money.readthedocs.io/en/latest/) library.
+Pricing is an inherently complex topic, often subject to the particular requirements of the user. InvenTree attempts to provide a comprehensive pricing architecture which is useful without being proscriptive.
 
 ### Terminology
 
-Cost - The theoretical amount of money required to pay for something.  
-Price - The actual amount of money paid.  
+Throughout this documentation (and within InvenTree) the concepts of *cost* and *price* are separated as follows:
 
-### Pricing points
+| Term | Description |
+| --- | --- |
+| Price | The theoretical amount of money required to pay for something. |
+| Cost | The actual amount of money paid. |
 
-| Price | Description | Linked to |
+### Pricing Sources
+
+Pricing information can be determined from multiple sources:
+
+| Pricing Source | Description | Linked to |
 | --- | --- | ---| 
-| Supplier Cost | How much it costs to theoretically purchase a part from a given supplier | Supplier |
-| Purchase Price | Historical pricing information for parts purchased | Stock Item |
-| Internal Cost | How much a part costs to make | Part |
-| BOM Cost | Total cost for an assembly (total cost of component items) | Part |
-| Sale Cost | How much a salable item is sold for (with cost-breaks) | Part |
-| Sale Price | How much an item was sold for | Sales Order |
+| Internal Price | How much a part costs to make | Part |
+| Supplier Price | The price to theoretically purchase a part from a given supplier (with price-breaks) | Supplier |
+| Purchase Cost | Historical cost information for parts purchased | Stock Item |
+| BOM Price | Total price for an assembly (total price of all component items) | Part |
+| Sale Price | How much a salable item is sold for (with price-breaks) | Part |
+| Sale Cost | How much an item was sold for | Sales Order |
+
+### Supporting Multiple Currencies
+
+InvenTree supports pricing data in multiple currencies, allowing integration with suppliers and customers using different currency systems.
+
+Supported currencies must be configured as part of [the InvenTree setup process](../start/config.md#supported-currencies).
+
+!!! info "Currency Support"
+    InvenTree provides multi-currency pricing support via the [django-money](https://django-money.readthedocs.io/en/latest/) library.
+
+#### Default Currency
+
+Many of the pricing operations are performed in reference to a *Default Currency* (which can be selected for the particular InvenTree installation).
+
+#### Conversion Rates
+
+To facilitate conversion between different currencies, exchange rate data is provided via the [exchangerate.host](https://exchangerate.host/#/) API. Currency exchange rates are updated once per day.
+
+!!! tip "Custom Exchange Rates"
+    Custom exchange rates or databases can be used if desired.
 
 ## Pricing Tab
 
-The pricing tab of a part provides all available pricing information for that part. It shows all price ranges and provides tools to calculate them.
+The pricing tab for a given Part provides all available pricing information for that part. It shows all price ranges and provides tools to calculate them.
 
-### Price ranges
+The pricing tab is divided into different sections, based on the available pricing data.
 
-A price range describes the unit price for a part at different buying / selling quantities (one par is called price point following). Many suppliers sell their parts with different price points depending on packaging and quantities. That can be replicated in InvenTree with price ranges.
+!!! info "Pricing Data"
+    As not all parts have the same pricing data available, the pricing tab display may be different from one part to the next
 
-The simplest price range just contains one price point - this will be created when a part gets assigned a price in a form.
+### Pricing Overview
 
-!!! warning "Adjust the wanted amount!"
-    As parts can have price ranges it is important to set the correct amount in the first panel to get an accurate price.
+At the top of the pricing tab, an *Overview* section shows a synopsis of the available pricing data:
 
-### Currency in the graphs and tables
+{% with id="pricing_overview", url="part/pricing_overview.png", description="Pricing Overview" %}
+{% include 'img.html' %}
+{% endwith %}
 
-All money-values are adjusted to the default currency at the current exchange rates (see [currency conversion](#currency-conversion) for more information). This can distort historical data but is necessary to easily compare values.
+This overview tab provides information on the *range* of pricing data available within each category. If pricing data is not available for a given category, it is marked as *No data*.
 
-### Supplier cost / prices
+Each price range is calculated in the [Default Currency](#default-currency), independent of the currency in which the original pricing information is stored. This is necessary for operations such as data sorting, price comparison, etc. Note that while the *overview* information is calculated in a single currency, the original pricing information is still available in the original currency.
 
-Shows how much it would cost to purchase the part right now from a supplier/manufacturer (can have [price ranges](#price-ranges)).  
-Also provides a graph of historical prices collected from stock in the tab **Purchase Price**.
+Price range data is [cached in the database](#price-data-caching) when underlying pricing information changes.
 
-### Internal cost / prices
+!!! tip "Refresh Pricing"
+    While pricing data is [automatically updated](#data-updates), the user can also manually refresh the pricing calculations manually, by pressing the "Refresh" button in the overview section.
 
-Parts can optionally have a internal cost (this needs to be enabled by a admin) that is used for internal sales. This value is used for BOM calculations (if the part is an assembly the internal cost must contain the cost for all sub-parts). [Price ranges](#price-ranges) are supported.
+#### Overall Pricing
 
-### BOM cost
+The *overall pricing* range is calculated based on the minimum and maximum of available pricing data. Note that *overall pricing* is the primary source of pricing data used in other pricing calculations (such as cumulative BOM costing, for example).
 
-If a part is an assembly this panel will show the cost (possibly as range) for all sub-parts and a graph how much each part contributes to the total cost.
+### Internal Pricing
 
-### Sale cost / prices
+A particular Part may have a set of *Internal Price Breaks* which denote quantity pricing set by the user. Internal pricing is set independent of any external pricing or BOM data - it is determined entirely by the user. If a part is purchased from external suppliers, then internal pricing may well be left blank.
 
-Sale prices are always to customers (through [sale orders](../sell/so.md)) and support [price ranges](#price-ranges).
+If desired, price breaks can be specified based on particular quantities.
 
-The panel also shows historical sale price information collected from past [purchase orders](../buy/po.md).
+{% with id="pricing_internal", url="part/pricing_internal.png", description="Internal Pricing" %}
+{% include 'img.html' %}
+{% endwith %}
 
-## Currency conversion
+#### Pricing Override
 
-Automatic updating of currency conversion rates can be provided via the [exchangerate.host](https://exchangerate.host/#/) API.
+If the **Internal Price Override** setting is enabled, then internal pricing data overrides any other available pricing (if present).
 
-Currency exchange rates are updated once per day.
+### Purchase History
 
+If the Part is designated as *purchaseable*, then historical purchase cost information is displayed (and used to calculate overall pricing). Purchase history data is collected from *completed* [purchase orders](../buy/po.md).
+
+{% with id="pricing_purchase_history", url="part/pricing_purchase_history.png", description="Purchase History" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Supplier Pricing
+
+If supplier pricing information is available, this can be also used to determine price range data.
+
+{% with id="pricing_supplier", url="part/pricing_supplier.png", description="Supplier Pricing" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### BOM Pricing
+
+If a Part is designated as an *assembly*, then the [Bill of Materials](../build/bom.md) (BOM) can be used to determine the price of the assembly. The price of each component in the BOM is used to calculate the overall price of the assembly.
+
+{% with id="pricing_bom", url="part/pricing_bom.png", description="BOM Pricing" %}
+{% include 'img.html' %}
+{% endwith %}
+
+!!! info "Complete Pricing Required"
+    If pricing data is not available for all items in the BOM, the assembly pricing will be incomplete
+
+### Variant Pricing
+
+For *template* parts, the price of any *variants* of the template is taken into account:
+
+{% with id="pricing_variants", url="part/pricing_variants.png", description="Variant Pricing" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Sale Pricing
+
+If the Part is designated as *Salable* then sale price breaks are made available. These can be configured as desired by the user, to define the desired sale price at various quantities.
+
+{% with id="pricing_sale_price_breaks", url="part/pricing_sale_price_breaks.png", description="Sale Pricing" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Sale History
+
+If the Part is designated as *Salable* then historical sale cost information is available. Sale history data is collected from *completed* [sales orders](../sell/so.md).
+
+{% with id="pricing_sale_history", url="part/pricing_sale_history.png", description="Sale History" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Price Data Caching
+
+#### Data Updates
