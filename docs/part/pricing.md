@@ -26,7 +26,7 @@ Pricing information can be determined from multiple sources:
 | --- | --- | ---| 
 | Internal Price | How much a part costs to make | [Part](../part/part.md) |
 | Supplier Price | The price to theoretically purchase a part from a given supplier (with price-breaks) | [Supplier](../buy/supplier.md) |
-| Purchase Cost | Historical cost information for parts purchased | [Stock Item](../stock/stock.md) |
+| Purchase Cost | Historical cost information for parts purchased | [Purchase Order](../buy/po.md) |
 | BOM Price | Total price for an assembly (total price of all component items) | [Part](../part/part.md) |
 | Sale Price | How much a salable item is sold for (with price-breaks) | [Part](../part/part.md) |
 | Sale Cost | How much an item was sold for | [Sales Order](../sell/so.md) |
