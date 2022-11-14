@@ -6,6 +6,9 @@ title: Pricing
 
 Pricing is an inherently complex topic, often subject to the particular requirements of the user. InvenTree attempts to provide a comprehensive pricing architecture which is useful without being proscriptive.
 
+!!! warning "Raw Data Only"
+    InvenTree stores raw pricing data, as provided by the user. Any calculations or decisions based on this data must take into consideration the context in which the data are entered.
+
 ### Terminology
 
 Throughout this documentation (and within InvenTree) the concepts of *cost* and *price* are separated as follows:
@@ -21,12 +24,12 @@ Pricing information can be determined from multiple sources:
 
 | Pricing Source | Description | Linked to |
 | --- | --- | ---| 
-| Internal Price | How much a part costs to make | Part |
-| Supplier Price | The price to theoretically purchase a part from a given supplier (with price-breaks) | Supplier |
-| Purchase Cost | Historical cost information for parts purchased | Stock Item |
-| BOM Price | Total price for an assembly (total price of all component items) | Part |
-| Sale Price | How much a salable item is sold for (with price-breaks) | Part |
-| Sale Cost | How much an item was sold for | Sales Order |
+| Internal Price | How much a part costs to make | [Part](../part/part.md) |
+| Supplier Price | The price to theoretically purchase a part from a given supplier (with price-breaks) | [Supplier](../buy/supplier.md) |
+| Purchase Cost | Historical cost information for parts purchased | [Stock Item](../stock/stock.md) |
+| BOM Price | Total price for an assembly (total price of all component items) | [Part](../part/part.md) |
+| Sale Price | How much a salable item is sold for (with price-breaks) | [Part](../part/part.md) |
+| Sale Cost | How much an item was sold for | [Sales Order](../sell/so.md) |
 
 ### Currency Support
 
