@@ -10,8 +10,9 @@ A test template defines the parameters of the test; the individual stock items c
 
 Test templates "cascade" down to variant parts: this means that if a master part has multiple variants, any test template defined for the master part will be assigned to the variants. Any stock items of the variant parts will have the same test templates associated with them.
 
-!!! missing "TODO"
-	Include pictures of the Test Template tab
+{% with id="part_test_templates", url="part/part_test_templates.png", description="Part Test Templates" %}
+{% include 'img.html' %}
+{% endwith %}
 
 ### Test Template Parameters
 
