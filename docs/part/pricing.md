@@ -119,6 +119,10 @@ If a Part is designated as an *assembly*, then the [Bill of Materials](../build/
 {% include 'img.html' %}
 {% endwith %}
 
+#### BOM Pricing Chart
+
+The BOM *Pricing Chart* displays two separate "pie charts", with minimum and maximum price data for each item in the BOM. Note that prices are only shown for BOM items which have available pricing information.
+
 !!! info "Complete Pricing Required"
     If pricing data is not available for all items in the BOM, the assembly pricing will be incomplete
 
