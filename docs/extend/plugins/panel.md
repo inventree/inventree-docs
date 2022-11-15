@@ -23,7 +23,8 @@ Each plugin can register templates simply by providing a 'templates' directory i
 
 The convention is that each 'templates' directory contains a subdirectory with the same name as the plugin :
   * e.g. templates/myplugin/my_template.html
-  * 
+
+
 In this case, the template can then be loaded (from any plugin!) by loading "myplugin/my_template.html".
     
     
