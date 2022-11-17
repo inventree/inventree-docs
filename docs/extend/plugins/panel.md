@@ -33,6 +33,25 @@ In this case, the template can then be loaded (from any plugin!) by loading "myp
 
 Custom code can be provided which will run when the particular panel is first loaded (by selecting it from the side menu).
 
+To add some javascript code, you can add a reference to a function that will be called when the panel is loaded  
+```
+  {
+        'title': "Updates",
+        'description': "Latest updates for this part",
+        'javascript': 'alert("You just loaded this panel!")',
+    }
+```
+
+Or to add a template file that will be renderered as javascript code : 
+ ```
+  {
+        'title': "Updates",
+        'description': "Latest updates for this part",
+        'javascript_template ': 'pluginTemplatePath/myJavascriptFile.js',
+    }
+```
+note : see convention for template directory above.
+    
 ## Example Implementation
 
 Refer to the `CustomPanelSample` example class in the `./plugin/samples/integration/` directory, for a fully worked example of how custom UI panels can be implemented.
