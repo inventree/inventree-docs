@@ -33,7 +33,7 @@ In this case, the template can then be loaded (from any plugin!) by loading "myp
 
 Custom code can be provided which will run when the particular panel is first loaded (by selecting it from the side menu).
 
-To add some javascript code, you can add a reference to a function that will be called when the panel is loaded  
+To add some javascript code, you can add a reference to a function that will be called when the panel is loaded with the 'javascript' key in the panel description :
 ```
   {
         'title': "Updates",
@@ -42,12 +42,12 @@ To add some javascript code, you can add a reference to a function that will be 
     }
 ```
 
-Or to add a template file that will be renderered as javascript code : 
+Or to add a template file that will be renderered as javascript code, from the plugin template folder, whith the 'javascript_template' key in the panel description :
  ```
   {
         'title': "Updates",
         'description': "Latest updates for this part",
-        'javascript_template ': 'pluginTemplatePath/myJavascriptFile.js',
+        'javascript_template': 'pluginTemplatePath/myJavascriptFile.js',
     }
 ```
 note : see convention for template directory above.
