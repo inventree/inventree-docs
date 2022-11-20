@@ -39,9 +39,9 @@ or
 
 InvenTree installation is not officially supported natively on Windows. Install using the WSL framework.
 
-### Command 'inv' / 'invoke' not found
+### Command 'invoke' not found
 
-If the `inv` or `invoke` command does not work, it means that the [invoke](https://pypi.org/project/invoke/) python library has not been correctly installed. 
+If the `invoke` command does not work, it means that the [invoke](https://pypi.org/project/invoke/) python library has not been correctly installed. 
 
 Update the installed python packages with PIP:
 
@@ -67,3 +67,7 @@ invoke worker
 
 !!! info "Supervisor"
     A better option is to manage the background worker process using a process manager such as supervisor. Refer to the [production server guide](./start/production.md).
+
+### File Sync Issues - Docker
+
+When installing under [Docker](./start/docker.md), sometimes issues may arise keeping [persistent data](./start/docker.md#persistent-data) in sync. Refer to the [common issues](./start/docker_prod.md#common-issues) section in the docker setup guide for further details.

@@ -102,6 +102,18 @@ InvenTree stores any persistent data (e.g. uploaded media files, database data, 
 !!! info "Data Directory"
     Make sure you change the path to the local directory where you want persistent data to be stored.
 
+#### Common Issues
+
+When configuring a docker install, sometimes a misconfiguration can cause peculiar issues where it seems that the installation is functioning correctly, but uploaded files and plugins do not "persist" across sessions. In such cases, the "mounted" volume has not mapped to a directory on your local filesystem. This may occur if you have tried multiple setup options without clearing existing volume bindings.
+
+!!! tip "Start with a clean slate"
+    To prevent such issues, it is recommended that you start with a "clean slate" if you have previously configured an InvenTree installation under docker.
+
+If you have previously setup InvenTree, remove existing volume bindings using the following command:
+
+```docker volume rm -f inventree-production_inventree_data```
+
+
 ## Production Setup Guide
 
 ### Edit Environment Variables
