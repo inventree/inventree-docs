@@ -12,13 +12,7 @@ Plugins can be added from multiple sources:
 - Custom plugins should be placed in the directory `./InvenTree/plugins`.
 - InvenTree built-in plugins are located in the directory `./InvenTree/plugin/builtin`.  
 
-Note: Plugins are discovered and loaded only when the server is started.
-
-!!! info "Enable Plugin Support"
-    To enable custom plugins, plugin support must be activated in the [server configuration](../start/config.md).
-
-!!! question "Have you tried turning it off and on again?"
-    When new plugins are installed (and activated), both the web server and background worker must be restarted.
+For further information, read more about [installing plugins](./plugins/install.md).
 
 ### Plugin Base Class
 
