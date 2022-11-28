@@ -13,15 +13,15 @@ Part.list(api, optional arguments)
 
 Optional arguments:
  
-- **IPN_regex:** Regular expression that filter the rasulta accorting to a match with the IPN (string)
+- **IPN_regex:** Regular expression that filter the result according to a match with the IPN (string)
 - **limit:** Number of results returned (int)
 - ...
 
-**returns:** A ist of all parts in the database that match the filter criteria given in the optional arguments.
+**returns:** A list of all parts in the database that match the filter criteria given in the optional arguments.
 
 If no optional arguments are given, all parts returned. 
 
-### Create
+### create
 
 Create a part in the database.
 ```python
@@ -42,40 +42,100 @@ Part.create(api, {
         })
 ```
 - **api:** Inventree api
-- **name:** Name if the part. This is also used as URL and cannot contain blank spaces and hashes (string)  
+- **name:** Name of the part. This is also used as URL and cannot contain blank spaces and hashes (string)  
+- **description:** Description of the part (string)  
+- **link:** An URL to further information (string)  
+- **category:** the primary key of the category where the part will be put in. The category must exist. Otherwise create will fail. (int)  
 
 **returns:** Handle of the created part
 
-### uploadAttachment
-Upload atachments like datasheets to the database. You can upload any file up to a limit of...
+The handle of the created part can be used for further actions that are described in the following section. 
+
+#### delete
+```python
+parthandle.delete()
+```  
+
+This deletes the part from the database. It also deletes all related attachments. 
+
+#### getCategory
+```python
+parthandle.getCategory()
+```  
+
+**returns:** Category object where the part is in
+
+#### is_valid
+```python
+parthandle.is_valid()
+```  
+**returns:** Boolean: True if the part is valid, false otherwise 
+
+#### uploadAttachment
+Upload attachments like datasheets to the database. You can upload any file up to a limit of...
 ```python
 parthandle.uploadAttachment(file, comment)
 ```  
-  -**file:** Filename including path name (string)
-  -**comment:** Comment for the attachment (string)
+- **file:** Filename including path name (string)
+- **comment:** Comment for the attachment (string)
 
 **returns:**
 
-### uploadImage
+#### uploadImage
 
 ```python
 parthandle.uploadImage(file)
 ```
--**file:** Filename of the picture including path name
+- **file:** Filename of the picture including path name (string)
 
 **returns:**
+
+#### save
+```python
+parthandle.save()
+```
+
+Saves the part data to the database. Needs to be called when _data has been modified.
+
+#### pk
+
+```python
+parthandle.pk
+```
+**returns:** Primary key of the part (int)
+
+#### _data
+
+```python
+parthandle._data
+```
+**returns:** Dict with all data of the part (dict)
+
+The data can be modified and saved afterwards using the save() method. The following example
+will set a part to inactive: 
+
+```python
+parthandle._data['active']=False
+parthandle.save()
+```
+
+#### uploadImage
+
+```python
+parthandle.uploadImage(file)
+```
+  -**file:** Filename of the picture including path name (string)
+
 
 ## Supplier Parts
 ```python
 from inventree.company import SupplierPart
-
 SupplierPart.create(api,{'part':ppk,'supplier':spk,'SKU':Partnumber,'link':Supplierlink})
-  
 ```
-  - **api:** taInventree api handle
-  - **ppk:** Primary key of the part where the supplier üart will be adddeda (int)
+  - **api:** Inventree api handle
+  - **ppk:** Primary key of the part where the supplier part will be added (int)
   - **spk:** Primary key of the supplier company (int)
-  - **Partnumber:** Partnumber or name of the part at the suppplier (string)
+  - **Partnumber:** Partnumber or name of the part at the supplier (string)
   - **Supplierlink:** URL to the part at the website of the supplier (string)
   
 **returns:** Handle of the created supplierpart
