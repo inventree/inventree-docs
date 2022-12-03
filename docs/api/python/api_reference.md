@@ -49,14 +49,28 @@ Part.create(api, {
 
 **returns:** Handle of the created part
 
-The handle of the created part can be used for further actions that are described in the following section. 
+### Get a specific part
+
+```python
+parthandle=Part(api, pk=x)
+```  
+
+- **api:** Inventree api
+- **x** Primary kex of the part to get
+
+**returns:** Handle of the part with the requested primary key
+
+
+The handle of a part can be used for further actions that are described in the following section. 
 
 #### delete
 ```python
 parthandle.delete()
 ```  
 
-This deletes the part from the database. It also deletes all related attachments. 
+This deletes the part from the database. It also deletes all related attachments. A part cannot 
+be deleted when it is active or has part relationships to other parts. These must be deleted before
+and the part needs to be set to inactive. 
 
 #### getCategory
 ```python
@@ -92,17 +106,11 @@ parthandle.uploadImage(file)
 
 #### save
 ```python
-parthandle.save()
+parthandle.save(data={'key':'value',...)
 ```
 
-Saves the part data to the database. Needs to be called when _data has been modified.
-
-#### pk
-
-```python
-parthandle.pk
-```
-**returns:** Primary key of the part (int)
+This function changes attributes of the part and saves changes to the database. The available keys can be found in parthandle._data. 
+The function can be called without any arguments just to save the data. 
 
 #### _data
 
@@ -117,14 +125,23 @@ will set a part to inactive:
 ```python
 parthandle._data['active']=False
 parthandle.save()
+# or
+parthandle.save(data={'active':False})
 ```
+
+#### pk
+
+```python
+parthandle.pk
+```
+**returns:** Primary key of the part (int)
 
 #### uploadImage
 
 ```python
 parthandle.uploadImage(file)
 ```
-  -**file:** Filename of the picture including path name (string)
+- **file:** Filename of the picture including path name (string)
 
 
 ## Supplier Parts
@@ -132,11 +149,24 @@ parthandle.uploadImage(file)
 from inventree.company import SupplierPart
 SupplierPart.create(api,{'part':ppk,'supplier':spk,'SKU':Partnumber,'link':Supplierlink})
 ```
-  - **api:** Inventree api handle
-  - **ppk:** Primary key of the part where the supplier part will be added (int)
-  - **spk:** Primary key of the supplier company (int)
-  - **Partnumber:** Partnumber or name of the part at the supplier (string)
-  - **Supplierlink:** URL to the part at the website of the supplier (string)
+- **api:** Inventree api handle
+- **ppk:** Primary key of the part where the supplier part will be added (int)
+- **spk:** Primary key of the supplier company (int)
+- **Partnumber:** Partnumber or name of the part at the supplier (string)
+- **Supplierlink:** URL to the part at the website of the supplier (string)
   
 **returns:** Handle of the created supplierpart
+
+## Supplier Part Price Breaks
+```python
+from inventree.company import SupplierPriceBreak
+SupplierPriceBreak.create(api,{'part':spk,'price':Price,'quantity':Quantity, 'price_currency':Currency})
+```
+- **api:** Inventree api handle
+- **spk:** Primary key of the supplier part where the price break will be added (int)
+- **Price:** Price of the part up to the given quantity (float) 
+- **Quantity:** Quantity of parts for this price (int)
+- **Currency:** Currency of the price. The available currencies are stored in Inventree (string)
+  
+**returns:** Handle of the created pricebreak
 
