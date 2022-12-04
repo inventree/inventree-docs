@@ -128,6 +128,7 @@ Each part object has access to a lot of context variables about the part. The fo
 | quantity_being_built | The amount being built |
 | required_build_order_quantity | The amount required for build orders |
 | allocated_build_order_quantity | The amount allocated for build orders |
+| build_order_allocations | Query set with all build order allocations for that part |
 | required_sales_order_quantity | The amount required for sales orders |
 | allocated_sales_order_quantity | The amount allocated for sales orders |
 | available | Wether the part is available or not | 

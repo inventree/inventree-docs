@@ -19,23 +19,45 @@ In addition to the default report context variables, the following context varia
 | --- | --- |
 | build | The [Build](./context_variables.md#build) object the report is being generated against |
 | part | The [Part](./context_variables.md#part) object that the build references |
-| reference | The build order reference string. This is just the string that follows BO... |
-| title | The full name of the build including the BO |
-| quantity | Build order quantity |
-| build.title | The description of the build |
-| build.status | The status of the build. 20 means 'Production' |
-| build.bom_items | A query set with all bom items for the build |
+| reference | The build order reference string |
 
-bom_items that can be looped. Each bom_item line has further context variables.
+#### build 
 
 | Variable | Description |
 | --- | --- |
-| line.reference | The reference designator of the component |
-| line.sub_part | The part at this position |
-| line.quantity | The number of components |
-| line.sub_part.build_order_allocations | ... |
+| title | The full name of the build |
+| quantity | Build order quantity |
+| title | The description of the build |
+| status | The status of the build. 20 means 'Production' |
+| bom_items | A query set with all bom items for the build |
+| required_parts | A query set with all bom items for the build |
+| sub_build_count | Number of sub builds |
+| sub_builds | Query set with all sub builds |
+| is_overdue | Boolean that tells if the build is overdue |
+| active | Boolean that tells if the build is active |
+| can_complete | Boolean that tells if the build can be completed ( all material allocated)|
+| is_complete | Boolean that tells if the build is complete |
+| parent | parent build if this is a sub build |
+| target_date | Date where the build should be finished |
+| creation_date | Date where the build has been created |
+| issued_by | User who created the build |
+| responsible | User who is responsible for the build |
 
-A very simple example wihtout any html formatting:
+As usual items in a query sets can be selected by adding a .n to the set e.g. build.required_parts.0
+will result in the first part of the list. Each query set has again its own context variables.
+
+#### bom_items 
+
+| Variable | Description |
+| --- | --- |
+| .reference | The reference designators of the components |
+| .quantity | The number of components |
+| .sub_part | The part at this position |
+| .substitutes.all | A query set with all allowed substitutes for that part |
+
+### Example 
+
+A very simple example without any html formatting:
 
 {% raw %}
 ```html
