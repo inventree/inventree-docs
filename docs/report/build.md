@@ -280,5 +280,5 @@ content: "v{{report_revision}} - {{ date.isoformat }}";
 
 This will result a report page like this:
 
-{% with id="report-61", url="build/report-61.png", description="Report Example Builds" %} {% include "img.html" %} {% endwith %}
+{% with id="report-options", url="build/report-61.png", description="Report Example Builds" %} {% include "img.html" %} {% endwith %}
 
