@@ -17,7 +17,7 @@ In addition to the default report context variables, the following context varia
 
 | Variable | Description |
 | --- | --- |
-| build | The [Build](./context_variables.md#build) object the report is being generated against |
+| build | The build object the report is being generated against |
 | part | The [Part](./context_variables.md#part) object that the build references |
 | reference | The build order reference string |
 | quantity | Build order quantity |
@@ -69,7 +69,7 @@ will result in the first part of the list. Each query set has again its own cont
 
 ### Example 
 
-A very simple example without any html formatting:
+The following example will create a report with header and BOM. In the BOM table substitutes will be listed. 
 
 {% raw %}
 ```html
