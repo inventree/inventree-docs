@@ -54,6 +54,7 @@ The following variables are accessed by build.variable
 | take_from | [StockLocation](./context_variables.md#stocklocation) to take stock from to make this build (if blank, can take from anywhere) |
 | title | The full name of the build |
 | title | The description of the build |
+| allocated_stock.all | A query set with all allocated stock items for the build |
 
 As usual items in a query sets can be selected by adding a .n to the set e.g. build.required_parts.0
 will result in the first part of the list. Each query set has again its own context variables.
@@ -66,6 +67,14 @@ will result in the first part of the list. Each query set has again its own cont
 | .quantity | The number of components |
 | .sub_part | The part at this position |
 | .substitutes.all | A query set with all allowed substitutes for that part |
+
+
+#### allocated_stock.all 
+
+| Variable | Description |
+| --- | --- |
+| .bom_item | The bom item where this part belongs to |
+| .stock_item | The allocated [StockItem](./context_variables.md#stockitem) |
 
 ### Example 
 
