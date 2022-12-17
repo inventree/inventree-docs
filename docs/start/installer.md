@@ -94,7 +94,7 @@ A rough outline of steps to achieve this could be:
 
 ## Updating InvenTree
 
-To update InvenTree run `apt update inventree` - this might need to be run as a sudo user.
+To update InvenTree run `apt install --only-upgrade inventree` - this might need to be run as a sudo user.
 
 ## Controlling InvenTree
 
