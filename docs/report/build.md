@@ -34,10 +34,10 @@ The following variables are accessed by build.variable
 | can_complete | Boolean that tells if the build can be completed ( all material allocated)|
 | creation_date | Date where the build has been created |
 | completion_date | Date the build was completed (or, if incomplete, the expected date of completion) |
-| completed_by | The [User](.context_variables.md#user) that completed the build |
+| completed_by | The [User](./context_variables.md#user) that completed the build |
 | is_overdue | Boolean that tells if the build is overdue |
 | is_complete | Boolean that tells if the build is complete |
-| issued_by | The [User](.context_variables.md#user) who created the build |
+| issued_by | The [User](./context_variables.md#user) who created the build |
 | link | External URL for extra information | 
 | notes | Text notes |
 | parent | Reference to a parent build object if this is a sub build |
