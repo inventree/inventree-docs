@@ -34,10 +34,10 @@ The following variables are accessed by build.variable
 | can_complete | Boolean that tells if the build can be completed ( all material allocated)|
 | creation_date | Date where the build has been created |
 | completion_date | Date the build was completed (or, if incomplete, the expected date of completion) |
-| completed_by | User that completed the build |
+| completed_by | The [User](.context_variables.md#user) that completed the build |
 | is_overdue | Boolean that tells if the build is overdue |
 | is_complete | Boolean that tells if the build is complete |
-| issued_by | User who created the build |
+| issued_by | The [User](.context_variables.md#user) who created the build |
 | link | External URL for extra information | 
 | notes | Text notes |
 | parent | Reference to a parent build object if this is a sub build |
@@ -45,7 +45,7 @@ The following variables are accessed by build.variable
 | quantity | Build order quantity |
 | reference | Build order reference (required, must be unique) |
 | required_parts | A query set with all parts that are required for the build |
-| responsible | User (or group) responsible for completing the build |
+| responsible | Owner responsible for completing the build. This can be a user or a group. Depending on that further context variables differ |
 | sales_order | References to a [Sales Order](./context_variables.md#salesorder) object for which this build is required (e.g. the output of this build will be used to fulfil a sales order) |
 | status | The status of the build. 20 means 'Production' |
 | sub_build_count | Number of sub builds |

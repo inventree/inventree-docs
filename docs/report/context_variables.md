@@ -231,3 +231,14 @@ Each part object has access to a lot of context variables about the part. The fo
 | prefix | Purchase Order reference prefix |
 | reference | The reference number |
 | title | The title of the order |
+
+
+#### user
+
+| Variable | Description |
+|----------|-------------|
+| username | the username of the user |
+| fist_name | The first name of the user |
+| last_name | The last name of the user |
+| email | The email address of the user |
+| pk | The primary key of the user |
