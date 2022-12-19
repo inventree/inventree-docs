@@ -31,7 +31,8 @@ The following variables are accessed by build.variable
 | active | Boolean that tells if the build is active |
 | batch | Batch code transferred to build parts (optional) |
 | bom_items | A query set with all BOM items for the build |
-| can_complete | Boolean that tells if the build can be completed ( all material allocated)|
+| can_complete | Boolean that tells if the build can be completed. Means: All material allocated and all parts have been build. |
+| are_untracked_parts_allocated | Boolean that tells if all bom_items have allocated stock_items. | 
 | creation_date | Date where the build has been created |
 | completion_date | Date the build was completed (or, if incomplete, the expected date of completion) |
 | completed_by | The [User](./context_variables.md#user) that completed the build |
