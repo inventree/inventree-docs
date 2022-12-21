@@ -83,6 +83,6 @@ To cancel the order, click on the <span class='fas fa-tools'></span> menu button
 Using the button to the top right of the list of Sales Orders, the view can be switched to a calendar view using the button <span class='fas fa-calendar-alt'></span>. This view shows orders with a defined target date only.
 
 This view can be accessed externally as an ICS calendar using a URL like the following:
-`http://inventree.example.org/api/order/purchase-order/calendar.ics`
+`http://inventree.example.org/api/order/sales-order/calendar.ics`
 
-by default, completed orders are not exported. These can be included by appending `?include_completed=True` to the URL.
+By default, completed orders are not exported. These can be included by appending `?include_completed=True` to the URL.
