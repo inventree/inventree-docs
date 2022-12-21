@@ -108,6 +108,6 @@ A new purchase order is then created based on the currently selected order:
 Using the button to the top right of the list of Purchase Orders, the view can be switched to a calendar view using the button <span class='fas fa-calendar-alt'></span>. This view shows orders with a defined target date only.
 
 This view can be accessed externally as an ICS calendar using a URL like the following:
-`http://inventree.example.org/api/order/purchase-order/calendar.ics`
+`http://inventree.example.org/api/order/calendar/purchase-order/calendar.ics`
 
 by default, completed orders are not exported. These can be included by appending `?include_completed=True` to the URL.
