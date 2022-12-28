@@ -2,6 +2,8 @@
 title: Part Views
 ---
 
+## Part Views
+
 The main part view is divided into 4 different panels:
 
 1. Categories
@@ -125,6 +127,10 @@ The *Sales Orders* tab shows a list of the sales orders for this part. It provid
 ### Scheduling
 
 The *Scheduling* tab provides an overview of the *predicted* future availability of a particular part. Refer to the [scheduling documentation](./scheduling.md) for further information.
+
+### Stocktake
+
+The *Stocktake* tab provide historical stock level information, based on user-provided stocktake data. Refer to the [stocktake documentation](./stocktake.md) for further information.
 
 ### Tests
 
