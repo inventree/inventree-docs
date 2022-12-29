@@ -197,7 +197,8 @@ Each part object has access to a lot of context variables about the part. The fo
 
 ### Manufacturers
 
-!!! incomplete "
+!!! incomplete "TODO"
+    This section requires further work
 
 #### Manufacturer
 
