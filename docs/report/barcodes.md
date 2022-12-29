@@ -73,3 +73,14 @@ To render a QR code, use the `qrcode` template tag:
 <img class='custom_qr_class' src='{% qrcode "Hello world!" %}'>
 {% endraw %}
 ```
+
+Additional parameters can be passed to the `qrcode` function for rendering:
+
+```html
+{% raw %}
+<img class='custom_qr_class' src='{% qrcode "Hello world!" fill_color="green" back_color="blue" %}'>
+{% endraw %}
+```
+
+!!! tip "Documentation"
+    Refer to the [qrcode library documentation](https://pypi.org/project/qrcode/) for more information

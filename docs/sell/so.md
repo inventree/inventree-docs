@@ -76,3 +76,13 @@ Once all items in the sales order have been shipped, click on <span class="badge
 ### Cancel Order
 
 To cancel the order, click on the <span class='fas fa-tools'></span> menu button next to the <span class="badge inventree add"><span class='fas fa-check-circle'></span> Complete Order</span> button, then click on the "<span class='fas fa-tools'></span> Cancel Order" menu option. Confirm then click on the <span class="badge inventree confirm">Submit</span> to cancel the order.
+
+
+### Calendar view
+
+Using the button to the top right of the list of Sales Orders, the view can be switched to a calendar view using the button <span class='fas fa-calendar-alt'></span>. This view shows orders with a defined target date only.
+
+This view can be accessed externally as an ICS calendar using a URL like the following:
+`http://inventree.example.org/api/order/calendar/sales-order/calendar.ics`
+
+By default, completed orders are not exported. These can be included by appending `?include_completed=True` to the URL.
