@@ -155,13 +155,24 @@ Each part object has access to a lot of context variables about the part. The fo
 
 ### Suppliers
 
-!!! incomplete "TODO"
-    This section requires further work
-
 #### Supplier
 
 | Variable | Description |
 |----------|-------------|
+| name | Name of the company |
+| description | Longer form description |
+| website | URL for the company website |
+| address | Postal address |
+| contact | Contace Name |
+| phone | Contact phone number |
+| email | Contact email address |
+| link | A second econdary URL to the company (Actually only accessible in the admin interface) |
+| notes | Extra notes about the company (Actually only accessible in the admin interface) |
+| is_customer | Boolean value, is this company a customer |
+| is_supplier | Boolean value, is this company a supplier |
+| is_manufacturer | Boolean value, is this company a manufacturer |
+| currency_code | Default currency for the company |
+| parts | Query set with all parts that the company supplies |
 
 #### SupplierPart
 
