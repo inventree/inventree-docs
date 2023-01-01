@@ -32,6 +32,9 @@ The source code for this droplet can be found in [inventree_droplet](https://git
 [InvenTree zebra plugin](https://github.com/SergeoLacruz/inventree-zebra-plugin) is a plugin to print labels with zebra printers.  
 Currently only the GK420T printer is supported.
 
+### InvenTree Apprise
+
+[InvenTree Apprise](https://github.com/matmair/inventree-apprise) is a plugin to send notifications via Apprise. This enables a wide variety of targets.
 
 ## First party plugins
 
