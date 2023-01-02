@@ -76,6 +76,7 @@ will result in the first part of the list. Each query set has again its own cont
 | --- | --- |
 | .bom_item | The bom item where this part belongs to |
 | .stock_item | The allocated [StockItem](./context_variables.md#stockitem) |
+| .quantity | The number of components needed for the build (components in BOM x parts to build) |
 
 ### Example 
 
