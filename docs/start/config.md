@@ -38,6 +38,9 @@ A configuration file *template* can be found on [GitHub](https://github.com/inve
 !!! info "Template File"
     The default configuration file (as defined by the template linked above) will be copied to the specifed configuration file location on first run, if a configuration file is not found in that location.
 
+!!! tip "Restart Server"
+    The contents of the configuration file are read when the InevnTree server first launches. If any changes are made to the configuration file, ensure that the server is restarted, so that the changes can be made operational.
+
 ## Basic Options
 
 The following basic options are available:
