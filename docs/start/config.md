@@ -202,6 +202,8 @@ If the selected providers need additional settings they must be added as dicts u
 !!! warning "You are not done"
     SSO still needs credentials for all providers and has to be enabled in the [global settings](../settings/global.md)!
 
+!!! tip "More Info"
+    Refer to the [SSO documentation](../settings/SSO.md) for more information.
 
 ### Login Options
 
