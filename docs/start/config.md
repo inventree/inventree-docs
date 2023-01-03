@@ -193,7 +193,7 @@ Alternatively this location can be specified with the `INVENTREE_BACKUP_DIR` env
 
 InvenTree provides allowance for additional sign-in options. The following options are not enabled by default, and care must be taken by the system administrator when configuring these settings.
 
-### Single Sign on
+### Single Sign On
 
 SSO backends for all required authentication providers need to be added to the config file as a list under the key `social_backends`. The correct backend-name can be found in django-allauths [configuration documentation](https://django-allauth.readthedocs.io/en/latest/installation.html#django).
 
