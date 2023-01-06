@@ -52,3 +52,20 @@ that is needed for the build. This will result in the following printout:
 
 {% with id="report-options", url="report/picklist.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
 
+For those of you who would like to replace the "/" by something else because it is hard 
+the read in certain fonts use the following trick:
+
+{% raw %}
+```html
+ <td> {% for loc in line.stock_item.location.path %}{{ loc.name }}{% if not forloop.last %}-{% endif %}{% endfor %} </td>
+```
+{% endraw %}
+
+Here we use location.path which is a query set that contains the location path up to the
+topmost parent. We use a loop to cycle through that and print the .name of the entry followed
+by a "-". The foorloop.last is a Django trick that allows us to not print the "-" after
+the last entry. The result looks like here:
+
+{% with id="report-options", url="report/picklist_with_path.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
+
+Finally added a |floatformat:0 to the quantity that removes the trailing zeros. 
