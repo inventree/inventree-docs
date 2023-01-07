@@ -36,6 +36,7 @@ Change how logins, password-forgot, signups are handled.
 | --- | --- | --- | --- |
 | Enable registration | Boolean | Enable self-registration for users on the login-pages | False |
 | Enable SSO | Boolean | Enable SSO on the login-pages | False |
+| Enable SSO registration | Boolean | Enable self-registration for users via SSO on the login-pages | False |
 | Enable password forgot | Boolean | Enable password forgot function on the login-pages.<br><br>This will let users reset their passwords on their own. For this feature to work you need to configure E-mail | True |
 | E-Mail required | Boolean | Require user to supply e-mail on signup.<br><br>Without a way (e-mail) to contact the user notifications and security features might not work! | False |
 | Enforce MFA | Boolean | Users must use multifactor security.<br><br>This forces each user to setup MFA and use it on each autentication | False |

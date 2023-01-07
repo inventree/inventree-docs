@@ -106,7 +106,7 @@ In the [settings screen](./global.md), navigate to the *Login Settings* panel. H
 | Setting | Description |
 | --- | --- |
 | Enable SSO | Enable this option to allow single sign on for user login |
-| Enable registration | Allow users to self-register |
+| Enable SSO registration | Allow users to self-register with SSO |
 | Auto-fill SSO users | Automatically fill out user account data with information provided by external SSO app |
 
 ### Configure Email
