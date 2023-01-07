@@ -43,6 +43,8 @@ Change how logins, password-forgot, signups are handled.
 | Mail twice | Boolean | On signup ask users twice for their mail | False |
 | Password twice | Boolean | On signup ask users twice for their password | True |
 | Auto-fill SSO users | Boolean | Automatically fill out user-details from SSO account-data.<br><br>If this feature is enabled the user is only asked for their username, first- and surname if those values can not be gathered from their SSO profile. This might lead to unwanted usernames bleading over. | True |
+| Allowed domains | String | Restrict signup to certain domains (comma-separated, strarting with @) |  |
+
 
 ### Barcodes
 
