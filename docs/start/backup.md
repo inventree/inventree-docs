@@ -42,6 +42,12 @@ invoke update --backup-data
 
 ### Daily Backup
 
+If desired, InvenTree can be configured to perform automated daily backups. The run-time setting to control this is found in the *Server Configuration* tab.
+
+{% with id="auto-backup", url="start/auto-backup.png", description="Automatic daily backup" %}
+{% include 'img.html' %}
+{% endwith %}
+
 ## Restore from Backup
 
 To restore from a previous backup, run the following command from the shell (within virtual environment if configured):
