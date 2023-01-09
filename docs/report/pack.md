@@ -53,7 +53,7 @@ that is needed for the build. This will result in the following printout:
 {% with id="report-options", url="report/picklist.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
 
 For those of you who would like to replace the "/" by something else because it is hard 
-the read in certain fonts use the following trick:
+to read in some fonts use the following trick:
 
 {% raw %}
 ```html
