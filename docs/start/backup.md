@@ -36,11 +36,7 @@ invoke backup
 
 ### Backup During Update
 
-A database backup can optionally be performed as part of a system update. When performing a manual update of your InvenTree installation - via either [docker](./docker.md) or [bare metal](./install.md) - specify the `-b` or `--backup-data` option as part of the `invoke update` command, e.g.:
-
-```
-invoke update --backup-data
-```
+When performing an update of your InvenTree installation - via either [docker](./docker.md) or [bare metal](./install.md) - a backup operation is automatically performed.
 
 ### Daily Backup
 
