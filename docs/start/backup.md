@@ -26,7 +26,9 @@ Specific storage configuration options are specified using the `backup_options` 
 
 ## Perform Backup
 
-To perform a backup operation, run the following command from the shell:
+#### Manual Backup
+
+To perform a manual backup operation, run the following command from the shell:
 
 ```
 invoke backup
