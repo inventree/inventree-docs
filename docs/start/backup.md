@@ -50,6 +50,9 @@ If desired, InvenTree can be configured to perform automated daily backups. The 
 {% include 'img.html' %}
 {% endwith %}
 
+!!! tip "Optional Feature"
+    Automated backup is disabled by default, and must be enabled by an admin user
+
 ## Restore from Backup
 
 To restore from a previous backup, run the following command from the shell (within virtual environment if configured):
