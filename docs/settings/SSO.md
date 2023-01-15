@@ -16,6 +16,7 @@ The basic requirements for configuring SSO are outlined below:
 1. Enable the required providers in the [config file](../start/config.md#single-sign-on).
 1. Create an external *app* with your provider of choice
 1. Add the required client configurations in the `SocialApp` app in the [admin interface](../settings/admin.md).
+1. Configure the *callback* URL for the external app.
 1. Enable SSO for the users in the [global settings](../settings/global.md).
 1. Configure [e-mail](../settings/email.md).
 
@@ -83,6 +84,15 @@ Configure the social application entry with the app details:
 !!! success "Multiple Applications"
     To provide support for multiple SSO applications, simply repeat this process and create another social application entry
 
+### Configure Callback URL
+
+The external SSO application must be provided with a *callback* URL - a URL by which it can communicate with the InvenTree server. The specific *name* that the external SSO application uses for this callback URL may vary, with some authentication applications referring to it with other names such as *reply* or *redirect*. 
+
+In any case, the URL is is specific to your installation and the SSO provider. The general pattern for this URL is: `{% raw %}<hostname>/accounts/<provider>/login/callback/{% endraw %}`.
+
+!!! success "Works for Local Installs"
+    Your server does not need to be "public facing" for this to work. For example the URL `http://localhost:1234/accounts/github/login/callback/` would be perfectly valid!
+
 ### Enable SSO Settings
 
 Now that the social application is created, you need to enable SSO authentication for the InvenTree server.
@@ -96,8 +106,9 @@ In the [settings screen](./global.md), navigate to the *Login Settings* panel. H
 | Setting | Description |
 | --- | --- |
 | Enable SSO | Enable this option to allow single sign on for user login |
-| Enable registration | Allow users to self-register |
+| Enable SSO registration | Allow users to self-register with SSO |
 | Auto-fill SSO users | Automatically fill out user account data with information provided by external SSO app |
+| Allowed domains | Optionally restrict signup to certain domains |
 
 ### Configure Email
 

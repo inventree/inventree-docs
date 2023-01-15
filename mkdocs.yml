@@ -72,6 +72,7 @@ nav:
         - Installer: start/installer.md
         - Development: start/development.md
         - Production: start/production.md
+    - Data Backup: start/backup.md
     - Migrating Data: start/migrate.md
   - Parts:
     - Parts: part/part.md

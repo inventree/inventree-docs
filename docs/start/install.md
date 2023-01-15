@@ -261,7 +261,7 @@ Refer to the [production server instructions](./production.md) for further infor
 Administrators wishing to update InvenTree to the latest version should follow the instructions below. The commands listed below should be run from the InvenTree root directory.
 
 !!! info "Update Database"
-	It is advisable to backup the InvenTree database before performing these steps. The particular backup procedure may depend on your installation details.
+	It is advisable to [backup the InvenTree database](./backup.md) before performing these steps. The particular backup procedure may depend on your installation details.
 
 ### Stop InvenTree Server
 
