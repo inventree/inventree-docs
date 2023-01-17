@@ -155,11 +155,11 @@ Each part object has access to a lot of context variables about the part. The fo
 | icon | The name of the icon if set, e.g. fas fa-warehouse |
 | item_count | Simply returns the number of stock items in this location | 
 | name | The name of the location. This is only the name of this location, not the path | 
-| owner | The owner of the location if it has one. The owner can actually only be assigned in the admin interface | 
-| parent | The parent location one level up. Returns None if it is already the top most one | 
-| path | A query set of locations that contains the hierarchy starting from the top most parent | 
-| path_string | A string that contains all all names of the path separated by slashes e.g. A/B/C | 
-| structural | A boolean the tells if the location is structural | 
+| owner | The owner of the location if it has one. The owner can only be assigned in the admin interface | 
+| parent | The parent location. Returns None if it is already the top most one | 
+| path | A queryset of locations that contains the hierarchy starting from the top most parent | 
+| path_string | A string that contains all names of the path separated by slashes e.g. A/B/C | 
+| structural | True if the location is structural | 
 
 ### Suppliers
 
