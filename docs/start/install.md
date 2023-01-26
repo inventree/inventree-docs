@@ -291,6 +291,9 @@ Updating the database is as simple as calling the `update` script:
 invoke update
 ```
 
+!!! info "Skip Backup"
+    By default, the `invoke update` command performs a database backup. To skip this step, add the `--skip-backup` flag
+
 This command performs the following steps:
 
 * Ensure all rquired packages are installed and up to date
