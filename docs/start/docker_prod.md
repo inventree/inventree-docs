@@ -213,6 +213,9 @@ Run the following command to ensure that the InvenTree database is updated:
 docker-compose run inventree-server invoke update
 ```
 
+!!! info "Skip Backup"
+    By default, the `invoke update` command performs a database backup. To skip this step, add the `--skip-backup` flag
+
 ### Start Containers
 
 Now restart the docker containers:
