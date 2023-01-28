@@ -88,7 +88,7 @@ This command also performs the following steps:
 If you are creating the initial database, you need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
 
 ```
-docker-compose run inventree-dev-server invoke superuser
+docker compose run inventree-dev-server invoke superuser
 ```
 
 ### Import Demo Data
@@ -96,7 +96,7 @@ docker-compose run inventree-dev-server invoke superuser
 To fill the database with a demo dataset, run the following command:
 
 ```
-docker-compose run inventree-dev-server invoke setup-test
+docker compose run inventree-dev-server invoke setup-test
 ```
 
 ### Start Docker Containers
@@ -104,7 +104,7 @@ docker-compose run inventree-dev-server invoke setup-test
 Now that the database has been created, migrations applied, and you have created an admin account, we are ready to launch the InvenTree containers:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 This command launches the remaining containers:
@@ -124,7 +124,7 @@ Once initial setup is complete, stopping and restarting the services is much sim
 To stop the InvenTree development server, simply run the following command:
 
 ```
-docker-compose down
+docker compose down
 ```
 
 ### Start InvenTree Services
@@ -132,7 +132,7 @@ docker-compose down
 To start the InvenTree development server, simply run the following command:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Restart InvenTree Services
@@ -140,7 +140,7 @@ docker-compose up -d
 A restart cycle is as simple as:
 
 ```
-docker-compose restart
+docker compose restart
 ```
 
 ## Editing InvenTree Source
@@ -156,7 +156,7 @@ Any updates which require a database schema change must be reflected in the data
 To run database migrations inside the docker container, run the following command:
 
 ```
-docker-compose run inventree-dev-server invoke update
+docker compose run inventree-dev-server invoke update
 ```
 
 ### Docker Image Updates
@@ -164,5 +164,5 @@ docker-compose run inventree-dev-server invoke update
 Occassionally, the docker image itself may receive some updates. In these cases, it may be required that the image is rebuilt. To perform a complete rebuild of the InvenTree development image from local source, run the following command:
 
 ```
-docker-compose build --no-cache
+docker compose build --no-cache
 ```
