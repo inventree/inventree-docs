@@ -10,11 +10,11 @@ InvenTree contains a number of data models which require a *unique* reference fi
 
 Out of the box, InvenTree defines a standard "pattern" for each type of reference (which can be edited via the InvenTree [settings interface](./global.md)).
 
-| Model Type | Default Pattern | Example |
+| Model Type | Default Pattern | Example Output |
 | --- | --- | --- |
-| Purchase Order | {% raw %}PO-{ref:04d}{% endraw %} | PO-1234 |
-| Sales Order | {% raw %}SO-{ref:04d}{% endraw %} | SO-1234 |
-| Build Order | {% raw %}BO-{ref:04d}{% endraw %} | BO-1234 |
+| Purchase Order | `{% raw %}PO-{ref:04d}{% endraw %}` | PO-0001 |
+| Sales Order | `{% raw %}SO-{ref:04d}{% endraw %}` | SO-0123 |
+| Build Order | `{% raw %}BO-{ref:04d}{% endraw %}` | BO-1234 |
 
 ### Pattern Requirements
 
@@ -31,15 +31,20 @@ When building a reference, the following variables are available for use:
 
 | Variable | Description |
 | --- | --- |
-| {% raw %}{ref}{% endraw %} | Incrementing portion of the reference (**required*)). Determines which part of the reference field auto-increments |
-| {% raw %}{date}{% endraw %} | The current date / time. This is a [Python datetime object](https://docs.python.org/3/library/datetime.html#datetime.datetime.now) |
+| `{% raw %}{ref}{% endraw %}` | Incrementing portion of the reference (**required*)). Determines which part of the reference field auto-increments |
+| `{% raw %}{date}{% endraw %}` | The current date / time. This is a [Python datetime object](https://docs.python.org/3/library/datetime.html#datetime.datetime.now) |
 
 The reference field pattern uses <a href="https://www.w3schools.com/python/ref_string_format.asp">Python string formatting</a> for value substitution.
+
+!!! tip "Date Formatting"
+    The `{% raw %}{date}{% endraw %}` variable can be formatted using the [Python Format Codes](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior).
 
 #### Substitution Examples
 
 Some examples below demonstrate how the variable substitution can be implemented:
 
-| Pattern | Description |
-| --- | --- |
-| {% raw %}{ref:05d}{% endraw %} | 
+| Pattern | Description | Example Output |
+| --- | --- | --- |
+| `{% raw %}PO-{ref}{% endraw %}` | Render the *reference* variable without any custom formatting | PO-123 |
+| `{% raw %}PO-{ref:05d}{% endraw %}` | Render the *reference* variable as a 5-digit decimal number | PO-00123 |
+| `{% raw %}PO-{ref:05d}-{date:%Y-%M-%d}{% endraw %}` | Render the *date* variable in isoformat | PO-00123-2023-01-17 |
