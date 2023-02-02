@@ -47,4 +47,4 @@ Some examples below demonstrate how the variable substitution can be implemented
 | --- | --- | --- |
 | `{% raw %}PO-{ref}{% endraw %}` | Render the *reference* variable without any custom formatting | PO-123 |
 | `{% raw %}PO-{ref:05d}{% endraw %}` | Render the *reference* variable as a 5-digit decimal number | PO-00123 |
-| `{% raw %}PO-{ref:05d}-{date:%Y-%M-%d}{% endraw %}` | Render the *date* variable in isoformat | PO-00123-2023-01-17 |
+| `{% raw %}PO-{ref:05d}-{date:%Y-%m-%d}{% endraw %}` | Render the *date* variable in isoformat | PO-00123-2023-01-17 |
