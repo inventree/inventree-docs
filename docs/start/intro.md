@@ -130,7 +130,7 @@ There are multiple ways to get an InvenTree server up and running, of various co
 
 ### Docker
 
-The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker-compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
+The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
 
 Refer to the following guides for further instructions:
 

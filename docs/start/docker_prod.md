@@ -12,25 +12,25 @@ The following guide provides a streamlined production InvenTree installation, wi
 ### Before You Start
 
 !!! warning "Docker Skills Required"
-    This guide assumes that you are reasonably comfortable with the basic concepts of docker and docker-compose.
+    This guide assumes that you are reasonably comfortable with the basic concepts of docker and docker compose.
 
 #### Docker Image
 
 This production setup guide uses the official InvenTree docker image, available from dockerhub.
 
 !!! info "Stable Version"
-    The provided docker-compose file targets `inventree:stable` by default.
+    The provided docker compose file targets `inventree:stable` by default.
 
 #### Docker Compose
 
 A sample [docker compose file](https://github.com/inventree/InvenTree/blob/master/docker/production/docker-compose.yml) is provided to sequence all the required processes.
 
 !!! tip "Starting Point"
-    If you require a different configuration, use this docker-compose file as a starting point.
+    If you require a different configuration, use this docker compose file as a starting point.
 
 #### Static and Media Files
 
-The sample docker-compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly.
+The sample docker compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly.
 
 !!! warning "Debug Warning"
     When running with `debug=False`, django *will not serve static and media files* - refer to the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
@@ -52,7 +52,7 @@ This tutorial assumes you are working from the `./docker/production` directory. 
 
 ### Containers
 
-The example docker-compose file launches the following containers:
+The example docker compose file launches the following containers:
 
 | Container | Description |
 | --- | --- |
@@ -132,7 +132,7 @@ The first step is to edit the environment variables, located in the `.env` file.
 Perform the initial database setup by running the following command:
 
 ```bash
-docker-compose run inventree-server invoke update
+docker compose run inventree-server invoke update
 ```
 
 This command performs the following steps:
@@ -148,7 +148,7 @@ This command performs the following steps:
 If you are creating the initial database, you need to create an admin (superuser) account for the database. Run the command below, and follow the prompts:
 
 ```
-docker-compose run inventree-server invoke superuser
+docker compose run inventree-server invoke superuser
 ```
 
 Alternatively, admin account details can be specifed in the `.env` file, removing the need for this manual step:
@@ -167,7 +167,7 @@ Alternatively, admin account details can be specifed in the `.env` file, removin
 Now that the database has been created, migrations applied, and you have created an admin account, we are ready to launch the InvenTree containers:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 This command launches the following containers:
@@ -189,7 +189,7 @@ To update your InvenTree installation to the latest version, follow these steps:
 Stop all running containers as below:
 
 ```
-docker-compose down
+docker compose down
 ```
 
 ### Update Images
@@ -197,20 +197,20 @@ docker-compose down
 Pull down the latest version of the InvenTree docker image
 
 ```
-docker-compose pull
+docker compose pull
 ```
 
 This ensures that the InvenTree containers will be running the latest version of the InvenTree source code.
 
 !!! info "Tagged Version"
-    If you are targetting a particular "tagged" version of InvenTree, you may wish to edit the `INVENTREE_TAG` variable in the `.env` file before issuing the `docker-compose pull` command
+    If you are targetting a particular "tagged" version of InvenTree, you may wish to edit the `INVENTREE_TAG` variable in the `.env` file before issuing the `docker compose pull` command
 
 ### Update Database
 
 Run the following command to ensure that the InvenTree database is updated:
 
 ```
-docker-compose run inventree-server invoke update
+docker compose run inventree-server invoke update
 ```
 
 !!! info "Skip Backup"
@@ -221,7 +221,7 @@ docker-compose run inventree-server invoke update
 Now restart the docker containers:
 
 ```
-docker-compose up -d
+docker compose up -d
 ``` 
 
 ## Data Backup
@@ -235,7 +235,7 @@ Read more about [data backup](./backup.md).
 To export the database to an agnostic JSON file, perform the following command:
 
 ```
-docker-compose run inventree-server invoke export-records -f /home/inventree/data/data.json
+docker compose run inventree-server invoke export-records -f /home/inventree/data/data.json
 ```
 
 This will export database records to the file `data.json` in your mounted volume directory.
