@@ -28,7 +28,7 @@ Pre-built Docker images are available from [dockerhub](https://hub.docker.com/r/
 
 The InvenTree docker image provides a containerized webserver, however it *must* be connected with other containers (at the very least, a database backend).
 
-InvenTree provides sample docker-compose files to get you up and running:
+InvenTree provides sample docker compose files to get you up and running:
 
 - A [development](#development-server) compose file provides a simple way to spin up a development environment
 - A [production](#production-server) compose file is intended to be used in a production environment, running the web server behind a nginx proxy.
