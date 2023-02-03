@@ -143,6 +143,7 @@ nav:
       - Interactive API: api/browse.md
     - Python Interface: 
       - Overview: api/python/python.md
+      - Currency Support: api/python/currency.md
       - Examples: api/python/examples.md
     - Barcodes:
       - Overview: barcodes/barcodes.md
