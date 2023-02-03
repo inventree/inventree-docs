@@ -6,7 +6,7 @@ title: Database Configuration
 
 While many InvenTree options can be configured at "run time", there are a number of system configuration parameters which need to be set *before* running InvenTree. Admin users will need to adjust the InvenTree installation to meet the particular needs of their setup. For example, pointing to the correct database backend, or specifying a list of allowed hosts.
 
-InvenTree system settings can be specified either in a configuration file, or via environment variables.
+InvenTree system settings can be specified either via environment variables, or in a configuration file.
 
 !!! info "Environment Variables"
     Settings specified using environment variables take priority. Values provided in the configuration file are ignored if a matching environment variable is present.
@@ -15,8 +15,7 @@ InvenTree system settings can be specified either in a configuration file, or vi
 
 In addition to specifying InvenTree options via the `config.yaml` file, these options can also be specified via environment variables. This can be usful for system administrators who want the flexibility of altering settings without editing the configuration file.
 
-- Environment variable settings use the `INVENTREE_` prefix, and are all uppercase.
-- Config file settings do not use this prefix, and are all lowercase
+Environment variable settings generally use the `INVENTREE_` prefix, and are all uppercase.
 
 !!! info "Configuration Priority"
     Configuration options set via environment variables will take priority over the values set in the `config.yaml` file.
@@ -28,12 +27,17 @@ In addition to specifying InvenTree options via the `config.yaml` file, these op
 
 To support install specific settings, a simple configuration file `config.yaml` is provided. This configuration file is loaded by the InvenTree server at runtime. Settings specific to a given install should be adjusted in `config.yaml`.
 
-The default InvenTree config file is located at `./InvenTree/config.yaml`
+#### Configuration File Location
 
-!!! tip "Configuration File Location"
-    The config file can be placed elsewhere, and specified with the `INVENTREE_CONFIG_FILE` environment variable.
+The InvenTree server tries to locate the `config.yaml` configuration file on startup, in the following locations:
 
-A configuration file *template* can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml) 
+1. Location is specified by the `INVENTREE_CONFIG_FILE` environment variable
+2. Located in the same local directory as the InvenTree source code
+
+!!! tip "Config File Location"
+    When the InvenTree server boots, it will report the location where it expects to find the configuration file
+
+The configuration file *template* can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml) 
 
 !!! info "Template File"
     The default configuration file (as defined by the template linked above) will be copied to the specifed configuration file location on first run, if a configuration file is not found in that location.
