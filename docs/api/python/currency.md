@@ -43,3 +43,14 @@ cad = manager.convertCurrency(12.54, 'AUD', 'CAD')
 # Convert from NZD to USD
 usd = manager.convertCurrency(99.99, 'NZD', 'USD')
 ```
+
+### Exchange Rate Update
+
+To request a manual update of currency data (from the server), run the following command:
+
+```python
+from inventree.currency import CurrencyManager
+
+manager = CurrencyManager(api)
+manager.refreshExchangeRates()
+```
