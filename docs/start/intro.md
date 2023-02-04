@@ -5,7 +5,7 @@ title: Setup Introduction
 !!! info "Fast install"
     A quick-and-easy install can be done done with the following one-liner.
 	```bash
-	wget -Nq https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh && bash install.sh
+	wget -qO install.sh https://get.inventree.org && bash install.sh
 	```
 	Read more about the [installer](./installer.md).
 
