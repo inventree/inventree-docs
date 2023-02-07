@@ -206,9 +206,8 @@ mysql> EXIT;
 
 Once the required software packages are installed and the database has been created, the InvenTree server options must be configured.
 
-InvenTree configuration can be performed using environment variables, or the `config.yaml` file (or a combination of both).
-
-Edit the configuration file at  `/home/inventree/src/InvenTree/config.yaml`.
+!!! tip "Configuration Options"
+    InvenTree configuration can be performed using environment variables, or the `config.yaml` configuration file (or a combination of both).
 
 !!! info "Config Guidelines"
     Refer to the [configuration guidelines](./config.md) for full details.
@@ -290,6 +289,9 @@ Updating the database is as simple as calling the `update` script:
 ```
 invoke update
 ```
+
+!!! info "Skip Backup"
+    By default, the `invoke update` command performs a database backup. To skip this step, add the `--skip-backup` flag
 
 This command performs the following steps:
 

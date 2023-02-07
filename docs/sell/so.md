@@ -14,10 +14,7 @@ To access the sales order page, click on the <span class="badge inventree nav ma
 
 ### Sales Order Reference
 
-{% with prefix="SO-", label="Sales Order" %}
-{% include "reference.html" %}
-{% endwith %}
-
+Each Sales Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
 
 ### Create Sales Order
 

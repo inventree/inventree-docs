@@ -14,9 +14,7 @@ To access the purchase order page, click on the <span class="badge inventree nav
 
 ### Purchase Order Reference
 
-{% with prefix="PO-", label="Purchase Order" %}
-{% include "reference.html" %}
-{% endwith %}
+Each Purchase Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
 
 ### Create Purchase Order
 

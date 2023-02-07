@@ -42,9 +42,7 @@ To navigate to the Build Order display, select *Build* from the main navigation 
 
 ### Build Order Reference
 
-{% with prefix="BO-", label="Build Order" %}
-{% include "reference.html" %}
-{% endwith %}
+Each Build Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
 
 ### Build Parameters
 

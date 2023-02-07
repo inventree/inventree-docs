@@ -5,7 +5,7 @@ title: Setup Introduction
 !!! info "Fast install"
     A quick-and-easy install can be done done with the following one-liner.
 	```bash
-	wget -Nq https://raw.githubusercontent.com/InvenTree/InvenTree/master/contrib/install.sh && bash install.sh
+	wget -qO install.sh https://get.inventree.org && bash install.sh
 	```
 	Read more about the [installer](./installer.md).
 
@@ -130,7 +130,7 @@ There are multiple ways to get an InvenTree server up and running, of various co
 
 ### Docker
 
-The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker-compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
+The recommended method of installing InvenTree is to use [docker](https://www.docker.com). InvenTree provides out-of-the-box support for docker and docker compose, which provides a simple, reliable and repeatable pipeline for integration into your production environment.
 
 Refer to the following guides for further instructions:
 
