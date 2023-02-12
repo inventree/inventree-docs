@@ -36,13 +36,21 @@ class PluginWithSettings(SettingsMixin, InvenTreePlugin):
             'description': _('Base URL for remote server'),
             'default': 'http://remote.url/api',
         },
+        'CONNECTION': {
+            'name': _('Printer Interface'),
+            'description': _('Select local or network printer'),
+            'choices': [('local','Local printer e.g. USB'),('network','Network printer with IP address')],
+            'default': 'local',
+        },
     }
 ```
 
 This mixin defines the helper functions `plugin.get_setting` and `plugin.set_seting` to access all plugin specific settings:
 
 ```python
-api_url = self.get_setting('API_URL')
+api_url = self.get_setting('API_URL', cache = False)
+self.set_setting('API_URL', 'some value')
 ```
+`get_setting` has an additional parameter which lets control if the value is taken directly from the database or from the cache. If it is left away 'False' ist the default that means the value is taken directly from the database. 
 
 
