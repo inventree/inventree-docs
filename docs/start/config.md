@@ -37,7 +37,7 @@ The InvenTree server tries to locate the `config.yaml` configuration file on sta
 !!! tip "Config File Location"
     When the InvenTree server boots, it will report the location where it expects to find the configuration file
 
-The configuration file *template* can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml) 
+The configuration file *template* can be found on [GitHub](https://github.com/inventree/InvenTree/blob/master/InvenTree/config_template.yaml)
 
 !!! info "Template File"
     The default configuration file (as defined by the template linked above) will be copied to the specifed configuration file location on first run, if a configuration file is not found in that location.
@@ -95,7 +95,7 @@ If not specified via environment variables, the fallback secret_key file (automa
 
 ## Database Options
 
-InvenTree provides support for multiple database backends - any backend supported natively by Django can be used. 
+InvenTree provides support for multiple database backends - any backend supported natively by Django can be used.
 
 Database options are specified under the *database* heading in the configuration file. Any option available in the Django documentation can be used here - it is passed through transparently to the management scripts.
 
@@ -164,9 +164,9 @@ By default, all hosts are allowed, and CORS requests are enabled from any origin
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| *N/A* | allowed_hosts | List of allowed hosts | `*` |
-| *N/A* | cors.allow_all | Allow all remote URLS for CORS checks | False |
-| *N/A* | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
+| INVENTREE_ALLOWED_HOSTS | allowed_hosts | List of allowed hosts | `*` |
+| INVENTREE_CORS_ORIGIN_ALLOW_ALL | cors.allow_all | Allow all remote URLS for CORS checks | False |
+| INVENTREE_CORS_ORIGIN_WHITELIST | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
 
 !!! info "Configuration File"
     Allowed hosts and CORS options must be changed in the configuration file, and cannot be set via environment variables
@@ -249,7 +249,7 @@ The logo and custom messages can be changed/set:
 | INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page | *Not set* |
 | INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar | *Not set* |
 
-If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings). 
+If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings).
 
 !!! info "Custom Splash Screen Path"
     The provided *custom splash screen* path must be specified *relative* to the location of the `/static/` directory.
