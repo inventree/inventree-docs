@@ -164,9 +164,9 @@ By default, all hosts are allowed, and CORS requests are enabled from any origin
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| *N/A* | allowed_hosts | List of allowed hosts | `*` |
-| *N/A* | cors.allow_all | Allow all remote URLS for CORS checks | False |
-| *N/A* | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
+| INVENTREE_ALLOWED_HOSTS | allowed_hosts | List of allowed hosts | `*` |
+| INVENTREE_CORS_ORIGIN_ALLOW_ALL | cors.allow_all | Allow all remote URLS for CORS checks | False |
+| INVENTREE_CORS_ORIGIN_WHITELIST | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
 
 !!! info "Configuration File"
     Allowed hosts and CORS options must be changed in the configuration file, and cannot be set via environment variables
