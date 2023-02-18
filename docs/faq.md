@@ -23,9 +23,9 @@ For more information, refer to the installation guides:
 !!! warning "Invoke Update"
     You must ensure that the `invoke update` command is perfomed *every time* you update InvenTree
 
-### Feature *x* is not visible after update
+### Feature *x* does not work after update
 
-If a particular menu / item is not visible after updating InvenTree, it may be due to your internet browser caching old versions of CSS and JavaScript files.
+If a particular menu / item is not visible after updating InvenTree, or a certain function no longer seems to work, it may be due to your internet browser caching old versions of CSS and JavaScript files.
 
 Before [raising an issue](https://github.com/inventree/inventree/issues), try hard-refreshing the browser cache:
 
@@ -35,7 +35,10 @@ or
 
 <kbd>Ctrl</kbd> + <kbd>F5</kbd>
 
-### Problems Installing on Windows
+!!! tip "A Refreshing Solution"
+    Performing a hard page refresh will remove old javascript files from your browser's cache
+
+### Problems installing on Windows
 
 InvenTree installation is not officially supported natively on Windows. Install using the WSL framework.
 
