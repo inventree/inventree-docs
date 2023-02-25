@@ -4,47 +4,52 @@ title: User Settings
 
 ## User Settings
 
-The various user settings described below can be configured for an individual user, to provide an InvenTree user experienced customized to their preferences.
+The various user settings described below can be configured for an individual user, to provide an InvenTree user experienced customized to their preferences. Your user settings can be accessed by selecting *Settings* from the menu in the top right order of the screen.
 
-User settings are arranged in the following categories:
+### Account Settings
 
-### Account
+The *Account Settings* screen shows configuration options for your user account, including linking [third party logins](./SSO.md) and [multi factor authentication](./MFA.md):
 
-User account configuration, including:
+{% with id="user-account", url="settings/user_account.png", description="User Account Settings" %}
+{% include 'img.html' %}
+{% endwith %}
 
-- Account management
-- Session management
-- Authentication options
-- Theme selection
-- Language selection
+### Display Settings
+
+The *Display Settings* screen shows general display configuration options. Additionally, this screen allows the user to select the primary language in which InvenTree is displayed.
+
+{% with id="user-display", url="settings/user_display.png", description="User Display Settings" %}
+{% include 'img.html' %}
+{% endwith %}
 
 ### Home Page
 
-Customize display of items on the InvenTree home page
+This screen allows the user to customize display of items on the InvenTree home page.
 
+{% with id="user-home", url="settings/user_home.png", description="Home Page Settings" %}
+{% include 'img.html' %}
+{% endwith %}
 
-### Search
+### Search Settings
 
 Customize settings for search results
 
-| Setting | Type | Description | Default |
-| --- | --- | --- | --- |
-| Search Preview Results | Integer | Number of results to show in search preview window | 10 |
-| Search Show Stock | Boolean | Display stock levels in part search results | True |
-| Hide Inactive Parts | Boolean | Hide inactive parts in search preview | False |
+{% with id="user-search", url="settings/user_search.png", description="User Search Settings" %}
+{% include 'img.html' %}
+{% endwith %}
 
-### Labels
+### Notifications
 
-Settings for label printing
+Settings related to notification messages
 
-| Setting | Type | Description | Default |
-| --- | --- | --- | --- |
-| Inline Label Display | Boolean | Display PDF labels in the browser | True |
+{% with id="user-notification", url="settings/user_notifications.png", description="User Notification Settings" %}
+{% include 'img.html' %}
+{% endwith %}
 
-### Reports
+### Reporting
 
-Settings for report generation
+Settings for label printing and report generation
 
-| Setting | Type | Description | Default |
-| --- | --- | --- | --- |
-| Inline Report Display | Boolean | Display PDF reports in the browser | False |
+{% with id="user-reporting", url="settings/user_reporting.png", description="User Reporting Settings" %}
+{% include 'img.html' %}
+{% endwith %}
