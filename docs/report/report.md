@@ -60,6 +60,10 @@ The django template system allows for conditional rendering, providing condition
 {% raw %}
 {% if <condition> %}
 {% do_something %}
+{% elif <other_condition> %}
+<!-- something else -->
+{% else %}
+<!-- finally -->
 {% endif %}
 {% endraw %}
 ```
