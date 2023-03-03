@@ -1,6 +1,10 @@
 ---
-title: Using media files
+title: Helper Functions
 ---
+
+## Maths Operations
+
+
 
 ## Media Files
 
