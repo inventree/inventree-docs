@@ -4,13 +4,16 @@ title: Install InvenTree
 
 ## Bare Metal Setup
 
-!!! tip "Docker Guide"
-    This guide is for a *bare metal* InvenTree installation. If you want to install using Docker (the recommended approach) refer to the [Docker Guide](./docker.md)
-
 !!! tip "Installer"
     There is an [installer](./installer.md) available - we recommend using that method.
 
+!!! tip "Docker Guide"
+    This guide is for a *bare metal* InvenTree installation. If you want to install using Docker refer to the [Docker Setup Guide](./docker.md)
+
 Follow the instructions below to install the required system packages, python modules, and InvenTree source code.
+
+!!! warning "Experienced Users Only"
+    The following instructions assume a reasonably advanced level of system administration knowledge for a linux based OS
 
 ### Install System Packages
 
@@ -56,16 +59,19 @@ sudo su inventree
 
 ### Create Required Directories
 
-```
-cd /home/inventree
-mkdir log static data
-```
+In addition to the location where the InvenTree source code is located, you will need to create some directories for storing data which will be served to the user (and thus must be available to the webserver). The location of these directories must be provided to the server via the [configuration options](./config.md).
 
-This step creates directories required by InvenTree:
+#### Static Files
 
-* `/home/inventree/log` - Store InvenTree log files
-* `/home/inventree/static` - Location of static files for the web server
-* `/home/inventre/data` - Location of uploaded media files
+InvenTree requires a directory for storage of [static files](./config.md#static-file-storage).
+
+#### Media Files
+
+InvenTree requires a directory for storage of [user uploaded files](./config.md#uploaded-file-storage)
+
+#### Backup Directory
+
+Location for storing [database backups](./config.md#backup-file-storage)
 
 ### Download Source Code
 
