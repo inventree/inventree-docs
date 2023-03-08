@@ -11,6 +11,29 @@ Some common functions are provided for use in custom report and label templates.
 {% endraw %}
 ```
 
+!!! tip "Use the Source, Luke"
+    To see the full range of available helper functions, refer to the source file [report.py](https://github.com/inventree/InvenTree/blob/master/InvenTree/report/templatetags/report.py) where these functions are defined!
+
+## Rendering Currency
+
+The helper function `render_currency` allows for simple rendering of currency data. This function can also convert the specified amount of currency into a different target currency:
+
+```html
+{% raw %}
+{% load report %}
+
+<em>Line Item Unit Pricing:</em>
+<ul>
+{% for line in order.lines %}
+<li>{% render_currency line.price currency=order.supplier.currency %}</li>
+{% }
+</ul>
+
+Total Price: {% render_currency order.total_price currency='NZD' decimal_places=2 %}
+
+{% endraw %}
+```
+
 ## Maths Operations
 
 Simple mathematical operators are available, as demonstrated in the example template below:
