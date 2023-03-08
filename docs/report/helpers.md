@@ -26,7 +26,7 @@ The helper function `render_currency` allows for simple rendering of currency da
 <ul>
 {% for line in order.lines %}
 <li>{% render_currency line.price currency=order.supplier.currency %}</li>
-{% }
+{% endfor %}
 </ul>
 
 Total Price: {% render_currency order.total_price currency='NZD' decimal_places=2 %}
