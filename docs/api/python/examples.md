@@ -157,7 +157,7 @@ SupplierPart.create(api,{
     'SKU':'some_code',
     'link':'https://www.xst.bla/products/stock?...'
 })
-SupplierPart.create(api,{
+ManufacturerPart.create(api,{
     'part':couch.pk,
     'manufacturer':acme.pk,
     'MPN':'Part code of the manufacturer'
