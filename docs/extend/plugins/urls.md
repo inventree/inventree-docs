@@ -9,7 +9,7 @@ Use the class constant `URLS` for a array of URLs that should be added to InvenT
 The array has to contain valid URL patterns as defined in the [django documentation](https://docs.djangoproject.com/en/stable/topics/http/urls/).
 
 ``` python
-class MyUrlsPlugin(URLsMixin, InvenTreePlugin):
+class MyUrlsPlugin(UrlsMixin, InvenTreePlugin):
 
     NAME = "UrlsMixin"
 
