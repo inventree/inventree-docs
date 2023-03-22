@@ -27,9 +27,9 @@ The list of parts underneath a given category can be filtered by multiple user-c
 
 Clicking on the part name links to the [*Part Detail*](./views.md) view.
 
-## Part Options
+## Part Attributes
 
-Each *Part* defined in the database provides a number of different options which determine how that part can be used. Configuring these options for a given part will impact the available functions that can be perform on (or using) that part).
+Each *Part* defined in the database provides a number of different attributes which determine how that part can be used. Configuring these attributes for a given part will impact the available functions that can be perform on (or using) that part).
 
 ### Virtual
 
@@ -64,6 +64,42 @@ If a part is designated as *Salable* it can be sold to external customers. Setti
 ### Active
 
 By default, all parts are *Active*. Marking a part as inactive means it is not available for many actions, but the part remains in the database. If a part becomes obsolete, it is recommended that it is marked as inactive, rather than deleting it from the database.
+
+## Part Images
+
+Each part can have an associated image, which is used for display purposes throughout the InvenTree interface. A prominent example is on the part detail page itself:
+
+{% with id="part_image", url="part/part_image_example.png", description="Part image example" %}
+{% include 'img.html' %}
+{% endwith %}
+
+### Image Thumbnails
+
+Thumbnail images are also used throughout the interface, particularly in table views, to reduce data load on the server. These thumbnail images are generated automatically when a new part image is uploaded.
+
+### Uploading Part Image
+
+#### Web Interface
+
+In the web interface, part images can be uploaded directly from the [part view](./views.md). Hover the mouse cursor over the Part image to reveal multiple options:
+
+{% with id="part_image_uplaod", url="part/part_image_upload.png", description="Upload part image" %}
+{% include 'img.html' %}
+{% endwith %}
+
+| Action | Description |
+| --- | --- |
+| Upload new image | Select an image file from your local computer to associate with the selected part |
+| Select from existing images | Select an image from a list of part images which already exist in the database |
+| Delete image | Remove the associated image from the selected part |
+
+#### API
+
+Image upload is supported via the [InvenTree API](../api/api.md), allowing images to be associated with parts programatically. Further, this means that the [Python interface](../api/python/python.md) also supports image upload.
+
+#### Mobile App
+
+The [InvenTree mobile app](../app/part.md#part-image-view) allows part images to be directly uploaded, either from stored files or integrated camera.
 
 ## Part Import
 

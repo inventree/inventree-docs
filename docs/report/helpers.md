@@ -1,14 +1,8 @@
 ---
-title: Using media files
+title: Helper Functions
 ---
 
-## Media Files
-
-*Media files* are any files uploaded to the InvenTree server by the user. These are stored under the `/media/` directory and can be accessed for use in custom reports or labels.
-
-**Load Report Functions**
-
-To load images into the reports/labels the report helper functions must first be loaded in the template:
+Some common functions are provided for use in custom report and label templates. To include these, load the `report` functions at the start of the template:
 
 ```html
 {% raw %}
@@ -16,6 +10,63 @@ To load images into the reports/labels the report helper functions must first be
 {% load report %}
 {% endraw %}
 ```
+
+!!! tip "Use the Source, Luke"
+    To see the full range of available helper functions, refer to the source file [report.py](https://github.com/inventree/InvenTree/blob/master/InvenTree/report/templatetags/report.py) where these functions are defined!
+
+## Rendering Currency
+
+The helper function `render_currency` allows for simple rendering of currency data. This function can also convert the specified amount of currency into a different target currency:
+
+```html
+{% raw %}
+{% load report %}
+
+<em>Line Item Unit Pricing:</em>
+<ul>
+{% for line in order.lines %}
+<li>{% render_currency line.price currency=order.supplier.currency %}</li>
+{% endfor %}
+</ul>
+
+Total Price: {% render_currency order.total_price currency='NZD' decimal_places=2 %}
+
+{% endraw %}
+```
+
+## Maths Operations
+
+Simple mathematical operators are available, as demonstrated in the example template below:
+
+```html
+{% raw %}
+<!-- Load the report helper functions -->
+{% load report %}
+
+{% add 1 3 %} <!-- Add two numbers together -->
+{% subtract 4 3 %} <!-- Subtract 3 from 4 -->
+{% multiply 1.2 3.4 %} <!-- Multiply two numbers -->
+{% divide 10 2 %} <!-- Divide 10 by 2 -->
+
+{% endraw %}
+```
+
+These operators can also be used with variables:
+
+```html
+{% raw %}
+{% load report %}
+
+{% for line in order.lines %}
+Total: {% multiply line.purchase_price line.quantity %}<br>
+{% endfor %}
+
+{% endraw %}
+```
+
+## Media Files
+
+*Media files* are any files uploaded to the InvenTree server by the user. These are stored under the `/media/` directory and can be accessed for use in custom reports or labels.
 
 ### Uploaded Images
 

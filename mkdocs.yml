@@ -118,7 +118,7 @@ nav:
       - Sales Order: report/sales_order.md
       - BOM: report/bom.md
     - Labels: report/labels.md
-    - Media Files: report/media.md
+    - Helper Functions: report/helpers.md
     - Barcodes: report/barcodes.md
     - Context Variables: report/context_variables.md
   - Admin:

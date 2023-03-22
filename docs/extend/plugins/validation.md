@@ -47,8 +47,13 @@ Custom serial number validation can be implemented using the `validate_serial_nu
 A plugin which requires all serial numbers to be valid hexadecimal values may implement this method as follows:
 
 ```python
-def validate_serial_number(self, serial: str):
-    """Validate the supplied serial number"""
+def validate_serial_number(self, serial: str, part: Part):
+    """Validate the supplied serial number
+    
+    Arguments:
+        serial: The proposed serial number (string)
+        part: The Part instance for which this serial number is being validated
+    """
 
     try:
         # Attempt integer conversion

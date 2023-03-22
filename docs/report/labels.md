@@ -106,7 +106,7 @@ Refer to the [barcode documentation](./barcodes.md).
 
 ### Using media files 
 
-Refer to the [media files documentation](./media.md).
+Refer to the [media files documentation](./helpers.md#media-files).
 
 ### Conditional Formatting
 

@@ -63,9 +63,9 @@ An administrator account can be specified using the following environment variab
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_ADMIN_USER | admin_user | Admin account username | *Not set* |
-| INVENTREE_ADMIN_PASSWORD | admin_password | Admin account password | *Not set* |
-| INVENTREE_ADMIN_EMAIL | admin_email |Admin account email address | *Not set* |
+| INVENTREE_ADMIN_USER | admin_user | Admin account username | *Not specified* |
+| INVENTREE_ADMIN_PASSWORD | admin_password | Admin account password | *Not specified* |
+| INVENTREE_ADMIN_EMAIL | admin_email |Admin account email address | *Not specified* |
 
 !!! info "Administrator Account"
     Providing `INVENTREE_ADMIN` credentials will result in the provided account being created with *superuser* permissions when InvenTree is started.
@@ -90,8 +90,8 @@ If not specified via environment variables, the fallback secret_key file (automa
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_SECRET_KEY | secret_key | Raw secret key value | *Not set* |
-| INVENTREE_SECRET_KEY_FILE | secret_key_file | File containing secret key value | *Not set* |
+| INVENTREE_SECRET_KEY | secret_key | Raw secret key value | *Not specified* |
+| INVENTREE_SECRET_KEY_FILE | secret_key_file | File containing secret key value | *Not specified* |
 
 ## Database Options
 
@@ -103,12 +103,12 @@ The following database options can be configured:
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_DB_ENGINE | database.ENGINE | Database backend | *Not set* |
-| INVENTREE_DB_NAME | database.NAME | Database name | *Not set* |
-| INVENTREE_DB_USER | database.USER | Database username (if required) | *Not set* |
-| INVENTREE_DB_PASSWORD | database.PASSWORD | Database password (if required) | *Not set* |
-| INVENTREE_DB_HOST | database.HOST | Database host address (if required) | *Not set* |
-| INVENTREE_DB_PORT | database.PORT | Database host port (if required) | *Not set* |
+| INVENTREE_DB_ENGINE | database.ENGINE | Database backend | *Not specified* |
+| INVENTREE_DB_NAME | database.NAME | Database name | *Not specified* |
+| INVENTREE_DB_USER | database.USER | Database username (if required) | *Not specified* |
+| INVENTREE_DB_PASSWORD | database.PASSWORD | Database password (if required) | *Not specified* |
+| INVENTREE_DB_HOST | database.HOST | Database host address (if required) | *Not specified* |
+| INVENTREE_DB_PORT | database.PORT | Database host port (if required) | *Not specified* |
 
 ### PostgreSQL Settings
 
@@ -140,13 +140,13 @@ The following email settings are available:
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_EMAIL_BACKEND | email.backend | Email backend module | django.core.mail.backends.smtp.EmailBackend |
-| INVENTREE_EMAIL_HOST | email.host | Email server host | *Not set* |
+| INVENTREE_EMAIL_HOST | email.host | Email server host | *Not specified* |
 | INVENTREE_EMAIL_PORT | email.port | Email server port | 25 |
-| INVENTREE_EMAIL_USERNAME | email.username | Email account username | *Not set* |
-| INVENTREE_EMAIL_PASSWORD | email.password | Email account password | *Not set* |
+| INVENTREE_EMAIL_USERNAME | email.username | Email account username | *Not specified* |
+| INVENTREE_EMAIL_PASSWORD | email.password | Email account password | *Not specified* |
 | INVENTREE_EMAIL_TLS | email.tls | Enable TLS support | False |
 | INVENTREE_EMAIL_SSL | email.ssl | Enable SSL support | False |
-| INVENTREE_EMAIL_SENDER | email.sender | Name of sender | *Not set* |
+| INVENTREE_EMAIL_SENDER | email.sender | Name of sender | *Not specified* |
 | INVENTREE_EMAIL_PREFIX | email.prefix | Prefix for subject text | [InvenTree] |
 
 ## Supported Currencies
@@ -164,9 +164,9 @@ By default, all hosts are allowed, and CORS requests are enabled from any origin
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| *N/A* | allowed_hosts | List of allowed hosts | `*` |
-| *N/A* | cors.allow_all | Allow all remote URLS for CORS checks | False |
-| *N/A* | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
+| INVENTREE_ALLOWED_HOSTS | allowed_hosts | List of allowed hosts | `*` |
+| INVENTREE_CORS_ORIGIN_ALLOW_ALL | cors.allow_all | Allow all remote URLS for CORS checks | False |
+| INVENTREE_CORS_ORIGIN_WHITELIST | cors.whitelist | List of whitelisted CORS URLs | *Empty list* |
 
 !!! info "Configuration File"
     Allowed hosts and CORS options must be changed in the configuration file, and cannot be set via environment variables
@@ -178,17 +178,31 @@ For further information, refer to the following documentation:
 
 ## File Storage Locations
 
+InvenTree requires some external directories for storing files:
+
+| Environment Variable | Configuration File | Description | Default |
+| --- | --- | --- | --- |
+| INVENTREE_STATIC_ROOT | static_root | List of allowed hosts | *Not specified* |
+| INVENTREE_MEDIA_ROOT | media_root | Allow all remote URLS for CORS checks | *Not specified* |
+| INVENTREE_BACKUP_DIR | backup_dir | List of whitelisted CORS URLs | *Not specified* |
+
 ### Static File Storage
 
 Static files **require** a local directory for storage. This directory should be specified with the `static_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_STATIC_ROOT` environment variable.
 
+!!! warning "Required"
+    The static file directory must be specified, or the server will not start
+
 ### Uploaded File Storage
 
 Uploaded media files **require** a local directory for storage. This directory should be specified with the `media_root` option in the config file based on the particular installation requirements.
 
 Alternatively this location can be specified with the `INVENTREE_MEDIA_ROOT` environment variable.
+
+!!! warning "Required"
+    The media file directory must be specified, or the server will not start
 
 ### Backup File Storage
 
@@ -244,10 +258,10 @@ The logo and custom messages can be changed/set:
 
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
-| INVENTREE_CUSTOM_LOGO | customize.logo | Path to custom logo in the static files directory | *Not set* |
-| INVENTREE_CUSTOM_SPLASH | customize.splash | Path to custom splash screen in the static files directory | *Not set* |
-| INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page | *Not set* |
-| INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar | *Not set* |
+| INVENTREE_CUSTOM_LOGO | customize.logo | Path to custom logo in the static files directory | *Not specified* |
+| INVENTREE_CUSTOM_SPLASH | customize.splash | Path to custom splash screen in the static files directory | *Not specified* |
+| INVENTREE_CUSTOMIZE | customize.login_message | Custom message for login page | *Not specified* |
+| INVENTREE_CUSTOMIZE | customize.navbar_message | Custom message for navbar | *Not specified* |
 
 If you want to remove the InvenTree branding as far as possible from your end-user also check the [global server settings](../settings/global.md#server-settings). 
 
@@ -264,8 +278,8 @@ The following [plugin](../extend/plugins.md) configuration options are available
 | Environment Variable | Configuration File | Description | Default |
 | --- | --- | --- | --- |
 | INVENTREE_PLUGINS_ENABLED | plugins_enabled | Enable plugin support | False |
-| INVENTREE_PLUGIN_FILE | plugins_plugin_file | Location of plugin installation file | *Not set* |
-| INVENTREE_PLUGIN_DIR | plugins_plugin_dir | Location of external plugin directory | *Not set* |
+| INVENTREE_PLUGIN_FILE | plugins_plugin_file | Location of plugin installation file | *Not specified* |
+| INVENTREE_PLUGIN_DIR | plugins_plugin_dir | Location of external plugin directory | *Not specified* |
 
 ## Other Options
 

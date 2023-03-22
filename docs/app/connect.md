@@ -124,6 +124,9 @@ The *Drawer Menu* can be accessed in the following ways:
 - From the *Home Screen* select the *Drawer* icon in the top-left corner of the screen
 - From any other screen, long-press the *Back* button in the top-left corner of the screen
 
+!!! tip "Long Press Menu"
+    Performing a "long press" on the *back* button will provide quick access to the drawer menu from any view
+
 The *Drawer Menu* provides instant access to the following actions:
 
 ### InvenTree
