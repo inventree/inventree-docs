@@ -285,4 +285,4 @@ The following [plugin](../extend/plugins.md) configuration options are available
 
 ### Middleware
 
-Custom middleware layers can specified here.
+Custom middleware layers can be specified here.
