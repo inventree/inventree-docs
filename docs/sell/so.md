@@ -1,5 +1,5 @@
 ---
-title: Sales Order
+title: Sales Orders
 ---
 
 ## Sales Orders
