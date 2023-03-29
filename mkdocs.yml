@@ -113,7 +113,6 @@ nav:
     - Templates: report/report.md
     - Reports:
       - Test Reports: report/test.md
-      - Packing List: report/pack.md
       - Build Order: report/build.md
       - Purchase Order: report/purchase_order.md
       - Sales Order: report/sales_order.md
