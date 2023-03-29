@@ -4,7 +4,7 @@ title: Sales Orders
 
 ## Sales Orders
 
-Sales orders allow users to track which stock items are sold to customers, therefore converting stock items / inventory into externally sold items.
+Sales orders allow tracking of which stock items are sold to customers, therefore converting stock items / inventory into externally sold items.
 
 To access the sales order page, click on the <span class="badge inventree nav main"><span class='fas fa-truck'></span> Sell</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-list'></span> Sales Orders</span> option in the dropdown list.
 
@@ -16,16 +16,16 @@ To access the sales order page, click on the <span class="badge inventree nav ma
 
 Each Sales Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
 
-### Create Sales Order
+### Create a Sales Order
 
 Once the sales order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Sales Order</span> which opens the "Create Sales Order" form.
 
-A sales order is linked to a specific customer, select one in the list of existing customers.
+A Sales Order is linked to a specific customer, select one in the list of existing customers.
 
-!!! warning
+!!! warning "Customers Only"
 	Only companies with the "Customer" attribute enabled will be shown and can be selected
 
-Fill out the rest of the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> 
+Fill out the rest of the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> to create the order.
 
 #### Add Line Items
 
