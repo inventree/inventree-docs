@@ -4,7 +4,7 @@ title: Sales Orders
 
 ## Sales Orders
 
-Sales orders allow to track which stock items are sold to customers, therefore converting stock items / inventory into externally sold items.
+Sales orders allow users to track which stock items are sold to customers, therefore converting stock items / inventory into externally sold items.
 
 To access the sales order page, click on the <span class="badge inventree nav main"><span class='fas fa-truck'></span> Sell</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-list'></span> Sales Orders</span> option in the dropdown list.
 

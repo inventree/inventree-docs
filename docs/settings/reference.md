@@ -15,6 +15,7 @@ Out of the box, InvenTree defines a standard "pattern" for each type of referenc
 | Purchase Order | `{% raw %}PO-{ref:04d}{% endraw %}` | PO-0001 |
 | Sales Order | `{% raw %}SO-{ref:04d}{% endraw %}` | SO-0123 |
 | Build Order | `{% raw %}BO-{ref:04d}{% endraw %}` | BO-1234 |
+| Return Order | `{% raw %} RMA-{ref:04d}{% endraw %}` | RMA-0987 |
 
 ### Pattern Requirements
 
