@@ -114,10 +114,7 @@ Each part object has access to a lot of context variables about the part. The fo
 
 ### Stock
 
-!!! incomplete "TODO"
-    This section requires further work
-
-#### StockItem
+#### Stock Item
 
 | Variable | Description |
 |----------|-------------|
@@ -146,7 +143,7 @@ Each part object has access to a lot of context variables about the part. The fo
 | purchase_price | The unit purchase price for this [StockItem](./context_variables.md#stockitem) - this is the unit price at time of purchase (if this item was purchased from an external supplier) |
 | packaging | Description of how the StockItem is packaged (e.g. "reel", "loose", "tape" etc) |
 
-#### StockLocation
+#### Stock Location
 
 | Variable | Description |
 |----------|-------------|
@@ -182,7 +179,7 @@ Each part object has access to a lot of context variables about the part. The fo
 | currency_code | Default currency for the company |
 | parts | Query set with all parts that the company supplies |
 
-#### SupplierPart
+#### Supplier Part
 
 | Variable | Description |
 |----------|-------------|
@@ -218,41 +215,46 @@ Each part object has access to a lot of context variables about the part. The fo
 | Variable | Description |
 |----------|-------------|
 
-
 ### Orders
 
 !!! incomplete "TODO"
     This section requires further work
 
-#### PurchaseOrder
+#### Purchase Order
+
+A [Purchase Order](../buy/po.md) object has the following context variables available.
+
 | Variable | Description |
 |----------|-------------|
 | description | The order description |
 | lines | The lines in the Purchase Order |
-| order | The order object itself |
 | reference | The reference number |
 | supplier | The supplier for this Purchase Order |
-| prefix | Purchase Order reference prefix |
-| title | The title of the order |
-
 
 #### SalesOrder
 
-!!! incomplete "TODO"
-    This section requires further work
+A [Sales Order](../sell/so.md) object has the following context variables available.
 
 | Variable | Description |
 |----------|-------------|
 | customer | An object with information about the customer |
 | description | The order description |
 | lines | The lines in the Sales Order |
-| order | The order object itself |
-| prefix | Purchase Order reference prefix |
 | reference | The reference number |
-| title | The title of the order |
+
+#### Return Order
+
+A [Return Order](../sell/return.md) object has the following context variables avaiable.
+
+| Variable | Description |
+| --- | --- |
+| customer | An object with information about the customer |
+| description | The order description |
+| lines | The lines in the Sales Order |
+| reference | The reference number |
 
 
-#### user
+### User
 
 | Variable | Description |
 |----------|-------------|
