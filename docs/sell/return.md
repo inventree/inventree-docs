@@ -81,6 +81,10 @@ Indvidual Return Orders can be viewed via the Return Order detail page:
 
 Here the details of the return order are available, and specific actions can be performed:
 
+### Edit Return Order
+
+The Return Order can be edit by selecting the <span class='fas fa-edit'></span> icon under the <span class='fas fa-tools'></span> actions menu.
+
 ### Line Items
 
 Return Order line items can be added while the [status](#return-order-status-codes) of the order is *In Progress*. Any stock item which is currently sold or assigned to the particular customer can be selected for return.

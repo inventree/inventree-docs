@@ -3,6 +3,7 @@ title: BOM Generation
 ---
 
 ## BOM Generation
+
 The bill of materials is an essential part of the documentation that needs to be sent to the factory. A simple csv export is OK to be important into SMT machines. But for human readable documentation it might not be sufficient. Additional information is needed. The Inventree report system allows to generate BOM well formatted BOM reports. 
 
 ### Context variables
