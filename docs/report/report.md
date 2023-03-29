@@ -144,6 +144,7 @@ InvenTree supports the following reporting functionality:
 | [Build Order Report](./build.md) | Format a build order report |
 | [Purchase Order Report](./purchase_order.md) | Format a purchase order report |
 | [Sales Order Report](./sales_order.md) | Format a sales order report |
+| [Return Order Report](./return_order.md) | Format a return order report |
 
 ## Report Options
 

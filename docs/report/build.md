@@ -6,11 +6,6 @@ title: Build Order Report
 
 Custom build order reports may be generated against any given Build Order. For example, build order reports can be used to generate work orders.
 
-### Build Filters
-
-!!! missing "TODO"
-    This section requires further work
-
 ### Context Variables
 
 In addition to the default report context variables, the following context variables are made available to the build order report template for rendering:
@@ -292,4 +287,10 @@ content: "v{{report_revision}} - {{ date.isoformat }}";
 This will result a report page like this:
 
 {% with id="report-options", url="build/report-61.png", description="Report Example Builds" %} {% include "img.html" %} {% endwith %}
+
+### Default Report Template
+
+A default *Build Report* template is provided out of the box, which is useful for generating simple test reports. Furthermore, it may be used as a starting point for developing custom BOM reports:
+
+View the [source code](https://github.com/inventree/InvenTree/blob/master/InvenTree/report/templates/report/inventree_build_order_base.html) for the default build report template.
 
