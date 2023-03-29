@@ -93,3 +93,5 @@ Return Order line items can be added while the [status](#return-order-status-cod
 While [line items](#line-items) must reference a particular stock item, extra line items are available for any other itemized information that needs to be conveyed with the order.
 
 ## Return Order Reports
+
+Custom [reports](../report/return_order.md) can be generated against each Return Order.

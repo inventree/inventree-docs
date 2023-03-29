@@ -117,6 +117,7 @@ nav:
       - Build Order: report/build.md
       - Purchase Order: report/purchase_order.md
       - Sales Order: report/sales_order.md
+      - Return Order: report/return_order.md
       - BOM: report/bom.md
     - Labels: report/labels.md
     - Helper Functions: report/helpers.md
