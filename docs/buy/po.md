@@ -12,11 +12,18 @@ To access the purchase order page, click on the <span class="badge inventree nav
 {% include "img.html" %}
 {% endwith %}
 
-### Purchase Order Reference
+### Purchase Order Status Codes
 
-Each Purchase Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
+Each Purchase Order has a specific status code which indicates the current state of the order:
 
-### Create Purchase Order
+| Status | Description |
+| --- | --- |
+| Pending | The purchase order has been created, but has not been submitted to the supplier |
+| In Progress | The purchase order has been issued to the supplier, and is in progress |
+| Complete | The purchase order has been completed, and is now closed |
+| Cancelled | The purchase order was cancelled, and is now closed |
+
+## Create Purchase Order
 
 Once the purchase order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Purchase Order</span> which opens the "Create Purchase Order" form.
 
@@ -26,6 +33,10 @@ A purchase order is linked to a specific supplier, select one in the list of exi
 	Only companies with the "Supplier" attribute enabled will be shown and can be selected
 
 Fill out the rest of the form with the purchase order information then click on <span class="badge inventree confirm">Submit</span> 
+
+### Purchase Order Reference
+
+Each Purchase Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
 
 ### Add Line Items
 
