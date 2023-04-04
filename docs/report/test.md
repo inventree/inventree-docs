@@ -4,14 +4,11 @@ title: Test Report
 
 ## Test Report
 
-InvenTree provides [test result](../stock/test.md) tracking functionality which allows the users to keep track of any tests which have been performed on a given stock item.
+InvenTree provides [test result](../stock/test.md) tracking functionality which allows the users to keep track of any tests which have been performed on a given [stock item](../stock/stock.md).
 
 Custom test reports may be generated against any given stock item. All testing data is made available to the template for custom rendering as required.
 
 For example, an "Acceptance Test" report template may be customized to the particular device, with the results for certain tests rendering in a particular part of the page, with any tests which have not passed highlighted.
-
-!!! missing "TODO"
-	This section requires further work
 
 ### Part Filters
 
@@ -72,3 +69,13 @@ The *installed_items* context variable is a list of all [StockItem](./context_va
 </table>
 {% endraw %}
 ```
+
+### Default Report Template
+
+A default *Test Report* template is provided out of the box, which is useful for generating simple test reports. Furthermore, it may be used as a starting point for developing custom test reports:
+
+{% with id="test-report-example", url="report/test_report_example.png", description="Example Test Report" %}
+{% include "img.html" %}
+{% endwith %}
+
+View the [source code](https://github.com/inventree/InvenTree/blob/master/InvenTree/report/templates/report/inventree_test_report_base.html) for the default test report template.

@@ -1,10 +1,10 @@
 ---
-title: Sales Order
+title: Sales Orders
 ---
 
 ## Sales Orders
 
-Sales orders allow to track which stock items are sold to customers, therefore converting stock items / inventory into externally sold items.
+Sales orders allow tracking of which stock items are sold to customers, therefore converting stock items / inventory into externally sold items.
 
 To access the sales order page, click on the <span class="badge inventree nav main"><span class='fas fa-truck'></span> Sell</span> navigation tab and click on <span class="badge inventree nav main"><span class='fas fa-list'></span> Sales Orders</span> option in the dropdown list.
 
@@ -12,20 +12,31 @@ To access the sales order page, click on the <span class="badge inventree nav ma
 {% include "img.html" %}
 {% endwith %}
 
-### Sales Order Reference
+### Sales Order Status Codes
 
-Each Sales Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
+Each Sales Order has a specific status code, which represents the state of the order:
 
-### Create Sales Order
+| Status | Description |
+| --- | --- |
+| Pending | The sales order has been created, but has not been finalized or submitted |
+| In Progress | The sales order has been issued, and is in progress |
+| Complete | The sales order has been completed, and is now closed |
+| Cancelled | The sales order was cancelled, and is now closed |
+
+## Create a Sales Order
 
 Once the sales order page is loaded, click on <span class="badge inventree add"><span class='fas fa-plus-circle'></span> New Sales Order</span> which opens the "Create Sales Order" form.
 
-A sales order is linked to a specific customer, select one in the list of existing customers.
+A Sales Order is linked to a specific customer, select one in the list of existing customers.
 
-!!! warning
+!!! warning "Customers Only"
 	Only companies with the "Customer" attribute enabled will be shown and can be selected
 
-Fill out the rest of the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> 
+Fill out the rest of the form with the sales order information then click on <span class="badge inventree confirm">Submit</span> to create the order.
+
+### Sales Order Reference
+
+Each Sales Order is uniquely identified by its *Reference* field. Read more about [reference fields](../settings/reference.md).
 
 #### Add Line Items
 

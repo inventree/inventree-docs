@@ -31,8 +31,9 @@ InvenTree functionality is split into a number of distinct roles. A group will h
 - **Stock Location** - The *stock location* role is related to accessing Stock Location data
 - **Stock Item** - The *stock item* role is related to accessing Stock Item data
 - **Build** - The *build* role is related to accessing Build Order and Bill of Materials data
-- **Purchase** - The *purchase* role is related to accessing Purchase Order data
-- **Sales** - The *sales* role is related to accessing Sales Order data
+- **Purchase Order** - The *purchase* role is related to accessing Purchase Order data
+- **Sales Order** - The *sales* role is related to accessing Sales Order data
+- **Return Order** - The *return* role is related to accessing Return Order data
 
 {% with id="Roles Admin View", url="admin/roles.png", description="Roles" %}
 {% include 'img.html' %}
