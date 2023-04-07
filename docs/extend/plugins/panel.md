@@ -60,7 +60,7 @@ Refer to the `CustomPanelSample` example class in the `./plugin/samples/integrat
 
 Lets have a look at another example. We like to have a new panel that contains a button. 
 Each time the button is clicked, a python function in our plugin shall be executed and
-do something usefull. the result will look like that:
+do something usefull. The result will look like that:
 
 {% with id="panels", url="plugin/mouser.png", description="Panel example with button" %} {% include "img.html" %} {% endwith %}
 
@@ -111,19 +111,19 @@ class MouserCartPanel(PanelMixin, SettingsMixin, InvenTreePlugin, UrlsMixin):
 
 ```
 
-The code is simple and really stripped down to thne minimum. In the plugin class we first define the plugin metadata. 
+The code is simple and really stripped down to the minimum. In the plugin class we first define the plugin metadata. 
 Afterwards we define the custom panel. Here we use a html template to describe the content of the panel. We need to 
 add the path here because the template resides in the subdirectory templates/mouser.
 Then we setup the url. This is important. The url connects the http request with the function to be executed. 
 
  * mouser/getcart: Path of the url together with SLUG
- * self.GatCart: This is the function to be called. It is defined further down
+ * self.GetCart: This is the function to be called. It is defined further down
  * get-cart: This is the name of the url that needs to be referenced in the html template. We see that later.
 
 Finally we define the function. This is a simple increment of a class value. 
 
 
-For displaying the panel we use a template file. 
+New lets have a look at the template file mouser.html
 
 ```html
 {% raw %}
@@ -146,14 +146,12 @@ async function JGetCart(){
 {% endraw %}
 ```
 
-We start with a bit of javascript. The function JGetCart just calls the url that has been define in the python code above. 
+We start with a bit of javascript. The function JGetCart just calls the url that has been defined in the python code above. 
 The url consists of a full path plugin:plugin-name:url-name. The plugin-name is the SLUG that was defined in the plugin code.
 Then just a reload.
 
-The button is defined  class="btn btn-info" This is an InvenTree button. There a are several others available. Please
-have a look at the css files.
-
-The last line renders the value that was defined in the plugin. 
+The button is defined  withe class="btn btn-info" This is an InvenTree button. There a are lots of others available. Please
+have a look at the css files.  The last line renders the value that was defined in the plugin. 
 
 Just give it a try: Each time you press the button, the value will be increased.
 
