@@ -10,7 +10,7 @@ From the *home screen*, select *Stock* to open the top-level stock location view
 
 The *Details* tab shows information about the selected stock location.
 
-{% with id="loc-detail", url="location_detail.jpg" %}
+{% with id="loc-detail", url="location_detail.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -26,7 +26,7 @@ If the current stock location has any sublocations, they are listed here. Select
 
 The *Stock* tab displays all the stock items available in this location. Tap a displayed stock item to navigate to the stock item detail view.
 
-{% with id="loc-stock", url="location_stock.jpg" %}
+{% with id="loc-stock", url="location_stock.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -38,11 +38,11 @@ The list of available stock items can be filtered using the input box at the top
 {% endwith %}
 
 
-### Actions Tab
+### Context Actions
 
-The *Actions* tab displays the available actions for the selected location:
+The following *Context Actions* are available for the selected location:
 
-{% with id="loc-actions", url="location_actions.jpg" %}
+{% with id="loc-actions", url="location_actions.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -74,7 +74,7 @@ Use the barcode scanner to scan a stock item into the current location.
 
 The *Stock Item Detail* view displays information about a single stock item:
 
-{% with id="stock-detail", url="stock_detail.jpg" %}
+{% with id="stock-detail", url="stock_detail.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -99,7 +99,7 @@ Tap on the notes tile to display and edit the notes for this stock item
 
 The *actions* tab displays the available actions for the selected stock item:
 
-{% with id="stock-actions", url="stock_actions.jpg" %}
+{% with id="stock-actions", url="stock_actions.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
