@@ -150,8 +150,12 @@ We start with a bit of javascript. The function JGetCart just calls the url that
 The url consists of a full path plugin:plugin-name:url-name. The plugin-name is the SLUG that was defined in the plugin code.
 Then just a reload.
 
-The button is defined  withe class="btn btn-info" This is an InvenTree button. There a are lots of others available. Please
-have a look at the css files.  The last line renders the value that was defined in the plugin. 
+The button is defined  withe class="btn btn-info" This is an InvenTree predefined button. There a are lots of others available. 
+Here are some examples of available colors:
+
+{% with id="panels", url="plugin/buttons.png", description="Button examples" %} {% include "img.html" %} {% endwith %}
+
+Please have a look at the css files for more options. The last line renders the value that was defined in the plugin. 
 
 Just give it a try: Each time you press the button, the value will be increased.
 
