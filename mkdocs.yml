@@ -139,6 +139,7 @@ nav:
     - InvenTree App: app/app.md
     - Connect: app/connect.md
     - Navigation: app/navigation.md
+    - Search: app/search.md
     - Barcodes: app/barcode.md
     - Parts: app/part.md
     - Stock: app/stock.md
