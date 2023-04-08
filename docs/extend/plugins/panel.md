@@ -147,10 +147,10 @@ async function JGetCart(){
 ```
 
 We start with a bit of javascript. The function JGetCart just calls the url that has been defined in the python code above. 
-The url consists of a full path plugin:plugin-name:url-name. The plugin-name is the SLUG that was defined in the plugin code.
+The url consists of a full path `plugin:plugin-name:url-namei`. The plugin-name is the SLUG that was defined in the plugin code.
 Then just a reload.
 
-The button is defined  withe class="btn btn-info" This is an InvenTree predefined button. There a are lots of others available. 
+The button is defined  with `class="btn btn-info` This is an InvenTree predefined button. There a are lots of others available. 
 Here are some examples of available colors:
 
 {% with id="panels", url="plugin/buttons.png", description="Button examples" %} {% include "img.html" %} {% endwith %}
