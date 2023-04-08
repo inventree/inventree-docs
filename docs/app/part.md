@@ -10,7 +10,7 @@ From the *home screen*, select *Parts* to open the top-level part category view.
 
 The *Details* tab shows information about the selected part category. In particular, it shows the name and description of the category, a link to the parent category (if available) and a list of subcategories.
 
-{% with id="part-category", url="part_category_detail.jpg" %}
+{% with id="part-category", url="part_category_detail.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -26,21 +26,21 @@ If the current category has any subcategories, these are listed here. Select any
 
 The *Parts* tab displays all the parts available in this category. Tap a displayed part to navigate to the part detail view.
 
-{% with id="cat-parts", url="category_parts_tab.jpg" %}
+{% with id="cat-parts", url="category_parts_tab.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
 The list of available parts can be filtered using the input box at the top of the screen:
 
-{% with id="cat-parts-filter", url="category_parts_filter.jpg" %}
+{% with id="cat-parts-filter", url="category_parts_filter.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
-### Actions Tab
+### Context Actions
 
-The *Actions* tab displays the available actions for the selected category:
+The following *Context Actions* are available for the selected category:
 
-{% with id="cat-actions", url="category_actions_tab.jpg" %}
+{% with id="cat-actions", url="category_actions_tab.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -77,7 +77,7 @@ In the part category display screen, there are three tabs of information availab
 
 The *Part Detail* view displays information about a single part:
 
-{% with id="part-details", url="part_details.jpg" %}
+{% with id="part-details", url="part_details.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
@@ -117,7 +117,7 @@ Select a particular attachment file to downloaded it to the local device.
 
 The *Stock* tab displays all the stock items available for this part. Tap on a particular stock item to navigate to a detail view for that item.
 
-{% with id="part-stock", url="part_stock.jpg" %}
+{% with id="part-stock", url="part_stock.png" %}
 {% include "app_img.html" %}
 {% endwith %}
 
