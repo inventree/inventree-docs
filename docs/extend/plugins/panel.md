@@ -58,9 +58,9 @@ Refer to the `CustomPanelSample` example class in the `./plugin/samples/integrat
 
 ### An example with button 
 
-Lets have a look at another example. We like to have a new panel that contains a button. 
+Let's have a look at another example. We like to have a new panel that contains a button. 
 Each time the button is clicked, a python function in our plugin shall be executed and
-do something usefull. The result will look like that:
+do something useful. The result will look like that:
 
 {% with id="panels", url="plugin/mouser.png", description="Panel example with button" %} {% include "img.html" %} {% endwith %}
 
@@ -147,7 +147,7 @@ async function JGetCart(){
 ```
 
 We start with a bit of javascript. The function JGetCart just calls the url that has been defined in the python code above. 
-The url consists of a full path `plugin:plugin-name:url-namei`. The plugin-name is the SLUG that was defined in the plugin code.
+The url consists of a full path `plugin:plugin-name:url-name`. The plugin-name is the SLUG that was defined in the plugin code.
 Then just a reload.
 
 The button is defined  with `class="btn btn-info` This is an InvenTree predefined button. There a are lots of others available. 
