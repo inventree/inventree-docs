@@ -159,7 +159,7 @@ we use a different format for the table cell e.g. print bold font or red color.
 For the picker we list the full path names of the stock locations and the quantity
 that is needed for the build. This will result in the following printout:
 
-{% with id="report-options", url="report/picklist.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
+{% with id="picklist", url="report/picklist.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
 
 For those of you who would like to replace the "/" by something else because it is hard 
 to read in some fonts use the following trick:
@@ -175,7 +175,7 @@ topmost parent. We use a loop to cycle through that and print the .name of the e
 by a "-". The foorloop.last is a Django trick that allows us to not print the "-" after
 the last entry. The result looks like here:
 
-{% with id="report-options", url="report/picklist_with_path.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
+{% with id="picklist_with_path", url="report/picklist_with_path.png", description="Picklist Example" %} {% include "img.html" %} {% endwith %}
 
 Finally added a `{% raw %}|floatformat:0{% endraw %}` to the quantity that removes the trailing zeros. 
 

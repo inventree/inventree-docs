@@ -62,7 +62,7 @@ Let's have a look at another example. We like to have a new panel that contains 
 Each time the button is clicked, a python function in our plugin shall be executed and
 do something useful. The result will look like that:
 
-{% with id="panels", url="plugin/mouser.png", description="Panel example with button" %} {% include "img.html" %} {% endwith %}
+{% with id="mouser", url="plugin/mouser.png", description="Panel example with button" %} {% include "img.html" %} {% endwith %}
 
 First we need to write the plugin code, similar as in the example above. 
 
@@ -153,7 +153,7 @@ Then just a reload.
 The button is defined  with `class="btn btn-info` This is an InvenTree predefined button. There a are lots of others available. 
 Here are some examples of available colors:
 
-{% with id="panels", url="plugin/buttons.png", description="Button examples" %} {% include "img.html" %} {% endwith %}
+{% with id="buttons", url="plugin/buttons.png", description="Button examples" %} {% include "img.html" %} {% endwith %}
 
 Please have a look at the css files for more options. The last line renders the value that was defined in the plugin. 
 
