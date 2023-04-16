@@ -9,18 +9,12 @@ The *Settings* view provides access to user configurable settings, in addition t
 The main settings view is shown below, and provides the following options:
 
 - **Server** - Configure and select server profile 
-- **Home Screen** - Configure home screen settings
 - **App Settings** - Configure app settings
+- **Home Screen** - Configure home screen settings
+- **Part** - Configure part settings
+- **About** - Display  app version information
 
 {% with id="settings_view", url="app/settings.png", maxheight="240px", description="Settings view" %}
-{% include 'img.html' %}
-{% endwith %}
-
-## Home Screen
-
-The *Home Screen* view allows you to configure display options for the app 'home screen':
-
-{% with id="home_settings", url="app/home_settings.png", maxheight="240px", description="Home Screen Settings" %}
 {% include 'img.html' %}
 {% endwith %}
 
@@ -54,5 +48,15 @@ Configure audible app notifications:
 
 ### App Settings
 
-- **Use Strict HTTPS** - Enforce strict checking of HTTPs certificates. Enabling this option may prevent you from connecting to the server if there are certificate issues
+- **Dark Mode** - Enable "dark mode" display for the app.
+- **Use Strict HTTPS** - Enforce strict checking of HTTPs certificates. Enabling this option may prevent you from connecting to the server if there are certificate issues.
+- **Language** - Select app language. By default, will use the system language of the device the app is installed on.
 - **Upload Error Reports** - Enable uploading of anonymous error / crash reports. These reports are used to improve the quality of the app.
+
+## Home Screen
+
+The *Home Screen* view allows you to configure display options for the app 'home screen':
+
+{% with id="home_settings", url="app/home_settings.png", maxheight="240px", description="Home Screen Settings" %}
+{% include 'img.html' %}
+{% endwith %}
