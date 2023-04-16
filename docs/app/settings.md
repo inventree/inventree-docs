@@ -9,8 +9,10 @@ The *Settings* view provides access to user configurable settings, in addition t
 The main settings view is shown below, and provides the following options:
 
 - **Server** - Configure and select server profile 
-- **Home Screen** - Configure home screen settings
 - **App Settings** - Configure app settings
+- **Home Screen** - Configure home screen settings
+- **Part** - Configure part settings
+- **About** - Display  app version information
 
 {% with id="settings_view", url="app/settings.png", maxheight="240px", description="Settings view" %}
 {% include 'img.html' %}
