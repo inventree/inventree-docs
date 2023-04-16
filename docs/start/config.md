@@ -186,6 +186,9 @@ InvenTree requires some external directories for storing files:
 | INVENTREE_MEDIA_ROOT | media_root | Allow all remote URLS for CORS checks | *Not specified* |
 | INVENTREE_BACKUP_DIR | backup_dir | List of whitelisted CORS URLs | *Not specified* |
 
+!!! tip "Serving Files"
+    Read the [Serving Files](./serving_files.md) section for more information on hosting *static* and *media* files
+
 ### Static File Storage
 
 Static files **require** a local directory for storage. This directory should be specified with the `static_root` option in the config file based on the particular installation requirements.
