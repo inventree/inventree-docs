@@ -32,8 +32,8 @@ A sample [docker compose file](https://github.com/inventree/InvenTree/blob/maste
 
 The sample docker compose configuration outlined on this page uses nginx to serve static files and media files. If you change this configuration, you will need to ensure that static and media files are served correctly.
 
-!!! warning "Debug Warning"
-    When running with `debug=False`, django *will not serve static and media files* - refer to the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/).
+!!! info "Read More"
+    Refer to the [Serving Files](./serving_files.md) section for more details
 
 #### Required Files
 
