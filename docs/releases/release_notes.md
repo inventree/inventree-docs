@@ -27,6 +27,9 @@ Specific tagged releases are shown below. Click on the release notes for each ve
 !!! info "Release Notes"
     Starting from v0.7.2, release notes have been migrated to GitHub. Release notes for older versions are available at the links below.
 
+### 0.11.x
+{% with prefix="0.11" %}{% include "release_table.html" %}{% endwith %}
+
 ### 0.10.x
 {% with prefix="0.10" %}{% include "release_table.html" %}{% endwith %}
 

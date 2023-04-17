@@ -4,7 +4,11 @@ title: Build Order Report
 
 ## Build Order Report
 
-Custom build order reports may be generated against any given Build Order. For example, build order reports can be used to generate work orders.
+Custom build order reports may be generated against any given [Build Order](../build/build.md). For example, build order reports can be used to generate work orders.
+
+### Build Filters
+
+A build order report template may define a set of filters against which [Build Order](../build/build.md) items are sorted.
 
 ### Context Variables
 
