@@ -153,6 +153,17 @@ InvenTree is supplied with a number of default templates "out of the box". These
 !!! tip "Read the Source"
     The source code for the default reports is [available on GitHub](https://github.com/inventree/InvenTree/tree/master/InvenTree/report/templates/report). Use this as a guide for generating your own reports!
 
+### Report Filters
+
+Each type of report provides a *filters* field, which can be used to filter which items a report can be generated against. The target of the *filters* field depends on the type of report - refer to the documentation on the specific report type for more information.
+
+For example, the [Test Report](./test.md) filter targets the linked [Stock Item](../stock/status.md) object, and can be used to select which stock items are allowed for the given report. Let's say that a certain test report should only be generated for "trackable" stock items. A filter could easily be constructed to accommodate this, by limiting available items to those where the associated [Part](../part/part.md) is *trackable*:
+
+```part__trackable=True```
+
+!!! warning "Advanced Users"
+    Report filtering is an advanced topic, and requires a little bit of knowledge of the underlying data structure!
+
 ## Report Options
 
 A number of global reporting options are available for customizing InvenTree reports:

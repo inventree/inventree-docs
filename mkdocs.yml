@@ -112,7 +112,7 @@ nav:
     - Return Orders: sell/return.md
   - Report:
     - Templates: report/report.md
-    - Reports:
+    - Report Types:
       - Test Reports: report/test.md
       - Build Order: report/build.md
       - Purchase Order: report/purchase_order.md
