@@ -10,17 +10,18 @@ Custom test reports may be generated against any given stock item. All testing d
 
 For example, an "Acceptance Test" report template may be customized to the particular device, with the results for certain tests rendering in a particular part of the page, with any tests which have not passed highlighted.
 
-### Part Filters
+### Stock Item Filters
 
-A TestReport template may define a set of filters against which parts are sorted. Any Part objects which match the provided filters can use the given TestReport.
+A TestReport template may define a set of filters against which stock items are sorted. Any [StockItem](../stock/stock.md) objects which match the provided filters can use the given TestReport.
 
-This allows each TestReport to easily be assigned to a particular Part, or even multiple parts.
+This allows each TestReport to easily be assigned to a particular StockItem, or even multiple items.
 
-In the example below, a test report template is uploaded and assigned to the part with the name *"My Widget"*. Any combination of fields relevant to the Part model can be used here.
+In the example below, a test report template is uploaded and available to any stock items linked to a part with the name *"My Widget"*. Any combination of fields relevant to the StockItem model can be used here.
 
-{% with id="test_report_add", url="admin/test_report_add.png", description="Upload test report template" %}
+{% with id="test-report-filters", url="report/test_report_filters.png", description="Test report filters" %}
 {% include 'img.html' %}
 {% endwith %}
+
 
 ### Context Variables
 
