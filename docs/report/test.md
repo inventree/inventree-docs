@@ -29,11 +29,16 @@ In addition to the default report context variables, the following context varia
 
 | Variable | Description |
 | --- | --- |
-| stock_item | The individual [StockItem](./context_variables.md#stockitem) object for which this test report is being generated |
+| stock_item | The individual [Stock Item](./context_variables.md#stockitem) object for which this test report is being generated |
+| serial | The serial number of the linked Stock Item |
 | part | The [Part](./context_variables.md#part) object of which the stock_item is an instance |
+| parameters | A dict object representing the [parameters](../part/parameter.md) of the referenced part |
+| test_keys | A list of the available 'keys' for the test results recorded against the stock item |
+| test_template_list | A list of the available [test templates](../part/test.md#part-test-templates) for the referenced part |
+| test_template_map | A map / dict of the available test templates |
 | results | A dict of test result objects, where the 'key' for each test result is a shortened version of the test name (see below) |
 | result_list | A list of each test result object |
-| installed_items | A flattened list representing all [StockItem](./context_variables.md#stockitem) objects which are *installed inside* the referenced [StockItem](./context_variables.md#stockitem) object |
+| installed_items | A flattened list representing all [Stock Item](./context_variables.md#stockitem) objects which are *installed inside* the referenced [Stock Item](./context_variables.md#stockitem) object |
 
 #### Results
 
