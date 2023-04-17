@@ -153,6 +153,29 @@ InvenTree is supplied with a number of default templates "out of the box". These
 !!! tip "Read the Source"
     The source code for the default reports is [available on GitHub](https://github.com/inventree/InvenTree/tree/master/InvenTree/report/templates/report). Use this as a guide for generating your own reports!
 
+## Creating Reports
+
+Report templates are created (and edited) via the [admin interface](../settings/admin.md), under the *Report* section. Select the certain type of report template you are wanting to create, and press the *Add* button in the top right corner:
+
+{% with id="report-create", url="report/add_report_template.png", description="Create new report" %}
+{% include 'img.html' %}
+{% endwith %}
+
+!!! tip "Editing Reports"
+    Existing reports can be edited from the admin interface, in the same location as described above. To change the contents of the template, re-upload a template file, to overrie the existing template data.
+
+### Name and Description
+
+Each report template requires a name and description, which identify and describe the report template.
+
+### Enabled Status
+
+Boolean field which determines if the specific report template is enabled, and available for use. Reports can be disabled to remove them from the list of available templates, but without deleting them from the database.
+
+### Filename Pattern
+
+The filename pattern used to generate the output `.pdf` file. Defaults to "report.pdf"
+
 ### Report Filters
 
 Each type of report provides a *filters* field, which can be used to filter which items a report can be generated against. The target of the *filters* field depends on the type of report - refer to the documentation on the specific report type for more information.
@@ -171,6 +194,10 @@ If you enter an invalid option for the filter field, an error message will be di
 
 !!! warning "Advanced Users"
     Report filtering is an advanced topic, and requires a little bit of knowledge of the underlying data structure!
+
+### Metadata
+
+A JSON field made available to any [plugins](../extend/plugins.md) - but not used by internal code.
 
 ## Report Options
 
