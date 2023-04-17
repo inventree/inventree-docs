@@ -146,6 +146,13 @@ InvenTree supports the following reporting functionality:
 | [Sales Order Report](./sales_order.md) | Format a sales order report |
 | [Return Order Report](./return_order.md) | Format a return order report |
 
+### Default Reports
+
+InvenTree is supplied with a number of default templates "out of the box". These are generally quite simple, but serve as a starting point for building custom reports to suit a specific need.
+
+!!! tip "Read the Source"
+    The source code for the default reports is [available on GitHub](https://github.com/inventree/InvenTree/tree/master/InvenTree/report/templates/report). Use this as a guide for generating your own reports!
+
 ## Report Options
 
 A number of global reporting options are available for customizing InvenTree reports:
