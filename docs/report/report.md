@@ -159,7 +159,15 @@ Each type of report provides a *filters* field, which can be used to filter whic
 
 For example, the [Test Report](./test.md) filter targets the linked [Stock Item](../stock/status.md) object, and can be used to select which stock items are allowed for the given report. Let's say that a certain test report should only be generated for "trackable" stock items. A filter could easily be constructed to accommodate this, by limiting available items to those where the associated [Part](../part/part.md) is *trackable*:
 
-```part__trackable=True```
+{% with id="report-filter-valid", url="report/filters_valid.png", description="Report filter  selection" %}
+{% include 'img.html' %}
+{% endwith %}
+
+If you enter an invalid option for the filter field, an error message will be displayed:
+
+{% with id="report-filter-invalid", url="report/filters_invalid.png", description="Invalid filter selection" %}
+{% include 'img.html' %}
+{% endwith %}
 
 !!! warning "Advanced Users"
     Report filtering is an advanced topic, and requires a little bit of knowledge of the underlying data structure!
