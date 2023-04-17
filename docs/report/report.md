@@ -161,7 +161,10 @@ Report templates are created (and edited) via the [admin interface](../settings/
 {% include 'img.html' %}
 {% endwith %}
 
-!!! tip "Editing Reports"
+!!! tip "Staff Access Only"
+    Only users with staff access can upload or edit report template files.
+
+!!! info "Editing Reports"
     Existing reports can be edited from the admin interface, in the same location as described above. To change the contents of the template, re-upload a template file, to overrie the existing template data.
 
 ### Name and Description
@@ -227,10 +230,6 @@ Setting the *Debug Mode* option renders the template as raw HTML instead of PDF,
 
 !!! warning "HTML Rendering Limitations"
     When rendered in debug mode, @page attributes (such as size, etc) will **not** be observed. Additionally, any asset files stored on the InvenTree server will not be rendered. Debug mode is not intended to produce "good looking" documents!
-
-## Uploading Templates
-
-Custom report templates can be uploaded using the [Admin Interface](../settings/admin.md). Only users with admin access can upload and/or edit report template files.
 
 ## Report Assets
 
