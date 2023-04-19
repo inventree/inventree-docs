@@ -53,7 +53,7 @@ The following variables are accessed by build.variable
 | target_date | Date the build will be overdue |
 | take_from | [StockLocation](./context_variables.md#stocklocation) to take stock from to make this build (if blank, can take from anywhere) |
 | title | The full name of the build |
-| title | The description of the build |
+| description | The description of the build |
 | allocated_stock.all | A query set with all allocated stock items for the build |
 
 As usual items in a query sets can be selected by adding a .n to the set e.g. build.required_parts.0
