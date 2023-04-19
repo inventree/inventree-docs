@@ -220,16 +220,7 @@ Each part object has access to a lot of context variables about the part. The fo
 !!! incomplete "TODO"
     This section requires further work
 
-#### Purchase Order
-
-A [Purchase Order](../buy/po.md) object has the following context variables available.
-
-| Variable | Description |
-|----------|-------------|
-| description | The order description |
-| lines | The lines in the Purchase Order |
-| reference | The reference number |
-| supplier | The supplier for this Purchase Order |
+The [Purchase Order](../buy/po.md) context variables are described in the [Purchase Order](purchase_order.md) section.
 
 #### SalesOrder
 
