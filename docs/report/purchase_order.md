@@ -17,7 +17,7 @@ In addition to the default report context variables, the following variables are
 | Variable | Description |
 | --- | --- |
 | order | The specific Purchase Order object |
-| reference | The order reference field (can also be accessed as `{% raw %}{{ order.description }}{% endraw %}`) |
+| reference | The order reference field (can also be accessed as `{% raw %}{{ order.reference }}{% endraw %}`) |
 | description | The order description field |
 | supplier | The [supplier](../buy/supplier.md) associated with this purchase order |
 | lines | A list of available line items for this order |
