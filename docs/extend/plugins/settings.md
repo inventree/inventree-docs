@@ -55,7 +55,7 @@ class PluginWithSettings(SettingsMixin, InvenTreePlugin):
     }
 ```
 
-This mixin defines the helper functions `plugin.get_setting` and `plugin.set_seting` to access all plugin specific settings:
+This mixin defines the helper functions `plugin.get_setting` and `plugin.set_setting` to access all plugin specific settings:
 
 ```python
 api_url = self.get_setting('API_URL', cache = False)
