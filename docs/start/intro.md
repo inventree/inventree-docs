@@ -156,22 +156,8 @@ So, for a production setup, you should set `INVENTREE_DEBUG=false` in the [confi
 
 ### Potential Issues
 
-However, turning off DEBUG mode creates further work for the system administrator. In particular, when running in DEBUG mode, the InvenTree web server natively manages *static* and *media* files, which means that the InvenTree server can run "monolithically" without the need for a separate web server.
+Turning off DEBUG mode creates further work for the system administrator. In particular, when running in DEBUG mode, the InvenTree web server natively manages *static* and *media* files, which means that the InvenTree server can run "monolithically" without the need for a separate web server.
 
-With DEBUG mode turned off, a separate web server is required for serving *static* and *media* files. You can find further information in the [django documentation](https://docs.djangoproject.com/en/dev/howto/static-files/deployment/).
+!!! info "Read More"
+    Refer to the [Serving Files](./serving_files.md) section for more details
 
-There are *many* different ways that a sysadmin might wish to handle this.
-
-The [docker production example](./docker_prod.md) provides an example using [Nginx](https://www.nginx.com/) to serve *static* and *media* files, and redirecting other requests to the InvenTree web server itself.
-
-You may use this as a jumping off point, or use an entirely different server setup.
-
-#### Static Files
-
-Static files can be served without any need for authentication. In fact, they must be accessible *without* authentication, otherwise the unauthenticated views (such as the login screen) will not function correctly.
-
-#### Media Files
-
-It is highly recommended that the *media* files are served in such a way that user authentication is required.
-
-Refer to the [docker production example](./docker_prod.md) for a demonstration of using nginx to serve media files only to authenticated users, and forward authentication requests to the InvenTree web server.

@@ -93,6 +93,13 @@ The process status can be viewed [in your web browser](http://localhost:9001).
 
 The InvenTree server (and background task manager) should now be running!
 
+### Static and Media Files
+
+In addition to the InvenTree server, you will need a method of delivering static and media files (this is *not* handled by the InvenTree server in a production environment).
+
+!!! info "Read More"
+    Refer to the [Serving Files](./serving_files.md) section for more details
+
 ### Next Steps
 
 You (or your system administrator) may wish to perform further steps such as placing the InvenTree server behind a reverse-proxy such as [nginx](https://www.nginx.com/).

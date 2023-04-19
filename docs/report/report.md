@@ -146,6 +146,62 @@ InvenTree supports the following reporting functionality:
 | [Sales Order Report](./sales_order.md) | Format a sales order report |
 | [Return Order Report](./return_order.md) | Format a return order report |
 
+### Default Reports
+
+InvenTree is supplied with a number of default templates "out of the box". These are generally quite simple, but serve as a starting point for building custom reports to suit a specific need.
+
+!!! tip "Read the Source"
+    The source code for the default reports is [available on GitHub](https://github.com/inventree/InvenTree/tree/master/InvenTree/report/templates/report). Use this as a guide for generating your own reports!
+
+## Creating Reports
+
+Report templates are created (and edited) via the [admin interface](../settings/admin.md), under the *Report* section. Select the certain type of report template you are wanting to create, and press the *Add* button in the top right corner:
+
+{% with id="report-create", url="report/add_report_template.png", description="Create new report" %}
+{% include 'img.html' %}
+{% endwith %}
+
+!!! tip "Staff Access Only"
+    Only users with staff access can upload or edit report template files.
+
+!!! info "Editing Reports"
+    Existing reports can be edited from the admin interface, in the same location as described above. To change the contents of the template, re-upload a template file, to overrie the existing template data.
+
+### Name and Description
+
+Each report template requires a name and description, which identify and describe the report template.
+
+### Enabled Status
+
+Boolean field which determines if the specific report template is enabled, and available for use. Reports can be disabled to remove them from the list of available templates, but without deleting them from the database.
+
+### Filename Pattern
+
+The filename pattern used to generate the output `.pdf` file. Defaults to "report.pdf"
+
+### Report Filters
+
+Each type of report provides a *filters* field, which can be used to filter which items a report can be generated against. The target of the *filters* field depends on the type of report - refer to the documentation on the specific report type for more information.
+
+For example, the [Test Report](./test.md) filter targets the linked [Stock Item](../stock/status.md) object, and can be used to select which stock items are allowed for the given report. Let's say that a certain test report should only be generated for "trackable" stock items. A filter could easily be constructed to accommodate this, by limiting available items to those where the associated [Part](../part/part.md) is *trackable*:
+
+{% with id="report-filter-valid", url="report/filters_valid.png", description="Report filter  selection" %}
+{% include 'img.html' %}
+{% endwith %}
+
+If you enter an invalid option for the filter field, an error message will be displayed:
+
+{% with id="report-filter-invalid", url="report/filters_invalid.png", description="Invalid filter selection" %}
+{% include 'img.html' %}
+{% endwith %}
+
+!!! warning "Advanced Users"
+    Report filtering is an advanced topic, and requires a little bit of knowledge of the underlying data structure!
+
+### Metadata
+
+A JSON field made available to any [plugins](../extend/plugins.md) - but not used by internal code.
+
 ## Report Options
 
 A number of global reporting options are available for customizing InvenTree reports:
@@ -174,10 +230,6 @@ Setting the *Debug Mode* option renders the template as raw HTML instead of PDF,
 
 !!! warning "HTML Rendering Limitations"
     When rendered in debug mode, @page attributes (such as size, etc) will **not** be observed. Additionally, any asset files stored on the InvenTree server will not be rendered. Debug mode is not intended to produce "good looking" documents!
-
-## Uploading Templates
-
-Custom report templates can be uploaded using the [Admin Interface](../settings/admin.md). Only users with admin access can upload and/or edit report template files.
 
 ## Report Assets
 

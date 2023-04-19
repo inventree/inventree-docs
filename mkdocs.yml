@@ -72,6 +72,7 @@ nav:
         - Installer: start/installer.md
         - Development: start/development.md
         - Production: start/production.md
+    - Serving Files: start/serving_files.md
     - Data Backup: start/backup.md
     - Migrating Data: start/migrate.md
   - Parts:
@@ -111,7 +112,7 @@ nav:
     - Return Orders: sell/return.md
   - Report:
     - Templates: report/report.md
-    - Reports:
+    - Report Types:
       - Test Reports: report/test.md
       - Build Order: report/build.md
       - Purchase Order: report/purchase_order.md
