@@ -179,7 +179,7 @@ Each part object has access to a lot of context variables about the part. The fo
 | currency_code | Default currency for the company |
 | parts | Query set with all parts that the company supplies |
 
-#### Supplier Part
+#### SupplierPart
 
 | Variable | Description |
 |----------|-------------|
