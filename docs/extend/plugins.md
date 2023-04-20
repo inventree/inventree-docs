@@ -98,6 +98,7 @@ Supported mixin classes are:
 - [LocateMixin](./plugins/locate.md)
 - [NavigationMixin](./plugins/navigation.md)
 - [PanelMixin](./plugins/panel.md)
+- [ReportMixin](./plugins/report.md)
 - [ScheduleMixin](./plugins/schedule.md)
 - [SettingsMixin](./plugins/settings.md)
 - [UrlsMixin](./plugins/urls.md)

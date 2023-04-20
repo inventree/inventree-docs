@@ -21,6 +21,7 @@ Consider the usecase for your plugin and define the exact function of the plugin
 
 - Is it just a simple REST-endpoint that runs a function ([ActionMixin](./plugins/action.md)) or a parser for a custom barcode format ([BarcodeMixin](./plugins/barcode.md))?
 - How does the user interact with the plugin? Is it a UI separate from the main InvenTree UI ([UrlsMixin](./plugins/urls.md)), does it need multiple pages with navigation-links ([NavigationMixin](./plugins/navigation.md)).
+- Do you need to extend reporting functionality? Check out the [ReportMixin](./plugins/report.md).
 - Will it make calls to external APIs ([APICallMixin](./plugins/api.md) helps there)?
 - Do you need to run in the background ([ScheduleMixin](./plugins/schedule.md)) or when things in InvenTree change ([EventMixin](./plugins/event.md))?
 - Does the plugin need configuration that should be user changeable ([SettingsMixin](./plugins/settings.md)) or static (just use a yaml in the config dir)?

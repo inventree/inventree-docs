@@ -133,6 +133,9 @@ So, if you are writing a template which has custom formatting, (or any other sec
 !!! tip "Close it out"
     Don't forget to end with a `{% raw %}{% endlocalize %}{% endraw %}` tag!
 
+### Extending with Plugins
+
+The [ReportMixin plugin class](../extend/plugins/report.md) allows reporting functionality to be extended with custom features.
 
 ## Report Types
 
