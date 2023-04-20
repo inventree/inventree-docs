@@ -157,6 +157,5 @@ Here are some examples of available colors:
 
 Please have a look at the css files for more options. The last line renders the value that was defined in the plugin. 
 
-Just give it a try: Each time you press the button, the value will be increased.
-
-Have fun
+!!! tip "Give it a try"
+    Each time you press the button, the value will be increased.
