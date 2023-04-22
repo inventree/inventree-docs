@@ -1,5 +1,10 @@
 # InvenTree Documentation
 
+
+> **Note**
+As of April 2023, the InvenTree documentation has now been moved to the [InvenTree source code repository](https://github.com/inventree/inventree). Any issues or pull requests related to documentation should be made there. This repository will be archived and no longer monitored
+
+
 [![Documentation Status](https://readthedocs.org/projects/inventree/badge/?version=latest)](https://inventree.readthedocs.io/en/latest/?badge=latest)
 
 This repository hosts the [official documentation](https://inventree.readthedocs.io/) for [InvenTree](https://github.com/inventree/inventree), an open source inventory management system. 
