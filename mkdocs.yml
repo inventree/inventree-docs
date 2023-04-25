@@ -55,6 +55,7 @@ nav:
   - InvenTree:
     - InvenTree: index.md
     - Features: features.md
+    - Getting started: started.md
     - Release Notes: releases/release_notes.md
     - FAQ: faq.md
     - Credits: credits.md
